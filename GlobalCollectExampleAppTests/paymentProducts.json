@@ -1,0 +1,53 @@
+{
+    "paymentProducts": [
+        {
+            "accountsOnFile": [
+                {
+                    "attributes": [
+                        {
+                            "key": "cardholderName",
+                            "value": "Rob"
+                        },
+                        {
+                            "key": "cardNumber",
+                            "value": "************7988"
+                        },
+                        {
+                            "key": "expiryDate",
+                            "value": "0820"
+                        },
+                        {
+                            "key": "issueNumber",
+                            "value": "12"
+                        }
+                    ],
+                    "displayHints": {
+                        "labelTemplate": [
+                            {
+                                "attributeKey": "cardNumber",
+                                "mask": "{{9999}} {{9999}} {{9999}} {{9999}} {{999}}"
+                            },
+                            {
+                                "attributeKey": "cardholderName"
+                            },
+                            {
+                                "attributeKey": "nonExistingKey"
+                            }
+                        ]
+                    },
+                    "id": 0,
+                    "paymentProductId": 1
+                }
+            ],
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 20,
+                "label": "Visa",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_1_v1.png"
+            },
+            "id": 1,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        }
+    ]
+}
