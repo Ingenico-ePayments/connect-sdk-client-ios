@@ -103,7 +103,7 @@
 
     self.explanation = [[UITextView alloc] init];
     self.explanation.translatesAutoresizingMaskIntoConstraints = NO;
-    self.explanation.text = NSLocalizedStringFromTable(@"SetupExplanation", kGCAppLocalizable, @"To process a payment using the services provided by GlobalCollect, the following information must be provided by a merchant.\n\nAfter providing the information requested below, this example app can process a payment.");
+    self.explanation.text = NSLocalizedStringFromTable(@"SetupExplanation", kGCAppLocalizable, @"To process a payment using the services provided by the GlobalCollect platform, the following information must be provided by a merchant.\n\nAfter providing the information requested below, this example app can process a payment.");
     self.explanation.editable = NO;
     self.explanation.backgroundColor = [UIColor colorWithRed:0.85 green:0.94 blue:0.97 alpha:1];
     self.explanation.textColor = [UIColor colorWithRed:0 green:0.58 blue:0.82 alpha:1];
@@ -393,7 +393,7 @@
         // ***************************************************************************
         //
         // The information contained in preparedPaymentRequest is stored in such a way
-        // that it can be sent to GlobalCollect via your server.
+        // that it can be sent to the GlobalCollect platform via your server.
         //
         // ***************************************************************************
 
