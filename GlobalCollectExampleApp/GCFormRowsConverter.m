@@ -27,7 +27,23 @@
 #import "GCValidationErrorIsRequired.h"
 #import "GCValueMappingItem.h"
 
+@interface GCFormRowsConverter ()
+
+@property (strong, nonatomic) NSBundle *sdkBundle;
+
+@end
+
 @implementation GCFormRowsConverter
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self != nil) {
+        NSString *sdkBundlePath = [[NSBundle mainBundle] pathForResource:@"GlobalCollectSDK" ofType:@"bundle"];
+        self.sdkBundle = [NSBundle bundleWithPath:sdkBundlePath];
+    }
+    return self;
+}
 
 - (NSMutableArray *)formRowsFromPaymentRequest:(GCPaymentRequest *)paymentRequest validation:(BOOL)validation confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts viewFactory:(GCViewFactory *)viewFactory
 {
@@ -87,14 +103,14 @@
     if (errorClass == [GCValidationErrorLength class]) {
         GCValidationErrorLength *lengthError = (GCValidationErrorLength *)error;
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"length"];
-        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTable(errorMessageKey, kGCSDKLocalizable, nil);
+        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
         NSString *errorMessageValueWithPlaceholder = [errorMessageValueWithPlaceholders stringByReplacingOccurrencesOfString:@"{maxLength}" withString:@"\%ld"];
         errorMessageValue = [errorMessageValueWithPlaceholder stringByReplacingOccurrencesOfString:@"{minLength}" withString:@"\%ld"];
         errorMessage = [NSString stringWithFormat:errorMessageValue, lengthError.minLength, lengthError.maxLength];
     } else if (errorClass == [GCValidationErrorRange class]) {
         GCValidationErrorRange *rangeError = (GCValidationErrorRange *)error;
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"range"];
-        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTable(errorMessageKey, kGCSDKLocalizable, nil);
+        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
         NSString *errorMessageValueWithPlaceholder = [errorMessageValueWithPlaceholders stringByReplacingOccurrencesOfString:@"{minValue}" withString:@"\%@"];
         errorMessageValue = [errorMessageValueWithPlaceholder stringByReplacingOccurrencesOfString:@"{maxValue}" withString:@"\%@"];
         NSString *minString;
@@ -109,23 +125,23 @@
         errorMessage = [NSString stringWithFormat:errorMessageValue, minString, maxString];
     } else if (errorClass == [GCValidationErrorExpirationDate class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"expirationDate"];
-        errorMessageValue = NSLocalizedStringFromTable(errorMessageKey, kGCSDKLocalizable, nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [GCValidationErrorFixedList class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"fixedList"];
-        errorMessageValue = NSLocalizedStringFromTable(errorMessageKey, kGCSDKLocalizable, nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [GCValidationErrorLuhn class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"luhn"];
-        errorMessageValue = NSLocalizedStringFromTable(errorMessageKey, kGCSDKLocalizable, nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [GCValidationErrorRegularExpression class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"regularExpression"];
-        errorMessageValue = NSLocalizedStringFromTable(errorMessageKey, kGCSDKLocalizable, nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [GCValidationErrorIsRequired class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"required"];
-        errorMessageValue = NSLocalizedStringFromTable(errorMessageKey, kGCSDKLocalizable, nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
         errorMessage = errorMessageValue;
     } else {
         [NSException raise:@"Invalid validation error" format:@"Validation error %@ is invalid", error];
@@ -139,10 +155,10 @@
     GCFormRowTextField *row = [[GCFormRowTextField alloc] init];
     row.textField = (GCTextField *)[viewFactory textFieldWithType:GCTextFieldType];
     NSString *placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder.%@", field.identifier, paymentProduct.identifier];
-    NSString *placeholderValue = NSLocalizedStringFromTable(placeholderKey, kGCSDKLocalizable, nil);
+    NSString *placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kGCSDKLocalizable, self.sdkBundle, nil);
     if ([placeholderKey isEqualToString:placeholderValue] == YES) {
         placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder", field.identifier];
-        placeholderValue = NSLocalizedStringFromTable(placeholderKey, kGCSDKLocalizable, nil);
+        placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kGCSDKLocalizable, self.sdkBundle, nil);
     }
     row.textField.placeholder = placeholderValue;
     if (field.displayHints.preferredInputType == GCIntegerKeyboard) {
@@ -178,10 +194,10 @@
     row.integerTextField = (GCIntegerTextField *)[viewFactory textFieldWithType:GCIntegerTextFieldType];
     row.fractionalTextField = (GCFractionalTextField *)[viewFactory textFieldWithType:GCFractionalTextFieldType];
     NSString *placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder.%@", field.identifier, paymentProduct.identifier];
-    NSString *placeholderValue = NSLocalizedStringFromTable(placeholderKey, kGCSDKLocalizable, nil);
+    NSString *placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kGCSDKLocalizable, self.sdkBundle, nil);
     if ([placeholderKey isEqualToString:placeholderValue] == YES) {
         placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder", field.identifier];
-        placeholderValue = NSLocalizedStringFromTable(placeholderKey, kGCSDKLocalizable, nil);
+        placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kGCSDKLocalizable, self.sdkBundle, nil);
     }
     row.integerTextField.placeholder = placeholderValue;
     if (field.displayHints.preferredInputType == GCIntegerKeyboard) {
@@ -217,10 +233,10 @@
     if (field.displayHints.tooltip.imagePath != nil) {
         row.showInfoButton = YES;
         NSString *tooltipTextKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.tooltipText.%@", field.identifier, paymentProduct.identifier];
-        NSString *tooltipTextValue = NSLocalizedStringFromTable(tooltipTextKey, kGCSDKLocalizable, nil);
+        NSString *tooltipTextValue = NSLocalizedStringFromTableInBundle(tooltipTextKey, kGCSDKLocalizable, self.sdkBundle, nil);
         if ([tooltipTextKey isEqualToString:tooltipTextValue] == YES) {
             tooltipTextKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.tooltipText", field.identifier];
-            tooltipTextValue = NSLocalizedStringFromTable(tooltipTextKey, kGCSDKLocalizable, nil);
+            tooltipTextValue = NSLocalizedStringFromTableInBundle(tooltipTextKey, kGCSDKLocalizable, self.sdkBundle, nil);
         }
         row.tooltipText = tooltipTextValue;
         row.tooltipImage = field.displayHints.tooltip.image;
@@ -258,10 +274,10 @@
     GCFormRowLabel *row = [[GCFormRowLabel alloc] init];
     GCLabel *label = (GCLabel *)[viewFactory labelWithType:GCLabelType];
     NSString *labelKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.label.%@", field.identifier, paymentProductId];
-    NSString *labelValue = NSLocalizedStringFromTable(labelKey, kGCSDKLocalizable, nil);
+    NSString *labelValue = NSLocalizedStringFromTableInBundle(labelKey, kGCSDKLocalizable, self.sdkBundle, nil);
     if ([labelKey isEqualToString:labelValue] == YES) {
         labelKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.label", field.identifier];
-        labelValue = NSLocalizedStringFromTable(labelKey, kGCSDKLocalizable, nil);
+        labelValue = NSLocalizedStringFromTableInBundle(labelKey, kGCSDKLocalizable, self.sdkBundle, nil);
     }
     label.text = labelValue;
     row.label = label;

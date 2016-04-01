@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *tooltipFormat;
 @property (strong, nonatomic) NSString *documentsFolderPath;
 @property (strong, nonatomic) NSFileManager *fileManager;
+@property (strong, nonatomic) NSBundle *sdkBundle;
 
 @end
 
@@ -25,12 +26,22 @@
 {
     self = [super init];
     if (self != nil) {
+        NSString *sdkBundlePath = [[NSBundle mainBundle] pathForResource:@"GlobalCollectSDK" ofType:@"bundle"];
+        NSBundle *sdkBundle = [NSBundle bundleWithPath:sdkBundlePath];
+        
         self.logoFormat = @"pp_logo_%@";
         self.tooltipFormat = @"pp_%@_tooltip_%@";
         self.fileManager = [NSFileManager defaultManager];
+        self.sdkBundle = sdkBundle;
+        
+        /*
+         An initial mapping from image identifiers to paths is stored in the bundle.
+         This mapping is transferred to the device and kept up to date.
+         */
         if ([StandardUserDefaults boolForKey:kGCImageMappingInitialized] == NO) {
-            NSDictionary *logoMapping = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"images" ofType:@"plist"]];
-            [StandardUserDefaults setObject:logoMapping forKey:kGCImageMapping];
+            NSString *imageMappingPath = [sdkBundle pathForResource:@"imageMapping" ofType:@"plist"];
+            NSDictionary *imageMapping = [NSDictionary dictionaryWithContentsOfFile:imageMappingPath];
+            [StandardUserDefaults setObject:imageMapping forKey:kGCImageMapping];
             [StandardUserDefaults setBool:YES forKey:kGCImageMappingInitialized];
             [StandardUserDefaults synchronize];
         }
@@ -105,13 +116,21 @@
         currentPath = @"";
     }
     if ([currentPath isEqualToString:newPath] == NO) {
-        NSString *newURL = [NSString stringWithFormat:@"%@%@", baseURL, newPath];
+        
+        /*
+         A new image for this identifier is available. Update the mapping
+         from image identifiers to paths on the device, and store the new
+         image in the documents folder.
+         */
+        NSString *newURL = [NSString stringWithFormat:@"%@/%@", baseURL, newPath];
         NSString *imagePath = [NSString stringWithFormat:@"%@/%@", DocumentsFolderPath, identifier];
         NSError *error = nil;
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:newURL]];
-        [data writeToFile:imagePath options:NSDataWritingAtomic error:&error];
-        if (error == nil) {
+        BOOL success = [data writeToFile:imagePath options:0 error:&error];
+        if (success == YES && error == nil) {
             [imageMapping setObject:newPath forKey:identifier];
+        } else if (success == NO) {
+            DLog(@"Unable to save image");
         } else {
             DLog(@"Error saving image: %@", [error localizedDescription]);
         }
@@ -132,11 +151,23 @@
 
 - (UIImage *)imageForIdentifier:(NSString *)identifier
 {
+    /*
+     If an image for this identifier is available in the documents folder,
+     this image is newer than the one in the bundle and should be used.
+     */
     NSString *imagePath = [NSString stringWithFormat:@"%@/%@", DocumentsFolderPath, identifier];
     if ([self.fileManager fileExistsAtPath:imagePath] == YES) {
-        return [UIImage imageWithContentsOfFile:imagePath];
+        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+        return image;
     }
-    return [UIImage imageNamed:identifier];
+    
+    /*
+     If there's no updated image available in the documents folder,
+     use the one in the bundle.
+     */
+    imagePath = [self.sdkBundle pathForResource:identifier ofType:@"png"];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+    return image;
 }
 
 @end

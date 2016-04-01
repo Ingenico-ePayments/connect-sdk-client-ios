@@ -36,12 +36,15 @@
 
 + (GCPaymentProductsTableSection *)paymentProductsTableSectionFromPaymentProducts:(GCPaymentProducts *)paymentProducts
 {
+    NSString *sdkBundlePath = [[NSBundle mainBundle] pathForResource:@"GlobalCollectSDK" ofType:@"bundle"];
+    NSBundle *sdkBundle = [NSBundle bundleWithPath:sdkBundlePath];
+    
     GCPaymentProductsTableSection *section = [[GCPaymentProductsTableSection alloc] init];
     for (GCBasicPaymentProduct *product in paymentProducts.paymentProducts) {
         section.type = GCPaymentProductType;
         GCPaymentProductsTableRow *row = [[GCPaymentProductsTableRow alloc] init];
         NSString *paymentProductKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", product.identifier];
-        NSString *paymentProductValue = NSLocalizedStringFromTable(paymentProductKey, kGCSDKLocalizable, nil);
+        NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, kGCSDKLocalizable, sdkBundle, nil);
         row.name = paymentProductValue;
         row.accountOnFileIdentifier = @"";
         row.paymentProductIdentifier = product.identifier;

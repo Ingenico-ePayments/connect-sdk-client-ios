@@ -106,7 +106,7 @@
     [self getResponseForURL:URL succes:^(id responseObject) {
         NSDictionary *rawConvertResponse = (NSDictionary *)responseObject;
         NSString *convertedAmount = [rawConvertResponse objectForKey:@"convertedAmount"];
-        long convertedAmountInCents = [convertedAmount longLongValue];
+        long convertedAmountInCents = (long) [convertedAmount longLongValue];
         success(convertedAmountInCents);
     } failure:^(NSError *error) {
         failure(error);

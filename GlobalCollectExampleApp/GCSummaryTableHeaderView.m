@@ -10,7 +10,7 @@
 
 @interface GCSummaryTableHeaderView ()
 
-@property (strong, nonatomic) UILabel *descriptionLabel;
+@property (strong, nonatomic) UILabel *summaryLabel;
 @property (strong, nonatomic) UILabel *amountLabel;
 @property (strong, nonatomic) UILabel *securePaymentLabel;
 
@@ -43,25 +43,25 @@
         [self addSubview:banner];
         [self addSubview:securePaymentContainer];
 
-        self.descriptionLabel = [[UILabel alloc] init];
-        self.descriptionLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.descriptionLabel.font = [UIFont boldSystemFontOfSize:16];
-        self.descriptionLabel.backgroundColor = [UIColor clearColor];
+        self.summaryLabel = [[UILabel alloc] init];
+        self.summaryLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        self.summaryLabel.font = [UIFont boldSystemFontOfSize:16];
+        self.summaryLabel.backgroundColor = [UIColor clearColor];
         self.amountLabel = [[UILabel alloc] init];
         self.amountLabel.translatesAutoresizingMaskIntoConstraints = NO;
         self.amountLabel.font = [UIFont boldSystemFontOfSize:16];
         self.amountLabel.backgroundColor = [UIColor clearColor];
-        [banner addSubview:self.descriptionLabel];
+        [banner addSubview:self.summaryLabel];
         [banner addSubview:self.amountLabel];
         
-        NSDictionary *viewMapping = NSDictionaryOfVariableBindings(_descriptionLabel, _amountLabel, securePaymentContainer, securePaymentIcon, _securePaymentLabel, banner);
+        NSDictionary *viewMapping = NSDictionaryOfVariableBindings(_summaryLabel, _amountLabel, securePaymentContainer, securePaymentIcon, _securePaymentLabel, banner);
         NSDictionary *metrics = @{@"bannerInnerMargin": @"8"};
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(10)-[banner]-(10)-|" options:0 metrics:nil views:viewMapping]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"[securePaymentContainer]-(10)-|" options:0 metrics:nil views:viewMapping]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[banner]-(1)-[securePaymentContainer]" options:0 metrics:nil views:viewMapping]];
-        [banner addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(bannerInnerMargin)-[_descriptionLabel]" options:0 metrics:metrics views:viewMapping]];
+        [banner addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(bannerInnerMargin)-[_summaryLabel]" options:0 metrics:metrics views:viewMapping]];
         [banner addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"[_amountLabel]-(bannerInnerMargin)-|" options:0 metrics:metrics views:viewMapping]];
-        [banner addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(bannerInnerMargin)-[_descriptionLabel]-(bannerInnerMargin)-|" options:0 metrics:metrics views:viewMapping]];
+        [banner addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(bannerInnerMargin)-[_summaryLabel]-(bannerInnerMargin)-|" options:0 metrics:metrics views:viewMapping]];
         [banner addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(bannerInnerMargin)-[_amountLabel]-(bannerInnerMargin)-|" options:0 metrics:metrics views:viewMapping]];
         [securePaymentContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"[securePaymentIcon(==7)]-(3)-[_securePaymentLabel]|" options:0 metrics:nil views:viewMapping]];
         [securePaymentContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_securePaymentLabel(==20)]" options:0 metrics:nil views:viewMapping]];
@@ -70,9 +70,9 @@
     return self;
 }
 
-- (void)setDescription:(NSString *)description
+- (void)setSummary:(NSString *)summary
 {
-    self.descriptionLabel.text = description;
+    self.summaryLabel.text = summary;
 }
 
 - (void)setAmount:(NSString *)amount

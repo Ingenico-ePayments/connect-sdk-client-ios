@@ -19,7 +19,7 @@ $ git clone https://github.com/Ingenico-ePayments/connect-sdk-client-ios.git
 Afterwards, you can open and run the Xcode project you just downloaded to execute the example app.
 
 To use the iOS SDK in your own app, you need to add the folders `GlobalCollectSDK` and `AFNetworking` to your project.
-The code in these folders depends on the `Foundations`, `UIKit`, and `CoreGraphics` frameworks, which you should add as resources to your project as follow:
+The code in these folders depends on the `Foundations`, `UIKit`, and `CoreGraphics` frameworks, which you should add as resources to your project as follows:
 
 1. Select your project in the project navigator.
 2. Select your app as a target.
@@ -28,3 +28,19 @@ The code in these folders depends on the `Foundations`, `UIKit`, and `CoreGraphi
   * CoreGraphics.framework
   * UIKit.framework
   * Foundation.framework
+
+Installation with CocoaPods
+---------------------------
+
+[CocoaPods](https://cocoapods.org/) is a dependency manager for Swift and Objective-C Cocoa projects.
+You can add the iOS SDK as a pod to your project by adding the following to your `Podfile`:
+
+```
+pod 'connect-sdk-client-ios'
+```
+
+Afterwards, run the following command:
+
+```
+$ pod install
+```

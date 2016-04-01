@@ -7,10 +7,9 @@
 //
 
 #import "GCFormRow.h"
-#import "GCButton.h"
 
 @interface GCFormRowButton : GCFormRow
 
-@property (strong, nonatomic) GCButton* button;
+@property (strong, nonatomic) UIButton* button;
 
 @end

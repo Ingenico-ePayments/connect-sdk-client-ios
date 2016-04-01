@@ -14,8 +14,8 @@
 #import "GCTooltipTableViewCell.h"
 #import "GCPaymentProductTableViewCell.h"
 #import "GCTextFieldTableViewCell.h"
-#import "GCPrimaryButton.h"
-#import "GCSecondaryButton.h"
+#import "UIButton+GCPrimaryButton.h"
+#import "UIButton+GCSecondaryButton.h"
 #import "GCSwitch.h"
 #import "GCPickerViewTableViewCell.h"
 #import "GCSummaryTableHeaderView.h"
@@ -63,15 +63,15 @@
     return cell;
 }
 
-- (GCButton *)buttonWithType:(GCViewType)type
+- (UIButton *)buttonWithType:(GCViewType)type
 {
-    GCButton *button;
+    UIButton *button;
     switch (type) {
         case GCPrimaryButtonType:
-            button = [[GCPrimaryButton alloc] init];
+            button = [UIButton primaryButton];
             break;
         case GCSecondaryButtonType:
-            button = [[GCSecondaryButton alloc] init];
+            button = [UIButton secondaryButton];
             break;
         default:
             [NSException raise:@"Invalid type of button" format:@"Button type %u is invalid", type];

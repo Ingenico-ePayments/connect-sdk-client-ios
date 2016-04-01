@@ -10,7 +10,6 @@
 
 #import "GCViewType.h"
 #import "GCTableViewCell.h"
-#import "GCButton.h"
 #import "GCSwitch.h"
 #import "GCTextField.h"
 #import "GCPickerView.h"
@@ -19,7 +18,7 @@
 @interface GCViewFactory : NSObject
 
 - (GCTableViewCell *)tableViewCellWithType:(GCViewType)type reuseIdentifier:(NSString *)reuseIdentifier;
-- (GCButton *)buttonWithType:(GCViewType)type;
+- (UIButton *)buttonWithType:(GCViewType)type;
 - (GCSwitch *)switchWithType:(GCViewType)type;
 - (GCTextField *)textFieldWithType:(GCViewType)type;
 - (GCPickerView *)pickerViewWithType:(GCViewType)type;

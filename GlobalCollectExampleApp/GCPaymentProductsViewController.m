@@ -59,7 +59,7 @@
 - (void)initializeHeader
 {
     self.header = (GCSummaryTableHeaderView *)[self.viewFactory tableHeaderViewWithType:GCSummaryTableHeaderViewType frame:CGRectMake(0, 0, self.tableView.frame.size.width, 70)];
-    self.header.description = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTable(@"AmountHeaderDescription", kGCAppLocalizable, @"Description of the amount header.")];
+    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTable(@"AmountHeaderDescription", kGCAppLocalizable, @"Description of the amount header.")];
     NSNumber *amountAsNumber = [[NSNumber alloc] initWithFloat:self.amount / 100.0];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];

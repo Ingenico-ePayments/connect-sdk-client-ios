@@ -26,8 +26,8 @@
 #import "GCLabelTableViewCell.h"
 #import "GCErrorMessageTableViewCell.h"
 #import "GCTooltipTableViewCell.h"
-#import "GCPrimaryButton.h"
-#import "GCSecondaryButton.h"
+#import "UIButton+GCPrimaryButton.h"
+#import "UIButton+GCSecondaryButton.h"
 #import "GCTextField.h"
 #import "GCSummaryTableHeaderView.h"
 #import "GCPaymentRequest.h"
@@ -116,7 +116,7 @@
 - (void)initializeHeader
 { 
     self.header = (GCSummaryTableHeaderView *)[self.viewFactory tableHeaderViewWithType:GCSummaryTableHeaderViewType frame:CGRectMake(0, 0, self.tableView.frame.size.width, 80)];
-    self.header.description = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTable(@"AmountHeaderDescription", kGCAppLocalizable, @"Description of the amount header.")];
+    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTable(@"AmountHeaderDescription", kGCAppLocalizable, @"Description of the amount header.")];
     NSNumber *amountAsNumber = [[NSNumber alloc] initWithFloat:self.amount / 100.0];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
@@ -162,7 +162,7 @@
     
     GCFormRowButton *payButtonFormRow = [[GCFormRowButton alloc] init];
     NSString *payButtonTitle = NSLocalizedStringFromTable(@"Pay", kGCAppLocalizable, @"Title of the pay button on the payment product screen.");
-    GCButton* payButton = [self.viewFactory buttonWithType:GCPrimaryButtonType];
+    UIButton* payButton = [self.viewFactory buttonWithType:GCPrimaryButtonType];
     [payButton setTitle:payButtonTitle forState:UIControlStateNormal];
     [payButton addTarget:self action:@selector(payButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     payButtonFormRow.button = payButton;
@@ -170,7 +170,7 @@
     
     GCFormRowButton *cancelButtonFormRow = [[GCFormRowButton alloc] init];
     NSString *cancelButtonTitle = NSLocalizedStringFromTable(@"Cancel", kGCAppLocalizable, @"Title of the cancel button on the payment product screen.");
-    GCButton* cancelButton = [self.viewFactory buttonWithType:GCSecondaryButtonType];
+    UIButton* cancelButton = [self.viewFactory buttonWithType:GCSecondaryButtonType];
     [cancelButton setTitle:cancelButtonTitle forState:UIControlStateNormal];
     [cancelButton addTarget:self action:@selector(cancelButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     cancelButtonFormRow.button = cancelButton;

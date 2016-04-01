@@ -47,7 +47,7 @@
 @property (strong, nonatomic) GCPickerView *currencyCodePicker;
 @property (strong, nonatomic) GCLabel *isRecurringLabel;
 @property (strong, nonatomic) GCSwitch *isRecurringSwitch;
-@property (strong, nonatomic) GCButton *payButton;
+@property (strong, nonatomic) UIButton *payButton;
 
 @property (nonatomic) long amountValue;
 
@@ -178,7 +178,7 @@
     self.currencyCodePicker.content = self.currencyCodes;
     self.currencyCodePicker.dataSource = self;
     self.currencyCodePicker.delegate = self;
-    [self.currencyCodePicker selectRow:43 inComponent:0 animated:NO];
+    [self.currencyCodePicker selectRow:42 inComponent:0 animated:NO];
     [self.containerView addSubview:self.currencyCodeLabel];
     [self.containerView addSubview:self.currencyCodePicker];
     
@@ -261,7 +261,7 @@
 - (void)buyButtonTapped:(UIButton *)sender
 {
     if (self.payButton == sender) {
-        self.amountValue = [self.amountTextField.text longLongValue];
+        self.amountValue = (long) [self.amountTextField.text longLongValue];
     } else {
         [NSException raise:@"Invalid sender" format:@"Sender %@ is invalid", sender];
     }

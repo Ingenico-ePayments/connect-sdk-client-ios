@@ -10,7 +10,7 @@
 
 @interface GCSummaryTableHeaderView : UIView
 
-@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) NSString *summary;
 @property (strong, nonatomic) NSString *amount;
 @property (strong, nonatomic) NSString *securePayment;
 

@@ -7,7 +7,7 @@
 //
 
 #import "GCEndViewController.h"
-#import "GCPrimaryButton.h"
+#import "UIButton+GCPrimaryButton.h"
 #import "GCAppConstants.h"
 #import "GCMerchantLogoImageView.h"
 
@@ -61,7 +61,7 @@
     textView.layer.cornerRadius = 5.0;
     textView.translatesAutoresizingMaskIntoConstraints = NO;
     
-    GCPrimaryButton *button = (GCPrimaryButton *)[self.viewFactory buttonWithType:GCPrimaryButtonType];
+    UIButton *button = [self.viewFactory buttonWithType:GCPrimaryButtonType];
     [container addSubview:button];
     NSString *continueButtonTitle = NSLocalizedStringFromTable(@"ContinueButtonTitle", kGCAppLocalizable, nil);
     [button setTitle:continueButtonTitle forState:UIControlStateNormal];
