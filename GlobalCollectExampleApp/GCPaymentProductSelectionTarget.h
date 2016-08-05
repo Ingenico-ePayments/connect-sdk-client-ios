@@ -10,8 +10,10 @@
 #import "GCBasicPaymentProduct.h"
 #import "GCAccountOnFile.h"
 
+@protocol GCPaymentItem;
+
 @protocol GCPaymentProductSelectionTarget <NSObject>
 
-- (void)didSelectPaymentProduct:(GCBasicPaymentProduct *)paymentProduct accountOnFile:(GCAccountOnFile *)accountOnFile;
+- (void)didSelectPaymentItem:(NSObject <GCBasicPaymentItem> *)paymentItem accountOnFile:(GCAccountOnFile *)accountOnFile;
 
 @end

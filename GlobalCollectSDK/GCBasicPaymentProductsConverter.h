@@ -1,5 +1,5 @@
 //
-//  GCPaymentProductsConverter.h
+//  GCBasicPaymentProductsConverter.h
 //  GlobalCollectSDK
 //
 //  Created for Global Collect on 06/06/14.
@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GCPaymentProducts.h"
+#import "GCBasicPaymentProducts.h"
 #import "GCAssetManager.h"
 #import "GCStringFormatter.h"
 
-@interface GCPaymentProductsConverter : NSObject
+@interface GCBasicPaymentProductsConverter : NSObject
 
-- (GCPaymentProducts *)paymentProductsFromJSON:(NSArray *)rawProducts;
+- (GCBasicPaymentProducts *)paymentProductsFromJSON:(NSArray *)rawProducts;
 
 @end

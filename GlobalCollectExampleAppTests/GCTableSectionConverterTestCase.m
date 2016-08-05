@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "GCPaymentProducts.h"
-#import "GCPaymentProductsConverter.h"
+#import "GCBasicPaymentProducts.h"
+#import "GCBasicPaymentProductsConverter.h"
 #import "GCPaymentProductsTableSection.h"
 #import "GCPaymentProductsTableRow.h"
 #import "GCTableSectionConverter.h"
@@ -17,7 +17,7 @@
 
 @interface GCTableSectionConverterTestCase : XCTestCase
 
-@property (strong, nonatomic) GCPaymentProductsConverter *paymentProductsConverter;
+@property (strong, nonatomic) GCBasicPaymentProductsConverter *paymentProductsConverter;
 @property (strong, nonatomic) GCStringFormatter *stringFormatter;
 
 @end
@@ -27,7 +27,7 @@
 - (void)setUp
 {
     [super setUp];
-    self.paymentProductsConverter = [[GCPaymentProductsConverter alloc] init];
+    self.paymentProductsConverter = [[GCBasicPaymentProductsConverter alloc] init];
     self.stringFormatter = [[GCStringFormatter alloc] init];
 }
 
@@ -42,7 +42,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSData *paymentProductsData = [fileManager contentsAtPath:paymentProductsPath];
     NSDictionary *paymentProductsJSON = [NSJSONSerialization JSONObjectWithData:paymentProductsData options:0 error:NULL];
-    GCPaymentProducts *paymentProducts = [self.paymentProductsConverter paymentProductsFromJSON:[paymentProductsJSON objectForKey:@"paymentProducts"]];
+    GCBasicPaymentProducts *paymentProducts = [self.paymentProductsConverter paymentProductsFromJSON:[paymentProductsJSON objectForKey:@"paymentProducts"]];
     NSArray *accountsOnFile = [paymentProducts accountsOnFile];
     for (GCAccountOnFile *accountOnFile in accountsOnFile) {
         accountOnFile.stringFormatter = self.stringFormatter;

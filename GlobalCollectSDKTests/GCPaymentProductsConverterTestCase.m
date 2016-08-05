@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "GCPaymentProductsConverter.h"
+#import "GCBasicPaymentProductsConverter.h"
 
 @interface GCPaymentProductsConverterTestCase : XCTestCase
 
-@property (strong, nonatomic) GCPaymentProductsConverter *converter;
+@property (strong, nonatomic) GCBasicPaymentProductsConverter *converter;
 
 @end
 
@@ -20,7 +20,7 @@
 - (void)setUp
 {
     [super setUp];
-    self.converter = [[GCPaymentProductsConverter alloc] init];
+    self.converter = [[GCBasicPaymentProductsConverter alloc] init];
 }
 
 - (void)tearDown
@@ -34,7 +34,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSData *paymentProductsData = [fileManager contentsAtPath:paymentProductsPath];
     NSDictionary *paymentProductsJSON = [NSJSONSerialization JSONObjectWithData:paymentProductsData options:0 error:NULL];
-    GCPaymentProducts *paymentProducts = [self.converter paymentProductsFromJSON:[paymentProductsJSON objectForKey:@"paymentProducts"]];
+    GCBasicPaymentProducts *paymentProducts = [self.converter paymentProductsFromJSON:[paymentProductsJSON objectForKey:@"paymentProducts"]];
     if (paymentProducts.paymentProducts.count != 26) {
         XCTFail(@"Wrong number of payment products.");
     }

@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "GCPaymentProducts.h"
+#import "GCBasicPaymentProducts.h"
 
 @interface GCPaymentProductsTestCase : XCTestCase
 
-@property (strong, nonatomic) GCPaymentProducts *products;
+@property (strong, nonatomic) GCBasicPaymentProducts *products;
 
 @end
 
@@ -20,7 +20,7 @@
 - (void)setUp
 {
     [super setUp];
-    self.products = [[GCPaymentProducts alloc] init];
+    self.products = [[GCBasicPaymentProducts alloc] init];
 }
 
 - (void)tearDown

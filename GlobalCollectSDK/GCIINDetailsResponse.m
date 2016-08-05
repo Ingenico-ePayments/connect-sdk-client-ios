@@ -10,14 +10,27 @@
 
 @implementation GCIINDetailsResponse
 
-- (instancetype)initWithPaymentProductId:(NSString *)paymentProductId status:(GCIINStatus)status
-{
+- (instancetype)initWithStatus:(GCIINStatus)status {
     self = [super init];
-    if (self != nil) {
-        _paymentProductId = paymentProductId;
+    if (self) {
         _status = status;
     }
+
     return self;
 }
+
+- (instancetype)initWithPaymentProductId:(NSString *)paymentProductId status:(GCIINStatus)status coBrands:(NSArray *)coBrands countryCode:(NSString *)countryCode allowedInContext:(BOOL)allowedInContext {
+    self = [super init];
+    if (self) {
+        _paymentProductId = paymentProductId;
+        _status = status;
+        _coBrands = coBrands;
+        _countryCode = countryCode;
+        _allowedInContext = allowedInContext;
+    }
+
+    return self;
+}
+
 
 @end

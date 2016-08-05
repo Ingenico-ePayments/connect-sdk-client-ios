@@ -1,21 +1,20 @@
 //
-//  GCPaymentProducts.m
+//  GCBasicPaymentProducts.m
 //  GlobalCollectSDK
 //
 //  Created for Global Collect on 05/06/14.
 //  Copyright (c) 2014 Global Collect Services B.V. All rights reserved.
 //
 
-#import "GCPaymentProducts.h"
-#import "GCBasicPaymentProduct.h"
+#import "GCBasicPaymentProducts.h"
 
-@interface GCPaymentProducts ()
+@interface GCBasicPaymentProducts ()
 
 @property (strong, nonatomic) GCStringFormatter *stringFormatter;
 
 @end
 
-@implementation GCPaymentProducts
+@implementation GCBasicPaymentProducts
 
 - (instancetype)init
 {

@@ -7,8 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08D0F63B1CEF34ED00FEC674 /* GCBasicPaymentGroupConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D0F63A1CEF34ED00FEC674 /* GCBasicPaymentGroupConverterTestCase.m */; };
+		08D0F63D1CEF350800FEC674 /* GCPaymentGroupConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D0F63C1CEF350800FEC674 /* GCPaymentGroupConverterTestCase.m */; };
+		08D0F63F1CEF351E00FEC674 /* GCPaymentGroupsConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D0F63E1CEF351E00FEC674 /* GCPaymentGroupsConverterTestCase.m */; };
+		08D0F6401CEF36A500FEC674 /* paymentProductGroups.json in Resources */ = {isa = PBXBuildFile; fileRef = 29CEF0E7042DD4672496390D /* paymentProductGroups.json */; };
+		08D0F6411CEF36A800FEC674 /* paymentProductGroup.json in Resources */ = {isa = PBXBuildFile; fileRef = 29CEFCFF02138B14B28A41C5 /* paymentProductGroup.json */; };
+		08D0F6431CEF3FFD00FEC674 /* GCPaymentProductInputDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D0F6421CEF3FFD00FEC674 /* GCPaymentProductInputDataTestCase.m */; };
+		08D0F6451CEF427400FEC674 /* paymentProduct.json in Resources */ = {isa = PBXBuildFile; fileRef = 08D0F6441CEF427400FEC674 /* paymentProduct.json */; };
+		29CEF09A08CB6773D2F56658 /* GCPaymentAmountOfMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEFBEFF285B190438529F7 /* GCPaymentAmountOfMoney.m */; };
+		29CEF0CE4199AA6077D7754F /* GCPaymentProductGroupConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEFA6F366B5C3CBA05A90C /* GCPaymentProductGroupConverter.m */; };
+		29CEF3127043F9DF78682AA5 /* GCIINDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF5C09B1D80C24C75CF28 /* GCIINDetail.m */; };
+		29CEF4C54B1D839D9B1FF9F0 /* GCBasicPaymentProductGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEFE17E3B22383955EF8D1 /* GCBasicPaymentProductGroup.m */; };
+		29CEF5197E26824532029C01 /* GCPaymentProductInputData.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF26138AC6A3824CB8AFE /* GCPaymentProductInputData.m */; };
+		29CEF5A342CC83B8C109DA4D /* GCIINDetailsResponseConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF3F4CDED15E1FCCE4B92 /* GCIINDetailsResponseConverter.m */; };
+		29CEF6E8777A21F02FDD6E23 /* GCBasicPaymentProductGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF0F93903B46CBBF71E97 /* GCBasicPaymentProductGroups.m */; };
+		29CEF72C43206D38FE5C1672 /* GCFormRowCoBrandsSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF711BEED4F2A40288853 /* GCFormRowCoBrandsSelection.m */; };
+		29CEF739E51AFB0FEE680C5A /* GCValidationErrorAllowed.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF4572AE1E8B93AF3D9E2 /* GCValidationErrorAllowed.m */; };
+		29CEF7795EAF5B7F3D6E6ED4 /* GCPaymentProductGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF578FDA120CFE924DC5E /* GCPaymentProductGroup.m */; };
+		29CEF88B4FA1E2F309BC676D /* GCPaymentItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEFB2E31523BC03F87552D /* GCPaymentItems.m */; };
+		29CEFB653C7F06617133EB5A /* GCBasicPaymentProductGroupConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEFB471C954B45DF044540 /* GCBasicPaymentProductGroupConverter.m */; };
+		29CEFB891B12B613730995B0 /* GCPaymentItemConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF69B4373761B2AFB1A21 /* GCPaymentItemConverter.m */; };
+		29CEFBAB8C7CEDB0CB9125B6 /* GCPaymentProductGroupsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF939325A988971E53B74 /* GCPaymentProductGroupsConverter.m */; };
+		29CEFBDCF697210B2060494B /* GCFormRowCoBrandsExplanation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF555BCA4F1D1A546CDCC /* GCFormRowCoBrandsExplanation.m */; };
+		29CEFDB2908D1726969BB86D /* GCPaymentContextConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF23E3C6434811C643008 /* GCPaymentContextConverter.m */; };
+		29CEFDD0A7B51E7EA8478E0A /* GCCoBrandsSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF5968DC8D58411146C55 /* GCCoBrandsSelectionTableViewCell.m */; };
+		29CEFE47E7CE615D9DA6C57B /* GCCOBrandsExplanationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEFC6ED730845B1C281F17 /* GCCOBrandsExplanationTableViewCell.m */; };
+		29CEFFB47188115FCEF1086F /* GCBasicPaymentItemConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF6B8B0C8020001D7DE35 /* GCBasicPaymentItemConverter.m */; };
 		47F161111C69F5800031DF46 /* GlobalCollectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47F161101C69F5800031DF46 /* GlobalCollectSDK.bundle */; };
-		A3003BD0196536FC0019BE1B /* GCC2SPaymentProductContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A3003BCF196536FC0019BE1B /* GCC2SPaymentProductContext.m */; };
+		A3003BD0196536FC0019BE1B /* GCPaymentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A3003BCF196536FC0019BE1B /* GCPaymentContext.m */; };
 		A3003BD3196539C10019BE1B /* GCPaymentProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = A3003BD2196539C10019BE1B /* GCPaymentProduct.m */; };
 		A3003BD619653E160019BE1B /* GCC2SCommunicatorConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = A3003BD519653E160019BE1B /* GCC2SCommunicatorConfiguration.m */; };
 		A3003BD9196571860019BE1B /* GCAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3003BD8196571860019BE1B /* GCAssetManager.m */; };
@@ -45,7 +71,7 @@
 		A318F76119645AA000CA21EC /* GCC2SCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A318F76019645AA000CA21EC /* GCC2SCommunicator.m */; };
 		A32E89911973B72C00431078 /* GCValidationErrorEmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E89901973B72C00431078 /* GCValidationErrorEmailAddress.m */; };
 		A32E89941973B77F00431078 /* GCValidatorEmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E89931973B77F00431078 /* GCValidatorEmailAddress.m */; };
-		A32E89971973E66800431078 /* GCPaymentProductDisplayHints.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E89961973E66800431078 /* GCPaymentProductDisplayHints.m */; };
+		A32E89971973E66800431078 /* GCPaymentItemDisplayHints.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E89961973E66800431078 /* GCPaymentItemDisplayHints.m */; };
 		A32E899D1973F8B700431078 /* GCAccountOnFileDisplayHints.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E899C1973F8B700431078 /* GCAccountOnFileDisplayHints.m */; };
 		A32E89A01973F8F600431078 /* GCLabelTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E899F1973F8F600431078 /* GCLabelTemplate.m */; };
 		A32E89A31974047F00431078 /* GCFormElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E89A21974047F00431078 /* GCFormElement.m */; };
@@ -149,7 +175,7 @@
 		A3FE1F8319629D8F005FF3FA /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE1F7B19629D8F005FF3FA /* UIWebView+AFNetworking.m */; };
 		A3FE1FD71962B34A005FF3FA /* GCStringFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE1FD61962B34A005FF3FA /* GCStringFormatter.m */; };
 		A3FE1FF81962B3C3005FF3FA /* GCBasicPaymentProductConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE1FE91962B3C3005FF3FA /* GCBasicPaymentProductConverter.m */; };
-		A3FE1FF91962B3C3005FF3FA /* GCPaymentProductsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE1FEB1962B3C3005FF3FA /* GCPaymentProductsConverter.m */; };
+		A3FE1FF91962B3C3005FF3FA /* GCBasicPaymentProductsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE1FEB1962B3C3005FF3FA /* GCBasicPaymentProductsConverter.m */; };
 		A3FE20051962B3E0005FF3FA /* GCBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE1FFD1962B3E0005FF3FA /* GCBase64.m */; };
 		A3FE20061962B3E0005FF3FA /* GCEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE1FFF1962B3E0005FF3FA /* GCEncryptor.m */; };
 		A3FE20081962B3E0005FF3FA /* GCJOSEEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE20021962B3E0005FF3FA /* GCJOSEEncryptor.m */; };
@@ -161,7 +187,7 @@
 		A3FE20351962B4B9005FF3FA /* GCBasicPaymentProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE20191962B4B9005FF3FA /* GCBasicPaymentProduct.m */; };
 		A3FE20361962B4B9005FF3FA /* GCPaymentProductField.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE201B1962B4B9005FF3FA /* GCPaymentProductField.m */; };
 		A3FE20371962B4B9005FF3FA /* GCPaymentProductFields.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE201D1962B4B9005FF3FA /* GCPaymentProductFields.m */; };
-		A3FE20381962B4B9005FF3FA /* GCPaymentProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE201F1962B4B9005FF3FA /* GCPaymentProducts.m */; };
+		A3FE20381962B4B9005FF3FA /* GCBasicPaymentProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE201F1962B4B9005FF3FA /* GCBasicPaymentProducts.m */; };
 		A3FE20391962B4B9005FF3FA /* GCValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE20211962B4B9005FF3FA /* GCValidator.m */; };
 		A3FE203A1962B4B9005FF3FA /* GCValidatorExpirationDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE20231962B4B9005FF3FA /* GCValidatorExpirationDate.m */; };
 		A3FE203B1962B4B9005FF3FA /* GCValidatorFixedList.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE20251962B4B9005FF3FA /* GCValidatorFixedList.m */; };
@@ -194,10 +220,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08D0F6381CEEFC6100FEC674 /* GCPaymentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentItem.h; path = GlobalCollectSDK/GCPaymentItem.h; sourceTree = "<group>"; };
+		08D0F6391CEEFCD600FEC674 /* GCBasicPaymentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCBasicPaymentItem.h; path = GlobalCollectSDK/GCBasicPaymentItem.h; sourceTree = "<group>"; };
+		08D0F63A1CEF34ED00FEC674 /* GCBasicPaymentGroupConverterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBasicPaymentGroupConverterTestCase.m; path = GlobalCollectSDKTests/GCBasicPaymentGroupConverterTestCase.m; sourceTree = SOURCE_ROOT; };
+		08D0F63C1CEF350800FEC674 /* GCPaymentGroupConverterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentGroupConverterTestCase.m; path = GlobalCollectSDKTests/GCPaymentGroupConverterTestCase.m; sourceTree = SOURCE_ROOT; };
+		08D0F63E1CEF351E00FEC674 /* GCPaymentGroupsConverterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentGroupsConverterTestCase.m; path = GlobalCollectSDKTests/GCPaymentGroupsConverterTestCase.m; sourceTree = SOURCE_ROOT; };
+		08D0F6421CEF3FFD00FEC674 /* GCPaymentProductInputDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPaymentProductInputDataTestCase.m; sourceTree = "<group>"; };
+		08D0F6441CEF427400FEC674 /* paymentProduct.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProduct.json; sourceTree = "<group>"; };
+		29CEF0B4321D4EBB1EAEE71A /* GCCOBrandsExplanationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCCOBrandsExplanationTableViewCell.h; sourceTree = "<group>"; };
+		29CEF0E7042DD4672496390D /* paymentProductGroups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProductGroups.json; sourceTree = SOURCE_ROOT; };
+		29CEF0F7A7D02B0F69BA538C /* GCPaymentContextConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentContextConverter.h; path = GlobalCollectSDK/GCPaymentContextConverter.h; sourceTree = "<group>"; };
+		29CEF0F93903B46CBBF71E97 /* GCBasicPaymentProductGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBasicPaymentProductGroups.m; path = GlobalCollectSDK/GCBasicPaymentProductGroups.m; sourceTree = "<group>"; };
+		29CEF11D1E343E67F70B777C /* GCPaymentProductGroupConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentProductGroupConverter.h; path = GlobalCollectSDK/GCPaymentProductGroupConverter.h; sourceTree = "<group>"; };
+		29CEF23E3C6434811C643008 /* GCPaymentContextConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentContextConverter.m; path = GlobalCollectSDK/GCPaymentContextConverter.m; sourceTree = "<group>"; };
+		29CEF26138AC6A3824CB8AFE /* GCPaymentProductInputData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPaymentProductInputData.m; sourceTree = "<group>"; };
+		29CEF2624E35BF23C5B81380 /* GCPaymentProductGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentProductGroup.h; path = GlobalCollectSDK/GCPaymentProductGroup.h; sourceTree = "<group>"; };
+		29CEF2CF00D5C72BCA2C8E10 /* GCPaymentAmountOfMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentAmountOfMoney.h; path = GlobalCollectSDK/GCPaymentAmountOfMoney.h; sourceTree = "<group>"; };
+		29CEF3F4CDED15E1FCCE4B92 /* GCIINDetailsResponseConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCIINDetailsResponseConverter.m; path = GlobalCollectSDK/GCIINDetailsResponseConverter.m; sourceTree = "<group>"; };
+		29CEF4572AE1E8B93AF3D9E2 /* GCValidationErrorAllowed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCValidationErrorAllowed.m; path = GlobalCollectSDK/GCValidationErrorAllowed.m; sourceTree = "<group>"; };
+		29CEF555BCA4F1D1A546CDCC /* GCFormRowCoBrandsExplanation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCFormRowCoBrandsExplanation.m; sourceTree = "<group>"; };
+		29CEF578FDA120CFE924DC5E /* GCPaymentProductGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentProductGroup.m; path = GlobalCollectSDK/GCPaymentProductGroup.m; sourceTree = "<group>"; };
+		29CEF5968DC8D58411146C55 /* GCCoBrandsSelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCCoBrandsSelectionTableViewCell.m; sourceTree = "<group>"; };
+		29CEF5C09B1D80C24C75CF28 /* GCIINDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCIINDetail.m; path = GlobalCollectSDK/GCIINDetail.m; sourceTree = "<group>"; };
+		29CEF5C7E7C1CB9E83CA794E /* GCBasicPaymentProductGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCBasicPaymentProductGroups.h; path = GlobalCollectSDK/GCBasicPaymentProductGroups.h; sourceTree = "<group>"; };
+		29CEF5ED3867F774B019072F /* GCPaymentItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentItems.h; path = GlobalCollectSDK/GCPaymentItems.h; sourceTree = "<group>"; };
+		29CEF5EEEAC44C096C5FE956 /* GCCoBrandsSelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCCoBrandsSelectionTableViewCell.h; sourceTree = "<group>"; };
+		29CEF6102CE5CD88851E380E /* GCValidationErrorAllowed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCValidationErrorAllowed.h; path = GlobalCollectSDK/GCValidationErrorAllowed.h; sourceTree = "<group>"; };
+		29CEF69B4373761B2AFB1A21 /* GCPaymentItemConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentItemConverter.m; path = GlobalCollectSDK/GCPaymentItemConverter.m; sourceTree = "<group>"; };
+		29CEF6B8B0C8020001D7DE35 /* GCBasicPaymentItemConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBasicPaymentItemConverter.m; path = GlobalCollectSDK/GCBasicPaymentItemConverter.m; sourceTree = "<group>"; };
+		29CEF6BD42C6EDD563A32D57 /* GCFormRowCoBrandsSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCFormRowCoBrandsSelection.h; sourceTree = "<group>"; };
+		29CEF711BEED4F2A40288853 /* GCFormRowCoBrandsSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCFormRowCoBrandsSelection.m; sourceTree = "<group>"; };
+		29CEF813DE4108CF92F445F8 /* GCBasicPaymentProductGroupConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCBasicPaymentProductGroupConverter.h; path = GlobalCollectSDK/GCBasicPaymentProductGroupConverter.h; sourceTree = "<group>"; };
+		29CEF88F90E345EBEAEC1817 /* GCPaymentProductInputData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPaymentProductInputData.h; sourceTree = "<group>"; };
+		29CEF939325A988971E53B74 /* GCPaymentProductGroupsConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentProductGroupsConverter.m; path = GlobalCollectSDK/GCPaymentProductGroupsConverter.m; sourceTree = "<group>"; };
+		29CEFA16DD0001FC3F2072F1 /* GCBasicPaymentProductGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCBasicPaymentProductGroup.h; path = GlobalCollectSDK/GCBasicPaymentProductGroup.h; sourceTree = "<group>"; };
+		29CEFA6F366B5C3CBA05A90C /* GCPaymentProductGroupConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentProductGroupConverter.m; path = GlobalCollectSDK/GCPaymentProductGroupConverter.m; sourceTree = "<group>"; };
+		29CEFB2E31523BC03F87552D /* GCPaymentItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentItems.m; path = GlobalCollectSDK/GCPaymentItems.m; sourceTree = "<group>"; };
+		29CEFB471C954B45DF044540 /* GCBasicPaymentProductGroupConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBasicPaymentProductGroupConverter.m; path = GlobalCollectSDK/GCBasicPaymentProductGroupConverter.m; sourceTree = "<group>"; };
+		29CEFB614611D818AF5F2FB0 /* GCBasicPaymentItemConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCBasicPaymentItemConverter.h; path = GlobalCollectSDK/GCBasicPaymentItemConverter.h; sourceTree = "<group>"; };
+		29CEFBEFF285B190438529F7 /* GCPaymentAmountOfMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentAmountOfMoney.m; path = GlobalCollectSDK/GCPaymentAmountOfMoney.m; sourceTree = "<group>"; };
+		29CEFC2767AC9C42550D90E1 /* GCIINDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCIINDetail.h; path = GlobalCollectSDK/GCIINDetail.h; sourceTree = "<group>"; };
+		29CEFC2B33EE26103F2BDE0A /* GCFormRowCoBrandsExplanation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCFormRowCoBrandsExplanation.h; sourceTree = "<group>"; };
+		29CEFC6ED730845B1C281F17 /* GCCOBrandsExplanationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCCOBrandsExplanationTableViewCell.m; sourceTree = "<group>"; };
+		29CEFCC11187C750D8703258 /* GCPaymentProductGroupsConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentProductGroupsConverter.h; path = GlobalCollectSDK/GCPaymentProductGroupsConverter.h; sourceTree = "<group>"; };
+		29CEFCFF02138B14B28A41C5 /* paymentProductGroup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProductGroup.json; sourceTree = SOURCE_ROOT; };
+		29CEFE17E3B22383955EF8D1 /* GCBasicPaymentProductGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBasicPaymentProductGroup.m; path = GlobalCollectSDK/GCBasicPaymentProductGroup.m; sourceTree = "<group>"; };
+		29CEFF3A39B3F3C8F5389A9C /* GCIINDetailsResponseConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCIINDetailsResponseConverter.h; path = GlobalCollectSDK/GCIINDetailsResponseConverter.h; sourceTree = "<group>"; };
+		29CEFF6DEBAFD05E1732EA4B /* GCPaymentItemConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentItemConverter.h; path = GlobalCollectSDK/GCPaymentItemConverter.h; sourceTree = "<group>"; };
 		47F161101C69F5800031DF46 /* GlobalCollectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GlobalCollectSDK.bundle; path = GlobalCollectSDK/GlobalCollectSDK.bundle; sourceTree = "<group>"; };
 		6A7816571B6F8A8A009C4641 /* GCAccountOnFileAttributeStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCAccountOnFileAttributeStatus.h; path = GlobalCollectSDK/GCAccountOnFileAttributeStatus.h; sourceTree = "<group>"; };
-		A3003BCE196536FC0019BE1B /* GCC2SPaymentProductContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCC2SPaymentProductContext.h; path = GlobalCollectSDK/GCC2SPaymentProductContext.h; sourceTree = "<group>"; };
-		A3003BCF196536FC0019BE1B /* GCC2SPaymentProductContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCC2SPaymentProductContext.m; path = GlobalCollectSDK/GCC2SPaymentProductContext.m; sourceTree = "<group>"; };
+		A3003BCE196536FC0019BE1B /* GCPaymentContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentContext.h; path = GlobalCollectSDK/GCPaymentContext.h; sourceTree = "<group>"; };
+		A3003BCF196536FC0019BE1B /* GCPaymentContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentContext.m; path = GlobalCollectSDK/GCPaymentContext.m; sourceTree = "<group>"; };
 		A3003BD1196539C10019BE1B /* GCPaymentProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentProduct.h; path = GlobalCollectSDK/GCPaymentProduct.h; sourceTree = "<group>"; };
 		A3003BD2196539C10019BE1B /* GCPaymentProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentProduct.m; path = GlobalCollectSDK/GCPaymentProduct.m; sourceTree = "<group>"; };
 		A3003BD419653E160019BE1B /* GCC2SCommunicatorConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCC2SCommunicatorConfiguration.h; path = GlobalCollectSDK/GCC2SCommunicatorConfiguration.h; sourceTree = "<group>"; };
@@ -268,8 +341,8 @@
 		A32E89901973B72C00431078 /* GCValidationErrorEmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCValidationErrorEmailAddress.m; path = GlobalCollectSDK/GCValidationErrorEmailAddress.m; sourceTree = "<group>"; };
 		A32E89921973B77F00431078 /* GCValidatorEmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCValidatorEmailAddress.h; path = GlobalCollectSDK/GCValidatorEmailAddress.h; sourceTree = "<group>"; };
 		A32E89931973B77F00431078 /* GCValidatorEmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCValidatorEmailAddress.m; path = GlobalCollectSDK/GCValidatorEmailAddress.m; sourceTree = "<group>"; };
-		A32E89951973E66800431078 /* GCPaymentProductDisplayHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentProductDisplayHints.h; path = GlobalCollectSDK/GCPaymentProductDisplayHints.h; sourceTree = "<group>"; };
-		A32E89961973E66800431078 /* GCPaymentProductDisplayHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentProductDisplayHints.m; path = GlobalCollectSDK/GCPaymentProductDisplayHints.m; sourceTree = "<group>"; };
+		A32E89951973E66800431078 /* GCPaymentItemDisplayHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentItemDisplayHints.h; path = GlobalCollectSDK/GCPaymentItemDisplayHints.h; sourceTree = "<group>"; };
+		A32E89961973E66800431078 /* GCPaymentItemDisplayHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentItemDisplayHints.m; path = GlobalCollectSDK/GCPaymentItemDisplayHints.m; sourceTree = "<group>"; };
 		A32E899B1973F8B700431078 /* GCAccountOnFileDisplayHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCAccountOnFileDisplayHints.h; path = GlobalCollectSDK/GCAccountOnFileDisplayHints.h; sourceTree = "<group>"; };
 		A32E899C1973F8B700431078 /* GCAccountOnFileDisplayHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCAccountOnFileDisplayHints.m; path = GlobalCollectSDK/GCAccountOnFileDisplayHints.m; sourceTree = "<group>"; };
 		A32E899E1973F8F600431078 /* GCLabelTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCLabelTemplate.h; path = GlobalCollectSDK/GCLabelTemplate.h; sourceTree = "<group>"; };
@@ -451,8 +524,8 @@
 		A3FE1FD61962B34A005FF3FA /* GCStringFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCStringFormatter.m; path = GlobalCollectSDK/GCStringFormatter.m; sourceTree = "<group>"; };
 		A3FE1FE81962B3C3005FF3FA /* GCBasicPaymentProductConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCBasicPaymentProductConverter.h; path = GlobalCollectSDK/GCBasicPaymentProductConverter.h; sourceTree = "<group>"; };
 		A3FE1FE91962B3C3005FF3FA /* GCBasicPaymentProductConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBasicPaymentProductConverter.m; path = GlobalCollectSDK/GCBasicPaymentProductConverter.m; sourceTree = "<group>"; };
-		A3FE1FEA1962B3C3005FF3FA /* GCPaymentProductsConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentProductsConverter.h; path = GlobalCollectSDK/GCPaymentProductsConverter.h; sourceTree = "<group>"; };
-		A3FE1FEB1962B3C3005FF3FA /* GCPaymentProductsConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentProductsConverter.m; path = GlobalCollectSDK/GCPaymentProductsConverter.m; sourceTree = "<group>"; };
+		A3FE1FEA1962B3C3005FF3FA /* GCBasicPaymentProductsConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCBasicPaymentProductsConverter.h; path = GlobalCollectSDK/GCBasicPaymentProductsConverter.h; sourceTree = "<group>"; };
+		A3FE1FEB1962B3C3005FF3FA /* GCBasicPaymentProductsConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBasicPaymentProductsConverter.m; path = GlobalCollectSDK/GCBasicPaymentProductsConverter.m; sourceTree = "<group>"; };
 		A3FE1FFC1962B3E0005FF3FA /* GCBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCBase64.h; path = GlobalCollectSDK/GCBase64.h; sourceTree = "<group>"; };
 		A3FE1FFD1962B3E0005FF3FA /* GCBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBase64.m; path = GlobalCollectSDK/GCBase64.m; sourceTree = "<group>"; };
 		A3FE1FFE1962B3E0005FF3FA /* GCEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCEncryptor.h; path = GlobalCollectSDK/GCEncryptor.h; sourceTree = "<group>"; };
@@ -475,8 +548,8 @@
 		A3FE201B1962B4B9005FF3FA /* GCPaymentProductField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentProductField.m; path = GlobalCollectSDK/GCPaymentProductField.m; sourceTree = "<group>"; };
 		A3FE201C1962B4B9005FF3FA /* GCPaymentProductFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentProductFields.h; path = GlobalCollectSDK/GCPaymentProductFields.h; sourceTree = "<group>"; };
 		A3FE201D1962B4B9005FF3FA /* GCPaymentProductFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentProductFields.m; path = GlobalCollectSDK/GCPaymentProductFields.m; sourceTree = "<group>"; };
-		A3FE201E1962B4B9005FF3FA /* GCPaymentProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentProducts.h; path = GlobalCollectSDK/GCPaymentProducts.h; sourceTree = "<group>"; };
-		A3FE201F1962B4B9005FF3FA /* GCPaymentProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentProducts.m; path = GlobalCollectSDK/GCPaymentProducts.m; sourceTree = "<group>"; };
+		A3FE201E1962B4B9005FF3FA /* GCBasicPaymentProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCBasicPaymentProducts.h; path = GlobalCollectSDK/GCBasicPaymentProducts.h; sourceTree = "<group>"; };
+		A3FE201F1962B4B9005FF3FA /* GCBasicPaymentProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBasicPaymentProducts.m; path = GlobalCollectSDK/GCBasicPaymentProducts.m; sourceTree = "<group>"; };
 		A3FE20201962B4B9005FF3FA /* GCValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCValidator.h; path = GlobalCollectSDK/GCValidator.h; sourceTree = "<group>"; };
 		A3FE20211962B4B9005FF3FA /* GCValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCValidator.m; path = GlobalCollectSDK/GCValidator.m; sourceTree = "<group>"; };
 		A3FE20221962B4B9005FF3FA /* GCValidatorExpirationDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCValidatorExpirationDate.h; path = GlobalCollectSDK/GCValidatorExpirationDate.h; sourceTree = "<group>"; };
@@ -537,11 +610,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29CEF58D1229DB1644FE5CA1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				08D0F6391CEEFCD600FEC674 /* GCBasicPaymentItem.h */,
+				08D0F6381CEEFC6100FEC674 /* GCPaymentItem.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		A3003BCD196536800019BE1B /* C2SPaymentProductContext */ = {
 			isa = PBXGroup;
 			children = (
-				A3003BCE196536FC0019BE1B /* GCC2SPaymentProductContext.h */,
-				A3003BCF196536FC0019BE1B /* GCC2SPaymentProductContext.m */,
+				A3003BCE196536FC0019BE1B /* GCPaymentContext.h */,
+				A3003BCF196536FC0019BE1B /* GCPaymentContext.m */,
+				29CEFBEFF285B190438529F7 /* GCPaymentAmountOfMoney.m */,
+				29CEF2CF00D5C72BCA2C8E10 /* GCPaymentAmountOfMoney.h */,
 			);
 			name = C2SPaymentProductContext;
 			sourceTree = "<group>";
@@ -569,6 +653,7 @@
 			children = (
 				A30330BB197CEF73008B7AF0 /* GCTableSectionConverterTestCase.m */,
 				A30330B6197CEF73008B7AF0 /* Supporting Files */,
+				08D0F6421CEF3FFD00FEC674 /* GCPaymentProductInputDataTestCase.m */,
 			);
 			path = GlobalCollectExampleAppTests;
 			sourceTree = "<group>";
@@ -576,6 +661,7 @@
 		A30330B6197CEF73008B7AF0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				08D0F6441CEF427400FEC674 /* paymentProduct.json */,
 				A30330C3197CEFB2008B7AF0 /* paymentProducts.json */,
 				A30330B7197CEF73008B7AF0 /* GlobalCollectExampleAppTests-Info.plist */,
 			);
@@ -612,14 +698,14 @@
 				A3FE20191962B4B9005FF3FA /* GCBasicPaymentProduct.m */,
 				A3003BD1196539C10019BE1B /* GCPaymentProduct.h */,
 				A3003BD2196539C10019BE1B /* GCPaymentProduct.m */,
-				A32E89951973E66800431078 /* GCPaymentProductDisplayHints.h */,
-				A32E89961973E66800431078 /* GCPaymentProductDisplayHints.m */,
+				A32E89951973E66800431078 /* GCPaymentItemDisplayHints.h */,
+				A32E89961973E66800431078 /* GCPaymentItemDisplayHints.m */,
 				A3FE201A1962B4B9005FF3FA /* GCPaymentProductField.h */,
 				A3FE201B1962B4B9005FF3FA /* GCPaymentProductField.m */,
 				A3FE201C1962B4B9005FF3FA /* GCPaymentProductFields.h */,
 				A3FE201D1962B4B9005FF3FA /* GCPaymentProductFields.m */,
-				A3FE201E1962B4B9005FF3FA /* GCPaymentProducts.h */,
-				A3FE201F1962B4B9005FF3FA /* GCPaymentProducts.m */,
+				A3FE201E1962B4B9005FF3FA /* GCBasicPaymentProducts.h */,
+				A3FE201F1962B4B9005FF3FA /* GCBasicPaymentProducts.m */,
 				A3FE202E1962B4B9005FF3FA /* GCValidators.h */,
 				A3FE202F1962B4B9005FF3FA /* GCValidators.m */,
 				A3FE20201962B4B9005FF3FA /* GCValidator.h */,
@@ -648,6 +734,14 @@
 				A3FD73F21966C9A300CA96F3 /* GCLabelTemplateItem.m */,
 				A32E89A11974047F00431078 /* GCFormElement.h */,
 				A32E89A21974047F00431078 /* GCFormElement.m */,
+				29CEF578FDA120CFE924DC5E /* GCPaymentProductGroup.m */,
+				29CEF2624E35BF23C5B81380 /* GCPaymentProductGroup.h */,
+				29CEF0F93903B46CBBF71E97 /* GCBasicPaymentProductGroups.m */,
+				29CEF5C7E7C1CB9E83CA794E /* GCBasicPaymentProductGroups.h */,
+				29CEF5ED3867F774B019072F /* GCPaymentItems.h */,
+				29CEFB2E31523BC03F87552D /* GCPaymentItems.m */,
+				29CEFE17E3B22383955EF8D1 /* GCBasicPaymentProductGroup.m */,
+				29CEFA16DD0001FC3F2072F1 /* GCBasicPaymentProductGroup.h */,
 			);
 			name = PaymentProducts;
 			sourceTree = "<group>";
@@ -657,6 +751,8 @@
 			children = (
 				A318F74519644E2B00CA21EC /* GCIINDetailsResponse.h */,
 				A318F74619644E2B00CA21EC /* GCIINDetailsResponse.m */,
+				29CEF5C09B1D80C24C75CF28 /* GCIINDetail.m */,
+				29CEFC2767AC9C42550D90E1 /* GCIINDetail.h */,
 			);
 			name = IINDetails;
 			sourceTree = "<group>";
@@ -695,6 +791,8 @@
 				A3018676196EB61200EC6150 /* GCValidationErrorNumericString.m */,
 				A32E898F1973B72C00431078 /* GCValidationErrorEmailAddress.h */,
 				A32E89901973B72C00431078 /* GCValidationErrorEmailAddress.m */,
+				29CEF4572AE1E8B93AF3D9E2 /* GCValidationErrorAllowed.m */,
+				29CEF6102CE5CD88851E380E /* GCValidationErrorAllowed.h */,
 			);
 			name = ValidationErrors;
 			sourceTree = "<group>";
@@ -740,6 +838,9 @@
 				A32E89B71976B0F600431078 /* GCPaymentProductsConverterTestCase.m */,
 				A32E89B91976B11800431078 /* GCBasicPaymentProductConverterTestCase.m */,
 				A32E89BB1976B12800431078 /* GCPaymentProductConverterTestCase.m */,
+				08D0F63A1CEF34ED00FEC674 /* GCBasicPaymentGroupConverterTestCase.m */,
+				08D0F63C1CEF350800FEC674 /* GCPaymentGroupConverterTestCase.m */,
+				08D0F63E1CEF351E00FEC674 /* GCPaymentGroupsConverterTestCase.m */,
 			);
 			name = Converters;
 			sourceTree = "<group>";
@@ -896,6 +997,8 @@
 				A32E89B31976B04E00431078 /* paymentProducts.json */,
 				A32E89B51976B0BF00431078 /* paymentProduct.json */,
 				A3B2DFF319EC0D640084CEB3 /* paymentProductMissingFields.json */,
+				29CEF0E7042DD4672496390D /* paymentProductGroups.json */,
+				29CEFCFF02138B14B28A41C5 /* paymentProductGroup.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -953,6 +1056,7 @@
 				A3003BD8196571860019BE1B /* GCAssetManager.m */,
 				A318F73E1964396300CA21EC /* GCUtil.h */,
 				A318F73F1964396300CA21EC /* GCUtil.m */,
+				29CEF58D1229DB1644FE5CA1 /* Protocols */,
 			);
 			name = GlobalCollectSDK;
 			sourceTree = "<group>";
@@ -1071,6 +1175,10 @@
 				A30C8CB8196AD3A200F1EDA3 /* GCLabelTableViewCell.m */,
 				A3F7E84B19F642B400FCD812 /* GCCurrencyTableViewCell.h */,
 				A3F7E84C19F642B400FCD812 /* GCCurrencyTableViewCell.m */,
+				29CEF5968DC8D58411146C55 /* GCCoBrandsSelectionTableViewCell.m */,
+				29CEF5EEEAC44C096C5FE956 /* GCCoBrandsSelectionTableViewCell.h */,
+				29CEFC6ED730845B1C281F17 /* GCCOBrandsExplanationTableViewCell.m */,
+				29CEF0B4321D4EBB1EAEE71A /* GCCOBrandsExplanationTableViewCell.h */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -1157,6 +1265,8 @@
 			isa = PBXGroup;
 			children = (
 				A3FE1F921962A099005FF3FA /* Tables */,
+				29CEF26138AC6A3824CB8AFE /* GCPaymentProductInputData.m */,
+				29CEF88F90E345EBEAEC1817 /* GCPaymentProductInputData.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1188,6 +1298,10 @@
 				A3BB2CEC196C0E460022F63C /* GCFormRowErrorMessage.m */,
 				A3018678196FBE3200EC6150 /* GCFormRowTooltip.h */,
 				A3018679196FBE3200EC6150 /* GCFormRowTooltip.m */,
+				29CEF711BEED4F2A40288853 /* GCFormRowCoBrandsSelection.m */,
+				29CEF6BD42C6EDD563A32D57 /* GCFormRowCoBrandsSelection.h */,
+				29CEF555BCA4F1D1A546CDCC /* GCFormRowCoBrandsExplanation.m */,
+				29CEFC2B33EE26103F2BDE0A /* GCFormRowCoBrandsExplanation.h */,
 			);
 			name = Tables;
 			sourceTree = "<group>";
@@ -1239,8 +1353,8 @@
 		A3FE1F981962A1D4005FF3FA /* Converters */ = {
 			isa = PBXGroup;
 			children = (
-				A3FE1FEA1962B3C3005FF3FA /* GCPaymentProductsConverter.h */,
-				A3FE1FEB1962B3C3005FF3FA /* GCPaymentProductsConverter.m */,
+				A3FE1FEA1962B3C3005FF3FA /* GCBasicPaymentProductsConverter.h */,
+				A3FE1FEB1962B3C3005FF3FA /* GCBasicPaymentProductsConverter.m */,
 				A3FE1FE81962B3C3005FF3FA /* GCBasicPaymentProductConverter.h */,
 				A3FE1FE91962B3C3005FF3FA /* GCBasicPaymentProductConverter.m */,
 				A3003BDE19659B1E0019BE1B /* GCPaymentProductConverter.h */,
@@ -1249,6 +1363,20 @@
 				A3FF10091AB83ABC005B96B0 /* GCDirectoryEntriesConverter.m */,
 				A3FF100B1AB83C39005B96B0 /* GCDirectoryEntryConverter.h */,
 				A3FF100C1AB83C39005B96B0 /* GCDirectoryEntryConverter.m */,
+				29CEF23E3C6434811C643008 /* GCPaymentContextConverter.m */,
+				29CEF0F7A7D02B0F69BA538C /* GCPaymentContextConverter.h */,
+				29CEF3F4CDED15E1FCCE4B92 /* GCIINDetailsResponseConverter.m */,
+				29CEFF3A39B3F3C8F5389A9C /* GCIINDetailsResponseConverter.h */,
+				29CEF6B8B0C8020001D7DE35 /* GCBasicPaymentItemConverter.m */,
+				29CEFB614611D818AF5F2FB0 /* GCBasicPaymentItemConverter.h */,
+				29CEFB471C954B45DF044540 /* GCBasicPaymentProductGroupConverter.m */,
+				29CEF813DE4108CF92F445F8 /* GCBasicPaymentProductGroupConverter.h */,
+				29CEF939325A988971E53B74 /* GCPaymentProductGroupsConverter.m */,
+				29CEFCC11187C750D8703258 /* GCPaymentProductGroupsConverter.h */,
+				29CEF69B4373761B2AFB1A21 /* GCPaymentItemConverter.m */,
+				29CEFF6DEBAFD05E1732EA4B /* GCPaymentItemConverter.h */,
+				29CEFA6F366B5C3CBA05A90C /* GCPaymentProductGroupConverter.m */,
+				29CEF11D1E343E67F70B777C /* GCPaymentProductGroupConverter.h */,
 			);
 			name = Converters;
 			sourceTree = "<group>";
@@ -1489,6 +1617,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D0F6451CEF427400FEC674 /* paymentProduct.json in Resources */,
 				A30330C4197CEFB2008B7AF0 /* paymentProducts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1508,9 +1637,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D0F6411CEF36A800FEC674 /* paymentProductGroup.json in Resources */,
 				A31267EB19F7B42A002BF36C /* paymentProductMissingFields.json in Resources */,
 				A32E89B41976B04E00431078 /* paymentProducts.json in Resources */,
 				A32E89B01976888B00431078 /* certificate.pfx in Resources */,
+				08D0F6401CEF36A500FEC674 /* paymentProductGroups.json in Resources */,
 				A32E89B61976B0BF00431078 /* paymentProduct.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1523,6 +1654,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A30330BC197CEF73008B7AF0 /* GCTableSectionConverterTestCase.m in Sources */,
+				08D0F6431CEF3FFD00FEC674 /* GCPaymentProductInputDataTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1589,8 +1721,8 @@
 				A3FE1F6919629D77005FF3FA /* AFURLSessionManager.m in Sources */,
 				A351DD2C196296220033E23C /* GCFormRowList.m in Sources */,
 				A351DD44196296220033E23C /* GCTextFieldTableViewCell.m in Sources */,
-				A3FE20381962B4B9005FF3FA /* GCPaymentProducts.m in Sources */,
-				A3FE1FF91962B3C3005FF3FA /* GCPaymentProductsConverter.m in Sources */,
+				A3FE20381962B4B9005FF3FA /* GCBasicPaymentProducts.m in Sources */,
+				A3FE1FF91962B3C3005FF3FA /* GCBasicPaymentProductsConverter.m in Sources */,
 				A3018671196EAAE600EC6150 /* GCValidationErrorIsRequired.m in Sources */,
 				A3FE203F1962B4B9005FF3FA /* GCValidatorRegularExpression.m in Sources */,
 				A3FF10041AB835E0005B96B0 /* GCDirectoryEntries.m in Sources */,
@@ -1603,10 +1735,10 @@
 				A3003BD619653E160019BE1B /* GCC2SCommunicatorConfiguration.m in Sources */,
 				A32E89911973B72C00431078 /* GCValidationErrorEmailAddress.m in Sources */,
 				A3FE20061962B3E0005FF3FA /* GCEncryptor.m in Sources */,
-				A3003BD0196536FC0019BE1B /* GCC2SPaymentProductContext.m in Sources */,
+				A3003BD0196536FC0019BE1B /* GCPaymentContext.m in Sources */,
 				A3BB2CED196C0E460022F63C /* GCFormRowErrorMessage.m in Sources */,
 				A351DD33196296220033E23C /* GCTooltipTableViewCell.m in Sources */,
-				A32E89971973E66800431078 /* GCPaymentProductDisplayHints.m in Sources */,
+				A32E89971973E66800431078 /* GCPaymentItemDisplayHints.m in Sources */,
 				A3FE1F6619629D77005FF3FA /* AFURLConnectionOperation.m in Sources */,
 				A351DD42196296220033E23C /* GCTableViewCell.m in Sources */,
 				A351DD2F196296220033E23C /* GCFormRowsConverter.m in Sources */,
@@ -1652,6 +1784,25 @@
 				A3003BD3196539C10019BE1B /* GCPaymentProduct.m in Sources */,
 				A3018677196EB61200EC6150 /* GCValidationErrorNumericString.m in Sources */,
 				A318F74B19644EE700CA21EC /* GCPreparedPaymentRequest.m in Sources */,
+				29CEF09A08CB6773D2F56658 /* GCPaymentAmountOfMoney.m in Sources */,
+				29CEFDB2908D1726969BB86D /* GCPaymentContextConverter.m in Sources */,
+				29CEF3127043F9DF78682AA5 /* GCIINDetail.m in Sources */,
+				29CEF5A342CC83B8C109DA4D /* GCIINDetailsResponseConverter.m in Sources */,
+				29CEFDD0A7B51E7EA8478E0A /* GCCoBrandsSelectionTableViewCell.m in Sources */,
+				29CEF72C43206D38FE5C1672 /* GCFormRowCoBrandsSelection.m in Sources */,
+				29CEFE47E7CE615D9DA6C57B /* GCCOBrandsExplanationTableViewCell.m in Sources */,
+				29CEFBDCF697210B2060494B /* GCFormRowCoBrandsExplanation.m in Sources */,
+				29CEF739E51AFB0FEE680C5A /* GCValidationErrorAllowed.m in Sources */,
+				29CEF7795EAF5B7F3D6E6ED4 /* GCPaymentProductGroup.m in Sources */,
+				29CEF6E8777A21F02FDD6E23 /* GCBasicPaymentProductGroups.m in Sources */,
+				29CEFFB47188115FCEF1086F /* GCBasicPaymentItemConverter.m in Sources */,
+				29CEFB653C7F06617133EB5A /* GCBasicPaymentProductGroupConverter.m in Sources */,
+				29CEFBAB8C7CEDB0CB9125B6 /* GCPaymentProductGroupsConverter.m in Sources */,
+				29CEF5197E26824532029C01 /* GCPaymentProductInputData.m in Sources */,
+				29CEF88B4FA1E2F309BC676D /* GCPaymentItems.m in Sources */,
+				29CEF4C54B1D839D9B1FF9F0 /* GCBasicPaymentProductGroup.m in Sources */,
+				29CEFB891B12B613730995B0 /* GCPaymentItemConverter.m in Sources */,
+				29CEF0CE4199AA6077D7754F /* GCPaymentProductGroupConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1663,7 +1814,9 @@
 				A32E89BE1976B92200431078 /* GCPaymentRequestTestCase.m in Sources */,
 				A33701FE1977C4EC00AB6F75 /* GCBase64TestCase.m in Sources */,
 				A32E89CE1976BC5700431078 /* GCPaymentProductsTestCase.m in Sources */,
+				08D0F63B1CEF34ED00FEC674 /* GCBasicPaymentGroupConverterTestCase.m in Sources */,
 				A32E89D41976BCA200431078 /* GCValidatorLengthTestCase.m in Sources */,
+				08D0F63F1CEF351E00FEC674 /* GCPaymentGroupsConverterTestCase.m in Sources */,
 				A32E89DA1976BCC800431078 /* GCValidatorRegularExpressionTestCase.m in Sources */,
 				A33701FA1977C3BB00AB6F75 /* GCStringFormatterTestCase.m in Sources */,
 				A32E89C61976BBE800431078 /* GCBasicPaymentProductTestCase.m in Sources */,
@@ -1685,6 +1838,7 @@
 				A32E89DC1976BCD600431078 /* GCValidatorEmailAddressTestCase.m in Sources */,
 				A33702021977C55200AB6F75 /* GCEncryptorTestCase.m in Sources */,
 				A32E89CC1976BC3800431078 /* GCPaymentProductFieldsTestCase.m in Sources */,
+				08D0F63D1CEF350800FEC674 /* GCPaymentGroupConverterTestCase.m in Sources */,
 				A32E89D21976BC8B00431078 /* GCValidatorFixedListTestCase.m in Sources */,
 				A32E89CA1976BC1200431078 /* GCPaymentProductFieldTestCase.m in Sources */,
 			);

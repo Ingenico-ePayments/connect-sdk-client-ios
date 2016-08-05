@@ -49,57 +49,68 @@
     return self;
 }
 
-- (void)initializeImagesForPaymentProducts:(GCPaymentProducts *)paymentProducts
+- (NSString *)logoIdentifierWithPaymentItem:(NSObject<GCPaymentItem> *)paymentItem {
+    NSString *path = paymentItem.displayHints.logoPath;
+    NSURL *url = [[NSURL alloc] initWithString:path];
+    NSString *fileName = [url lastPathComponent];
+    fileName = [fileName stringByReplacingOccurrencesOfString:@".png" withString:@""];
+    NSRange range = [fileName rangeOfString:@"_" options: NSBackwardsSearch];
+    if (range.location != NSNotFound) {
+        fileName = [fileName substringToIndex:(range.location)];
+    }
+    return fileName;
+}
+
+- (void)initializeImagesForPaymentItems:(NSArray *)paymentItems
 {
-    for (GCBasicPaymentProduct *basicPaymentProduct in paymentProducts.paymentProducts) {
-        basicPaymentProduct.displayHints.logoImage = [self logoImageForPaymentProduct:basicPaymentProduct.identifier];
+    for (NSObject<GCPaymentItem> *paymentItem in paymentItems) {
+        paymentItem.displayHints.logoImage = [self logoImageForPaymentItem:paymentItem.identifier];
     }
 }
 
-- (void)initializeImagesForPaymentProduct:(GCPaymentProduct *)paymentProduct
-{
-    paymentProduct.displayHints.logoImage = [self logoImageForPaymentProduct:paymentProduct.identifier];
-    for (GCPaymentProductField *field in paymentProduct.fields.paymentProductFields) {
+- (void)initializeImagesForPaymentItem:(NSObject<GCPaymentItem> *)paymentItem {
+    paymentItem.displayHints.logoImage = [self logoImageForPaymentItem:paymentItem.identifier];
+    for (GCPaymentProductField *field in paymentItem.fields.paymentProductFields) {
         if (field.displayHints.tooltip.imagePath != nil) {
-            field.displayHints.tooltip.image = [self tooltipImageForPaymentProduct:paymentProduct.identifier field:field.identifier];
+            field.displayHints.tooltip.image = [self tooltipImageForPaymentItem:paymentItem.identifier field:field.identifier];
         }
     }
 }
 
-- (void)updateImagesForPaymentProductsAsynchronously:(GCPaymentProducts *)paymentProducts baseURL:(NSString *)baseURL
+- (void)updateImagesForPaymentItemsAsynchronously:(NSArray *)paymentItems baseURL:(NSString *)baseURL
 {
     dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(backgroundQueue, ^{
-        [self updateImagesForPaymentProducts:paymentProducts baseURL:baseURL];
+        [self updateImagesForPaymentItems:paymentItems baseURL:baseURL];
     });
 }
 
-- (void)updateImagesForPaymentProductAsynchronously:(GCPaymentProduct *)paymentProduct baseURL:(NSString *)baseURL
+- (void)updateImagesForPaymentItemAsynchronously:(NSObject<GCPaymentItem> *)paymentItem baseURL:(NSString *)baseURL
 {
     dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(backgroundQueue, ^{
-        [self updateImagesForPaymentProduct:paymentProduct baseURL:baseURL];
+        [self updateImagesForPaymentItem:paymentItem baseURL:baseURL];
     });
 }
 
 
-- (void)updateImagesForPaymentProducts:(GCPaymentProducts *)paymentProducts baseURL:(NSString *)baseURL
+- (void)updateImagesForPaymentItems:(NSArray *)paymentItems baseURL:(NSString *)baseURL
 {
     NSMutableDictionary *imageMapping = [[[NSUserDefaults standardUserDefaults] objectForKey:kGCImageMapping] mutableCopy];
-    for (GCBasicPaymentProduct *basicPaymentProduct in paymentProducts.paymentProducts) {
-        NSString *identifier = [NSString stringWithFormat:self.logoFormat, basicPaymentProduct.identifier];
-        [self updateImageWithIdentifier:identifier imageMapping:imageMapping newPath:basicPaymentProduct.displayHints.logoPath baseURL:baseURL];
+    for (NSObject<GCPaymentItem> *paymentItem in paymentItems) {
+        NSString *identifier = [NSString stringWithFormat:self.logoFormat, paymentItem.identifier];
+        [self updateImageWithIdentifier:identifier imageMapping:imageMapping newPath:paymentItem.displayHints.logoPath baseURL:baseURL];
     }
     [StandardUserDefaults setObject:imageMapping forKey:kGCImageMapping];
     [StandardUserDefaults synchronize];
 }
 
-- (void)updateImagesForPaymentProduct:(GCPaymentProduct *)paymentProduct baseURL:(NSString *)baseURL
+- (void)updateImagesForPaymentItem:(NSObject<GCPaymentItem> *)paymentItem baseURL:(NSString *)baseURL
 {
     NSMutableDictionary *imageMapping = [[[NSUserDefaults standardUserDefaults] objectForKey:kGCImageMapping] mutableCopy];
-    for (GCPaymentProductField *field in paymentProduct.fields.paymentProductFields) {
+    for (GCPaymentProductField *field in paymentItem.fields.paymentProductFields) {
         if (field.displayHints.tooltip.imagePath != nil) {
-            NSString *identifier = [NSString stringWithFormat:self.tooltipFormat, paymentProduct.identifier, field.identifier];
+            NSString *identifier = [NSString stringWithFormat:self.tooltipFormat, paymentItem.identifier, field.identifier];
             [self updateImageWithIdentifier:identifier imageMapping:imageMapping newPath:field.displayHints.tooltip.imagePath baseURL:baseURL];
         }
     }
@@ -130,22 +141,22 @@
         if (success == YES && error == nil) {
             [imageMapping setObject:newPath forKey:identifier];
         } else if (success == NO) {
-            DLog(@"Unable to save image");
+            DLog(@"Unable to save image: %@", identifier);
         } else {
             DLog(@"Error saving image: %@", [error localizedDescription]);
         }
     }
 }
 
-- (UIImage *)logoImageForPaymentProduct:(NSString *)paymentProductId
+- (UIImage *)logoImageForPaymentItem:(NSString *)paymentItemId
 {
-    NSString *identifier = [NSString stringWithFormat:self.logoFormat, paymentProductId];
+    NSString *identifier = [NSString stringWithFormat:self.logoFormat, paymentItemId];
     return [self imageForIdentifier:identifier];
 }
 
-- (UIImage *)tooltipImageForPaymentProduct:(NSString *)paymentProductId field:(NSString *)paymentProductFieldId
+- (UIImage *)tooltipImageForPaymentItem:(NSString *)paymentItemId field:(NSString *)paymentProductFieldId
 {
-    NSString *identifier = [NSString stringWithFormat:self.tooltipFormat, paymentProductId, paymentProductFieldId];
+    NSString *identifier = [NSString stringWithFormat:self.tooltipFormat, paymentItemId, paymentProductFieldId];
     return [self imageForIdentifier:identifier];
 }
 

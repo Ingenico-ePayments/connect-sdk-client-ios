@@ -6,12 +6,18 @@
 //  Copyright (c) 2014 Global Collect Services B.V. All rights reserved.
 //
 
-#import "GCMacros.h"
 #import "GCC2SCommunicator.h"
-#import "GCPaymentProductsConverter.h"
+#import "GCBasicPaymentProductsConverter.h"
 #import "GCPaymentProductConverter.h"
 #import "GCDirectoryEntriesConverter.h"
 #import "GCAFNetworkingWrapper.h"
+#import "GCPaymentAmountOfMoney.h"
+#import "GCPaymentContextConverter.h"
+#import "GCIINDetailsResponseConverter.h"
+#import "GCBasicPaymentProductGroups.h"
+#import "GCPaymentProductGroup.h"
+#import "GCPaymentProductGroupsConverter.h"
+#import "GCPaymentProductGroupConverter.h"
 
 @interface GCC2SCommunicator ()
 
@@ -32,24 +38,38 @@
     return self;
 }
 
-- (void)paymentProductsForContext:(GCC2SPaymentProductContext *)context success:(void (^)(GCPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure
+- (void)paymentProductsForContext:(GCPaymentContext *)context success:(void (^)(GCBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure
 {
     NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
-    NSString *URL = [NSString stringWithFormat:@"%@/%@/products?countryCode=%@&currencyCode=%@&amount=%lu&hide=fields&isRecurring=%@", [self baseURL], self.configuration.customerId, context.countryCode, context.currencyCode, (unsigned long)context.totalAmount, isRecurring];
+    NSString *URL = [NSString stringWithFormat:@"%@/%@/products?countryCode=%@&currencyCode=%@&amount=%lu&hide=fields&isRecurring=%@", [self baseURL], self.configuration.customerId, context.countryCode, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
     [self getResponseForURL:URL succes:^(id responseObject) {
         NSArray *rawPaymentProducts = [(NSDictionary *)responseObject objectForKey:@"paymentProducts"];
-        GCPaymentProductsConverter *converter = [[GCPaymentProductsConverter alloc] init];
-        GCPaymentProducts *paymentProducts = [converter paymentProductsFromJSON:rawPaymentProducts];
+        GCBasicPaymentProductsConverter *converter = [[GCBasicPaymentProductsConverter alloc] init];
+        GCBasicPaymentProducts *paymentProducts = [converter paymentProductsFromJSON:rawPaymentProducts];
         success(paymentProducts);
     } failure:^(NSError *error) {
         failure(error);
     }];
 }
 
-- (void)paymentProductWithId:(NSString *)paymentProductId context:(GCC2SPaymentProductContext *)context success:(void (^)(GCPaymentProduct *paymentProduct))success failure:(void (^)(NSError *error))failure
+- (void)paymentProductGroupsForContext:(GCPaymentContext *)context success:(void (^)(GCBasicPaymentProductGroups *paymentProductGroups))success failure:(void (^)(NSError *error))failure {
+    NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
+    NSString *URL = [NSString stringWithFormat:@"%@/%@/productgroups?countryCode=%@&currencyCode=%@&amount=%lu&hide=fields&isRecurring=%@", [self baseURL], self.configuration.customerId, context.countryCode, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
+    [self getResponseForURL:URL succes:^(id responseObject) {
+        NSArray *rawPaymentProductGroups = [(NSDictionary *)responseObject objectForKey:@"paymentProductGroups"];
+        GCPaymentProductGroupsConverter *converter = [[GCPaymentProductGroupsConverter alloc] init];
+        GCBasicPaymentProductGroups *paymentProductGroups = [converter paymentProductGroupsFromJSON:rawPaymentProductGroups];
+        success(paymentProductGroups);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+
+- (void)paymentProductWithId:(NSString *)paymentProductId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProduct *paymentProduct))success failure:(void (^)(NSError *error))failure
 {
     NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
-    NSString *URL = [NSString stringWithFormat:@"%@/%@/products/%@/?countryCode=%@&currencyCode=%@&amount=%lu&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductId, context.countryCode, context.currencyCode, (unsigned long)context.totalAmount, isRecurring];
+    NSString *URL = [NSString stringWithFormat:@"%@/%@/products/%@/?countryCode=%@&currencyCode=%@&amount=%lu&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductId, context.countryCode, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
     [self getResponseForURL:URL succes:^(id responseObject) {
         NSDictionary *rawPaymentProduct = (NSDictionary *)responseObject;
         GCPaymentProductConverter *converter = [[GCPaymentProductConverter alloc] init];
@@ -58,6 +78,20 @@
     } failure:^(NSError *error) {
         failure(error);
     }];
+}
+
+- (void)paymentProductGroupWithId:(NSString *)paymentProductGroupId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProductGroup *paymentProductGroup))success failure:(void (^)(NSError *error))failure {
+    NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
+    NSString *URL = [NSString stringWithFormat:@"%@/%@/productgroups/%@/?countryCode=%@&currencyCode=%@&amount=%lu&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductGroupId, context.countryCode, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
+    [self getResponseForURL:URL succes:^(id responseObject) {
+        NSDictionary *rawPaymentProductGroup = (NSDictionary *)responseObject;
+        GCPaymentProductGroupConverter *converter = [[GCPaymentProductGroupConverter alloc] init];
+        GCPaymentProductGroup *paymentProductGroup = [converter paymentProductGroupFromJSON:rawPaymentProductGroup];
+        success(paymentProductGroup);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+
 }
 
 - (void)publicKey:(void (^)(GCPublicKeyResponse *publicKeyResponse))success failure:(void (^)(NSError *error))failure
@@ -73,30 +107,32 @@
         failure(error);
     }];
 }
-
-- (void)paymentProductIdByPartialCreditCardNumber:(NSString *)partialCreditCardNumber success:(void (^)(NSString *paymentProductId))success failure:(void (^)(NSError *error))failure
-{
+- (void)paymentProductIdByPartialCreditCardNumber:(NSString *)partialCreditCardNumber context:(GCPaymentContext *)context success:(void (^)(GCIINDetailsResponse *iinDetailsResponse))success failure:(void (^)(NSError *error))failure {
     NSString *URL = [NSString stringWithFormat:@"%@/%@/services/getIINdetails", [self baseURL], self.configuration.customerId];
-    
+
     int max = (int) MIN(partialCreditCardNumber.length, 6);
     NSString *trimmedPartialCreditCardNumber = [partialCreditCardNumber substringToIndex:max];
-    NSDictionary *parameters = @{@"bin": trimmedPartialCreditCardNumber};
-    
+
+    NSDictionary *parameters;
+    GCPaymentContextConverter *converter = [[GCPaymentContextConverter alloc] init];
+    if (context == nil) {
+        parameters = [converter JSONFromPartialCreditCardNumber:trimmedPartialCreditCardNumber];
+    }
+    else {
+        parameters = [converter JSONFromPaymentProductContext:context partialCreditCardNumber:trimmedPartialCreditCardNumber];
+    }
+
     NSMutableIndexSet *additionalAcceptableStatusCodes = [[NSMutableIndexSet alloc] initWithIndex:404];
-    
+
     [self postResponseForURL:URL withParameters:parameters additionalAcceptableStatusCodes:additionalAcceptableStatusCodes succes:^(id responseObject) {
         NSDictionary *response = (NSDictionary *)responseObject;
-        NSNumber *paymentProductId = [response objectForKey:@"paymentProductId"];
-        NSString *paymentProductIdAsString;
-        if (paymentProductId == nil) {
-            paymentProductIdAsString = @"";
-        } else {
-            paymentProductIdAsString = [NSString stringWithFormat:@"%@", paymentProductId];
-        }
-        success(paymentProductIdAsString);
+        GCIINDetailsResponseConverter *converter = [[GCIINDetailsResponseConverter alloc] init];
+        GCIINDetailsResponse *IINDetails = [converter IINDetailsResponseFromJSON:response];
+        success(IINDetails);
     } failure:^(NSError *error) {
         failure(error);
     }];
+
 }
 
 - (void)convertAmount:(long)amountInCents withSource:(NSString *)source target:(NSString *)target succes:(void (^)(long convertedAmountInCents))success failure:(void (^)(NSError *error))failure

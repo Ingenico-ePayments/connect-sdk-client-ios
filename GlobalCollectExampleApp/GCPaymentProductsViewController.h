@@ -10,13 +10,15 @@
 
 #import "GCPaymentProductSelectionTarget.h"
 #import "GCViewFactory.h"
-#import "GCPaymentProducts.h"
+#import "GCBasicPaymentProducts.h"
+
+@class GCPaymentItems;
 
 @interface GCPaymentProductsViewController : UITableViewController
 
 @property (strong, nonatomic) GCViewFactory *viewFactory;
 @property (weak, nonatomic) id <GCPaymentProductSelectionTarget> target;
-@property (strong, nonatomic) GCPaymentProducts *paymentProducts;
+@property (strong, nonatomic) GCPaymentItems *paymentItems;
 @property (nonatomic) NSUInteger amount;
 @property (strong, nonatomic) NSString *currencyCode;
 

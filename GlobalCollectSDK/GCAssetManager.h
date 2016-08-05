@@ -8,16 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GCPaymentProducts.h"
+#import "GCBasicPaymentProducts.h"
 #import "GCPaymentProduct.h"
+
+@class GCPaymentItems;
 
 @interface GCAssetManager : NSObject
 
-- (void)initializeImagesForPaymentProducts:(GCPaymentProducts *)paymentProducts;
-- (void)initializeImagesForPaymentProduct:(GCPaymentProduct *)paymentProduct;
-- (void)updateImagesForPaymentProductsAsynchronously:(GCPaymentProducts *)paymentProducts baseURL:(NSString *)baseURL;
-- (void)updateImagesForPaymentProductAsynchronously:(GCPaymentProduct *)paymentProduct baseURL:(NSString *)baseURL;
-- (UIImage *)logoImageForPaymentProduct:(NSString *)paymentProductId;
-- (UIImage *)tooltipImageForPaymentProduct:(NSString *)paymentProductId field:(NSString *)paymentProductFieldId;
+- (void)initializeImagesForPaymentItems:(NSArray *)paymentItems;
+- (void)initializeImagesForPaymentItem:(NSObject<GCPaymentItem> *)paymentItem;
+- (void)updateImagesForPaymentItemsAsynchronously:(NSArray *)paymentItems baseURL:(NSString *)baseURL;
+- (void)updateImagesForPaymentItemAsynchronously:(NSObject<GCPaymentItem> *)paymentItem baseURL:(NSString *)baseURL;
+- (UIImage *)logoImageForPaymentItem:(NSString *)paymentItemId;
+- (UIImage *)tooltipImageForPaymentItem:(NSString *)paymentItemId field:(NSString *)paymentProductFieldId;
 
 @end

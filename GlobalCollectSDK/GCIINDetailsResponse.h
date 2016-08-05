@@ -15,6 +15,11 @@
 @property (strong, nonatomic, readonly) NSString* paymentProductId;
 @property (nonatomic, readonly) GCIINStatus status;
 
-- (instancetype)initWithPaymentProductId:(NSString *)paymentProductId status:(GCIINStatus)status;
+@property (strong, nonatomic, readonly) NSArray *coBrands;
+@property (strong, nonatomic, readonly) NSString *countryCode;
+@property (assign, nonatomic, readonly, getter=isAllowedInContext) BOOL allowedInContext;
+
+- (instancetype)initWithStatus:(GCIINStatus)status;
+- (instancetype)initWithPaymentProductId:(NSString *)paymentProductId status:(GCIINStatus)status coBrands:(NSArray *)coBrands countryCode:(NSString *)countryCode allowedInContext:(BOOL)allowedInContext;
 
 @end

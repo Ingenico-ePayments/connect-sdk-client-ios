@@ -7,14 +7,13 @@
 //
 
 #import "GCSDKConstants.h"
-#import "GCMacros.h"
 #import "GCValidator.h"
-#import "GCValidatorFixedList.h"
 #import "GCFormRowsConverter.h"
-#import "GCPaymentProductField.h"
 #import "GCFormRowList.h"
 #import "GCFormRowTextField.h"
+#import "GCPaymentProductInputData.h"
 #import "GCFormRowCurrency.h"
+#import "GCIINDetailsResponse.h"
 #import "GCFormRowLabel.h"
 #import "GCFormRowErrorMessage.h"
 #import "GCValidationError.h"
@@ -26,6 +25,7 @@
 #import "GCValidationErrorRegularExpression.h"
 #import "GCValidationErrorIsRequired.h"
 #import "GCValueMappingItem.h"
+#import "GCValidationErrorAllowed.h"
 
 @interface GCFormRowsConverter ()
 
@@ -45,23 +45,22 @@
     return self;
 }
 
-- (NSMutableArray *)formRowsFromPaymentRequest:(GCPaymentRequest *)paymentRequest validation:(BOOL)validation confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts viewFactory:(GCViewFactory *)viewFactory
-{
+- (NSMutableArray *)formRowsFromInputData:(GCPaymentProductInputData *)inputData iinDetailsResponse:(GCIINDetailsResponse *)iinDetailsResponse validation:(BOOL)validation viewFactory:(GCViewFactory *)viewFactory confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts {
     NSMutableArray *rows = [[NSMutableArray alloc] init];
-    for (GCPaymentProductField* field in paymentRequest.paymentProduct.fields.paymentProductFields) {
+    for (GCPaymentProductField* field in inputData.paymentItem.fields.paymentProductFields) {
         GCFormRow *row;
-        BOOL isPartOfAccountOnFile = [paymentRequest fieldIsPartOfAccountOnFile:field.identifier];
+        BOOL isPartOfAccountOnFile = [inputData fieldIsPartOfAccountOnFile:field.identifier];
         NSString *value;
         BOOL isEnabled;
         if (isPartOfAccountOnFile == YES) {
             NSString *mask = field.displayHints.mask;
-            value = [paymentRequest.accountOnFile maskedValueForField:field.identifier mask:mask];
-            isEnabled = [paymentRequest fieldIsReadOnly:field.identifier] == NO;
+            value = [inputData.accountOnFile maskedValueForField:field.identifier mask:mask];
+            isEnabled = [inputData fieldIsReadOnly:field.identifier] == NO;
         } else {
-            value = [paymentRequest maskedValueForField:field.identifier];
+            value = [inputData maskedValueForField:field.identifier];
             isEnabled = YES;
         }
-        row = [self labelFormRowFromField:field paymentProduct:paymentRequest.paymentProduct.identifier viewFactory:viewFactory];
+        row = [self labelFormRowFromField:field paymentProduct:inputData.paymentItem.identifier viewFactory:viewFactory];
         [rows addObject:row];
         switch (field.displayHints.formElement.type) {
             case GCListType: {
@@ -69,11 +68,11 @@
                 break;
             }
             case GCTextType: {
-                row = [self textFieldFormRowFromField:field paymentProduct:paymentRequest.paymentProduct value:value isEnabled:isEnabled confirmedPaymentProducts:confirmedPaymentProducts viewFactory:viewFactory];
+                row = [self textFieldFormRowFromField:field paymentItem:inputData.paymentItem value:value isEnabled:isEnabled confirmedPaymentProducts:confirmedPaymentProducts viewFactory:viewFactory];
                 break;
             }
             case GCCurrencyType: {
-                row = [self currencyFormRowFromField:field paymentProduct:paymentRequest.paymentProduct value:value isEnabled:isEnabled viewFactory:viewFactory];
+                row = [self currencyFormRowFromField:field paymentItem:inputData.paymentItem value:value isEnabled:isEnabled viewFactory:viewFactory];
                 break;
             }
             default: {
@@ -87,9 +86,25 @@
                 row = [self errorFormRowWithError:field.errors.firstObject forCurrency:field.displayHints.formElement.type == GCCurrencyType];
                 [rows addObject:row];
             }
+        } else if (iinDetailsResponse != nil && [field.identifier isEqualToString:@"cardNumber"]) {
+            GCValidationError *iinLookupError = [self errorWithIINDetails:iinDetailsResponse];
+            if (iinLookupError != nil) {
+                row = [self errorFormRowWithError:iinLookupError forCurrency:field.displayHints.formElement.type == GCCurrencyType];
+                [rows addObject:row];
+            }
         }
     }
     return rows;
+}
+
+- (GCValidationError *)errorWithIINDetails:(GCIINDetailsResponse *)iinDetailsResponse {
+    //Validation error
+    if (iinDetailsResponse.status == GCExistingButNotAllowed) {
+        return [GCValidationErrorAllowed new];
+    } else if (iinDetailsResponse.status == GCUnknown) {
+        return [GCValidationErrorLuhn new];
+    }
+    return nil;
 }
 
 - (GCFormRowErrorMessage *)errorFormRowWithError:(GCValidationError *)error forCurrency:(BOOL)forCurrency
@@ -135,6 +150,10 @@
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"luhn"];
         errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
         errorMessage = errorMessageValue;
+    } else if (errorClass == [GCValidationErrorAllowed class]) {
+        errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"allowedInContext"];
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
+        errorMessage = errorMessageValue;
     } else if (errorClass == [GCValidationErrorRegularExpression class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"regularExpression"];
         errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kGCSDKLocalizable, self.sdkBundle, nil);
@@ -150,11 +169,11 @@
     return row;
 }
 
-- (GCFormRowTextField *)textFieldFormRowFromField:(GCPaymentProductField *)field paymentProduct:(GCPaymentProduct *)paymentProduct value:(NSString *)value isEnabled:(BOOL)isEnabled confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts viewFactory:(GCViewFactory *)viewFactory
+- (GCFormRowTextField *)textFieldFormRowFromField:(GCPaymentProductField *)field paymentItem:(NSObject<GCPaymentItem> *)paymentItem value:(NSString *)value isEnabled:(BOOL)isEnabled confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts viewFactory:(GCViewFactory *)viewFactory
 {
     GCFormRowTextField *row = [[GCFormRowTextField alloc] init];
     row.textField = (GCTextField *)[viewFactory textFieldWithType:GCTextFieldType];
-    NSString *placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder.%@", field.identifier, paymentProduct.identifier];
+    NSString *placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.paymentProductFields.%@.placeholder", paymentItem.identifier, field.identifier];
     NSString *placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kGCSDKLocalizable, self.sdkBundle, nil);
     if ([placeholderKey isEqualToString:placeholderValue] == YES) {
         placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder", field.identifier];
@@ -173,27 +192,31 @@
     [row.textField setEnabled:isEnabled];
     row.textField.rightViewMode = UITextFieldViewModeAlways;
     row.paymentProductField = field;
-    
+
     if ([field.identifier isEqualToString:@"cardNumber"] == YES) {
-        row.logo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-        row.logo.contentMode = UIViewContentModeScaleAspectFit;
-        row.logo.image = paymentProduct.displayHints.logoImage;
-        if ([confirmedPaymentProducts member:paymentProduct.identifier] != nil) {
+        if ([confirmedPaymentProducts member:paymentItem.identifier] != nil) {
+            row.logo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+            row.logo.contentMode = UIViewContentModeScaleAspectFit;
+            row.logo.image = paymentItem.displayHints.logoImage;
             row.textField.rightView = row.logo;
         }
+        else {
+            row.logo = nil;
+            row.textField.rightView = nil;
+        }
     }
-    
-    [self setTooltipForFormRow:row withField:field paymentProduct:paymentProduct];
+
+    [self setTooltipForFormRow:row withField:field paymentItem:paymentItem];
 
     return row;
 }
 
-- (GCFormRowCurrency *)currencyFormRowFromField:(GCPaymentProductField *)field paymentProduct:(GCPaymentProduct *)paymentProduct value:(NSString *)value isEnabled:(BOOL)isEnabled viewFactory:(GCViewFactory *)viewFactory
+- (GCFormRowCurrency *)currencyFormRowFromField:(GCPaymentProductField *)field paymentItem:(NSObject<GCPaymentItem> *)paymentItem value:(NSString *)value isEnabled:(BOOL)isEnabled viewFactory:(GCViewFactory *)viewFactory
 {
     GCFormRowCurrency *row = [[GCFormRowCurrency alloc] init];
     row.integerTextField = (GCIntegerTextField *)[viewFactory textFieldWithType:GCIntegerTextFieldType];
     row.fractionalTextField = (GCFractionalTextField *)[viewFactory textFieldWithType:GCFractionalTextFieldType];
-    NSString *placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder.%@", field.identifier, paymentProduct.identifier];
+    NSString *placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.paymentProductFields.%@.placeholder", paymentItem.identifier, field.identifier];
     NSString *placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kGCSDKLocalizable, self.sdkBundle, nil);
     if ([placeholderKey isEqualToString:placeholderValue] == YES) {
         placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder", field.identifier];
@@ -222,17 +245,17 @@
     [row.fractionalTextField setEnabled:isEnabled];
     row.fractionalTextField.rightViewMode = UITextFieldViewModeNever;
     row.paymentProductField = field;
-    
-    [self setTooltipForFormRow:row withField:field paymentProduct:paymentProduct];
+
+    [self setTooltipForFormRow:row withField:field paymentItem:paymentItem];
     
     return row;
 }
 
-- (void)setTooltipForFormRow:(GCFormRowWithInfoButton *)row withField:(GCPaymentProductField *)field paymentProduct:(GCPaymentProduct *)paymentProduct
+- (void)setTooltipForFormRow:(GCFormRowWithInfoButton *)row withField:(GCPaymentProductField *)field paymentItem:(NSObject<GCPaymentItem> *)paymentItem
 {
     if (field.displayHints.tooltip.imagePath != nil) {
         row.showInfoButton = YES;
-        NSString *tooltipTextKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.tooltipText.%@", field.identifier, paymentProduct.identifier];
+        NSString *tooltipTextKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.paymentProductFields.%@.tooltipText", paymentItem.identifier, field.identifier];
         NSString *tooltipTextValue = NSLocalizedStringFromTableInBundle(tooltipTextKey, kGCSDKLocalizable, self.sdkBundle, nil);
         if ([tooltipTextKey isEqualToString:tooltipTextValue] == YES) {
             tooltipTextKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.tooltipText", field.identifier];
@@ -273,7 +296,7 @@
 {
     GCFormRowLabel *row = [[GCFormRowLabel alloc] init];
     GCLabel *label = (GCLabel *)[viewFactory labelWithType:GCLabelType];
-    NSString *labelKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.label.%@", field.identifier, paymentProductId];
+    NSString *labelKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.paymentProductFields.%@.label", paymentProductId, field.identifier];
     NSString *labelValue = NSLocalizedStringFromTableInBundle(labelKey, kGCSDKLocalizable, self.sdkBundle, nil);
     if ([labelKey isEqualToString:labelValue] == YES) {
         labelKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.label", field.identifier];

@@ -11,10 +11,6 @@
 
 #import <CommonCrypto/CommonCryptor.h>
 #import <CommonCrypto/CommonHMAC.h>
-#import <Security/Security.h>
-#import <Security/SecKey.h>
-#import <Security/SecImportExport.h>
-#import <Security/SecCertificate.h>
 
 @implementation GCEncryptor
 

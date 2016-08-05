@@ -10,7 +10,7 @@
 #import "GCPaymentProductFields.h"
 #import "GCPaymentProductField.h"
 
-@interface GCPaymentProduct : GCBasicPaymentProduct
+@interface GCPaymentProduct : GCBasicPaymentProduct <GCPaymentItem>
 
 @property (strong, nonatomic) GCPaymentProductFields *fields;
 

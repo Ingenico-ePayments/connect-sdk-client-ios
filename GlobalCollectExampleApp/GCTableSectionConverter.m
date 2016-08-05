@@ -7,22 +7,19 @@
 //
 
 #import "GCSDKConstants.h"
-#import "GCMacros.h"
 #import "GCTableSectionConverter.h"
-#import "GCAccountOnFile.h"
 #import "GCPaymentProductsTableRow.h"
-#import "GCAccountOnFileAttribute.h"
-#import "GCPaymentProduct.h"
-#import "GCLabelTemplateItem.h"
+#import "GCPaymentItems.h"
+#import "GCBasicPaymentProductGroup.h"
 
 @implementation GCTableSectionConverter
 
-+ (GCPaymentProductsTableSection *)paymentProductsTableSectionFromAccountsOnFile:(NSArray *)accountsOnFile paymentProducts:(GCPaymentProducts *)paymentProducts
++ (GCPaymentProductsTableSection *)paymentProductsTableSectionFromAccountsOnFile:(NSArray *)accountsOnFile paymentItems:(GCPaymentItems *)paymentItems
 {
     GCPaymentProductsTableSection *section = [[GCPaymentProductsTableSection alloc] init];
     section.type = GCAccountOnFileType;
     for (GCAccountOnFile *accountOnFile in accountsOnFile) {
-        GCBasicPaymentProduct *product = [paymentProducts paymentProductWithIdentifier:accountOnFile.paymentProductIdentifier];
+        id<GCBasicPaymentItem> product = [paymentItems paymentItemWithIdentifier:accountOnFile.paymentProductIdentifier];
         GCPaymentProductsTableRow *row = [[GCPaymentProductsTableRow alloc] init];
         NSString *displayName = [accountOnFile label];
         row.name = displayName;
@@ -34,24 +31,36 @@
     return section;
 }
 
-+ (GCPaymentProductsTableSection *)paymentProductsTableSectionFromPaymentProducts:(GCPaymentProducts *)paymentProducts
++ (GCPaymentProductsTableSection *)paymentProductsTableSectionFromPaymentItems:(GCPaymentItems *)paymentItems
 {
     NSString *sdkBundlePath = [[NSBundle mainBundle] pathForResource:@"GlobalCollectSDK" ofType:@"bundle"];
     NSBundle *sdkBundle = [NSBundle bundleWithPath:sdkBundlePath];
     
     GCPaymentProductsTableSection *section = [[GCPaymentProductsTableSection alloc] init];
-    for (GCBasicPaymentProduct *product in paymentProducts.paymentProducts) {
+    for (NSObject<GCPaymentItem> *paymentItem in paymentItems.paymentItems) {
         section.type = GCPaymentProductType;
         GCPaymentProductsTableRow *row = [[GCPaymentProductsTableRow alloc] init];
-        NSString *paymentProductKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", product.identifier];
+        NSString *paymentProductKey = [self localizationKeyWithPaymentItem:paymentItem];
         NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, kGCSDKLocalizable, sdkBundle, nil);
         row.name = paymentProductValue;
         row.accountOnFileIdentifier = @"";
-        row.paymentProductIdentifier = product.identifier;
-        row.logo = product.displayHints.logoImage;
+        row.paymentProductIdentifier = paymentItem.identifier;
+        row.logo = paymentItem.displayHints.logoImage;
         [section.rows addObject:row];
     }
     return section;
+}
+
++ (NSString *)localizationKeyWithPaymentItem:(NSObject<GCBasicPaymentItem> *)paymentItem {
+    if ([paymentItem isKindOfClass:[GCBasicPaymentProduct class]]) {
+        return [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", paymentItem.identifier];
+    }
+    else if ([paymentItem isKindOfClass:[GCBasicPaymentProductGroup class]]) {
+        return [NSString stringWithFormat:@"gc.general.paymentProductGroups.%@.name", paymentItem.identifier];
+    }
+    else {
+        return @"";
+    }
 }
 
 @end

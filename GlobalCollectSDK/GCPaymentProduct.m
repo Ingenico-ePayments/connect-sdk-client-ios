@@ -7,7 +7,6 @@
 //
 
 #import "GCPaymentProduct.h"
-#import "GCPaymentProductField.h"
 
 @implementation GCPaymentProduct
 

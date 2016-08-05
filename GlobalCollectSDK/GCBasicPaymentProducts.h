@@ -1,5 +1,5 @@
 //
-//  GCPaymentProducts.h
+//  GCBasicPaymentProducts.h
 //  GlobalCollectSDK
 //
 //  Created for Global Collect on 05/06/14.
@@ -10,7 +10,7 @@
 
 #import "GCBasicPaymentProduct.h"
 
-@interface GCPaymentProducts : NSObject
+@interface GCBasicPaymentProducts : NSObject
 
 @property (strong, nonatomic) NSMutableArray *paymentProducts;
 

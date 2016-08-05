@@ -13,14 +13,15 @@
 #import "GCAccountOnFile.h"
 #import "GCPaymentRequestTarget.h"
 #import "GCSession.h"
+#import "GCCoBrandsSelectionTableViewCell.h"
 
 @interface GCPaymentProductViewController : UITableViewController
 
 @property (weak, nonatomic) id <GCPaymentRequestTarget> paymentRequestTarget;
 @property (strong, nonatomic) GCViewFactory *viewFactory;
-@property (nonatomic) GCPaymentProduct *paymentProduct;
+@property (nonatomic) NSObject<GCPaymentItem> *paymentItem;
 @property (strong, nonatomic) GCAccountOnFile *accountOnFile;
-@property (strong, nonatomic) GCC2SPaymentProductContext *context;
+@property (strong, nonatomic) GCPaymentContext *context;
 @property (nonatomic) NSUInteger amount;
 @property (strong, nonatomic) GCSession *session;
 

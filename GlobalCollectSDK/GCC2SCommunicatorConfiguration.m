@@ -7,7 +7,6 @@
 //
 
 #import "GCC2SCommunicatorConfiguration.h"
-#import "GCUtil.h"
 
 @interface GCC2SCommunicatorConfiguration ()
 

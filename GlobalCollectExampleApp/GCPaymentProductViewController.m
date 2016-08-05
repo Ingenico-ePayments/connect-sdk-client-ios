@@ -26,13 +26,17 @@
 #import "GCLabelTableViewCell.h"
 #import "GCErrorMessageTableViewCell.h"
 #import "GCTooltipTableViewCell.h"
-#import "UIButton+GCPrimaryButton.h"
-#import "UIButton+GCSecondaryButton.h"
-#import "GCTextField.h"
 #import "GCSummaryTableHeaderView.h"
-#import "GCPaymentRequest.h"
-#import "SVProgressHUD.h"
 #import "GCMerchantLogoImageView.h"
+#import "GCPaymentAmountOfMoney.h"
+#import "GCFormRowCoBrandsSelection.h"
+#import "GCIINDetail.h"
+#import "GCPaymentProductsTableRow.h"
+#import "GCPaymentProductTableViewCell.h"
+#import "GCSDKConstants.h"
+#import "GCFormRowCoBrandsExplanation.h"
+#import "GCCOBrandsExplanationTableViewCell.h"
+#import "GCPaymentProductInputData.h"
 
 @interface GCPaymentProductViewController () <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -40,17 +44,20 @@
 @property (strong, nonatomic) NSMutableArray *tooltipRows;
 @property (nonatomic) BOOL validation;
 @property (strong, nonatomic) NSMutableSet *confirmedPaymentProducts;
-@property (strong, nonatomic) GCPaymentRequest *paymentRequest;
+@property (strong, nonatomic) GCPaymentProductInputData *inputData;
 @property (nonatomic) BOOL rememberPaymentDetails;
 @property (strong, nonatomic) GCSummaryTableHeaderView *header;
 @property (strong, nonatomic) UITextPosition *cursorPositionInCreditCardNumberTextField;
 @property (nonatomic) BOOL switching;
+@property (nonatomic, strong) GCIINDetailsResponse *iinDetailsResponse;
+@property (nonatomic, assign) BOOL coBrandsCollapsed;
 
 @end
 
 @implementation GCPaymentProductViewController
 
 - (instancetype)init
+
 {
     self = [super initWithStyle:UITableViewStylePlain];
     return self;
@@ -67,10 +74,6 @@
 
     self.navigationItem.titleView = [[GCMerchantLogoImageView alloc] init];
 
-    self.paymentRequest = [[GCPaymentRequest alloc] init];
-    self.paymentRequest.paymentProduct = self.paymentProduct;
-    self.paymentRequest.accountOnFile = self.accountOnFile;
-    self.paymentRequest.tokenize = NO;
     self.rememberPaymentDetails = NO;
 
     [self initializeHeader];
@@ -81,9 +84,18 @@
     self.tooltipRows = [[NSMutableArray alloc] init];
     self.validation = NO;
     self.confirmedPaymentProducts = [[NSMutableSet alloc] init];
+
+    self.inputData = [GCPaymentProductInputData new];
+    self.inputData.paymentItem = self.paymentItem;
+    if ([self.paymentItem isKindOfClass:[GCPaymentProduct class]]) {
+        GCPaymentProduct *product = (GCPaymentProduct *) self.paymentItem;
+        [self.confirmedPaymentProducts addObject:product.identifier];
+    }
+
     [self initializeFormRows];
     
     self.switching = NO;
+    self.coBrandsCollapsed = YES;
 }
 
 - (void)initializeTapRecognizer
@@ -120,7 +132,7 @@
     NSNumber *amountAsNumber = [[NSNumber alloc] initWithFloat:self.amount / 100.0];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
-    [numberFormatter setCurrencyCode:self.context.currencyCode];
+    [numberFormatter setCurrencyCode:self.context.amountOfMoney.currencyCode];
     NSString *amountAsString = [numberFormatter stringFromNumber:amountAsNumber];
     self.header.amount = amountAsString;
     self.header.securePayment = NSLocalizedStringFromTable(@"SecurePayment", kGCAppLocalizable, @"Text indicating that a secure payment method is used.");
@@ -135,13 +147,18 @@
 - (void)updateFormRowsWithValidation:(BOOL)validation tooltipRows:(NSArray *)tooltipRows confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts
 {
     GCFormRowsConverter *mapper = [[GCFormRowsConverter alloc] init];
-    NSArray *formRows = [mapper formRowsFromPaymentRequest:self.paymentRequest validation:validation confirmedPaymentProducts:confirmedPaymentProducts viewFactory:self.viewFactory];
-    
+    NSArray *formRows = [mapper formRowsFromInputData:self.inputData iinDetailsResponse:self.iinDetailsResponse validation:validation viewFactory:self.viewFactory confirmedPaymentProducts:confirmedPaymentProducts];
+
     NSMutableArray *formRowsWithTooltip = [[NSMutableArray alloc] init];
     for (GCFormRow *row in formRows) {
         [formRowsWithTooltip addObject:row];
         if ([row class] == [GCFormRowTextField class]) {
             GCFormRowTextField *textFieldRow = (GCFormRowTextField *)row;
+
+            if ([textFieldRow.paymentProductField.identifier isEqualToString:@"cardNumber"]) {
+                [self addCoBrandFormsInFormRows:formRowsWithTooltip iinDetailsResponse:self.iinDetailsResponse];
+            }
+
             for (GCFormRowTooltip *tooltipRow in tooltipRows) {
                 if (tooltipRow.paymentProductField == textFieldRow.paymentProductField) {
                     [formRowsWithTooltip addObject:tooltipRow];
@@ -152,12 +169,15 @@
     
     self.formRows = formRowsWithTooltip;
 
-    if (self.paymentProduct.allowsTokenization == YES && self.paymentProduct.autoTokenized == NO && self.accountOnFile == nil) {
-        GCFormRowSwitch *switchFormRow = [[GCFormRowSwitch alloc] init];
-        switchFormRow.switchControl = (GCSwitch *)[self.viewFactory switchWithType:GCSwitchType];
-        switchFormRow.text = NSLocalizedStringFromTable(@"RememberMyDetails", kGCAppLocalizable, @"Explanation of the switch for remembering payment information.");
-        switchFormRow.switchControl.on = self.rememberPaymentDetails;
-        [self.formRows addObject:switchFormRow];
+    if ([self.paymentItem isKindOfClass:[GCPaymentProduct class]]) {
+        GCPaymentProduct *product = (GCPaymentProduct *) self.paymentItem;
+        if (product.allowsTokenization == YES && product.autoTokenized == NO && self.accountOnFile == nil) {
+            GCFormRowSwitch *switchFormRow = [[GCFormRowSwitch alloc] init];
+            switchFormRow.switchControl = (GCSwitch *) [self.viewFactory switchWithType:GCSwitchType];
+            switchFormRow.text = NSLocalizedStringFromTable(@"RememberMyDetails", kGCAppLocalizable, @"Explanation of the switch for remembering payment information.");
+            switchFormRow.switchControl.on = self.rememberPaymentDetails;
+            [self.formRows addObject:switchFormRow];
+        }
     }
     
     GCFormRowButton *payButtonFormRow = [[GCFormRowButton alloc] init];
@@ -175,6 +195,77 @@
     [cancelButton addTarget:self action:@selector(cancelButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     cancelButtonFormRow.button = cancelButton;
     [self.formRows addObject:cancelButtonFormRow];
+}
+
+- (void)addCoBrandFormsInFormRows:(NSMutableArray *)formRows iinDetailsResponse:(GCIINDetailsResponse *)iinDetailsResponse {
+    NSMutableArray *coBrands = [NSMutableArray new];
+    for (GCIINDetail *coBrand in iinDetailsResponse.coBrands) {
+        if (coBrand.isAllowedInContext) {
+            [coBrands addObject:coBrand.paymentProductId];
+        }
+    }
+    if (coBrands.count > 1) {
+        if (!self.coBrandsCollapsed) {
+            NSString *sdkBundlePath = [[NSBundle mainBundle] pathForResource:@"GlobalCollectSDK" ofType:@"bundle"];
+            NSBundle *sdkBundle = [NSBundle bundleWithPath:sdkBundlePath];
+
+            //Add explanation row
+            GCFormRowCoBrandsExplanation *explanationRow = [GCFormRowCoBrandsExplanation new];
+            [formRows addObject:explanationRow];
+
+            //Add row for selection coBrands
+            for (NSString *id in coBrands) {
+                GCPaymentProductsTableRow *row = [[GCPaymentProductsTableRow alloc] init];
+                row.paymentProductIdentifier = id;
+
+                NSString *paymentProductKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", id];
+                NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, kGCSDKLocalizable, sdkBundle, nil);
+                row.name = paymentProductValue;
+
+                GCAssetManager *assetManager = [GCAssetManager new];
+                UIImage *logo = [assetManager logoImageForPaymentItem:id];
+                row.logo = logo;
+
+                [formRows addObject:row];
+            }
+        }
+
+        GCFormRowCoBrandsSelection *toggleCoBrandRow = [GCFormRowCoBrandsSelection new];
+        [formRows addObject:toggleCoBrandRow];
+    }
+}
+
+-(void)switchToPaymentProduct:(NSString *)paymentProductId {
+    if (paymentProductId != nil) {
+        [self.confirmedPaymentProducts addObject:paymentProductId];
+    }
+    if (paymentProductId == nil) {
+        if ([self.confirmedPaymentProducts containsObject:self.paymentItem.identifier]) {
+            [self.confirmedPaymentProducts removeObject:self.paymentItem.identifier];
+        }
+        [self updateFormRows];
+    }
+    else if ([paymentProductId isEqualToString:self.paymentItem.identifier] == YES) {
+        [self updateFormRows];
+    }
+    else if (self.switching == NO) {
+        self.switching = YES;
+        [self.session paymentProductWithId:paymentProductId context:self.context success:^(GCPaymentProduct *paymentProduct) {
+            self.paymentItem = paymentProduct;
+            self.inputData.paymentItem = paymentProduct;
+            [self updateFormRows];
+            self.switching = NO;
+        } failure:^(NSError *error) {
+        }];
+    }
+}
+
+-(void)updateFormRows {
+    self.coBrandsCollapsed = YES;
+    [self updateFormRowsWithValidation:NO tooltipRows:self.tooltipRows confirmedPaymentProducts:self.confirmedPaymentProducts];
+    [self.tableView reloadData];
+    [self resetCardNumberTextField];
+
 }
 
 #pragma mark - Table view data source
@@ -210,6 +301,12 @@
         cell = [self cellForErrorMessage:(GCFormRowErrorMessage *)row tableView:tableView];
     } else if (class == [GCFormRowTooltip class]) {
         cell = [self cellForTooltip:(GCFormRowTooltip *)row tableView:tableView];
+    } else if (class == [GCFormRowCoBrandsSelection class]) {
+        cell = [self cellForCoBrandsSelection:(GCFormRowCoBrandsSelection *)row tableView:tableView];
+    } else if (class == [GCFormRowCoBrandsExplanation class]) {
+        cell = [self cellForCoBrandsExplanation:(GCFormRowCoBrandsExplanation  *)row tableView:tableView];
+    } else if (class == [GCPaymentProductsTableRow class]) {
+        cell = [self cellForPaymentProduct:(GCPaymentProductsTableRow  *)row tableView:tableView];
     } else {
         [NSException raise:@"Invalid form row class" format:@"Form row class %@ is invalid", class];
     }
@@ -247,7 +344,7 @@
     cell.integerTextField.delegate = self;
     cell.fractionalTextField = row.fractionalTextField;
     cell.fractionalTextField.delegate = self;
-    cell.currencyCode = self.context.currencyCode;
+    cell.currencyCode = self.context.amountOfMoney.currencyCode;
     if (row.showInfoButton == YES) {
         cell.accessoryType = UITableViewCellAccessoryDetailButton;
     } else {
@@ -328,6 +425,42 @@
     return cell;
 }
 
+- (GCCoBrandsSelectionTableViewCell *)cellForCoBrandsSelection:(GCFormRowCoBrandsSelection *)row tableView:(UITableView *)tableView
+{
+    NSString *reuseIdentifier = @"co-brand-selection-cell";
+    GCCoBrandsSelectionTableViewCell *cell = (GCCoBrandsSelectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (cell == nil) {
+        cell = (GCCoBrandsSelectionTableViewCell *)[self.viewFactory tableViewCellWithType:GCCoBrandsSelectionTableViewCellType reuseIdentifier:reuseIdentifier];
+    }
+    return cell;
+}
+
+
+- (GCCOBrandsExplanationTableViewCell *)cellForCoBrandsExplanation:(GCFormRowCoBrandsExplanation *)row tableView:(UITableView *)tableView
+{
+    NSString *reuseIdentifier = @"co-brand-explanation-cell";
+    GCCOBrandsExplanationTableViewCell *cell = (GCCOBrandsExplanationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (cell == nil) {
+        cell = (GCCOBrandsExplanationTableViewCell *)[self.viewFactory tableViewCellWithType:GCCoBrandsExplanationTableViewCellType reuseIdentifier:reuseIdentifier];
+    }
+    return cell;
+}
+
+- (GCPaymentProductTableViewCell *)cellForPaymentProduct:(GCPaymentProductsTableRow *)row tableView:(UITableView *)tableView
+{
+    NSString *reuseIdentifier = @"payment-product-selection-cell";
+    GCPaymentProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (cell == nil) {
+        cell = (GCPaymentProductTableViewCell *)[self.viewFactory tableViewCellWithType:GCPaymentProductTableViewCellType reuseIdentifier:reuseIdentifier];
+    }
+    cell.name = row.name;
+    cell.logo = row.logo;
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
+    [cell setNeedsLayout];
+    return cell;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GCFormRow *row = self.formRows[indexPath.row];
@@ -336,8 +469,27 @@
         return 162.5;
     } else if (class == [GCFormRowTooltip class]) {
         return 160;
+    } else if (class == [GCFormRowCoBrandsSelection class]) {
+        return 30;
+    } else if (class == [GCFormRowCoBrandsExplanation class]) {
+        NSAttributedString *cellString = [GCCOBrandsExplanationTableViewCell cellString];
+        CGRect rect = [cellString boundingRectWithSize:CGSizeMake(tableView.bounds.size.width, CGFLOAT_MAX)
+                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                               context:nil];
+        return rect.size.height + 20;
     }
     return 44;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.formRows[indexPath.row] isKindOfClass:[GCFormRowCoBrandsSelection class]]) {
+        self.coBrandsCollapsed = !self.coBrandsCollapsed;
+        [self updateFormRowsWithValidation:self.validation tooltipRows:self.tooltipRows confirmedPaymentProducts:self.confirmedPaymentProducts];
+        [self.tableView reloadData];
+    } else if ([self.formRows[indexPath.row] isKindOfClass:[GCPaymentProductsTableRow class]]) {
+        GCPaymentProductsTableRow *row = (GCPaymentProductsTableRow *)self.formRows[indexPath.row];
+        [self switchToPaymentProduct:row.paymentProductIdentifier];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
@@ -385,42 +537,43 @@
 {
     GCFormRowTextField *row = [self formRowWithTextField:textField];
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    [self.paymentRequest setValue:newString forField:row.paymentProductField.identifier];
+    [self.inputData setValue:newString forField:row.paymentProductField.identifier];
     if (string.length == 0) {
         return YES;
     } else {
         NSInteger cursorPosition = range.location + string.length;
-        NSString *formattedString = [self.paymentRequest maskedValueForField:row.paymentProductField.identifier cursorPosition:&cursorPosition];
+        NSString *formattedString = [self.inputData maskedValueForField:row.paymentProductField.identifier cursorPosition:&cursorPosition];
         textField.text = formattedString;
         cursorPosition = MIN(cursorPosition, formattedString.length);
         UITextPosition *cursorPositionInTextField = [textField positionFromPosition:textField.beginningOfDocument offset:cursorPosition];
         [textField setSelectedTextRange:[textField textRangeFromPosition:cursorPositionInTextField toPosition:cursorPositionInTextField]];
         
         if ([row.paymentProductField.identifier isEqualToString:@"cardNumber"] == YES) {
-            NSString *unmasked = [self.paymentRequest unmaskedValueForField:row.paymentProductField.identifier];
+            NSString *unmasked = [self.inputData unmaskedValueForField:row.paymentProductField.identifier];
             if (unmasked.length >= 6) {
                 unmasked = [unmasked substringToIndex:6];
-                GCIINDetailsResponse *response = [self.session IINDetailsForPartialCreditCardNumber:unmasked];
-                if (response.status == GCSupported) {
-                    [self.confirmedPaymentProducts addObject:response.paymentProductId];
-                    if ([response.paymentProductId isEqualToString:self.paymentProduct.identifier] == NO && self.switching == NO) {
-                        self.switching = YES;
-                        [self.session paymentProductWithId:response.paymentProductId context:self.context success:^(GCPaymentProduct *paymentProduct) {
-                            self.paymentProduct = paymentProduct;
-                            self.paymentRequest.paymentProduct = paymentProduct;
-                            self.cursorPositionInCreditCardNumberTextField = cursorPositionInTextField;
-                            [self updateFormRowsWithValidation:NO tooltipRows:self.tooltipRows confirmedPaymentProducts:self.confirmedPaymentProducts];
-                            [self.tableView reloadData];
-                            [self resetCardNumberTextField];
-                            self.switching = NO;
-                        } failure:^(NSError *error) {
-                        }];
-                    } else {
-                        if (textField.rightView == nil) {
-                            textField.rightView = row.logo;
+
+                [self.session IINDetailsForPartialCreditCardNumber:unmasked context:self.context success:^(GCIINDetailsResponse *response) {
+                    self.iinDetailsResponse = response;
+                    if (response.status == GCSupported) {
+                        BOOL coBrandSelected = NO;
+                        for (GCIINDetail *coBrand in response.coBrands) {
+                            if ([coBrand.paymentProductId isEqualToString:self.paymentItem.identifier]) {
+                                coBrandSelected = YES;
+                            }
+                        }
+                        if (coBrandSelected == NO) {
+                            [self switchToPaymentProduct:response.paymentProductId];
+                        }
+                        else {
+                            [self switchToPaymentProduct:self.paymentItem.identifier];
                         }
                     }
-                }
+                    else {
+                        [self switchToPaymentProduct:nil];
+                    }
+                }                                          failure:^(NSError *error) {
+                }];
             }
         }
         return NO;
@@ -473,7 +626,7 @@
     int fractionalPart = [fractionalString intValue];
     long long newValue = integerPart * 100 + fractionalPart;
     NSString *newString = [NSString stringWithFormat:@"%03lld", newValue];
-    [self.paymentRequest setValue:newString forField:identifier];
+    [self.inputData setValue:newString forField:identifier];
     
     return newString;
 }
@@ -531,21 +684,30 @@
     NSString *name = pickerView.content[row];
     NSString *identifier = [element.nameToIdentifierMapping objectForKey:name];
     element.selectedRow = row;
-    [self.paymentRequest setValue:identifier forField:element.paymentProductFieldIdentifier];
+    [self.inputData setValue:identifier forField:element.paymentProductFieldIdentifier];
 }
 
 #pragma mark Button target methods
 
 - (void)payButtonTapped
 {
-    [self.paymentRequest validate];
-    if (self.paymentRequest.errors.count == 0) {
-        [self.paymentRequestTarget didSubmitPaymentRequest:self.paymentRequest];
-    } else {
+    BOOL valid = NO;
+
+    [self.inputData validate];
+    if (self.inputData.errors.count == 0) {
+        GCPaymentRequest *paymentRequest = [self.inputData paymentRequest];
+        [paymentRequest validate];
+        if (paymentRequest.errors.count == 0) {
+            valid = YES;
+            [self.paymentRequestTarget didSubmitPaymentRequest:paymentRequest];
+        }
+    }
+    if (valid == NO) {
         self.validation = YES;
         [self updateFormRowsWithValidation:self.validation tooltipRows:self.tooltipRows confirmedPaymentProducts:self.confirmedPaymentProducts];
         [self.tableView reloadData];
     }
+
 }
 
 - (void)cancelButtonTapped
@@ -555,7 +717,7 @@
 
 - (void)switchChanged:(GCSwitch *)sender
 {
-    self.paymentRequest.tokenize = sender.on;
+    self.inputData.tokenize = sender.on;
 }
 
 #pragma mark Helper methods

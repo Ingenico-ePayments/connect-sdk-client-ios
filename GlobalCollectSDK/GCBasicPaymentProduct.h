@@ -10,16 +10,21 @@
 
 #import "GCAccountsOnFile.h"
 #import "GCAccountOnFile.h"
-#import "GCPaymentProductDisplayHints.h"
+#import "GCPaymentItemDisplayHints.h"
+#import "GCPaymentItem.h"
+#import "GCBasicPaymentItem.h"
 
-@interface GCBasicPaymentProduct : NSObject
+@interface GCBasicPaymentProduct : NSObject <GCBasicPaymentItem>
 
+@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic, strong) GCPaymentItemDisplayHints *displayHints;
+@property (strong, nonatomic) GCAccountsOnFile *accountsOnFile;
 @property (nonatomic) BOOL allowsTokenization;
 @property (nonatomic) BOOL allowsRecurring;
 @property (nonatomic) BOOL autoTokenized;
-@property (strong, nonatomic) GCPaymentProductDisplayHints *displayHints;
-@property (nonatomic) NSString *identifier;
-@property (strong, nonatomic) GCAccountsOnFile *accountsOnFile;
+
+@property (nonatomic) NSString *paymentMethod;
+@property (nonatomic) NSString *paymentProductGroup;
 
 - (GCAccountOnFile *)accountOnFileWithIdentifier:(NSString *)accountOnFileIdentifier;
 - (void)setStringFormatter:(GCStringFormatter *)stringFormatter;

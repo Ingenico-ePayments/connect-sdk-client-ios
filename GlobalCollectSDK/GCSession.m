@@ -6,12 +6,13 @@
 //  Copyright (c) 2014 Global Collect Services B.V. All rights reserved.
 //
 
-#import "GCMacros.h"
 #import "GCSession.h"
 #import "GCBase64.h"
 #import "GCJSON.h"
-#import "GCUtil.h"
 #import "GCSDKConstants.h"
+#import "GCBasicPaymentProductGroups.h"
+#import "GCPaymentProductGroup.h"
+#import "GCPaymentItems.h"
 
 @interface GCSession ()
 
@@ -20,12 +21,15 @@
 @property (strong, nonatomic) GCEncryptor *encryptor;
 @property (strong, nonatomic) GCJOSEEncryptor *JOSEEncryptor;
 @property (strong, nonatomic) GCStringFormatter *stringFormatter;
-@property (strong, nonatomic) GCPaymentProducts *paymentProducts;
+@property (strong, nonatomic) GCBasicPaymentProducts *paymentProducts;
+@property (strong, nonatomic) GCBasicPaymentProductGroups *paymentProductGroups;
 @property (strong, nonatomic) NSMutableDictionary *paymentProductMapping;
+@property (strong, nonatomic) NSMutableDictionary *paymentProductGroupMapping;
 @property (strong, nonatomic) NSMutableDictionary *directoryEntriesMapping;
 @property (strong, nonatomic) GCBase64 *base64;
 @property (strong, nonatomic) GCJSON *JSON;
 @property (strong, nonatomic) NSMutableDictionary *IINMapping;
+@property (assign, nonatomic) BOOL iinLookupPending;
 
 @end
 
@@ -65,20 +69,59 @@
     return session;
 }
 
-- (void)paymentProductsForContext:(GCC2SPaymentProductContext *)context success:(void (^)(GCPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure
+- (void)paymentProductsForContext:(GCPaymentContext *)context success:(void (^)(GCBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure
 {
-    [self.communicator paymentProductsForContext:context success:^(GCPaymentProducts *paymentProducts) {
+    [self.communicator paymentProductsForContext:context success:^(GCBasicPaymentProducts *paymentProducts) {
         self.paymentProducts = paymentProducts;
         self.paymentProducts.stringFormatter = self.stringFormatter;
-        [self.assetManager initializeImagesForPaymentProducts:paymentProducts];
-        [self.assetManager updateImagesForPaymentProductsAsynchronously:self.paymentProducts baseURL:[self.communicator assetsBaseURL]];
+        [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
+        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL]];
         success(paymentProducts);
     } failure:^(NSError *error) {
         failure(error);
     }];
 }
 
-- (void)paymentProductWithId:(NSString *)paymentProductId context:(GCC2SPaymentProductContext *)context success:(void (^)(GCPaymentProduct *paymentProduct))success failure:(void (^)(NSError *error))failure
+- (void)paymentProductGroupsForContext:(GCPaymentContext *)context success:(void (^)(GCBasicPaymentProductGroups *paymentProductGroups))success failure:(void (^)(NSError *error))failure {
+    [self.communicator paymentProductGroupsForContext:context success:^(GCBasicPaymentProductGroups *paymentProductGroups) {
+        self.paymentProductGroups = paymentProductGroups;
+        self.paymentProductGroups.stringFormatter = self.stringFormatter;
+        [self.assetManager initializeImagesForPaymentItems:paymentProductGroups.paymentProductGroups];
+        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProductGroups.paymentProductGroups baseURL:[self.communicator assetsBaseURL]];
+        success(paymentProductGroups);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+
+}
+
+- (void)paymentItemsForContext:(GCPaymentContext *)context groupPaymentProducts:(BOOL)groupPaymentProducts success:(void (^)(GCPaymentItems *paymentItems))success failure:(void (^)(NSError *error))failure {
+    [self.communicator paymentProductsForContext:context success:^(GCBasicPaymentProducts *paymentProducts) {
+        self.paymentProducts = paymentProducts;
+        self.paymentProducts.stringFormatter = self.stringFormatter;
+        [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
+        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL]];
+
+        if (groupPaymentProducts) {
+            [self.communicator paymentProductGroupsForContext:context success:^(GCBasicPaymentProductGroups *paymentProductGroups) {
+                self.paymentProductGroups = paymentProductGroups;
+                self.paymentProductGroups.stringFormatter = self.stringFormatter;
+                [self.assetManager initializeImagesForPaymentItems:paymentProductGroups.paymentProductGroups];
+                [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProductGroups.paymentProductGroups baseURL:[self.communicator assetsBaseURL]];
+
+                GCPaymentItems *items = [[GCPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:paymentProductGroups];
+                success(items);
+            } failure:failure];
+        }
+        else {
+            GCPaymentItems *items = [GCPaymentItems new];
+            items.paymentItems = [NSMutableArray arrayWithArray:paymentProducts.paymentProducts];
+            success(items);
+        }
+    } failure:failure];
+}
+
+- (void)paymentProductWithId:(NSString *)paymentProductId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProduct *paymentProduct))success failure:(void (^)(NSError *error))failure
 {
     NSString *key = [NSString stringWithFormat:@"%@-%@", paymentProductId, [context description]];
     GCPaymentProduct *paymentProduct = [self.paymentProductMapping objectForKey:key];
@@ -87,8 +130,8 @@
     } else {
         [self.communicator paymentProductWithId:paymentProductId context:context success:^(GCPaymentProduct *paymentProduct) {
             [self.paymentProductMapping setObject:paymentProduct forKey:key];
-            [self.assetManager initializeImagesForPaymentProduct:paymentProduct];
-            [self.assetManager updateImagesForPaymentProductAsynchronously:paymentProduct baseURL:[self.communicator assetsBaseURL]];
+            [self.assetManager initializeImagesForPaymentItem:paymentProduct];
+            [self.assetManager updateImagesForPaymentItemAsynchronously:paymentProduct baseURL:[self.communicator assetsBaseURL]];
             success(paymentProduct);
         } failure:^(NSError *error) {
             failure(error);
@@ -96,45 +139,43 @@
     }
 }
 
-- (GCIINDetailsResponse *)IINDetailsForPartialCreditCardNumber:(NSString *)partialCreditCardNumber;
-{
-    GCIINDetailsResponse *response;
-    if (partialCreditCardNumber.length < 6) {
-        response = [[GCIINDetailsResponse alloc] initWithPaymentProductId:@"" status:GCNotEnoughDigits];
+- (void)paymentProductGroupWithId:(NSString *)paymentProductGroupId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProductGroup *paymentProductGroup))success failure:(void (^)(NSError *error))failure {
+    NSString *key = [NSString stringWithFormat:@"%@-%@", paymentProductGroupId, [context description]];
+    GCPaymentProductGroup *paymentProductGroup = [self.paymentProductGroupMapping objectForKey:key];
+    if (paymentProductGroup != nil) {
+        success(paymentProductGroup);
     } else {
-        NSString *truncatedCreditCardNumber = [partialCreditCardNumber substringToIndex:6];
-        NSString *storedPaymentProductId = [self.IINMapping objectForKey:truncatedCreditCardNumber];
-        if (storedPaymentProductId == nil) {
-            storedPaymentProductId = @"#";
-            [self.IINMapping setObject:storedPaymentProductId forKey:truncatedCreditCardNumber];
-            [self.communicator paymentProductIdByPartialCreditCardNumber:partialCreditCardNumber success:^(NSString *paymentProductId) {
-                [self.IINMapping setObject:paymentProductId forKey:truncatedCreditCardNumber];
-                [StandardUserDefaults setObject:self.IINMapping forKey:kGCIINMapping];
-                [StandardUserDefaults synchronize];
-            } failure:^(NSError *error) {
-            }];
-        }
-        response = [self IINDetailsForPaymentProductId:storedPaymentProductId];
+        [self.communicator paymentProductGroupWithId:paymentProductGroupId context:context success:^(GCPaymentProductGroup *paymentProductGroup) {
+            [self.paymentProductGroupMapping setObject:paymentProductGroup forKey:key];
+            [self.assetManager initializeImagesForPaymentItem:paymentProductGroup];
+            [self.assetManager updateImagesForPaymentItemAsynchronously:paymentProductGroup baseURL:[self.communicator assetsBaseURL]];
+            success(paymentProductGroup);
+        } failure:^(NSError *error) {
+            failure(error);
+        }];
     }
-    return response;
 }
 
-- (GCIINDetailsResponse *)IINDetailsForPaymentProductId:(NSString *)paymentProductId
+- (void)IINDetailsForPartialCreditCardNumber:(NSString *)partialCreditCardNumber context:(GCPaymentContext *)context success:(void (^)(GCIINDetailsResponse *iinDetailsResponse))success failure:(void (^)(NSError *error))failure
 {
-    GCIINDetailsResponse *response;
-    if ([paymentProductId isEqualToString:@"#"] == YES) {
-        response = [[GCIINDetailsResponse alloc] initWithPaymentProductId:@"" status:GCPending];
-    } else if ([paymentProductId isEqualToString:@""] == YES) {
-        response = [[GCIINDetailsResponse alloc] initWithPaymentProductId:@"" status:GCUnknown];
-    } else {
-        GCBasicPaymentProduct *basicPaymentProduct = [self.paymentProducts paymentProductWithIdentifier:paymentProductId];
-        if (basicPaymentProduct == nil) {
-            response = [[GCIINDetailsResponse alloc] initWithPaymentProductId:@"" status:GCUnsupported];
-        } else {
-            response = [[GCIINDetailsResponse alloc] initWithPaymentProductId:paymentProductId status:GCSupported];
-        }
+    if (partialCreditCardNumber.length < 6) {
+        GCIINDetailsResponse *response = [[GCIINDetailsResponse alloc] initWithStatus:GCNotEnoughDigits];
+        success(response);
+    } else if (self.iinLookupPending == YES) {
+        GCIINDetailsResponse *response = [[GCIINDetailsResponse alloc] initWithStatus:GCPending];
+        success(response);
     }
-    return response;
+    else {
+        self.iinLookupPending = YES;
+        [self.communicator paymentProductIdByPartialCreditCardNumber:partialCreditCardNumber context:context success:^(GCIINDetailsResponse *response) {
+            self.iinLookupPending = NO;
+            success(response);
+        } failure:^(NSError *error) {
+            self.iinLookupPending = NO;
+            failure(error);
+
+        }];
+    }
 }
 
 - (void)convertAmount:(long)amountInCents withSource:(NSString *)source target:(NSString *)target succes:(void (^)(long convertedAmountInCents))success failure:(void (^)(NSError *error))failure

@@ -1,5 +1,5 @@
 //
-//  IGCAppDelegate.m
+//  GCAppDelegate.m
 //  GlobalCollectExampleApp
 //
 //  Created for Global Collect on 10/04/14.
@@ -7,7 +7,6 @@
 //
 
 #import "SVProgressHUD.h"
-#import "AFNetworkActivityLogger.h"
 
 #import "GCAppDelegate.h"
 #import "GCStartViewController.h"

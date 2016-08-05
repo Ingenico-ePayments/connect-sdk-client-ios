@@ -8,20 +8,26 @@
 
 #import <Foundation/Foundation.h>
 #import "GCC2SCommunicatorConfiguration.h"
-#import "GCC2SPaymentProductContext.h"
+#import "GCPaymentContext.h"
 #import "GCPublicKeyResponse.h"
-#import "GCPaymentProducts.h"
+#import "GCBasicPaymentProducts.h"
 #import "GCPaymentProduct.h"
 #import "GCAssetManager.h"
 #import "GCStringFormatter.h"
 #import "GCDirectoryEntries.h"
+#import "GCIINDetailsResponse.h"
+
+@class GCBasicPaymentProductGroups;
+@class GCPaymentProductGroup;
 
 @interface GCC2SCommunicator : NSObject
 
 - (instancetype)initWithConfiguration:(GCC2SCommunicatorConfiguration *)configuration;
-- (void)paymentProductsForContext:(GCC2SPaymentProductContext *)context success:(void (^)(GCPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure;
-- (void)paymentProductWithId:(NSString *)paymentProductId context:(GCC2SPaymentProductContext *)context success:(void (^)(GCPaymentProduct *paymentProduct))success failure:(void (^)(NSError *error))failure;
-- (void)paymentProductIdByPartialCreditCardNumber:(NSString *)partialCreditCardNumber success:(void (^)(NSString *paymentProductId))success failure:(void (^)(NSError *error))failure;
+- (void)paymentProductsForContext:(GCPaymentContext *)context success:(void (^)(GCBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure;
+- (void)paymentProductGroupsForContext:(GCPaymentContext *)context success:(void (^)(GCBasicPaymentProductGroups *paymentProductGroups))success failure:(void (^)(NSError *error))failure;
+- (void)paymentProductWithId:(NSString *)paymentProductId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProduct *paymentProduct))success failure:(void (^)(NSError *error))failure;
+- (void)paymentProductGroupWithId:(NSString *)paymentProductGroupId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProductGroup *paymentProductGroup))success failure:(void (^)(NSError *error))failure;
+- (void)paymentProductIdByPartialCreditCardNumber:(NSString *)partialCreditCardNumber context:(GCPaymentContext *)context success:(void (^)(GCIINDetailsResponse *iinDetailsResponse))success failure:(void (^)(NSError *error))failure;
 - (void)publicKey:(void (^)(GCPublicKeyResponse *publicKeyResponse))success failure:(void (^)(NSError *error))failure;
 - (void)convertAmount:(long)amountInCents withSource:(NSString *)source target:(NSString *)target succes:(void (^)(long convertedAmountInCents))success failure:(void (^)(NSError *error))failure;
 - (void)directoryForPaymentProductId:(NSString *)paymentProductId countryCode:(NSString *)countryCode currencyCode:(NSString *)currencyCode succes:(void (^)(GCDirectoryEntries *directoryEntries))success failure:(void (^)(NSError *error))failure;

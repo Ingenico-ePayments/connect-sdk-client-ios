@@ -11,8 +11,11 @@
 #import "GCPaymentRequest.h"
 #import "GCViewFactory.h"
 
+@class GCIINDetailsResponse;
+@class GCPaymentProductInputData;
+
 @interface GCFormRowsConverter : NSObject
 
-- (NSMutableArray *)formRowsFromPaymentRequest:(GCPaymentRequest *)paymentRequest validation:(BOOL)validation confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts viewFactory:(GCViewFactory *)viewFactory;
+- (NSMutableArray *)formRowsFromInputData:(GCPaymentProductInputData *)inputData iinDetailsResponse:(GCIINDetailsResponse *)iinDetailsResponse validation:(BOOL)validation viewFactory:(GCViewFactory *)viewFactory confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts;
 
 @end

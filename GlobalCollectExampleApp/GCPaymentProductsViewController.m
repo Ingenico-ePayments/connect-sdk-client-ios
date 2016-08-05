@@ -6,18 +6,14 @@
 //  Copyright (c) 2014 Global Collect Services B.V. All rights reserved.
 //
 
-#import <SVProgressHUD/SVProgressHUD.h>
-
 #import "GCAppConstants.h"
 #import "GCPaymentProductsViewController.h"
-#import "GCPaymentType.h"
-#import "GCViewType.h"
 #import "GCPaymentProductTableViewCell.h"
 #import "GCPaymentProductsTableSection.h"
 #import "GCPaymentProductsTableRow.h"
 #import "GCTableSectionConverter.h"
-#import "GCAccountOnFile.h"
 #import "GCSummaryTableHeaderView.h"
+#import "GCPaymentItems.h"
 #import "GCMerchantLogoImageView.h"
 
 @interface GCPaymentProductsViewController ()
@@ -45,13 +41,14 @@
     [self initializeHeader];
     
     self.sections = [[NSMutableArray alloc] init];
-    if ([self.paymentProducts hasAccountsOnFile] == YES) {
+    //TODO: Accounts on file
+    if ([self.paymentItems hasAccountsOnFile] == YES) {
         GCPaymentProductsTableSection *accountsSection =
-        [GCTableSectionConverter paymentProductsTableSectionFromAccountsOnFile:[self.paymentProducts accountsOnFile] paymentProducts:self.paymentProducts];
+        [GCTableSectionConverter paymentProductsTableSectionFromAccountsOnFile:[self.paymentItems accountsOnFile] paymentItems:self.paymentItems];
         accountsSection.title = NSLocalizedStringFromTable(@"PreviousPaymentProducts", kGCAppLocalizable, @"Title of the section that displays stored payment products.");
         [self.sections addObject:accountsSection];
     }
-    GCPaymentProductsTableSection *productsSection = [GCTableSectionConverter paymentProductsTableSectionFromPaymentProducts:self.paymentProducts];
+    GCPaymentProductsTableSection *productsSection = [GCTableSectionConverter paymentProductsTableSectionFromPaymentItems:self.paymentItems];
     productsSection.title = NSLocalizedStringFromTable(@"AvailablePaymentProducts", kGCAppLocalizable, @"Title of the section that shows all available payment products.");
     [self.sections addObject:productsSection];
 }
@@ -109,12 +106,15 @@
 {
     GCPaymentProductsTableSection *section = self.sections[indexPath.section];
     GCPaymentProductsTableRow *row = section.rows[indexPath.row];
-    GCBasicPaymentProduct *product = [self.paymentProducts paymentProductWithIdentifier:row.paymentProductIdentifier];
-    GCAccountOnFile *accountOnFile = nil;
+    NSObject<GCBasicPaymentItem> *paymentItem = [self.paymentItems paymentItemWithIdentifier:row.paymentProductIdentifier];
     if (section.type == GCAccountOnFileType) {
-        accountOnFile = [product accountOnFileWithIdentifier:row.accountOnFileIdentifier];
+        GCBasicPaymentProduct *product = (GCBasicPaymentProduct *) paymentItem;
+        GCAccountOnFile *accountOnFile = [product accountOnFileWithIdentifier:row.accountOnFileIdentifier];
+        [self.target didSelectPaymentItem:product accountOnFile:accountOnFile];
     }
-    [self.target didSelectPaymentProduct:product accountOnFile:accountOnFile];
+    else {
+        [self.target didSelectPaymentItem:paymentItem accountOnFile:nil];
+    }
 }
 
 @end

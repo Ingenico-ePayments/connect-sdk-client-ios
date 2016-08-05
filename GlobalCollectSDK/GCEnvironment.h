@@ -12,7 +12,7 @@
 typedef enum {
     GCProduction,
     GCPreProduction,
-    GCSandbox
+    GCSandbox,
 } GCEnvironment;
 
 #endif

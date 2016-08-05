@@ -7,7 +7,6 @@
 //
 
 #import <sys/sysctl.h>
-#import <UIKit/UIKit.h>
 
 #import "GCUtil.h"
 #import "GCBase64.h"
@@ -34,7 +33,8 @@
         self.metaInfo = @{
             @"platformIdentifier": platformIdentifier,
             @"appIdentifier": @"Example iOS app/1.0",
-            @"sdkIdentifier": @"iOSClientSDK/1.0",
+            @"sdkIdentifier": @"iOSClientSDK/v2.0.0",
+            @"sdkCreator": @"Ingenico",
             @"screenSize": screenSize,
             @"deviceBrand": @"Apple",
             @"deviceType": deviceType};
@@ -87,8 +87,6 @@
     return encodedMetaInfo;
 }
 
-// The environments GCIntegration, GCDevelopmentNami, and GCDevelopmentIsaac should not be used.
-
 - (NSString *)C2SBaseURLByRegion:(GCRegion)region environment:(GCEnvironment)environment
 {
     switch (region) {
@@ -126,8 +124,6 @@
             break;
     }
 }
-
-// The environments GCIntegration, GCDevelopmentNami, and GCDevelopmentIsaac should not be used.
 
 - (NSString *)assetsBaseURLByRegion:(GCRegion)region environment:(GCEnvironment)environment
 {

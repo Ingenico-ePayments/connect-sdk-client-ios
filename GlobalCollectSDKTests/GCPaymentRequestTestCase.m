@@ -38,49 +38,11 @@
     [super tearDown];
 }
 
-- (void)testSetValue
-{
-    [self.request setValue:@"12345678" forField:@"cardNumber"];
-    NSString *maskedValue = [self.request maskedValueForField:@"cardNumber"];
-    NSString *expectedOutput = @"1234 5678 ";
-    XCTAssertTrue([maskedValue isEqualToString:expectedOutput] == YES, @"Value not set correctly in payment request");
-}
-
 - (void)testValidate
 {
     [self.request setValue:@"1" forField:@"cvv"];
     [self.request validate];
     XCTAssertTrue(self.request.errors.count == 2, @"Unexpected number of errors while validating payment request");
-}
-
-- (void)testFieldIsPartOfAccountOnFileYes
-{
-    XCTAssertTrue([self.request fieldIsPartOfAccountOnFile:@"cardNumber"] == YES, @"Card number should be part of account on file");
-}
-
-- (void)testFieldIsPartOfAccountOnFileNo
-{
-    XCTAssertTrue([self.request fieldIsPartOfAccountOnFile:@"cvv"] == NO, @"CVV should not be part of account on file");
-}
-
-- (void)testMaskedValueForField
-{
-    NSString *maskedValue = [self.request maskedValueForField:@"expiryDate"];
-    XCTAssertTrue([maskedValue isEqualToString:@"08/20"] == YES, @"Masked expiry date is incorrect");
-}
-
-- (void)testMaskedValueForFieldWithCursorPosition
-{
-    NSInteger cursorPosition = 4;
-    NSString *maskedValue = [self.request maskedValueForField:@"expiryDate" cursorPosition:&cursorPosition];
-    XCTAssertTrue([maskedValue isEqualToString:@"08/20"] == YES, @"Masked expiry date is incorrect");
-    XCTAssertTrue(cursorPosition == 5, @"Cursor position after applying mask is incorrect");
-}
-
-- (void)testUnmaskedValueForField
-{
-    NSString *value = [self.request unmaskedValueForField:@"expiryDate"];
-    XCTAssertTrue([value isEqualToString:@"0820"] == YES, @"Unmasked expiry date is incorrect");
 }
 
 - (void)testUnmaskedFieldValues

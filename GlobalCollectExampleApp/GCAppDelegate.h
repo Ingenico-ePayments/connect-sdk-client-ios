@@ -1,5 +1,5 @@
 //
-//  IGCAppDelegate.h
+//  GCAppDelegate.h
 //  GlobalCollectExampleApp
 //
 //  Created for Global Collect on 10/04/14.

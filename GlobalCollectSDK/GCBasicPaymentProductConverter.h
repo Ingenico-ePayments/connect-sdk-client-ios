@@ -11,8 +11,9 @@
 #import "GCBasicPaymentProduct.h"
 #import "GCAssetManager.h"
 #import "GCStringFormatter.h"
+#import "GCBasicPaymentItemConverter.h"
 
-@interface GCBasicPaymentProductConverter : NSObject
+@interface GCBasicPaymentProductConverter : GCBasicPaymentItemConverter
 
 - (GCBasicPaymentProduct *)basicPaymentProductFromJSON:(NSDictionary *)rawBasicProduct;
 - (void)setBasicPaymentProduct:(GCBasicPaymentProduct *)basicProduct JSON:(NSDictionary *)rawBasicProduct;

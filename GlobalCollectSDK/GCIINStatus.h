@@ -14,7 +14,8 @@ typedef enum {
     GCUnsupported,
     GCUnknown,
     GCNotEnoughDigits,
-    GCPending
+    GCPending,
+    GCExistingButNotAllowed
 } GCIINStatus;
 
 #endif

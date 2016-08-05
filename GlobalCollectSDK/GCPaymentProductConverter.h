@@ -8,6 +8,7 @@
 
 #import "GCBasicPaymentProductConverter.h"
 #import "GCPaymentProduct.h"
+#import "GCPaymentItemConverter.h"
 
 @interface GCPaymentProductConverter : GCBasicPaymentProductConverter
 

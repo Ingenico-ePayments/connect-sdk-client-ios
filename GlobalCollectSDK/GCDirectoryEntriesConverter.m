@@ -8,7 +8,6 @@
 
 #import "GCDirectoryEntriesConverter.h"
 #import "GCDirectoryEntryConverter.h"
-#import "GCDirectoryEntry.h"
 
 @implementation GCDirectoryEntriesConverter
 

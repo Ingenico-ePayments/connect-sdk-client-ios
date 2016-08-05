@@ -38,7 +38,9 @@ typedef enum {
     GCButtonTableViewCellType,
     GCLabelTableViewCellType,
     GCTooltipTableViewCellType,
-    
+    GCCoBrandsSelectionTableViewCellType,
+    GCCoBrandsExplanationTableViewCellType,
+
     // TableHeaderView
     GCSummaryTableHeaderViewType,
     

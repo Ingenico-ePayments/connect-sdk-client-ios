@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Global Collect Services B.V. All rights reserved.
 //
 
-#import "GCMacros.h"
 #import "GCValidatorEmailAddress.h"
 #import "GCValidationErrorEmailAddress.h"
 

@@ -7,7 +7,6 @@
 //
 
 #import "GCCurrencyTableViewCell.h"
-#import "GCSDKConstants.h"
 
 @interface GCCurrencyTableViewCell ()
 

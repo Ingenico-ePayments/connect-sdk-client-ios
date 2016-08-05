@@ -7,8 +7,6 @@
 //
 
 #import "GCPaymentRequest.h"
-#import "GCStringFormatter.h"
-#import "GCPaymentProductField.h"
 #import "GCAccountOnFileAttribute.h"
 #import "GCValidatorFixedList.h"
 
@@ -114,6 +112,10 @@
 
 - (void)validate
 {
+    if (self.paymentProduct == nil || ![self.paymentProduct isKindOfClass:[GCPaymentProduct class]]) {
+        [NSException raise:@"Invalid payment product" format:@"Payment product is invalid"];
+    }
+
     [self.errors removeAllObjects];
     for (GCPaymentProductField *field in self.paymentProduct.fields.paymentProductFields) {
         if ([self fieldIsPartOfAccountOnFile:field.identifier] == NO) {

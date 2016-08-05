@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self != nil) {
-        self.displayHints = [[GCPaymentProductDisplayHints alloc] init];
+        self.displayHints = [[GCPaymentItemDisplayHints alloc] init];
         self.accountsOnFile = [[GCAccountsOnFile alloc] init];
     }
     return self;

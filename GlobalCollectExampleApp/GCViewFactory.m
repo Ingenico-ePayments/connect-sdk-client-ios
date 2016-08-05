@@ -16,12 +16,13 @@
 #import "GCTextFieldTableViewCell.h"
 #import "UIButton+GCPrimaryButton.h"
 #import "UIButton+GCSecondaryButton.h"
-#import "GCSwitch.h"
 #import "GCPickerViewTableViewCell.h"
 #import "GCSummaryTableHeaderView.h"
 #import "GCIntegerTextField.h"
 #import "GCFractionalTextField.h"
 #import "GCCurrencyTableViewCell.h"
+#import "GCCoBrandsSelectionTableViewCell.h"
+#import "GCCOBrandsExplanationTableViewCell.h"
 
 @implementation GCViewFactory
 
@@ -55,6 +56,12 @@
             break;
         case GCLabelTableViewCellType:
             cell = [[GCLabelTableViewCell alloc] initWithReuseIdentifier:reuseIdentifier];
+            break;
+        case GCCoBrandsSelectionTableViewCellType:
+            cell = [[GCCoBrandsSelectionTableViewCell alloc] initWithReuseIdentifier:reuseIdentifier];
+            break;
+        case GCCoBrandsExplanationTableViewCellType:
+            cell = [[GCCOBrandsExplanationTableViewCell alloc] initWithReuseIdentifier:reuseIdentifier];
             break;
         default:
             [NSException raise:@"Invalid type of table view cell" format:@"Table view cell type %u is invalid", type];

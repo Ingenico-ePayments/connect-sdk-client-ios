@@ -1,0 +1,76 @@
+{
+  "accountsOnFile" : [ ],
+  "allowsTokenization" : true,
+  "autoTokenized" : false,
+  "displayHints" : {
+    "displayOrder" : 2147483647,
+    "label" : "Cards",
+    "logo" : "templates/master/global/css/img/ppimages/group-card.png"
+  },
+  "fields" : [ {
+    "dataRestrictions" : {
+      "isRequired" : true,
+      "validators" : {
+      }
+    },
+    "displayHints" : {
+      "alwaysShow" : false,
+      "displayOrder" : 0,
+      "formElement" : {
+        "type" : "text"
+      },
+      "label" : "Card number",
+      "mask" : "{{9999}} {{9999}} {{9999}} {{9999}} {{999}}",
+      "obfuscate" : false,
+      "placeholderLabel" : "**** **** **** ****",
+      "preferredInputType" : "IntegerKeyboard"
+    },
+    "id" : "cardNumber",
+    "type" : "numericstring"
+  }, {
+    "dataRestrictions" : {
+      "isRequired" : true,
+      "validators" : {
+      }
+    },
+    "displayHints" : {
+      "alwaysShow" : false,
+      "displayOrder" : 1,
+      "formElement" : {
+        "type" : "text"
+      },
+      "label" : "Expiry date",
+      "mask" : "{{99}}/{{99}}",
+      "obfuscate" : false,
+      "placeholderLabel" : "MM/YY",
+      "preferredInputType" : "IntegerKeyboard"
+    },
+    "id" : "expiryDate",
+    "type" : "expirydate"
+  }, {
+    "dataRestrictions" : {
+      "isRequired" : true,
+      "validators" : {
+      }
+    },
+    "displayHints" : {
+      "alwaysShow" : true,
+      "displayOrder" : 2,
+      "formElement" : {
+        "type" : "text"
+      },
+      "label" : "CVV",
+      "mask" : "{{9999}}",
+      "obfuscate" : false,
+      "placeholderLabel" : "123",
+      "preferredInputType" : "IntegerKeyboard",
+      "tooltip" : {
+        "image" : "templates/master/global/css/img/ppimages/ppf_cvv_v1.png",
+        "label" : "Please enter your security code as shown in the image"
+      }
+    },
+    "id" : "cvv",
+    "type" : "numericstring"
+  } ],
+  "id" : "card"
+}

@@ -7,7 +7,6 @@
 //
 
 #import "GCJOSEEncryptor.h"
-#import "GCEncryptor.h"
 #import "GCBase64.h"
 
 @interface GCJOSEEncryptor ()

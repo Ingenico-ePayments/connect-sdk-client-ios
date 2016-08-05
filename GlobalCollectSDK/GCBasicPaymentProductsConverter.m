@@ -1,19 +1,19 @@
 //
-//  GCPaymentProductsConverter.m
+//  GCBasicPaymentProductsConverter.m
 //  GlobalCollectSDK
 //
 //  Created for Global Collect on 06/06/14.
 //  Copyright (c) 2014 Global Collect Services B.V. All rights reserved.
 //
 
-#import "GCPaymentProductsConverter.h"
+#import "GCBasicPaymentProductsConverter.h"
 #import "GCBasicPaymentProductConverter.h"
 
-@implementation GCPaymentProductsConverter
+@implementation GCBasicPaymentProductsConverter
 
-- (GCPaymentProducts *)paymentProductsFromJSON:(NSArray *)rawProducts
+- (GCBasicPaymentProducts *)paymentProductsFromJSON:(NSArray *)rawProducts
 {
-    GCPaymentProducts *products = [[GCPaymentProducts alloc] init];
+    GCBasicPaymentProducts *products = [[GCBasicPaymentProducts alloc] init];
     GCBasicPaymentProductConverter *converter = [[GCBasicPaymentProductConverter alloc] init];
     for (NSDictionary *rawProduct in rawProducts) {
         GCBasicPaymentProduct *product = [converter basicPaymentProductFromJSON:rawProduct];

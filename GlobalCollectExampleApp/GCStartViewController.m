@@ -7,23 +7,19 @@
 //
 
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "AFNetworking.h"
 
 #import "GCAppConstants.h"
 #import "GCSDKConstants.h"
-#import "GCMacros.h"
+#import "GCPaymentItem.h"
 #import "GCStartViewController.h"
 #import "GCViewFactory.h"
 #import "GCPaymentProductsViewController.h"
 #import "GCPaymentProductViewController.h"
 #import "GCEndViewController.h"
-#import "GCPaymentType.h"
-#import "GCPaymentProducts.h"
-#import "GCMerchantLogoImageView.h"
 
-#import "GCUtil.h"
-#import "GCSession.h"
-#import "GCC2Scommunicator.h"
+#import "GCPaymentAmountOfMoney.h"
+#import "GCPaymentProductGroup.h"
+#import "GCBasicPaymentProductGroup.h"
 
 @interface GCStartViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -53,7 +49,7 @@
 
 @property (strong, nonatomic) GCViewFactory *viewFactory;
 @property (strong, nonatomic) GCSession *session;
-@property (strong, nonatomic) GCC2SPaymentProductContext *context;
+@property (strong, nonatomic) GCPaymentContext *context;
 
 @property (strong, nonatomic) NSArray *countryCodes;
 @property (strong, nonatomic) NSArray *currencyCodes;
@@ -304,20 +300,20 @@
     // ***************************************************************************
     //
     // To retrieve the available payment products, the information stored in the
-    // following GCC2SPaymentProductContext object is needed.
+    // following GCPaymentContext object is needed.
     //
     // After the GCSession object has retrieved the payment products that match
-    // the information stored in the GCC2SPaymentProductContext object, a
+    // the information stored in the GCPaymentContext object, a
     // selection screen is shown. This screen itself is not part of the SDK and
     // only illustrates a possible payment product selection screen.
     //
     // ***************************************************************************
-    
-    self.context = [[GCC2SPaymentProductContext alloc] initWithTotalAmount:self.amountValue countryCode:countryCode currencyCode:currencyCode isRecurring:isRecurring];
-    
-    [self.session paymentProductsForContext:self.context success:^(GCPaymentProducts *paymentProducts) {
+    GCPaymentAmountOfMoney *amountOfMoney = [[GCPaymentAmountOfMoney alloc] initWithTotalAmount:self.amountValue currencyCode:currencyCode];
+    self.context = [[GCPaymentContext alloc] initWithAmountOfMoney:amountOfMoney isRecurring:isRecurring countryCode:countryCode];
+
+    [self.session paymentItemsForContext:self.context groupPaymentProducts:YES success:^(GCPaymentItems *paymentItems) {
         [SVProgressHUD dismiss];
-        [self showPaymentProductSelection:paymentProducts];
+        [self showPaymentProductSelection:paymentItems];
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kGCAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductsErrorExplanation", kGCAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -325,19 +321,19 @@
     }];
 }
 
--(void)showPaymentProductSelection:(GCPaymentProducts *)paymentProducts
+-(void)showPaymentProductSelection:(GCPaymentItems *)paymentItems
 {
     GCPaymentProductsViewController *paymentProductSelection = [[GCPaymentProductsViewController alloc] init];
     paymentProductSelection.target = self;
-    paymentProductSelection.paymentProducts = paymentProducts;
+    paymentProductSelection.paymentItems = paymentItems;
     paymentProductSelection.viewFactory = self.viewFactory;
     paymentProductSelection.amount = self.amountValue;
-    paymentProductSelection.currencyCode = self.context.currencyCode;
+    paymentProductSelection.currencyCode = self.context.amountOfMoney.currencyCode;
     [self.navigationController pushViewController:paymentProductSelection animated:YES];
     [SVProgressHUD dismiss];
 }
 
-- (void)didSelectPaymentProduct:(GCBasicPaymentProduct *)basicPaymentProduct accountOnFile:(GCAccountOnFile *)accountOnFile
+- (void)didSelectPaymentItem:(NSObject <GCBasicPaymentItem> *)paymentItem accountOnFile:(GCAccountOnFile *)accountOnFile;
 {
     [SVProgressHUD show];
     
@@ -357,31 +353,47 @@
     // website.
     //
     // ***************************************************************************
-    
-    [self.session paymentProductWithId:basicPaymentProduct.identifier context:self.context success:^(GCPaymentProduct *paymentProduct) {
-        [SVProgressHUD dismiss];
-        if (paymentProduct.fields.paymentProductFields.count > 0) {
-            GCPaymentProductViewController *paymentProductForm = [[GCPaymentProductViewController alloc] init];
-            paymentProductForm.paymentRequestTarget = self;
-            paymentProductForm.paymentProduct = paymentProduct;
-            paymentProductForm.accountOnFile = accountOnFile;
-            paymentProductForm.context = self.context;
-            paymentProductForm.viewFactory = self.viewFactory;
-            paymentProductForm.amount = self.amountValue;
-            paymentProductForm.session = self.session;
-            [self.navigationController pushViewController:paymentProductForm animated:YES];
-        } else {
-            GCPaymentRequest *request = [[GCPaymentRequest alloc] init];
-            request.paymentProduct = paymentProduct;
-            request.accountOnFile = accountOnFile;
-            request.tokenize = NO;
-            [self didSubmitPaymentRequest:request];
-        }
-    } failure:^(NSError *error) {
-        [SVProgressHUD dismiss];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kGCAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductErrorExplanation", kGCAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    }];
+
+    if ([paymentItem isKindOfClass:[GCBasicPaymentProduct class]]) {
+        [self.session paymentProductWithId:paymentItem.identifier context:self.context success:^(GCPaymentProduct *paymentProduct) {
+            [SVProgressHUD dismiss];
+            if (paymentProduct.fields.paymentProductFields.count > 0) {
+                [self showPaymentItem:paymentProduct accountOnFile:accountOnFile];
+            } else {
+                GCPaymentRequest *request = [[GCPaymentRequest alloc] init];
+                request.paymentProduct = paymentProduct;
+                request.accountOnFile = accountOnFile;
+                request.tokenize = NO;
+                [self didSubmitPaymentRequest:request];
+            }
+        }                          failure:^(NSError *error) {
+            [SVProgressHUD dismiss];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kGCAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductErrorExplanation", kGCAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }];
+    }
+    else if ([paymentItem isKindOfClass:[GCBasicPaymentProductGroup class]]) {
+        [self.session paymentProductGroupWithId:paymentItem.identifier context:self.context success:^(GCPaymentProductGroup *paymentProductGroup) {
+            [SVProgressHUD dismiss];
+            [self showPaymentItem:paymentProductGroup accountOnFile:accountOnFile];
+        }                               failure:^(NSError *error) {
+            [SVProgressHUD dismiss];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kGCAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductErrorExplanation", kGCAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }];
+    }
+}
+
+-(void)showPaymentItem:(NSObject <GCPaymentItem> *)paymentItem accountOnFile:(GCAccountOnFile *)accountOnFile {
+    GCPaymentProductViewController *paymentProductForm = [[GCPaymentProductViewController alloc] init];
+    paymentProductForm.paymentRequestTarget = self;
+    paymentProductForm.paymentItem = paymentItem;
+    paymentProductForm.accountOnFile = accountOnFile;
+    paymentProductForm.context = self.context;
+    paymentProductForm.viewFactory = self.viewFactory;
+    paymentProductForm.amount = self.amountValue;
+    paymentProductForm.session = self.session;
+    [self.navigationController pushViewController:paymentProductForm animated:YES];
 }
 
 - (void)didSubmitPaymentRequest:(GCPaymentRequest *)paymentRequest

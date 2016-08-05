@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Global Collect Services B.V. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "GCAppDelegate.h"
 
 int main(int argc, char * argv[])

@@ -7,9 +7,7 @@
 //
 
 #import "GCEndViewController.h"
-#import "UIButton+GCPrimaryButton.h"
 #import "GCAppConstants.h"
-#import "GCMerchantLogoImageView.h"
 
 @interface GCEndViewController ()
 
