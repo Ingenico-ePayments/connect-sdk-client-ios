@@ -37,13 +37,19 @@
     float width = self.contentView.frame.size.width;
     
     self.tooltipLabel.frame = CGRectMake(15, 10, width - 30, 40);
-    self.tooltipImageContainer.frame = CGRectMake(10, 50, 200, 100);
+    if (self.tooltipImage == nil) {
+        self.tooltipImageContainer.frame = CGRectMake(10, 50, 0, 0);
+    }
+    else {
+        self.tooltipImageContainer.frame = CGRectMake(10, 50, 200, 100);
+    }
 }
 
 - (void)setTooltipImage:(UIImage *)tooltipImage
 {
     _tooltipImage = tooltipImage;
     [self.tooltipImageContainer setImage:tooltipImage];
+    [self layoutSubviews];
 }
 
 @end

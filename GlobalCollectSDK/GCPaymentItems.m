@@ -38,7 +38,12 @@
     self = [self init];
     if (self != nil) {
         self.paymentItems = [NSMutableArray arrayWithArray:[self createPaymentItemsFromProducts:products groups:groups]];
-        self.allPaymentItems = [products.paymentProducts arrayByAddingObjectsFromArray:groups.paymentProductGroups];
+        if (groups != nil) {
+            self.allPaymentItems = [products.paymentProducts arrayByAddingObjectsFromArray:groups.paymentProductGroups];
+        } else {
+            self.allPaymentItems = products.paymentProducts;
+        }
+
     }
     return self;
 }

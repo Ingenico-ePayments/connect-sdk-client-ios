@@ -19,7 +19,12 @@
 @property (nonatomic) GCRegion region;
 @property (nonatomic) GCEnvironment environment;
 
-- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(GCRegion)region environment:(GCEnvironment)environment util:(GCUtil *)util;
+@property (nonatomic, strong) NSString *appIdentifier;
+@property (nonatomic, strong) NSString *ipAddress;
+
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(GCRegion)region environment:(GCEnvironment)environment util:(GCUtil *)util __deprecated_msg("use method initWithClientSessionId:customerId:region:environment:appIdentifier:ipAddress:util: instead");
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(GCRegion)region environment:(GCEnvironment)environment appIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress util:(GCUtil *)util;
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(GCRegion)region environment:(GCEnvironment)environment appIdentifier:(NSString *)appIdentifier util:(GCUtil *)util;
 - (NSString *)baseURL;
 - (NSString *)assetsBaseURL;
 - (NSString *)base64EncodedClientMetaInfo;

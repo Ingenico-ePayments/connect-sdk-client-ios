@@ -49,7 +49,7 @@
     paymentRequest.tokenize = self.tokenize;
     for (NSString *key in self.fieldValues.allKeys) {
         NSString *value = self.fieldValues[key];
-        [paymentRequest setValue:key forField:value];
+        [paymentRequest setValue:value forField:key];
     }
 
     return paymentRequest;

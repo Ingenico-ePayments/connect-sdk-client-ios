@@ -32,8 +32,7 @@
         NSString *deviceType = [self deviceType];
         self.metaInfo = @{
             @"platformIdentifier": platformIdentifier,
-            @"appIdentifier": @"Example iOS app/1.0",
-            @"sdkIdentifier": @"iOSClientSDK/v2.0.0",
+            @"sdkIdentifier": @"iOSClientSDK/v2.1.0",
             @"sdkCreator": @"Ingenico",
             @"screenSize": screenSize,
             @"deviceBrand": @"Apple",
@@ -75,17 +74,43 @@
 
 - (NSString *)base64EncodedClientMetaInfo
 {
-    NSString *encodedMetaInfo = [self base64EncodedStringFromDictionary:[self metaInfo]];
-    return encodedMetaInfo;
+    return [self base64EncodedClientMetaInfoWithAppIdentifier:nil];
 }
 
 - (NSString *)base64EncodedClientMetaInfoWithAddedData:(NSDictionary *)addedData
 {
-    NSMutableDictionary *metaInfo = [[self metaInfo] mutableCopy];
-    [metaInfo addEntriesFromDictionary:addedData];
+    return [self base64EncodedClientMetaInfoWithAppIdentifier:nil ipAddress:nil addedData:addedData];
+}
+
+- (NSString *)base64EncodedClientMetaInfoWithAppIdentifier:(NSString *)appIdentifier {
+    return [self base64EncodedClientMetaInfoWithAppIdentifier:appIdentifier ipAddress:nil addedData:nil];
+}
+
+- (NSString *)base64EncodedClientMetaInfoWithAppIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress {
+    return [self base64EncodedClientMetaInfoWithAppIdentifier:appIdentifier ipAddress:ipAddress addedData:nil];
+}
+
+- (NSString *)base64EncodedClientMetaInfoWithAppIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress addedData:(NSDictionary *)addedData {
+    NSMutableDictionary *metaInfo = [self.metaInfo mutableCopy];
+    if (addedData != nil) {
+        [metaInfo addEntriesFromDictionary:addedData];
+    }
+
+    if (appIdentifier && appIdentifier.length > 0) {
+        metaInfo[@"appIdentifier"] = appIdentifier;
+    }
+    else {
+        metaInfo[@"appIdentifier"] = @"UNKNOWN";
+    }
+
+    if (ipAddress && ipAddress.length > 0) {
+        metaInfo[@"ipAddress"] = ipAddress;
+    }
+
     NSString *encodedMetaInfo = [self base64EncodedStringFromDictionary:metaInfo];
     return encodedMetaInfo;
 }
+
 
 - (NSString *)C2SBaseURLByRegion:(GCRegion)region environment:(GCEnvironment)environment
 {

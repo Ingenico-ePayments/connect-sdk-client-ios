@@ -8,8 +8,9 @@
 
 #import "GCFormRow.h"
 #import "GCSwitch.h"
+#import "GCFormRowWithInfoButton.h"
 
-@interface GCFormRowSwitch : GCFormRow
+@interface GCFormRowSwitch : GCFormRowWithInfoButton
 
 @property (strong, nonatomic) GCSwitch* switchControl;
 @property (strong, nonatomic) NSString *text;

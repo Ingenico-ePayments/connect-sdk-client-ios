@@ -13,6 +13,7 @@
 #import "GCBasicPaymentProductGroups.h"
 #import "GCPaymentProductGroup.h"
 #import "GCPaymentItems.h"
+#import <PassKit/PassKit.h>
 
 @interface GCSession ()
 
@@ -58,16 +59,21 @@
 
 + (GCSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(GCRegion)region environment:(GCEnvironment)environment
 {
+    return [self sessionWithClientSessionId:clientSessionId customerId:customerId region:region environment:environment appIdentifier:nil];
+}
+
++ (GCSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(GCRegion)region environment:(GCEnvironment)environment appIdentifier:(NSString *)appIdentifier {
     GCUtil *util = [[GCUtil alloc] init];
     GCAssetManager *assetManager = [[GCAssetManager alloc] init];
     GCStringFormatter *stringFormatter = [[GCStringFormatter alloc] init];
     GCEncryptor *encryptor = [[GCEncryptor alloc] init];
-    GCC2SCommunicatorConfiguration *configuration = [[GCC2SCommunicatorConfiguration alloc] initWithClientSessionId:clientSessionId customerId:customerId region:region environment:environment util:util];
+    GCC2SCommunicatorConfiguration *configuration = [[GCC2SCommunicatorConfiguration alloc] initWithClientSessionId:clientSessionId customerId:customerId region:region environment:environment appIdentifier:appIdentifier util:util];
     GCC2SCommunicator *communicator = [[GCC2SCommunicator alloc] initWithConfiguration:configuration];
     GCJOSEEncryptor *JOSEEncryptor = [[GCJOSEEncryptor alloc] initWithEncryptor:encryptor];
     GCSession *session = [[GCSession alloc] initWithCommunicator:communicator assetManager:assetManager encryptor:encryptor JOSEEncryptor:JOSEEncryptor stringFormatter:stringFormatter];
     return session;
 }
+
 
 - (void)paymentProductsForContext:(GCPaymentContext *)context success:(void (^)(GCBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure
 {
@@ -77,6 +83,14 @@
         [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
         [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL]];
         success(paymentProducts);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+- (void)paymentProductNetworksForProductId:(NSString *)paymentProductId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProductNetworks *paymentProductNetworks))success failure:(void (^)(NSError *error))failure {
+    [self.communicator paymentProductNetworksForProductId:paymentProductId context:context success:^(GCPaymentProductNetworks *paymentProductNetworks) {
+        success(paymentProductNetworks);
     } failure:^(NSError *error) {
         failure(error);
     }];
@@ -114,8 +128,7 @@
             } failure:failure];
         }
         else {
-            GCPaymentItems *items = [GCPaymentItems new];
-            items.paymentItems = [NSMutableArray arrayWithArray:paymentProducts.paymentProducts];
+            GCPaymentItems *items = [[GCPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:nil];
             success(items);
         }
     } failure:failure];
@@ -245,6 +258,10 @@
 - (NSString *)clientSessionId
 {
     return [self.communicator clientSessionId];
+}
+
+- (BOOL)isEnvironmentTypeProduction {
+    return [self.communicator isEnvironmentTypeProduction];
 }
 
 @end

@@ -15,6 +15,7 @@
 @property (strong, nonatomic) GCPaymentAmountOfMoney *amountOfMoney;
 @property (nonatomic, readonly) BOOL isRecurring;
 @property (strong, nonatomic, readonly) NSString *countryCode;
+@property (strong, nonatomic) NSString *locale;
 
 - (instancetype)initWithAmountOfMoney:(GCPaymentAmountOfMoney *)amountOfMoney isRecurring:(BOOL)isRecurring countryCode:(NSString *)countryCode;
 

@@ -7,6 +7,7 @@
 //
 
 #import "GCAppConstants.h"
+#import "GCSDKConstants.h"
 #import "GCPaymentProductViewController.h"
 #import "GCFormRowsConverter.h"
 #import "GCFormRow.h"
@@ -126,16 +127,18 @@
 }
 
 - (void)initializeHeader
-{ 
+{
+    NSString *sdkBundlePath = [[NSBundle mainBundle] pathForResource:@"GlobalCollectSDK" ofType:@"bundle"];
+    NSBundle *sdkBundle = [NSBundle bundleWithPath:sdkBundlePath];
     self.header = (GCSummaryTableHeaderView *)[self.viewFactory tableHeaderViewWithType:GCSummaryTableHeaderViewType frame:CGRectMake(0, 0, self.tableView.frame.size.width, 80)];
-    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTable(@"AmountHeaderDescription", kGCAppLocalizable, @"Description of the amount header.")];
+    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.total", kGCSDKLocalizable, sdkBundle, @"Description of the amount header.")];
     NSNumber *amountAsNumber = [[NSNumber alloc] initWithFloat:self.amount / 100.0];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
     [numberFormatter setCurrencyCode:self.context.amountOfMoney.currencyCode];
     NSString *amountAsString = [numberFormatter stringFromNumber:amountAsNumber];
     self.header.amount = amountAsString;
-    self.header.securePayment = NSLocalizedStringFromTable(@"SecurePayment", kGCAppLocalizable, @"Text indicating that a secure payment method is used.");
+    self.header.securePayment = NSLocalizedStringFromTableInBundle(@"gc.app.general.securePaymentText", kGCSDKLocalizable, sdkBundle, @"Text indicating that a secure payment method is used.");
     self.tableView.tableHeaderView = self.header;
 }
 
@@ -147,9 +150,28 @@
 - (void)updateFormRowsWithValidation:(BOOL)validation tooltipRows:(NSArray *)tooltipRows confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts
 {
     GCFormRowsConverter *mapper = [[GCFormRowsConverter alloc] init];
-    NSArray *formRows = [mapper formRowsFromInputData:self.inputData iinDetailsResponse:self.iinDetailsResponse validation:validation viewFactory:self.viewFactory confirmedPaymentProducts:confirmedPaymentProducts];
+    NSArray *rows = [mapper formRowsFromInputData:self.inputData iinDetailsResponse:self.iinDetailsResponse validation:validation viewFactory:self.viewFactory confirmedPaymentProducts:confirmedPaymentProducts];
+    NSMutableArray *formRows = [[NSMutableArray alloc] initWithArray:rows];
 
-    NSMutableArray *formRowsWithTooltip = [[NSMutableArray alloc] init];
+    if ([self.paymentItem isKindOfClass:[GCPaymentProduct class]]) {
+        NSString *sdkBundlePath = [[NSBundle mainBundle] pathForResource:@"GlobalCollectSDK" ofType:@"bundle"];
+        NSBundle *sdkBundle = [NSBundle bundleWithPath:sdkBundlePath];
+        GCPaymentProduct *product = (GCPaymentProduct *) self.paymentItem;
+        if (product.allowsTokenization == YES && product.autoTokenized == NO && self.accountOnFile == nil) {
+            GCFormRowSwitch *switchFormRow = [[GCFormRowSwitch alloc] init];
+            switchFormRow.switchControl = (GCSwitch *) [self.viewFactory switchWithType:GCSwitchType];
+            switchFormRow.text = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe", kGCSDKLocalizable, sdkBundle, @"Explanation of the switch for remembering payment information.");
+            switchFormRow.switchControl.on = self.rememberPaymentDetails;
+
+
+            switchFormRow.showInfoButton = YES;
+            switchFormRow.tooltipIdentifier = @"RememberMeTooltip";
+            switchFormRow.tooltipText = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe.tooltip", kGCSDKLocalizable, sdkBundle, nil);
+            [formRows addObject:switchFormRow];
+        }
+    }
+
+    NSMutableArray *formRowsWithTooltip = [NSMutableArray new];
     for (GCFormRow *row in formRows) {
         [formRowsWithTooltip addObject:row];
         if ([row class] == [GCFormRowTextField class]) {
@@ -158,9 +180,11 @@
             if ([textFieldRow.paymentProductField.identifier isEqualToString:@"cardNumber"]) {
                 [self addCoBrandFormsInFormRows:formRowsWithTooltip iinDetailsResponse:self.iinDetailsResponse];
             }
-
+        }
+        if ([[row class] isSubclassOfClass:[GCFormRowWithInfoButton class]]) {
+            GCFormRowWithInfoButton *infoButtonRow = (GCFormRowWithInfoButton *)row;
             for (GCFormRowTooltip *tooltipRow in tooltipRows) {
-                if (tooltipRow.paymentProductField == textFieldRow.paymentProductField) {
+                if ([tooltipRow.tooltipIdentifier isEqualToString:infoButtonRow.tooltipIdentifier]) {
                     [formRowsWithTooltip addObject:tooltipRow];
                 }
             }
@@ -168,20 +192,11 @@
     }
     
     self.formRows = formRowsWithTooltip;
+    NSString *sdkBundlePath = [[NSBundle mainBundle] pathForResource:@"GlobalCollectSDK" ofType:@"bundle"];
+    NSBundle *sdkBundle = [NSBundle bundleWithPath:sdkBundlePath];
 
-    if ([self.paymentItem isKindOfClass:[GCPaymentProduct class]]) {
-        GCPaymentProduct *product = (GCPaymentProduct *) self.paymentItem;
-        if (product.allowsTokenization == YES && product.autoTokenized == NO && self.accountOnFile == nil) {
-            GCFormRowSwitch *switchFormRow = [[GCFormRowSwitch alloc] init];
-            switchFormRow.switchControl = (GCSwitch *) [self.viewFactory switchWithType:GCSwitchType];
-            switchFormRow.text = NSLocalizedStringFromTable(@"RememberMyDetails", kGCAppLocalizable, @"Explanation of the switch for remembering payment information.");
-            switchFormRow.switchControl.on = self.rememberPaymentDetails;
-            [self.formRows addObject:switchFormRow];
-        }
-    }
-    
     GCFormRowButton *payButtonFormRow = [[GCFormRowButton alloc] init];
-    NSString *payButtonTitle = NSLocalizedStringFromTable(@"Pay", kGCAppLocalizable, @"Title of the pay button on the payment product screen.");
+    NSString *payButtonTitle = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.payButton", kGCSDKLocalizable, sdkBundle, @"Title of the pay button on the payment product screen.");
     UIButton* payButton = [self.viewFactory buttonWithType:GCPrimaryButtonType];
     [payButton setTitle:payButtonTitle forState:UIControlStateNormal];
     [payButton addTarget:self action:@selector(payButtonTapped) forControlEvents:UIControlEventTouchUpInside];
@@ -189,7 +204,7 @@
     [self.formRows addObject:payButtonFormRow];
     
     GCFormRowButton *cancelButtonFormRow = [[GCFormRowButton alloc] init];
-    NSString *cancelButtonTitle = NSLocalizedStringFromTable(@"Cancel", kGCAppLocalizable, @"Title of the cancel button on the payment product screen.");
+    NSString *cancelButtonTitle = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.cancelButton", kGCSDKLocalizable, sdkBundle, @"Title of the cancel button on the payment product screen.");
     UIButton* cancelButton = [self.viewFactory buttonWithType:GCSecondaryButtonType];
     [cancelButton setTitle:cancelButtonTitle forState:UIControlStateNormal];
     [cancelButton addTarget:self action:@selector(cancelButtonTapped) forControlEvents:UIControlEventTouchUpInside];
@@ -363,6 +378,11 @@
     cell.switchControl = row.switchControl;
     cell.textLabel.text = row.text;
     [cell.switchControl addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+    if (row.showInfoButton == YES) {
+        cell.accessoryType = UITableViewCellAccessoryDetailButton;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
 }
 
@@ -468,7 +488,8 @@
     if (class == [GCFormRowList class]) {
         return 162.5;
     } else if (class == [GCFormRowTooltip class]) {
-        return 160;
+        GCFormRowTooltip *tooltipRow = (GCFormRowTooltip *)row;
+        return tooltipRow.tooltipImage == nil?40:160;
     } else if (class == [GCFormRowCoBrandsSelection class]) {
         return 30;
     } else if (class == [GCFormRowCoBrandsExplanation class]) {
@@ -494,13 +515,12 @@
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-    GCTextFieldTableViewCell *cell = (GCTextFieldTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-    GCFormRowTextField *textFieldRow = [self formRowWithTextField:cell.textField];
-    
+    GCFormRowWithInfoButton *infoButtonRow = (GCFormRowWithInfoButton *)self.formRows[indexPath.row];
+
     NSMutableArray *newTooltipRows = [[NSMutableArray alloc] init];
     BOOL found = NO;
     for (GCFormRowTooltip *tooltipRow in self.tooltipRows) {
-        if (tooltipRow.paymentProductField != textFieldRow.paymentProductField) {
+        if (![tooltipRow.tooltipIdentifier isEqualToString: infoButtonRow.tooltipIdentifier]) {
             [newTooltipRows addObject:tooltipRow];
         } else {
             found = YES;
@@ -508,9 +528,9 @@
     }
     if (found == NO) {
         GCFormRowTooltip *tooltipRow = [[GCFormRowTooltip alloc] init];
-        tooltipRow.paymentProductField = textFieldRow.paymentProductField;
-        tooltipRow.tooltipImage = textFieldRow.tooltipImage;
-        tooltipRow.tooltipText = textFieldRow.tooltipText;
+        tooltipRow.tooltipIdentifier = infoButtonRow.tooltipIdentifier;
+        tooltipRow.tooltipImage = infoButtonRow.tooltipImage;
+        tooltipRow.tooltipText = infoButtonRow.tooltipText;
         [newTooltipRows addObject:tooltipRow];
     }
     self.tooltipRows = newTooltipRows;

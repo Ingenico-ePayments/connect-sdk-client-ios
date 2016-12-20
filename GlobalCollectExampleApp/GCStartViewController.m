@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Global Collect Services B.V. All rights reserved.
 //
 
+#import <PassKit/PassKit.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
 #import "GCAppConstants.h"
@@ -16,6 +17,7 @@
 #import "GCPaymentProductsViewController.h"
 #import "GCPaymentProductViewController.h"
 #import "GCEndViewController.h"
+#import "GCPaymentProductsViewControllerTarget.h"
 
 #import "GCPaymentAmountOfMoney.h"
 #import "GCPaymentProductGroup.h"
@@ -31,6 +33,8 @@
 @property (strong, nonatomic) GCTextField *clientSessionIdTextField;
 @property (strong, nonatomic) GCLabel *customerIdLabel;
 @property (strong, nonatomic) GCTextField *customerIdTextField;
+@property (strong, nonatomic) GCLabel *merchantIdLabel;
+@property (strong, nonatomic) GCTextField *merchantIdTextField;
 @property (strong, nonatomic) GCLabel *regionLabel;
 @property (strong, nonatomic) UISegmentedControl *regionControl;
 @property (strong, nonatomic) GCLabel *environmentLabel;
@@ -44,6 +48,7 @@
 @property (strong, nonatomic) GCLabel *isRecurringLabel;
 @property (strong, nonatomic) GCSwitch *isRecurringSwitch;
 @property (strong, nonatomic) UIButton *payButton;
+@property (strong, nonatomic) GCPaymentProductsViewControllerTarget *paymentProductsViewControllerTarget;
 
 @property (nonatomic) long amountValue;
 
@@ -72,7 +77,7 @@
     self.countryCodes = [[kGCCountryCodes componentsSeparatedByString:@", "] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     self.currencyCodes = [[kGCCurrencyCodes componentsSeparatedByString:@", "] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
-    NSInteger viewHeight = 1420;
+    NSInteger viewHeight = 1500;
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.delaysContentTouches = NO;
@@ -111,6 +116,7 @@
     self.clientSessionIdLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.clientSessionIdTextField = [self.viewFactory textFieldWithType:GCTextFieldType];
     self.clientSessionIdTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.clientSessionIdTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.clientSessionIdTextField.text = [StandardUserDefaults objectForKey:kGCClientSessionId];
     [self.containerView addSubview:self.clientSessionIdLabel];
     [self.containerView addSubview:self.clientSessionIdTextField];
@@ -120,9 +126,20 @@
     self.customerIdLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.customerIdTextField = [self.viewFactory textFieldWithType:GCTextFieldType];
     self.customerIdTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.customerIdTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.customerIdTextField.text = [StandardUserDefaults objectForKey:kGCCustomerId];
     [self.containerView addSubview:self.customerIdLabel];
     [self.containerView addSubview:self.customerIdTextField];
+    
+    self.merchantIdLabel = [self.viewFactory labelWithType:GCLabelType];
+    self.merchantIdLabel.text = NSLocalizedStringFromTable(@"MerchantIdentifier", kGCAppLocalizable, @"Merchant identifier");
+    self.merchantIdLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.merchantIdTextField = [self.viewFactory textFieldWithType:GCTextFieldType];
+    self.merchantIdTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.merchantIdTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    self.merchantIdTextField.text = [StandardUserDefaults objectForKey:kGCMerchantId];
+    [self.containerView addSubview:self.merchantIdLabel];
+    [self.containerView addSubview:self.merchantIdTextField];
 
     self.regionLabel = [self.viewFactory labelWithType:GCLabelType];
     self.regionLabel.text = NSLocalizedStringFromTable(@"Region", kGCAppLocalizable, @"Region");
@@ -192,7 +209,7 @@
     [self.payButton addTarget:self action:@selector(buyButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.containerView addSubview:self.payButton];
 
-    NSDictionary *views = NSDictionaryOfVariableBindings(_explanation, _clientSessionIdLabel, _clientSessionIdTextField, _customerIdLabel, _customerIdTextField, _regionLabel, _regionControl, _environmentLabel, _environmentPicker, _amountLabel, _amountTextField, _countryCodeLabel, _countryCodePicker, _currencyCodeLabel, _currencyCodePicker, _isRecurringLabel, _isRecurringSwitch, _payButton);
+    NSDictionary *views = NSDictionaryOfVariableBindings(_explanation, _clientSessionIdLabel, _clientSessionIdTextField, _customerIdLabel, _customerIdTextField, _merchantIdLabel, _merchantIdTextField, _regionLabel, _regionControl, _environmentLabel, _environmentPicker, _amountLabel, _amountTextField, _countryCodeLabel, _countryCodePicker, _currencyCodeLabel, _currencyCodePicker, _isRecurringLabel, _isRecurringSwitch, _payButton);
     NSDictionary *metrics = @{@"largeSpace": @"24"};
 
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_explanation]-|" options:0 metrics:nil views:views]];
@@ -200,6 +217,8 @@
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_clientSessionIdTextField]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_customerIdLabel]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_customerIdTextField]-|" options:0 metrics:nil views:views]];
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_merchantIdLabel]-|" options:0 metrics:nil views:views]];
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_merchantIdTextField]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_regionLabel]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_regionControl]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_environmentLabel]-|" options:0 metrics:nil views:views]];
@@ -213,7 +232,7 @@
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_isRecurringLabel]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_isRecurringSwitch]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_payButton]-|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(largeSpace)-[_explanation(==100)]-(largeSpace)-[_clientSessionIdLabel]-[_clientSessionIdTextField]-(largeSpace)-[_customerIdLabel]-[_customerIdTextField]-(largeSpace)-[_regionLabel]-[_regionControl]-(largeSpace)-[_environmentLabel]-[_environmentPicker]-(largeSpace)-[_amountLabel]-[_amountTextField]-(largeSpace)-[_countryCodeLabel]-[_countryCodePicker]-(largeSpace)-[_currencyCodeLabel]-[_currencyCodePicker]-(largeSpace)-[_isRecurringLabel]-[_isRecurringSwitch]-(largeSpace)-[_payButton]" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(largeSpace)-[_explanation(==100)]-(largeSpace)-[_clientSessionIdLabel]-[_clientSessionIdTextField]-(largeSpace)-[_customerIdLabel]-[_customerIdTextField]-(largeSpace)-[_merchantIdLabel]-[_merchantIdTextField]-(largeSpace)-[_regionLabel]-[_regionControl]-(largeSpace)-[_environmentLabel]-[_environmentPicker]-(largeSpace)-[_amountLabel]-[_amountTextField]-(largeSpace)-[_countryCodeLabel]-[_countryCodePicker]-(largeSpace)-[_currencyCodeLabel]-[_currencyCodePicker]-(largeSpace)-[_isRecurringLabel]-[_isRecurringSwitch]-(largeSpace)-[_payButton]" options:0 metrics:metrics views:views]];
 }
 
 - (void)initializeTapRecognizer
@@ -235,6 +254,7 @@
     }
 }
 
+#pragma mark -
 #pragma mark Picker view delegate
 
 - (NSInteger)numberOfComponentsInPickerView:(GCPickerView *)pickerView
@@ -254,6 +274,9 @@
     return string;
 }
 
+#pragma mark -
+#pragma mark Button actions
+
 - (void)buyButtonTapped:(UIButton *)sender
 {
     if (self.payButton == sender) {
@@ -262,12 +285,16 @@
         [NSException raise:@"Invalid sender" format:@"Sender %@ is invalid", sender];
     }
 
-    [SVProgressHUD show];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
 
     NSString *clientSessionId = self.clientSessionIdTextField.text;
     [StandardUserDefaults setObject:clientSessionId forKey:kGCClientSessionId];
     NSString *customerId = self.customerIdTextField.text;
     [StandardUserDefaults setObject:customerId forKey:kGCCustomerId];
+    if (self.merchantIdTextField.text != nil) {
+        NSString *merchantId = self.merchantIdTextField.text;
+        [StandardUserDefaults setObject:merchantId forKey:kGCMerchantId];
+    }
     GCRegion region;
     if (self.regionControl.selectedSegmentIndex == 0) {
         region = GCRegionEU;
@@ -291,7 +318,7 @@
     //
     // ***************************************************************************
 
-    self.session = [GCSession sessionWithClientSessionId:clientSessionId customerId:customerId region:region environment:environment];
+    self.session = [GCSession sessionWithClientSessionId:clientSessionId customerId:customerId region:region environment:environment appIdentifier:kGCApplicationIdentifier];
 
     NSString *countryCode = [self.countryCodes objectAtIndex:[self.countryCodePicker selectedRowInComponent:0]];
     NSString *currencyCode = [self.currencyCodes objectAtIndex:[self.currencyCodePicker selectedRowInComponent:0]];
@@ -323,8 +350,10 @@
 
 -(void)showPaymentProductSelection:(GCPaymentItems *)paymentItems
 {
+    self.paymentProductsViewControllerTarget = [[GCPaymentProductsViewControllerTarget alloc] initWithNavigationController:self.navigationController session:self.session context:self.context viewFactory:self.viewFactory];
+    self.paymentProductsViewControllerTarget.paymentFinishedTarget = self;
     GCPaymentProductsViewController *paymentProductSelection = [[GCPaymentProductsViewController alloc] init];
-    paymentProductSelection.target = self;
+    paymentProductSelection.target = self.paymentProductsViewControllerTarget;
     paymentProductSelection.paymentItems = paymentItems;
     paymentProductSelection.viewFactory = self.viewFactory;
     paymentProductSelection.amount = self.amountValue;
@@ -333,101 +362,24 @@
     [SVProgressHUD dismiss];
 }
 
-- (void)didSelectPaymentItem:(NSObject <GCBasicPaymentItem> *)paymentItem accountOnFile:(GCAccountOnFile *)accountOnFile;
-{
-    [SVProgressHUD show];
-    
-    // ***************************************************************************
-    //
-    // After selecting a payment product or an account on file associated to a
-    // payment product in the payment product selection screen, the GCSession
-    // object is used to retrieve all information for this payment product.
-    //
-    // Afterwards, a screen is shown that allows the user to fill in all
-    // relevant information, unless the payment product has no fields.
-    // This screen is also not part of the SDK and is offered for demonstration
-    // purposes only.
-    //
-    // If the payment product has no fields, the merchant is responsible for
-    // fetching the URL for a redirect to a third party and show the corresponding
-    // website.
-    //
-    // ***************************************************************************
-
-    if ([paymentItem isKindOfClass:[GCBasicPaymentProduct class]]) {
-        [self.session paymentProductWithId:paymentItem.identifier context:self.context success:^(GCPaymentProduct *paymentProduct) {
-            [SVProgressHUD dismiss];
-            if (paymentProduct.fields.paymentProductFields.count > 0) {
-                [self showPaymentItem:paymentProduct accountOnFile:accountOnFile];
-            } else {
-                GCPaymentRequest *request = [[GCPaymentRequest alloc] init];
-                request.paymentProduct = paymentProduct;
-                request.accountOnFile = accountOnFile;
-                request.tokenize = NO;
-                [self didSubmitPaymentRequest:request];
-            }
-        }                          failure:^(NSError *error) {
-            [SVProgressHUD dismiss];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kGCAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductErrorExplanation", kGCAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-        }];
-    }
-    else if ([paymentItem isKindOfClass:[GCBasicPaymentProductGroup class]]) {
-        [self.session paymentProductGroupWithId:paymentItem.identifier context:self.context success:^(GCPaymentProductGroup *paymentProductGroup) {
-            [SVProgressHUD dismiss];
-            [self showPaymentItem:paymentProductGroup accountOnFile:accountOnFile];
-        }                               failure:^(NSError *error) {
-            [SVProgressHUD dismiss];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kGCAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductErrorExplanation", kGCAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-        }];
-    }
-}
-
--(void)showPaymentItem:(NSObject <GCPaymentItem> *)paymentItem accountOnFile:(GCAccountOnFile *)accountOnFile {
-    GCPaymentProductViewController *paymentProductForm = [[GCPaymentProductViewController alloc] init];
-    paymentProductForm.paymentRequestTarget = self;
-    paymentProductForm.paymentItem = paymentItem;
-    paymentProductForm.accountOnFile = accountOnFile;
-    paymentProductForm.context = self.context;
-    paymentProductForm.viewFactory = self.viewFactory;
-    paymentProductForm.amount = self.amountValue;
-    paymentProductForm.session = self.session;
-    [self.navigationController pushViewController:paymentProductForm animated:YES];
-}
-
-- (void)didSubmitPaymentRequest:(GCPaymentRequest *)paymentRequest
-{
-    [SVProgressHUD show];
-    [self.session preparePaymentRequest:paymentRequest success:^(GCPreparedPaymentRequest *preparedPaymentRequest) {
-        [SVProgressHUD dismiss];
-        
-        // ***************************************************************************
-        //
-        // The information contained in preparedPaymentRequest is stored in such a way
-        // that it can be sent to the GlobalCollect platform via your server.
-        //
-        // ***************************************************************************
-
-        GCEndViewController *end = [[GCEndViewController alloc] init];
-        end.target = self;
-        end.viewFactory = self.viewFactory;
-        [self.navigationController pushViewController:end animated:YES];
-    } failure:^(NSError *error) {
-        [SVProgressHUD dismiss];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kGCAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"SubmitErrorExplanation", kGCAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    }];
-}
-
-- (void)didCancelPaymentRequest
-{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
+#pragma mark -
+#pragma mark Continue shopping target
 
 - (void)didSelectContinueShopping
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+#pragma mark -
+#pragma mark Payment finished target
+
+- (void)didFinishPayment {
+    GCEndViewController *end = [[GCEndViewController alloc] init];
+    end.target = self;
+    end.viewFactory = self.viewFactory;
+    [self.navigationController pushViewController:end animated:YES];
+}
+
+#pragma mark -
 
 @end

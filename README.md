@@ -5,7 +5,7 @@ The Ingenico Connect iOS SDK provides a convenient way to support a large number
 It supports iOS 6.1 and up out-of-the box.
 The iOS SDK comes with an example app that illustrates the use of the SDK and the services provided by Ingenico ePayments on the GlobalCollect platform.
 
-The documentation is available on [https://developer.globalcollect.com/documentation/sdk/ios/](https://developer.globalcollect.com/documentation/sdk/ios/).
+See the [Ingenico Connect Developer Hub](https://developer.globalcollect.com/documentation/sdk/mobile/ios/) for more information on how to use the SDK.
 
 Installation
 ------------

@@ -20,6 +20,7 @@
 		29CEF4C54B1D839D9B1FF9F0 /* GCBasicPaymentProductGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEFE17E3B22383955EF8D1 /* GCBasicPaymentProductGroup.m */; };
 		29CEF5197E26824532029C01 /* GCPaymentProductInputData.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF26138AC6A3824CB8AFE /* GCPaymentProductInputData.m */; };
 		29CEF5A342CC83B8C109DA4D /* GCIINDetailsResponseConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF3F4CDED15E1FCCE4B92 /* GCIINDetailsResponseConverter.m */; };
+		29CEF6DA8E58C0F39FB97B52 /* GlobalCollectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29CEF09A22F77ED801AFB9B1 /* GlobalCollectSDK.bundle */; };
 		29CEF6E8777A21F02FDD6E23 /* GCBasicPaymentProductGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF0F93903B46CBBF71E97 /* GCBasicPaymentProductGroups.m */; };
 		29CEF72C43206D38FE5C1672 /* GCFormRowCoBrandsSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF711BEED4F2A40288853 /* GCFormRowCoBrandsSelection.m */; };
 		29CEF739E51AFB0FEE680C5A /* GCValidationErrorAllowed.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF4572AE1E8B93AF3D9E2 /* GCValidationErrorAllowed.m */; };
@@ -33,6 +34,8 @@
 		29CEFDD0A7B51E7EA8478E0A /* GCCoBrandsSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF5968DC8D58411146C55 /* GCCoBrandsSelectionTableViewCell.m */; };
 		29CEFE47E7CE615D9DA6C57B /* GCCOBrandsExplanationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEFC6ED730845B1C281F17 /* GCCOBrandsExplanationTableViewCell.m */; };
 		29CEFFB47188115FCEF1086F /* GCBasicPaymentItemConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF6B8B0C8020001D7DE35 /* GCBasicPaymentItemConverter.m */; };
+		42974C791DC8A56300B91814 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42974C781DC8A56300B91814 /* PassKit.framework */; };
+		42974C7E1DC8ABD200B91814 /* GCPaymentProductsViewControllerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 42974C7D1DC8ABD200B91814 /* GCPaymentProductsViewControllerTarget.m */; };
 		47F161111C69F5800031DF46 /* GlobalCollectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47F161101C69F5800031DF46 /* GlobalCollectSDK.bundle */; };
 		A3003BD0196536FC0019BE1B /* GCPaymentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A3003BCF196536FC0019BE1B /* GCPaymentContext.m */; };
 		A3003BD3196539C10019BE1B /* GCPaymentProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = A3003BD2196539C10019BE1B /* GCPaymentProduct.m */; };
@@ -200,6 +203,7 @@
 		A3FF10071AB8364C005B96B0 /* GCDirectoryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FF10061AB8364C005B96B0 /* GCDirectoryEntry.m */; };
 		A3FF100A1AB83ABC005B96B0 /* GCDirectoryEntriesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FF10091AB83ABC005B96B0 /* GCDirectoryEntriesConverter.m */; };
 		A3FF100D1AB83C39005B96B0 /* GCDirectoryEntryConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FF100C1AB83C39005B96B0 /* GCDirectoryEntryConverter.m */; };
+		F59D91CF1DB63A9300FC386E /* GCPaymentProductNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = F59D91CE1DB63A9300FC386E /* GCPaymentProductNetworks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +231,7 @@
 		08D0F63E1CEF351E00FEC674 /* GCPaymentGroupsConverterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPaymentGroupsConverterTestCase.m; path = GlobalCollectSDKTests/GCPaymentGroupsConverterTestCase.m; sourceTree = SOURCE_ROOT; };
 		08D0F6421CEF3FFD00FEC674 /* GCPaymentProductInputDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPaymentProductInputDataTestCase.m; sourceTree = "<group>"; };
 		08D0F6441CEF427400FEC674 /* paymentProduct.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProduct.json; sourceTree = "<group>"; };
+		29CEF09A22F77ED801AFB9B1 /* GlobalCollectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GlobalCollectSDK.bundle; path = GlobalCollectSDK/GlobalCollectSDK.bundle; sourceTree = "<group>"; };
 		29CEF0B4321D4EBB1EAEE71A /* GCCOBrandsExplanationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCCOBrandsExplanationTableViewCell.h; sourceTree = "<group>"; };
 		29CEF0E7042DD4672496390D /* paymentProductGroups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProductGroups.json; sourceTree = SOURCE_ROOT; };
 		29CEF0F7A7D02B0F69BA538C /* GCPaymentContextConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentContextConverter.h; path = GlobalCollectSDK/GCPaymentContextConverter.h; sourceTree = "<group>"; };
@@ -267,6 +272,10 @@
 		29CEFE17E3B22383955EF8D1 /* GCBasicPaymentProductGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCBasicPaymentProductGroup.m; path = GlobalCollectSDK/GCBasicPaymentProductGroup.m; sourceTree = "<group>"; };
 		29CEFF3A39B3F3C8F5389A9C /* GCIINDetailsResponseConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCIINDetailsResponseConverter.h; path = GlobalCollectSDK/GCIINDetailsResponseConverter.h; sourceTree = "<group>"; };
 		29CEFF6DEBAFD05E1732EA4B /* GCPaymentItemConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentItemConverter.h; path = GlobalCollectSDK/GCPaymentItemConverter.h; sourceTree = "<group>"; };
+		42974C781DC8A56300B91814 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		42974C7C1DC8ABD200B91814 /* GCPaymentProductsViewControllerTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPaymentProductsViewControllerTarget.h; sourceTree = "<group>"; };
+		42974C7D1DC8ABD200B91814 /* GCPaymentProductsViewControllerTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPaymentProductsViewControllerTarget.m; sourceTree = "<group>"; };
+		42974C7F1DC8B2B600B91814 /* GCPaymentFinishedTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCPaymentFinishedTarget.h; sourceTree = "<group>"; };
 		47F161101C69F5800031DF46 /* GlobalCollectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GlobalCollectSDK.bundle; path = GlobalCollectSDK/GlobalCollectSDK.bundle; sourceTree = "<group>"; };
 		6A7816571B6F8A8A009C4641 /* GCAccountOnFileAttributeStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCAccountOnFileAttributeStatus.h; path = GlobalCollectSDK/GCAccountOnFileAttributeStatus.h; sourceTree = "<group>"; };
 		A3003BCE196536FC0019BE1B /* GCPaymentContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPaymentContext.h; path = GlobalCollectSDK/GCPaymentContext.h; sourceTree = "<group>"; };
@@ -576,6 +585,9 @@
 		A3FF10091AB83ABC005B96B0 /* GCDirectoryEntriesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDirectoryEntriesConverter.m; path = GlobalCollectSDK/GCDirectoryEntriesConverter.m; sourceTree = "<group>"; };
 		A3FF100B1AB83C39005B96B0 /* GCDirectoryEntryConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDirectoryEntryConverter.h; path = GlobalCollectSDK/GCDirectoryEntryConverter.h; sourceTree = "<group>"; };
 		A3FF100C1AB83C39005B96B0 /* GCDirectoryEntryConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDirectoryEntryConverter.m; path = GlobalCollectSDK/GCDirectoryEntryConverter.m; sourceTree = "<group>"; };
+		F519A9D21DBF5F2100E61034 /* GlobalCollectExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GlobalCollectExampleApp.entitlements; sourceTree = "<group>"; };
+		F59D91CD1DB63A9300FC386E /* GCPaymentProductNetworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPaymentProductNetworks.h; sourceTree = "<group>"; };
+		F59D91CE1DB63A9300FC386E /* GCPaymentProductNetworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPaymentProductNetworks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,6 +604,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42974C791DC8A56300B91814 /* PassKit.framework in Frameworks */,
 				A351DCB5196296000033E23C /* CoreGraphics.framework in Frameworks */,
 				A351DCB7196296000033E23C /* UIKit.framework in Frameworks */,
 				A351DCB3196296000033E23C /* Foundation.framework in Frameworks */,
@@ -617,6 +630,15 @@
 				08D0F6381CEEFC6100FEC674 /* GCPaymentItem.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		42974C7B1DC8AB5400B91814 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				42974C7C1DC8ABD200B91814 /* GCPaymentProductsViewControllerTarget.h */,
+				42974C7D1DC8ABD200B91814 /* GCPaymentProductsViewControllerTarget.m */,
+			);
+			name = Targets;
 			sourceTree = "<group>";
 		};
 		A3003BCD196536800019BE1B /* C2SPaymentProductContext */ = {
@@ -742,6 +764,8 @@
 				29CEFB2E31523BC03F87552D /* GCPaymentItems.m */,
 				29CEFE17E3B22383955EF8D1 /* GCBasicPaymentProductGroup.m */,
 				29CEFA16DD0001FC3F2072F1 /* GCBasicPaymentProductGroup.h */,
+				F59D91CD1DB63A9300FC386E /* GCPaymentProductNetworks.h */,
+				F59D91CE1DB63A9300FC386E /* GCPaymentProductNetworks.m */,
 			);
 			name = PaymentProducts;
 			sourceTree = "<group>";
@@ -933,6 +957,7 @@
 		A351DCB1196296000033E23C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42974C781DC8A56300B91814 /* PassKit.framework */,
 				A351DCB2196296000033E23C /* Foundation.framework */,
 				A351DCB4196296000033E23C /* CoreGraphics.framework */,
 				A351DCB6196296000033E23C /* UIKit.framework */,
@@ -943,6 +968,7 @@
 		A351DCB8196296000033E23C /* GlobalCollectExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				F519A9D21DBF5F2100E61034 /* GlobalCollectExampleApp.entitlements */,
 				A3FE1FA21962AE7E005FF3FA /* Constants */,
 				A3FE1F901962A076005FF3FA /* Models */,
 				A3FE1F8E1962A036005FF3FA /* Converters */,
@@ -1045,7 +1071,6 @@
 				A3FE1F951962A1BF005FF3FA /* Models */,
 				A3FE1F941962A1B9005FF3FA /* Macros */,
 				A3FE1F931962A1B4005FF3FA /* Constants */,
-				A3FE1F9F1962A41C005FF3FA /* Supporting Files */,
 				A318F7541964541D00CA21EC /* GCSession.h */,
 				A318F7551964541D00CA21EC /* GCSession.m */,
 				A318F75F19645AA000CA21EC /* GCC2SCommunicator.h */,
@@ -1122,6 +1147,7 @@
 				A351DD08196296220033E23C /* GCPaymentProductViewController.m */,
 				A30CB1F31963F723000192B3 /* GCEndViewController.h */,
 				A30CB1F41963F723000192B3 /* GCEndViewController.m */,
+				42974C7B1DC8AB5400B91814 /* Targets */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1189,6 +1215,7 @@
 				A351DCFC196296220033E23C /* GCPaymentProductSelectionTarget.h */,
 				A30CB1F21963F657000192B3 /* GCPaymentRequestTarget.h */,
 				A30CB1F61963F89A000192B3 /* GCContinueShoppingTarget.h */,
+				42974C7F1DC8B2B600B91814 /* GCPaymentFinishedTarget.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -1386,6 +1413,7 @@
 			children = (
 				A3FE1FD51962B34A005FF3FA /* GCStringFormatter.h */,
 				A3FE1FD61962B34A005FF3FA /* GCStringFormatter.m */,
+				29CEF80CA460EB24818C667D /* Supporting Files */,
 			);
 			name = Formatters;
 			sourceTree = "<group>";
@@ -1399,14 +1427,6 @@
 				A3FE20021962B3E0005FF3FA /* GCJOSEEncryptor.m */,
 			);
 			name = Cryptography;
-			sourceTree = "<group>";
-		};
-		A3FE1F9F1962A41C005FF3FA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				47F161101C69F5800031DF46 /* GlobalCollectSDK.bundle */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A3FE1FA21962AE7E005FF3FA /* Constants */ = {
@@ -1509,6 +1529,12 @@
 					};
 					A351DCAE196296000033E23C = {
 						DevelopmentTeam = S453L3NXGS;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+						};
 					};
 					A351DCC9196296000033E23C = {
 						DevelopmentTeam = S453L3NXGS;
@@ -1626,10 +1652,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47F161111C69F5800031DF46 /* GlobalCollectSDK.bundle in Resources */,
 				A363FC591AA70C8200186592 /* GCAppLocalizable.strings in Resources */,
 				A351DD4D196296360033E23C /* SVProgressHUD.bundle in Resources */,
 				A351DCC5196296000033E23C /* Images.xcassets in Resources */,
+				29CEF6DA8E58C0F39FB97B52 /* GlobalCollectSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1755,6 +1781,7 @@
 				A3E12FF419F5323F008E7311 /* GCFormRowCurrency.m in Sources */,
 				A318F75A1964550000CA21EC /* GCPaymentRequest.m in Sources */,
 				A3FE1F6419629D77005FF3FA /* AFNetworkReachabilityManager.m in Sources */,
+				42974C7E1DC8ABD200B91814 /* GCPaymentProductsViewControllerTarget.m in Sources */,
 				A3FE1F6719629D77005FF3FA /* AFURLRequestSerialization.m in Sources */,
 				A351DD31196296220033E23C /* GCFormRowTextField.m in Sources */,
 				A3018660196D9B3B00EC6150 /* GCValidationErrorRange.m in Sources */,
@@ -1801,6 +1828,7 @@
 				29CEF5197E26824532029C01 /* GCPaymentProductInputData.m in Sources */,
 				29CEF88B4FA1E2F309BC676D /* GCPaymentItems.m in Sources */,
 				29CEF4C54B1D839D9B1FF9F0 /* GCBasicPaymentProductGroup.m in Sources */,
+				F59D91CF1DB63A9300FC386E /* GCPaymentProductNetworks.m in Sources */,
 				29CEFB891B12B613730995B0 /* GCPaymentItemConverter.m in Sources */,
 				29CEF0CE4199AA6077D7754F /* GCPaymentProductGroupConverter.m in Sources */,
 			);

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "connect-sdk-client-ios"
-  s.version       = "2.0.0"
+  s.version       = "2.1.0"
   s.summary       = "Ingenico Connect iOS SDK"
   s.description   = <<-DESC
                     This native iOS SDK facilitates handling payments in your apps

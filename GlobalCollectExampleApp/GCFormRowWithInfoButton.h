@@ -11,6 +11,7 @@
 @interface GCFormRowWithInfoButton : GCFormRow
 
 @property (nonatomic) BOOL showInfoButton;
+@property (nonatomic, strong) NSString *tooltipIdentifier;
 @property (strong, nonatomic) UIImage *tooltipImage;
 @property (strong, nonatomic) NSString *tooltipText;
 

@@ -12,6 +12,7 @@
 @interface GCFormRowTooltip : GCFormRow
 
 @property (strong, nonatomic) GCPaymentProductField *paymentProductField;
+@property (nonatomic, strong) NSString *tooltipIdentifier;
 @property (strong, nonatomic) UIImage *tooltipImage;
 @property (strong, nonatomic) NSString *tooltipText;
 

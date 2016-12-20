@@ -18,6 +18,8 @@
 #import "GCPaymentProductGroup.h"
 #import "GCPaymentProductGroupsConverter.h"
 #import "GCPaymentProductGroupConverter.h"
+#import "GCSDKConstants.h"
+#import <PassKit/PKPaymentAuthorizationViewController.h>
 
 @interface GCC2SCommunicator ()
 
@@ -38,15 +40,70 @@
     return self;
 }
 
+- (BOOL)isEnvironmentTypeProduction {
+    switch (self.configuration.environment) {
+        case GCProduction:
+            return YES;
+        default:
+            return NO;
+    }
+}
+
 - (void)paymentProductsForContext:(GCPaymentContext *)context success:(void (^)(GCBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure
 {
     NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
-    NSString *URL = [NSString stringWithFormat:@"%@/%@/products?countryCode=%@&currencyCode=%@&amount=%lu&hide=fields&isRecurring=%@", [self baseURL], self.configuration.customerId, context.countryCode, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
+    NSString *URL = [NSString stringWithFormat:@"%@/%@/products?countryCode=%@&locale=%@&currencyCode=%@&amount=%lu&hide=fields&isRecurring=%@", [self baseURL], self.configuration.customerId, context.countryCode, context.locale, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
     [self getResponseForURL:URL succes:^(id responseObject) {
         NSArray *rawPaymentProducts = [(NSDictionary *)responseObject objectForKey:@"paymentProducts"];
         GCBasicPaymentProductsConverter *converter = [[GCBasicPaymentProductsConverter alloc] init];
         GCBasicPaymentProducts *paymentProducts = [converter paymentProductsFromJSON:rawPaymentProducts];
-        success(paymentProducts);
+        [self filterAndroidPayFromProducts:paymentProducts];
+        [self checkApplePayAvailabilityWithPaymentProducts:paymentProducts forContext:context success:^{
+            success(paymentProducts);
+        } failure:^(NSError *error) {
+            failure(error);
+        }];
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+- (void)filterAndroidPayFromProducts:(GCBasicPaymentProducts *)paymentProducts {
+    GCBasicPaymentProduct *androidPayPaymentProduct = [paymentProducts paymentProductWithIdentifier:kGCAndroidPayIdentifier];
+    if (androidPayPaymentProduct != nil) {
+        [paymentProducts.paymentProducts removeObject:androidPayPaymentProduct];
+    }
+}
+
+- (void)checkApplePayAvailabilityWithPaymentProducts:(GCBasicPaymentProducts *)paymentProducts forContext:(GCPaymentContext *)context success:(void (^)(void))success failure:(void (^)(NSError *error))failure {
+    GCBasicPaymentProduct *applePayPaymentProduct = [paymentProducts paymentProductWithIdentifier:kGCApplePayIdentifier];
+    if (applePayPaymentProduct != nil) {
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0") && [PKPaymentAuthorizationViewController canMakePayments]) {
+            [self paymentProductNetworksForProductId:kGCApplePayIdentifier context:context success:^(GCPaymentProductNetworks *paymentProductNetworks) {
+                if ([PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:paymentProductNetworks.paymentProductNetworks] == NO) {
+                    [paymentProducts.paymentProducts removeObject:applePayPaymentProduct];
+                }
+                success();
+            } failure:^(NSError *error) {
+                failure(error);
+            }];
+        } else {
+            [paymentProducts.paymentProducts removeObject:applePayPaymentProduct];
+            success();
+        }
+    } else {
+        success();
+    }
+}
+
+- (void)paymentProductNetworksForProductId:(NSString *)paymentProductId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProductNetworks *paymentProductNetworks))success failure:(void (^)(NSError *error))failure {
+    NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
+    NSString *URL = [NSString stringWithFormat:@"%@/%@/products/%@/networks?countryCode=%@&locale=%@&currencyCode=%@&amount=%lu&hide=fields&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductId, context.countryCode, context.locale, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
+    [self getResponseForURL:URL succes:^(id responseObject) {
+        NSArray *rawProductNetworks = [(NSDictionary *)responseObject objectForKey:@"networks"];
+        GCPaymentProductNetworks *paymentProductNetworks = [[GCPaymentProductNetworks alloc] init];
+        [paymentProductNetworks.paymentProductNetworks addObjectsFromArray:rawProductNetworks];
+        success(paymentProductNetworks);
     } failure:^(NSError *error) {
         failure(error);
     }];
@@ -54,7 +111,7 @@
 
 - (void)paymentProductGroupsForContext:(GCPaymentContext *)context success:(void (^)(GCBasicPaymentProductGroups *paymentProductGroups))success failure:(void (^)(NSError *error))failure {
     NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
-    NSString *URL = [NSString stringWithFormat:@"%@/%@/productgroups?countryCode=%@&currencyCode=%@&amount=%lu&hide=fields&isRecurring=%@", [self baseURL], self.configuration.customerId, context.countryCode, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
+    NSString *URL = [NSString stringWithFormat:@"%@/%@/productgroups?countryCode=%@&locale=%@&currencyCode=%@&amount=%lu&hide=fields&isRecurring=%@", [self baseURL], self.configuration.customerId, context.countryCode, context.locale, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
     [self getResponseForURL:URL succes:^(id responseObject) {
         NSArray *rawPaymentProductGroups = [(NSDictionary *)responseObject objectForKey:@"paymentProductGroups"];
         GCPaymentProductGroupsConverter *converter = [[GCPaymentProductGroupsConverter alloc] init];
@@ -68,21 +125,58 @@
 
 - (void)paymentProductWithId:(NSString *)paymentProductId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProduct *paymentProduct))success failure:(void (^)(NSError *error))failure
 {
-    NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
-    NSString *URL = [NSString stringWithFormat:@"%@/%@/products/%@/?countryCode=%@&currencyCode=%@&amount=%lu&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductId, context.countryCode, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
-    [self getResponseForURL:URL succes:^(id responseObject) {
-        NSDictionary *rawPaymentProduct = (NSDictionary *)responseObject;
-        GCPaymentProductConverter *converter = [[GCPaymentProductConverter alloc] init];
-        GCPaymentProduct *paymentProduct = [converter paymentProductFromJSON:rawPaymentProduct];
-        success(paymentProduct);
+    [self checkAvailabilityForPaymentProductWithId:paymentProductId context:context success:^{
+        NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
+        NSString *URL = [NSString stringWithFormat:@"%@/%@/products/%@/?countryCode=%@&locale=%@&currencyCode=%@&amount=%lu&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductId, context.countryCode, context.locale, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
+        [self getResponseForURL:URL succes:^(id responseObject) {
+            NSDictionary *rawPaymentProduct = (NSDictionary *)responseObject;
+            GCPaymentProductConverter *converter = [[GCPaymentProductConverter alloc] init];
+            GCPaymentProduct *paymentProduct = [converter paymentProductFromJSON:rawPaymentProduct];
+            success(paymentProduct);
+        } failure:^(NSError *error) {
+            failure(error);
+        }];
     } failure:^(NSError *error) {
         failure(error);
     }];
 }
 
+- (void)checkAvailabilityForPaymentProductWithId:(NSString *)paymentProductId context:(GCPaymentContext *)context success:(void (^)(void))success failure:(void (^)(NSError *error))failure
+{
+    if ([paymentProductId isEqualToString:kGCApplePayIdentifier]) {
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0") && [PKPaymentAuthorizationViewController canMakePayments]) {
+            [self paymentProductNetworksForProductId:kGCApplePayIdentifier context:context success:^(GCPaymentProductNetworks *paymentProductNetworks) {
+                if ([PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:paymentProductNetworks.paymentProductNetworks] == NO) {
+                    failure([self badRequestErrorForPaymentProductId:paymentProductId context:context]);
+                } else {
+                    success();
+                }
+            } failure:^(NSError *error) {
+                failure(error);
+            }];
+        } else {
+            failure([self badRequestErrorForPaymentProductId:paymentProductId context:context]);
+        }
+    } else {
+        success();
+    }
+}
+
+- (NSError *)badRequestErrorForPaymentProductId:(NSString *)paymentProductId context:(GCPaymentContext *)context {
+    
+    NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
+    NSString *URL = [NSString stringWithFormat:@"%@/%@/products/%@/?countryCode=%@&locale=%@&currencyCode=%@&amount=%lu&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductId, context.countryCode, context.locale, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
+    NSDictionary *errorUserInfo = @{@"com.alamofire.serialization.response.error.response": [[NSHTTPURLResponse alloc] initWithURL:[NSURL fileURLWithPath:URL] statusCode:400 HTTPVersion:nil headerFields:@{@"Connection": @"close"}],
+                                    @"NSErrorFailingURLKey": URL,
+                                    @"com.alamofire.serialization.response.error.data": [NSData data],
+                                    @"NSLocalizedDescription": @"Request failed: bad request (400)"};
+    NSError *error = [NSError errorWithDomain:@"com.alamofire.serialization.response.error.response" code:-1011 userInfo:errorUserInfo];
+    return error;
+}
+
 - (void)paymentProductGroupWithId:(NSString *)paymentProductGroupId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProductGroup *paymentProductGroup))success failure:(void (^)(NSError *error))failure {
     NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
-    NSString *URL = [NSString stringWithFormat:@"%@/%@/productgroups/%@/?countryCode=%@&currencyCode=%@&amount=%lu&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductGroupId, context.countryCode, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
+    NSString *URL = [NSString stringWithFormat:@"%@/%@/productgroups/%@/?countryCode=%@&locale=%@&currencyCode=%@&amount=%lu&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductGroupId, context.countryCode, context.locale, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
     [self getResponseForURL:URL succes:^(id responseObject) {
         NSDictionary *rawPaymentProductGroup = (NSDictionary *)responseObject;
         GCPaymentProductGroupConverter *converter = [[GCPaymentProductGroupConverter alloc] init];

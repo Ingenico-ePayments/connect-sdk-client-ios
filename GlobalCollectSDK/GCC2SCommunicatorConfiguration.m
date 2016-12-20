@@ -18,6 +18,14 @@
 
 - (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(GCRegion)region environment:(GCEnvironment)environment util:(GCUtil *)util
 {
+    return [self initWithClientSessionId:clientSessionId customerId:customerId region:region environment:environment appIdentifier:nil ipAddress:nil util:util];
+}
+
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(GCRegion)region environment:(GCEnvironment)environment appIdentifier:(NSString *)appIdentifier util:(GCUtil *)util {
+    return [self initWithClientSessionId:clientSessionId customerId:customerId region:region environment:environment appIdentifier:appIdentifier ipAddress:nil util:util];
+}
+
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(GCRegion)region environment:(GCEnvironment)environment appIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress util:(GCUtil *)util {
     self = [super init];
     if (self != nil) {
         self.clientSessionId = clientSessionId;
@@ -25,9 +33,13 @@
         self.region = region;
         self.environment = environment;
         self.util = util;
+        self.appIdentifier = appIdentifier;
+        self.ipAddress = ipAddress;
     }
     return self;
+
 }
+
 
 - (NSString *)baseURL
 {
@@ -41,7 +53,7 @@
 
 - (NSString *)base64EncodedClientMetaInfo
 {
-    return [self.util base64EncodedClientMetaInfo];
+    return [self.util base64EncodedClientMetaInfoWithAppIdentifier:self.appIdentifier ipAddress:self.ipAddress];
 }
 
 

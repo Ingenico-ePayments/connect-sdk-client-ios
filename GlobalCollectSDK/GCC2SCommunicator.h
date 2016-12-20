@@ -16,6 +16,7 @@
 #import "GCStringFormatter.h"
 #import "GCDirectoryEntries.h"
 #import "GCIINDetailsResponse.h"
+#import "GCPaymentProductNetworks.h"
 
 @class GCBasicPaymentProductGroups;
 @class GCPaymentProductGroup;
@@ -31,9 +32,12 @@
 - (void)publicKey:(void (^)(GCPublicKeyResponse *publicKeyResponse))success failure:(void (^)(NSError *error))failure;
 - (void)convertAmount:(long)amountInCents withSource:(NSString *)source target:(NSString *)target succes:(void (^)(long convertedAmountInCents))success failure:(void (^)(NSError *error))failure;
 - (void)directoryForPaymentProductId:(NSString *)paymentProductId countryCode:(NSString *)countryCode currencyCode:(NSString *)currencyCode succes:(void (^)(GCDirectoryEntries *directoryEntries))success failure:(void (^)(NSError *error))failure;
+- (void)paymentProductNetworksForProductId:(NSString *)paymentProductId context:(GCPaymentContext *)context success:(void (^)(GCPaymentProductNetworks *paymentProductNetworks))success failure:(void (^)(NSError *error))failure;
 - (NSString *)base64EncodedClientMetaInfo;
 - (NSString *)baseURL;
 - (NSString *)assetsBaseURL;
 - (NSString *)clientSessionId;
+
+- (BOOL)isEnvironmentTypeProduction;
 
 @end

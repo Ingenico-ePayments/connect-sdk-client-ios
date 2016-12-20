@@ -263,6 +263,7 @@
         }
         row.tooltipText = tooltipTextValue;
         row.tooltipImage = field.displayHints.tooltip.image;
+        row.tooltipIdentifier = field.identifier;
     }
 }
 

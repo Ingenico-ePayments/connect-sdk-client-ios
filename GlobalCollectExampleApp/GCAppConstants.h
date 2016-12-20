@@ -13,5 +13,7 @@
 #define kGCPrimaryColor     [UIColor colorWithRed:0 green:0.8 blue:0 alpha:1]
 #define kGCClientSessionId  @"kGCClientSessionId"
 #define kGCCustomerId       @"kGCCustomerId"
+#define kGCMerchantId       @"kGCMerchantId"
+#define kGCApplicationIdentifier @"iOS Example Application/v1.0"
 
 #endif

@@ -7,6 +7,7 @@
 //
 
 #import "GCAppConstants.h"
+#import "GCSDKConstants.h"
 #import "GCPaymentProductsViewController.h"
 #import "GCPaymentProductTableViewCell.h"
 #import "GCPaymentProductsTableSection.h"
@@ -20,6 +21,7 @@
 
 @property (strong, nonatomic) NSMutableArray *sections;
 @property (strong, nonatomic) GCSummaryTableHeaderView *header;
+@property (strong, nonatomic) NSBundle *sdkBundle;
 
 @end
 
@@ -28,6 +30,8 @@
 - (instancetype)init
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
+    NSString *sdkBundlePath = [[NSBundle mainBundle] pathForResource:@"GlobalCollectSDK" ofType:@"bundle"];
+    self.sdkBundle = [NSBundle bundleWithPath:sdkBundlePath];
     return self;
 }
 
@@ -45,25 +49,25 @@
     if ([self.paymentItems hasAccountsOnFile] == YES) {
         GCPaymentProductsTableSection *accountsSection =
         [GCTableSectionConverter paymentProductsTableSectionFromAccountsOnFile:[self.paymentItems accountsOnFile] paymentItems:self.paymentItems];
-        accountsSection.title = NSLocalizedStringFromTable(@"PreviousPaymentProducts", kGCAppLocalizable, @"Title of the section that displays stored payment products.");
+        accountsSection.title = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductSelection.accountsOnFileTitle", kGCSDKLocalizable, self.sdkBundle, @"Title of the section that displays stored payment products.");
         [self.sections addObject:accountsSection];
     }
     GCPaymentProductsTableSection *productsSection = [GCTableSectionConverter paymentProductsTableSectionFromPaymentItems:self.paymentItems];
-    productsSection.title = NSLocalizedStringFromTable(@"AvailablePaymentProducts", kGCAppLocalizable, @"Title of the section that shows all available payment products.");
+    productsSection.title = NSLocalizedStringFromTable(@"gc.app.paymentProductSelection.pageTitle", kGCSDKLocalizable, @"Title of the section that shows all available payment products.");
     [self.sections addObject:productsSection];
 }
 
 - (void)initializeHeader
 {
     self.header = (GCSummaryTableHeaderView *)[self.viewFactory tableHeaderViewWithType:GCSummaryTableHeaderViewType frame:CGRectMake(0, 0, self.tableView.frame.size.width, 70)];
-    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTable(@"AmountHeaderDescription", kGCAppLocalizable, @"Description of the amount header.")];
+    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.total", kGCSDKLocalizable, self.sdkBundle, @"Description of the amount header.")];
     NSNumber *amountAsNumber = [[NSNumber alloc] initWithFloat:self.amount / 100.0];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
     [numberFormatter setCurrencyCode:self.currencyCode];
     NSString *amountAsString = [numberFormatter stringFromNumber:amountAsNumber];
     self.header.amount = amountAsString;
-    self.header.securePayment = NSLocalizedStringFromTable(@"SecurePayment", kGCAppLocalizable, @"Text indicating that a secure payment method is used.");
+    self.header.securePayment = NSLocalizedStringFromTableInBundle(@"gc.app.general.securePaymentText", kGCSDKLocalizable, self.sdkBundle, @"Text indicating that a secure payment method is used.");
     self.tableView.tableHeaderView = self.header;
 }
 

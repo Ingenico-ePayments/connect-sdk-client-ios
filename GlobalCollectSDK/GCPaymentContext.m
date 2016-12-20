@@ -23,6 +23,8 @@
         _isRecurring = isRecurring;
         _countryCode = countryCode;
     }
+    
+    self.locale = [[[[NSLocale currentLocale] objectForKey: NSLocaleLanguageCode] stringByAppendingString:@"_"] stringByAppendingString:[[NSLocale currentLocale] objectForKey: NSLocaleCountryCode]];
 
     return self;
 }
