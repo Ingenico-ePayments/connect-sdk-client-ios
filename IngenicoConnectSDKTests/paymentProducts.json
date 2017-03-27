@@ -1,0 +1,322 @@
+{
+    "paymentProducts": [
+        {
+            "accountsOnFile": [
+                {
+                    "attributes": [
+                        {
+                            "key": "cardholderName",
+                            "value": "Rob"
+                        },
+                        {
+                            "key": "cardNumber",
+                            "value": "************7988"
+                        },
+                        {
+                            "key": "expiryDate",
+                            "value": "0820"
+                        },
+                        {
+                            "key": "issueNumber",
+                            "value": "12"
+                        }
+                    ],
+                    "displayHints": {
+                        "labelTemplate": [
+                            {
+                                "attributeKey": "cardNumber",
+                                "mask": "{{9999}} {{9999}} {{9999}} {{9999}} {{999}}"
+                            }
+                        ]
+                    },
+                    "id": 0,
+                    "paymentProductId": 1
+                }
+            ],
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "autoTokenized": false,
+            "displayHints": {
+                "displayOrder": 20,
+                "label": "Visa",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_1_v1.png"
+            },
+            "id": 1,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 19,
+                "label": "American Express",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_2_v1.png"
+            },
+            "id": 2,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 18,
+                "label": "MasterCard",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_3_v1.png"
+            },
+            "id": 3,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 17,
+                "label": "Invoice",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_201_v1.png"
+            },
+            "id": 201,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 73,
+                "label": "Discover",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_128_v1.png"
+            },
+            "id": 128,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 29,
+                "label": "Western Union",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_1501_v1.png"
+            },
+            "id": 1501,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 69,
+                "label": "PaySafeCard",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_830_v1.png"
+            },
+            "id": 830,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 92,
+                "label": "Carte Bancaire",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_130_v1.png"
+            },
+            "id": 130,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 27,
+                "label": "Bank Transfer",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_11_v1.png"
+            },
+            "id": 11,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 28,
+                "label": "Check",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_12_v1.png"
+            },
+            "id": 12,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 84,
+                "label": "Diners Club",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_132_v1.png"
+            },
+            "id": 132,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 47,
+                "label": "iDEAL",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_809_v1.png"
+            },
+            "id": 809,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 103,
+                "label": "Ukash",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_1400_v1.png"
+            },
+            "id": 1400,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 58,
+                "label": "Visa Delta",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_111_v1.png"
+            },
+            "id": 111,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 83,
+                "label": "Alipay",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_861_v2.png"
+            },
+            "id": 861,
+            "mobileIntegrationLevel": "BASIC_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 54,
+                "label": "Maestro",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_117_v1.png"
+            },
+            "id": 117,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 72,
+                "label": "SEPA direct debit",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_770_v1.png"
+            },
+            "id": 770,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 80,
+                "label": "Sofortüberweisung",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_836_v1.png"
+            },
+            "id": 836,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 61,
+                "label": "UnionPay",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_430_v1.png"
+            },
+            "id": 430
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 52,
+                "label": "Moneybookers",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_843_v1.png"
+            },
+            "id": 843,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 56,
+                "label": "PayPal",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_840_v1.png"
+            },
+            "id": 840,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 70,
+                "label": "JCB",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_125_v1.png"
+            },
+            "id": 125,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 55,
+                "label": "WebMoney",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_841_v1.png"
+            },
+            "id": 841,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 77,
+                "label": "Dankort",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_123_v1.png"
+            },
+            "id": 123,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": true,
+            "allowsTokenization": true,
+            "displayHints": {
+                "displayOrder": 76,
+                "label": "Visa Electron",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_122_v1.png"
+            },
+            "id": 122,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        },
+        {
+            "allowsRecurring": false,
+            "allowsTokenization": false,
+            "displayHints": {
+                "displayOrder": 60,
+                "label": "cashU",
+                "logo": "/templates/master/global/css/img/ppimages/pp_logo_845_v1.png"
+            },
+            "id": 845,
+            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
+        }
+    ]
+}

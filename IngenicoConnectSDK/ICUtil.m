@@ -1,0 +1,204 @@
+//
+//  ICUtil.m
+//  IngenicoConnectSDK
+//
+//  Created for Ingenico ePayments on 15/12/2016.
+//  Copyright © 2017 Global Collect Services. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import <sys/sysctl.h>
+
+#import <IngenicoConnectSDK/ICUtil.h>
+#import <IngenicoConnectSDK/ICBase64.h>
+#import <IngenicoConnectSDK/ICMacros.h>
+
+@interface ICUtil ()
+
+@property (strong, nonatomic) NSDictionary *metaInfo;
+@property (strong, nonatomic) ICBase64 *base64;
+@property (strong, nonatomic) NSArray *c2sBaseURLMapping;
+@property (strong, nonatomic) NSArray *assetsBaseURLMapping;
+
+@end
+
+@implementation ICUtil
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self != nil) {
+        NSString *platformIdentifier = [self platformIdentifier];
+        NSString *screenSize = [self screenSize];
+        NSString *deviceType = [self deviceType];
+        self.metaInfo = @{
+            @"platformIdentifier": platformIdentifier,
+            @"sdkIdentifier": @"iOSClientSDK/v3.0.0",
+            @"sdkCreator": @"Ingenico",
+            @"screenSize": screenSize,
+            @"deviceBrand": @"Apple",
+            @"deviceType": deviceType};
+        self.base64 = [[ICBase64 alloc] init];
+    }
+    return self;
+}
+
+- (NSString *)platformIdentifier
+{
+    NSString *OSName = [[UIDevice currentDevice] systemName];
+    NSString *OSVersion = [[UIDevice currentDevice] systemVersion];
+    NSString *platformIdentifier = [NSString stringWithFormat:@"%@/%@", OSName, OSVersion];
+    return platformIdentifier;
+}
+
+- (NSString *)screenSize
+{
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    CGFloat screenScale = [[UIScreen mainScreen] scale];
+    CGSize screenSize = CGSizeMake(screenBounds.size.width * screenScale, screenBounds.size.height * screenScale);
+    NSString *screenSizeAsString = [NSString stringWithFormat:@"%dx%d", (int)screenSize.width, (int)screenSize.height];
+    return screenSizeAsString;
+}
+
+// The following method is based on code published by Scott Kantner on TechRepublic
+// http://www.techrepublic.com/blog/software-engineer/better-code-determine-device-types-and-ios-versions/
+
+- (NSString *)deviceType {
+    size_t size;
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    char *machine = malloc(size);
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSString *platform = [NSString stringWithUTF8String:machine];
+    free(machine);
+    return platform;
+}
+
+- (NSString *)base64EncodedClientMetaInfo
+{
+    return [self base64EncodedClientMetaInfoWithAppIdentifier:nil];
+}
+
+- (NSString *)base64EncodedClientMetaInfoWithAddedData:(NSDictionary *)addedData
+{
+    return [self base64EncodedClientMetaInfoWithAppIdentifier:nil ipAddress:nil addedData:addedData];
+}
+
+- (NSString *)base64EncodedClientMetaInfoWithAppIdentifier:(NSString *)appIdentifier {
+    return [self base64EncodedClientMetaInfoWithAppIdentifier:appIdentifier ipAddress:nil addedData:nil];
+}
+
+- (NSString *)base64EncodedClientMetaInfoWithAppIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress {
+    return [self base64EncodedClientMetaInfoWithAppIdentifier:appIdentifier ipAddress:ipAddress addedData:nil];
+}
+
+- (NSString *)base64EncodedClientMetaInfoWithAppIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress addedData:(NSDictionary *)addedData {
+    NSMutableDictionary *metaInfo = [self.metaInfo mutableCopy];
+    if (addedData != nil) {
+        [metaInfo addEntriesFromDictionary:addedData];
+    }
+
+    if (appIdentifier && appIdentifier.length > 0) {
+        metaInfo[@"appIdentifier"] = appIdentifier;
+    }
+    else {
+        metaInfo[@"appIdentifier"] = @"UNKNOWN";
+    }
+
+    if (ipAddress && ipAddress.length > 0) {
+        metaInfo[@"ipAddress"] = ipAddress;
+    }
+
+    NSString *encodedMetaInfo = [self base64EncodedStringFromDictionary:metaInfo];
+    return encodedMetaInfo;
+}
+
+
+- (NSString *)C2SBaseURLByRegion:(ICRegion)region environment:(ICEnvironment)environment
+{
+    return @"http://api.gc-dev.isaac.local/client/v1"; // TODO: REMOVE ME!
+    switch (region) {
+        case ICRegionEU:
+            switch (environment) {
+                case ICProduction:
+                    return @"https://api-eu.globalcollect.com/client/v1";
+                    break;
+                case ICPreProduction:
+                    return @"https://api-eu-preprod.globalcollect.com/client/v1";
+                    break;
+                case ICSandbox:
+                    return @"https://api-eu-sandbox.globalcollect.com/client/v1";
+                    break;
+                default:
+                    [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
+            }
+        case ICRegionUS:
+            switch (environment) {
+                case ICProduction:
+                    return @"https://api-us.globalcollect.com/client/v1";
+                    break;
+                case ICPreProduction:
+                    return @"https://api-us-preprod.globalcollect.com/client/v1";
+                    break;
+                case ICSandbox:
+                    return @"https://api-us-sandbox.globalcollect.com/client/v1";
+                    break;
+                default:
+                    [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
+                    break;
+            }
+        default:
+            [NSException raise:@"Invalid region" format:@"Region %d is invalid", region];
+            break;
+    }
+}
+
+- (NSString *)assetsBaseURLByRegion:(ICRegion)region environment:(ICEnvironment)environment
+{
+    switch (region) {
+        case ICRegionEU:
+            switch (environment) {
+                case ICProduction:
+                    return @"https://assets.pay1.poweredbyglobalcollect.com";
+                    break;
+                case ICPreProduction:
+                    return @"https://assets.pay1.preprod.poweredbyglobalcollect.com";
+                    break;
+                case ICSandbox:
+                    return @"https://assets.pay1.sandbox.poweredbyglobalcollect.com";
+                    break;
+                default:
+                    [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
+            }
+        case ICRegionUS:
+            switch (environment) {
+                case ICProduction:
+                    return @"https://assets.pay2.poweredbyglobalcollect.com";
+                    break;
+                case ICPreProduction:
+                    return @"https://assets.pay2.preprod.poweredbyglobalcollect.com";
+                    break;
+                case ICSandbox:
+                    return @"https://assets.pay2.sandbox.poweredbyglobalcollect.com";
+                    break;
+                default:
+                    [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
+            }
+        default:
+            [NSException raise:@"Invalid region" format:@"Region %d is invalid", region];
+            break;
+    }
+}
+
+- (NSString *)base64EncodedStringFromDictionary:(NSDictionary *)dictionary
+{
+    NSError *error = nil;
+    NSData *JSONData = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:&error];
+    if (error != nil) {
+        DLog(@"Unable to serialize dictionary");
+        return @"";
+    }
+    NSString *encodedString = [self.base64 encode:JSONData];
+    return encodedString;
+}
+
+@end

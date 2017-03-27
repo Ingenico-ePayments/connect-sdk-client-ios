@@ -1,0 +1,49 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AFNetworkingActivityLogger (3.0.1):
+    - AFNetworking (~> 2.0)
+  - SVProgressHUD (2.0.3)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AFNetworking/UIKit
+  - AFNetworkingActivityLogger (from `https://github.com/RomainBoulay/AFNetworkingActivityLogger`)
+  - SVProgressHUD
+
+EXTERNAL SOURCES:
+  AFNetworkingActivityLogger:
+    :git: https://github.com/RomainBoulay/AFNetworkingActivityLogger
+
+CHECKOUT OPTIONS:
+  AFNetworkingActivityLogger:
+    :commit: 0cd28e0718c6ff16643a0c44412e304a28b46bb7
+    :git: https://github.com/RomainBoulay/AFNetworkingActivityLogger
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AFNetworkingActivityLogger: 42859bfa5f531a224cec083b908718161b92782a
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+
+PODFILE CHECKSUM: 30a937b72e55b3928008fc40097f4c113b25ad5d
+
+COCOAPODS: 1.1.1
