@@ -33,7 +33,7 @@
         NSString *deviceType = [self deviceType];
         self.metaInfo = @{
             @"platformIdentifier": platformIdentifier,
-            @"sdkIdentifier": @"iOSClientSDK/v3.0.0",
+            @"sdkIdentifier": @"iOSClientSDK/v3.0.1",
             @"sdkCreator": @"Ingenico",
             @"screenSize": screenSize,
             @"deviceBrand": @"Apple",
@@ -115,7 +115,6 @@
 
 - (NSString *)C2SBaseURLByRegion:(ICRegion)region environment:(ICEnvironment)environment
 {
-    return @"http://api.gc-dev.isaac.local/client/v1"; // TODO: REMOVE ME!
     switch (region) {
         case ICRegionEU:
             switch (environment) {
