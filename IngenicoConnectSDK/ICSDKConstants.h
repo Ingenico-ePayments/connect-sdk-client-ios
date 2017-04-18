@@ -14,8 +14,7 @@
 #define kICImageMapping             @"kICImageMapping"
 #define kICImageMappingInitialized  @"kICImageMappingInitialized"
 #define kICIINMapping               @"kICIINMapping"
-#define kICSDKBundleIdentifier      @"org.cocoapods.IngenicoConnectSDK"
-#define kICSDKBundlePath            [[NSBundle bundleWithIdentifier:kICSDKBundleIdentifier] pathForResource:@"IngenicoConnectSDK" ofType:@"bundle"]
+#define kICSDKBundlePath            [[NSBundle mainBundle] pathForResource:@"IngenicoConnectSDK" ofType:@"bundle"]
 
 #define StandardUserDefaults        [NSUserDefaults standardUserDefaults]
 #define DocumentsFolderPath         [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]

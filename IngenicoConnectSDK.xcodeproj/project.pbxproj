@@ -214,6 +214,8 @@
 		B4D77F1B1DE731D300F7B1C1 /* ICPaymentProductNetworks.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77EDB1DE731D300F7B1C1 /* ICPaymentProductNetworks.h */; };
 		B4D77F1C1DE731D300F7B1C1 /* ICPaymentProductNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D77EDC1DE731D300F7B1C1 /* ICPaymentProductNetworks.m */; };
 		F5353A931E1F978C002A323E /* IngenicoConnectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5353A921E1F978C002A323E /* IngenicoConnectSDK.bundle */; };
+		F5EC6CB01E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h in Headers */ = {isa = PBXBuildFile; fileRef = F5EC6CAE1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h */; };
+		F5EC6CB11E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EC6CAF1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -442,6 +444,8 @@
 		B9EEF0EF68DF83D327360514 /* Pods-IngenicoConnectSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDKTests/Pods-IngenicoConnectSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF08A8A53CB540695EAEFB24 /* Pods-IngenicoConnectSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDK/Pods-IngenicoConnectSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		F5353A921E1F978C002A323E /* IngenicoConnectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IngenicoConnectSDK.bundle; sourceTree = "<group>"; };
+		F5EC6CAE1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICValidatorBoletoBancarioRequiredness.h; sourceTree = "<group>"; };
+		F5EC6CAF1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICValidatorBoletoBancarioRequiredness.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -874,6 +878,7 @@
 		B4D77E481DE7317E00F7B1C1 /* PaymentProducts */ = {
 			isa = PBXGroup;
 			children = (
+				F5EC6CAD1E678C5C0001E0E6 /* Validators */,
 				B4D77E9D1DE731D300F7B1C1 /* ICAccountOnFile.h */,
 				B4D77E9E1DE731D300F7B1C1 /* ICAccountOnFile.m */,
 				B4D77E9F1DE731D300F7B1C1 /* ICAccountOnFileAttribute.h */,
@@ -900,26 +905,6 @@
 				B4D77EB41DE731D300F7B1C1 /* ICPaymentProductFields.m */,
 				B4D77EB51DE731D300F7B1C1 /* ICBasicPaymentProducts.h */,
 				B4D77EB61DE731D300F7B1C1 /* ICBasicPaymentProducts.m */,
-				B4D77EB71DE731D300F7B1C1 /* ICValidators.h */,
-				B4D77EB81DE731D300F7B1C1 /* ICValidators.m */,
-				B4D77EB91DE731D300F7B1C1 /* ICValidator.h */,
-				B4D77EBA1DE731D300F7B1C1 /* ICValidator.m */,
-				B4D77EBB1DE731D300F7B1C1 /* ICValidatorExpirationDate.h */,
-				B4D77EBC1DE731D300F7B1C1 /* ICValidatorExpirationDate.m */,
-				B4D77EBD1DE731D300F7B1C1 /* ICValidatorFixedList.h */,
-				B4D77EBE1DE731D300F7B1C1 /* ICValidatorFixedList.m */,
-				B4D77EBF1DE731D300F7B1C1 /* ICValueMappingItem.h */,
-				B4D77EC01DE731D300F7B1C1 /* ICValueMappingItem.m */,
-				B4D77EC11DE731D300F7B1C1 /* ICValidatorLength.h */,
-				B4D77EC21DE731D300F7B1C1 /* ICValidatorLength.m */,
-				B4D77EC31DE731D300F7B1C1 /* ICValidatorLuhn.h */,
-				B4D77EC41DE731D300F7B1C1 /* ICValidatorLuhn.m */,
-				B4D77EC51DE731D300F7B1C1 /* ICValidatorRange.h */,
-				B4D77EC61DE731D300F7B1C1 /* ICValidatorRange.m */,
-				B4D77EC71DE731D300F7B1C1 /* ICValidatorRegularExpression.h */,
-				B4D77EC81DE731D300F7B1C1 /* ICValidatorRegularExpression.m */,
-				B4D77EC91DE731D300F7B1C1 /* ICValidatorEmailAddress.h */,
-				B4D77ECA1DE731D300F7B1C1 /* ICValidatorEmailAddress.m */,
 				B4D77ECB1DE731D300F7B1C1 /* ICAccountOnFileDisplayHints.h */,
 				B4D77ECC1DE731D300F7B1C1 /* ICAccountOnFileDisplayHints.m */,
 				B4D77ECD1DE731D300F7B1C1 /* ICLabelTemplate.h */,
@@ -940,6 +925,35 @@
 				B4D77EDC1DE731D300F7B1C1 /* ICPaymentProductNetworks.m */,
 			);
 			name = PaymentProducts;
+			sourceTree = "<group>";
+		};
+		F5EC6CAD1E678C5C0001E0E6 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				B4D77EB71DE731D300F7B1C1 /* ICValidators.h */,
+				B4D77EB81DE731D300F7B1C1 /* ICValidators.m */,
+				B4D77EB91DE731D300F7B1C1 /* ICValidator.h */,
+				B4D77EBA1DE731D300F7B1C1 /* ICValidator.m */,
+				B4D77EBB1DE731D300F7B1C1 /* ICValidatorExpirationDate.h */,
+				B4D77EBC1DE731D300F7B1C1 /* ICValidatorExpirationDate.m */,
+				B4D77EBD1DE731D300F7B1C1 /* ICValidatorFixedList.h */,
+				B4D77EBE1DE731D300F7B1C1 /* ICValidatorFixedList.m */,
+				B4D77EBF1DE731D300F7B1C1 /* ICValueMappingItem.h */,
+				B4D77EC01DE731D300F7B1C1 /* ICValueMappingItem.m */,
+				B4D77EC11DE731D300F7B1C1 /* ICValidatorLength.h */,
+				B4D77EC21DE731D300F7B1C1 /* ICValidatorLength.m */,
+				B4D77EC31DE731D300F7B1C1 /* ICValidatorLuhn.h */,
+				B4D77EC41DE731D300F7B1C1 /* ICValidatorLuhn.m */,
+				B4D77EC51DE731D300F7B1C1 /* ICValidatorRange.h */,
+				B4D77EC61DE731D300F7B1C1 /* ICValidatorRange.m */,
+				B4D77EC71DE731D300F7B1C1 /* ICValidatorRegularExpression.h */,
+				B4D77EC81DE731D300F7B1C1 /* ICValidatorRegularExpression.m */,
+				B4D77EC91DE731D300F7B1C1 /* ICValidatorEmailAddress.h */,
+				B4D77ECA1DE731D300F7B1C1 /* ICValidatorEmailAddress.m */,
+				F5EC6CAE1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h */,
+				F5EC6CAF1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m */,
+			);
+			name = Validators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1020,6 +1034,7 @@
 				B4D77F091DE731D300F7B1C1 /* ICValidatorEmailAddress.h in Headers */,
 				B4D77DE81DE7301900F7B1C1 /* ICBase64.h in Headers */,
 				B4D77E7B1DE731B200F7B1C1 /* ICValidationErrorLength.h in Headers */,
+				F5EC6CB01E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h in Headers */,
 				B4D77EFB1DE731D300F7B1C1 /* ICValidatorExpirationDate.h in Headers */,
 				B4D77F161DE731D300F7B1C1 /* ICBasicPaymentProductGroups.h in Headers */,
 				B4D77E1D1DE7303800F7B1C1 /* ICBasicPaymentItemConverter.h in Headers */,
@@ -1253,6 +1268,7 @@
 				B4D77EFE1DE731D300F7B1C1 /* ICValidatorFixedList.m in Sources */,
 				B4D77E501DE7319700F7B1C1 /* ICDirectoryEntry.m in Sources */,
 				B4D77F191DE731D300F7B1C1 /* ICBasicPaymentProductGroup.m in Sources */,
+				F5EC6CB11E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m in Sources */,
 				B4D77E111DE7303800F7B1C1 /* ICBasicPaymentProductConverter.m in Sources */,
 				B4D77E861DE731B200F7B1C1 /* ICValidationErrorRegularExpression.m in Sources */,
 				B4D77F151DE731D300F7B1C1 /* ICBasicPaymentProductGroups.m in Sources */,
@@ -1391,10 +1407,7 @@
 				ICC_DYNAMIC_NO_PIC = NO;
 				ICC_NO_COMMON_BLOCKS = YES;
 				ICC_OPTIMIZATION_LEVEL = 0;
-				ICC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				ICC_PREPROCESSOR_DEFINITIONS = "DEBUG=1 $(inherited)";
 				ICC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				ICC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				ICC_WARN_UNDECLARED_SELECTOR = YES;

@@ -7,6 +7,7 @@
 //
 
 #import <IngenicoConnectSDK/ICValidator.h>
+#import <IngenicoConnectSDK/ICPaymentRequest.h>
 
 @implementation ICValidator
 
@@ -20,6 +21,12 @@
 }
 
 - (void)validate:(NSString *)value
+{
+    NSLog(@"validate: is deprecated! please use validate:forPaymentRequest: instead");
+    [self validate:value forPaymentRequest:nil];
+}
+
+- (void)validate:(NSString *)value forPaymentRequest:(ICPaymentRequest *)request
 {
     [self.errors removeAllObjects];
 }

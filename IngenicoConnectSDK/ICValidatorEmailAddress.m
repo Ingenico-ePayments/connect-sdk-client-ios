@@ -40,9 +40,9 @@
     return self;
 }
 
-- (void)validate:(NSString *)value
+- (void)validate:(NSString *)value forPaymentRequest:(ICPaymentRequest *)request
 {
-    [super validate:value];
+    [super validate:value forPaymentRequest:request];
     NSInteger numberOfMatches = [self.expression numberOfMatchesInString:value options:0 range:NSMakeRange(0, value.length)];
     if (numberOfMatches != 1) {
         ICValidationErrorEmailAddress *error = [[ICValidationErrorEmailAddress alloc] init];

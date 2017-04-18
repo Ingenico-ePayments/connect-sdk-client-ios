@@ -37,40 +37,44 @@
 
 - (void)validateValue:(NSString *)value
 {
+    NSLog(@"validateValue: is deprecated! please use validateValue:forPaymentRequest: instead");
+    [self validateValue:value forPaymentRequest:nil];
+}
+
+- (void)validateValue:(NSString *)value forPaymentRequest:(ICPaymentRequest *)request
+{
     [self.errors removeAllObjects];
-    if (self.dataRestrictions.isRequired == YES && [value isEqualToString:@""] == YES ) {
+    if (self.dataRestrictions.isRequired == YES && [value isEqualToString:@""] == YES) {
         ICValidationErrorIsRequired *error = [[ICValidationErrorIsRequired alloc] init];
         [self.errors addObject:error];
-    } else {
-        if (self.dataRestrictions.isRequired == YES || [value isEqualToString:@""] == NO) {
-            for (ICValidator *rule in self.dataRestrictions.validators.validators) {
-                [rule validate:value];
-                [self.errors addObjectsFromArray:rule.errors];
+    } else if (self.dataRestrictions.isRequired == YES || [value isEqualToString:@""] == NO || self.dataRestrictions.validators.containsSomeTimesRequiredValidator) {
+        for (ICValidator *rule in self.dataRestrictions.validators.validators) {
+            [rule validate:value forPaymentRequest:request];
+            [self.errors addObjectsFromArray:rule.errors];
+        }
+        switch (self.type) {
+            case ICExpirationDate:
+                break;
+            case ICInteger: {
+                NSNumber *number = [self.numberFormatter numberFromString:value];
+                if (number == nil) {
+                    ICValidationErrorInteger *error = [[ICValidationErrorInteger alloc] init];
+                    [self.errors addObject:error];
+                }
+                break;
             }
-            switch (self.type) {
-                case ICExpirationDate:
-                break;
-                case ICInteger: {
-                    NSNumber *number = [self.numberFormatter numberFromString:value];
-                    if (number == nil) {
-                        ICValidationErrorInteger *error = [[ICValidationErrorInteger alloc] init];
-                        [self.errors addObject:error];
-                    }
-                    break;
+            case ICNumericString: {
+                if ([self.numericStringCheck numberOfMatchesInString:value options:0 range:NSMakeRange(0, value.length)] != 1) {
+                    ICValidationErrorNumericString *error = [[ICValidationErrorNumericString alloc] init];
+                    [self.errors addObject:error];
                 }
-                case ICNumericString: {
-                    if ([self.numericStringCheck numberOfMatchesInString:value options:0 range:NSMakeRange(0, value.length)] != 1) {
-                        ICValidationErrorNumericString *error = [[ICValidationErrorNumericString alloc] init];
-                        [self.errors addObject:error];
-                    }
-                    break;
-                }
-                case ICString:
                 break;
-                default:
+            }
+            case ICString:
+                break;
+            default:
                 [NSException raise:@"Invalid type" format:@"Type %u is invalid", self.type];
                 break;
-            }
         }
     }
 }

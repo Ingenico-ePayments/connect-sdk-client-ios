@@ -12,6 +12,8 @@
 #import <IngenicoConnectSDK/ICDataRestrictions.h>
 #import <IngenicoConnectSDK/ICType.h>
 
+@class ICPaymentRequest;
+
 @interface ICPaymentProductField : NSObject
 
 @property (strong, nonatomic) ICDataRestrictions *dataRestrictions;
@@ -21,6 +23,7 @@
 
 @property (strong, nonatomic) NSMutableArray *errors;
 
-- (void)validateValue:(NSString *)value;
+- (void)validateValue:(NSString *)value DEPRECATED_ATTRIBUTE;
+- (void)validateValue:(NSString *)value forPaymentRequest:(ICPaymentRequest *)request;
 
 @end

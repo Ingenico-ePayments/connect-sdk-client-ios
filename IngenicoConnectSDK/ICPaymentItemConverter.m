@@ -20,6 +20,7 @@
 #import <IngenicoConnectSDK/ICValidatorRange.h>
 #import <IngenicoConnectSDK/ICValidatorLength.h>
 #import <IngenicoConnectSDK/ICValidatorFixedList.h>
+#import <IngenicoConnectSDK/ICValidatorBoletoBancarioRequiredness.h>
 
 @implementation ICPaymentItemConverter {
 
@@ -167,6 +168,11 @@
         validator = [self validatorRegularExpressionFromJSON:[rawValidators objectForKey:@"regularExpression"]];
         [validators.validators addObject:validator];
     }
+    if ([rawValidators objectForKey:@"boletoBancarioRequiredness"] != nil) {
+        validator = [self validatorBoletoBancarioRequirednessFromJSON:[rawValidators objectForKey:@"boletoBancarioRequiredness"]];
+        [validators.validators addObject:validator];
+        validators.containsSomeTimesRequiredValidator = YES;
+    }
 }
 
 - (ICValidatorRegularExpression *)validatorRegularExpressionFromJSON:(NSDictionary *)rawValidator
@@ -201,6 +207,13 @@
         [allowedValues addObject:value];
     }
     ICValidatorFixedList *validator = [[ICValidatorFixedList alloc] initWithAllowedValues:allowedValues];
+    return validator;
+}
+
+- (ICValidatorBoletoBancarioRequiredness *)validatorBoletoBancarioRequirednessFromJSON:(NSDictionary *)rawValidator
+{
+    ICValidatorBoletoBancarioRequiredness *validator = [[ICValidatorBoletoBancarioRequiredness alloc] init];
+    validator.fiscalNumberLength = [[rawValidator objectForKey:@"fiscalNumberLength"] integerValue];
     return validator;
 }
 

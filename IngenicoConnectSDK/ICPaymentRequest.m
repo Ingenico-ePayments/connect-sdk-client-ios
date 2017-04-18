@@ -120,7 +120,7 @@
     for (ICPaymentProductField *field in self.paymentProduct.fields.paymentProductFields) {
         if ([self fieldIsPartOfAccountOnFile:field.identifier] == NO) {
             NSString *fieldValue = [self unmaskedValueForField:field.identifier];
-            [field validateValue:fieldValue];
+            [field validateValue:fieldValue forPaymentRequest:self];
             [self.errors addObjectsFromArray:field.errors];
         }
     }

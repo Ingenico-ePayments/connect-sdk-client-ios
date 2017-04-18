@@ -20,9 +20,9 @@
     return self;
 }
 
-- (void)validate:(NSString *)value
+- (void)validate:(NSString *)value forPaymentRequest:(ICPaymentRequest *)request
 {
-    [super validate:value];
+    [super validate:value forPaymentRequest:request];
     for (NSString *allowedValue in self.allowedValues) {
         if ([allowedValue isEqualToString:value] == YES) {
             return;

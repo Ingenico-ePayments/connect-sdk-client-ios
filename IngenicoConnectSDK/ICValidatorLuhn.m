@@ -11,9 +11,9 @@
 
 @implementation ICValidatorLuhn
 
-- (void)validate:(NSString *)value
+- (void)validate:(NSString *)value forPaymentRequest:(ICPaymentRequest *)request
 {
-    [super validate:value];
+    [super validate:value forPaymentRequest:request];
     NSInteger evenSum = 0;
     NSInteger oddSum = 0;
     NSInteger digit;

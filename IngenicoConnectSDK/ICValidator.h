@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@class ICPaymentRequest;
 
 @interface ICValidator : NSObject
 
 @property (strong, nonatomic) NSMutableArray *errors;
 
-- (void)validate:(NSString *)value;
+- (void)validate:(NSString *)value DEPRECATED_ATTRIBUTE;
+- (void)validate:(NSString *)value forPaymentRequest:(ICPaymentRequest *)request;
 
 @end

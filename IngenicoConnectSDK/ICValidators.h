@@ -11,5 +11,6 @@
 @interface ICValidators : NSObject
 
 @property (strong, nonatomic) NSMutableArray *validators;
+@property (nonatomic) BOOL containsSomeTimesRequiredValidator;
 
 @end

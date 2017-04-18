@@ -11,9 +11,9 @@
 
 @implementation ICValidatorLength
 
-- (void)validate:(NSString *)value
+- (void)validate:(NSString *)value forPaymentRequest:(ICPaymentRequest *)request
 {
-    [super validate:value];
+    [super validate:value forPaymentRequest:request];
     ICValidationErrorLength *error = [[ICValidationErrorLength alloc] init];
     error.minLength = self.minLength;
     error.maxLength = self.maxLength;

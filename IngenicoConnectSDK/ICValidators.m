@@ -15,6 +15,7 @@
     self = [super init];
     if (self != nil) {
         self.validators = [[NSMutableArray alloc] init];
+        self.containsSomeTimesRequiredValidator = NO;
     }
     return self;
 }
