@@ -11,7 +11,9 @@
 
 typedef enum {
     ICRegionEU,
-    ICRegionUS
+    ICRegionUS,
+    ICRegionAMS,
+    ICRegionPAR
 } ICRegion;
 
 #endif

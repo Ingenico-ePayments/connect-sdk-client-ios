@@ -33,7 +33,7 @@
         NSString *deviceType = [self deviceType];
         self.metaInfo = @{
             @"platformIdentifier": platformIdentifier,
-            @"sdkIdentifier": @"iOSClientSDK/v3.1.0",
+            @"sdkIdentifier": @"iOSClientSDK/v3.2.0",
             @"sdkCreator": @"Ingenico",
             @"screenSize": screenSize,
             @"deviceBrand": @"Apple",
@@ -119,13 +119,13 @@
         case ICRegionEU:
             switch (environment) {
                 case ICProduction:
-                    return @"https://api-eu.globalcollect.com/client/v1";
+                    return @"https://ams1.api-ingenico.com/client/v1";
                     break;
                 case ICPreProduction:
-                    return @"https://api-eu-preprod.globalcollect.com/client/v1";
+                    return @"https://ams1.preprod.api-ingenico.com/client/v1";
                     break;
                 case ICSandbox:
-                    return @"https://api-eu-sandbox.globalcollect.com/client/v1";
+                    return @"https://ams1.sandbox.api-ingenico.com/client/v1";
                     break;
                 default:
                     [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
@@ -133,13 +133,43 @@
         case ICRegionUS:
             switch (environment) {
                 case ICProduction:
-                    return @"https://api-us.globalcollect.com/client/v1";
+                    return @"https://us.api-ingenico.com/client/v1";
                     break;
                 case ICPreProduction:
-                    return @"https://api-us-preprod.globalcollect.com/client/v1";
+                    return @"https://us.preprod.api-ingenico.com/client/v1";
                     break;
                 case ICSandbox:
-                    return @"https://api-us-sandbox.globalcollect.com/client/v1";
+                    return @"https://us.sandbox.api-ingenico.com/client/v1";
+                    break;
+                default:
+                    [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
+                    break;
+            }
+        case ICRegionAMS:
+            switch (environment) {
+                case ICProduction:
+                    return @"https://ams2.api-ingenico.com/client/v1";
+                    break;
+                case ICPreProduction:
+                    return @"https://ams2.preprod.api-ingenico.com/client/v1";
+                    break;
+                case ICSandbox:
+                    return @"https://ams2.sandbox.api-ingenico.com/client/v1";
+                    break;
+                default:
+                    [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
+                    break;
+            }
+        case ICRegionPAR:
+            switch (environment) {
+                case ICProduction:
+                    return @"https://par.api-ingenico.com/client/v1";
+                    break;
+                case ICPreProduction:
+                    return @"https://par-preprod.api-ingenico.com/client/v1";
+                    break;
+                case ICSandbox:
+                    return @"https://par.sandbox.api-ingenico.com/client/v1";
                     break;
                 default:
                     [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
@@ -157,13 +187,13 @@
         case ICRegionEU:
             switch (environment) {
                 case ICProduction:
-                    return @"https://assets.pay1.poweredbyglobalcollect.com";
+                    return @"https://assets.pay1.secured-by-ingenico.com";
                     break;
                 case ICPreProduction:
-                    return @"https://assets.pay1.preprod.poweredbyglobalcollect.com";
+                    return @"https://assets.pay1.preprod.secured-by-ingenico.com";
                     break;
                 case ICSandbox:
-                    return @"https://assets.pay1.sandbox.poweredbyglobalcollect.com";
+                    return @"https://assets.pay1.sandbox.secured-by-ingenico.com";
                     break;
                 default:
                     [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
@@ -171,13 +201,41 @@
         case ICRegionUS:
             switch (environment) {
                 case ICProduction:
-                    return @"https://assets.pay2.poweredbyglobalcollect.com";
+                    return @"https://assets.pay2.secured-by-ingenico.com";
                     break;
                 case ICPreProduction:
-                    return @"https://assets.pay2.preprod.poweredbyglobalcollect.com";
+                    return @"https://assets.pay2.preprod.secured-by-ingenico.com";
                     break;
                 case ICSandbox:
-                    return @"https://assets.pay2.sandbox.poweredbyglobalcollect.com";
+                    return @"https://assets.pay2.sandbox.secured-by-ingenico.com";
+                    break;
+                default:
+                    [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
+            }
+        case ICRegionAMS:
+            switch (environment) {
+                case ICProduction:
+                    return @"https://assets.pay3.secured-by-ingenico.com";
+                    break;
+                case ICPreProduction:
+                    return @"https://assets.pay3.preprod.secured-by-ingenico.com";
+                    break;
+                case ICSandbox:
+                    return @"https://assets.pay3.sandbox.secured-by-ingenico.com";
+                    break;
+                default:
+                    [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
+            }
+        case ICRegionPAR:
+            switch (environment) {
+                case ICProduction:
+                    return @"https://assets.pay4.secured-by-ingenico.com";
+                    break;
+                case ICPreProduction:
+                    return @"https://assets.pay4.preprod.secured-by-ingenico.com";
+                    break;
+                case ICSandbox:
+                    return @"https://assets.pay4.sandbox.secured-by-ingenico.com";
                     break;
                 default:
                     [NSException raise:@"Invalid environment" format:@"Environment %d is invalid", environment];
