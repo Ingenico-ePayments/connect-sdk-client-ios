@@ -18,8 +18,6 @@
 	<string>templates/master/global/css/img/ppimages/pp_logo_53_v1.png</string>
 	<key>pp_logo_56</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_56_v1.png</string>
-	<key>pp_logo_111</key>
-	<string>templates/master/global/css/img/ppimages/pp_logo_111_v1.png</string>
 	<key>pp_logo_114</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_114_v1.png</string>
 	<key>pp_logo_117</key>
@@ -143,8 +141,6 @@
 	<key>pp_2_tooltip_cvv</key>
 	<string>templates/master/global/css/img/ppimages/ppf_cvv_v1.png</string>
 	<key>pp_3_tooltip_cvv</key>
-	<string>templates/master/global/css/img/ppimages/ppf_cvv_v1.png</string>
-	<key>pp_111_tooltip_cvv</key>
 	<string>templates/master/global/css/img/ppimages/ppf_cvv_v1.png</string>
 	<key>pp_117_tooltip_cvv</key>
 	<string>templates/master/global/css/img/ppimages/ppf_cvv_v1.png</string>

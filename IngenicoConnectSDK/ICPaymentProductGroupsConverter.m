@@ -16,7 +16,7 @@
     ICBasicPaymentProductGroups *groups = [ICBasicPaymentProductGroups new];
     ICBasicPaymentProductGroupConverter *converter = [ICBasicPaymentProductGroupConverter new];
     for (NSDictionary *rawProductGroup in rawProductGroups) {
-        ICPaymentProductGroup *group = [converter paymentProductGroupFromJSON:rawProductGroup];
+        ICBasicPaymentProductGroup *group = [converter paymentProductGroupFromJSON:rawProductGroup];
         [groups.paymentProductGroups addObject:group];
     }
     [groups sort];

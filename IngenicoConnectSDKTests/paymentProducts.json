@@ -177,17 +177,6 @@
             "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
         },
         {
-            "allowsRecurring": true,
-            "allowsTokenization": true,
-            "displayHints": {
-                "displayOrder": 58,
-                "label": "Visa Delta",
-                "logo": "/templates/master/global/css/img/ppimages/pp_logo_111_v1.png"
-            },
-            "id": 111,
-            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
-        },
-        {
             "allowsRecurring": false,
             "allowsTokenization": false,
             "displayHints": {

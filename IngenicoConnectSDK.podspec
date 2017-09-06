@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 
   s.name          = "IngenicoConnectSDK"
-  s.version       = "3.2.0"
+  s.version       = "3.3.0"
   s.summary       = "Ingenico Connect iOS SDK"
   s.description   = <<-DESC
                     This native iOS SDK facilitates handling payments in your apps
-                    using the GlobalCollect platform of Ingenico ePayments.
+                    using the Ingenico ePayments platform of Ingenico ePayments.
                     DESC
 
   s.homepage      = "https://github.com/Ingenico-ePayments/connect-sdk-client-ios"

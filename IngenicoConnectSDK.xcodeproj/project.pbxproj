@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E3D65B848A6B9267A6369A9 /* Pods_IngenicoConnectSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1555FCB3A5BE54C63C9C1EE /* Pods_IngenicoConnectSDK.framework */; };
-		7AF08AAC8B049A7109410C30 /* Pods_IngenicoConnectSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24104E7B4FD5170DB8F17F5F /* Pods_IngenicoConnectSDKTests.framework */; };
+		2AF54A5DB88AE1BE53646103 /* libPods-IngenicoConnectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A70514BF7A7F376716F06C7C /* libPods-IngenicoConnectSDK.a */; };
 		B4C369C91DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699A1DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m */; };
 		B4C369CA1DE754C100C50450 /* ICStubUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699D1DE754C100C50450 /* ICStubUtil.m */; };
 		B4C369CB1DE754C100C50450 /* ICJOSEEncryptorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699F1DE754C100C50450 /* ICJOSEEncryptorTestCase.m */; };
@@ -213,6 +212,7 @@
 		B4D77F1A1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77EDA1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h */; };
 		B4D77F1B1DE731D300F7B1C1 /* ICPaymentProductNetworks.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77EDB1DE731D300F7B1C1 /* ICPaymentProductNetworks.h */; };
 		B4D77F1C1DE731D300F7B1C1 /* ICPaymentProductNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D77EDC1DE731D300F7B1C1 /* ICPaymentProductNetworks.m */; };
+		B9B2CC376135A4E305A4E4D7 /* libPods-IngenicoConnectSDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E8785683750C1D6B24F034 /* libPods-IngenicoConnectSDKTests.a */; };
 		F5353A931E1F978C002A323E /* IngenicoConnectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5353A921E1F978C002A323E /* IngenicoConnectSDK.bundle */; };
 		F5EC6CB01E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h in Headers */ = {isa = PBXBuildFile; fileRef = F5EC6CAE1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h */; };
 		F5EC6CB11E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EC6CAF1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m */; };
@@ -230,9 +230,8 @@
 
 /* Begin PBXFileReference section */
 		14746FB8345302C2CDF3D011 /* Pods-IngenicoConnectSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDKTests/Pods-IngenicoConnectSDKTests.release.xcconfig"; sourceTree = "<group>"; };
-		24104E7B4FD5170DB8F17F5F /* Pods_IngenicoConnectSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IngenicoConnectSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3317A7442F6B5B5D2187727B /* Pods-IngenicoConnectSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDK/Pods-IngenicoConnectSDK.release.xcconfig"; sourceTree = "<group>"; };
-		A1555FCB3A5BE54C63C9C1EE /* Pods_IngenicoConnectSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IngenicoConnectSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70514BF7A7F376716F06C7C /* libPods-IngenicoConnectSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IngenicoConnectSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C3699A1DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICAFNetworkingWrapperTestCase.m; path = IngenicoConnectSDKTests/ICAFNetworkingWrapperTestCase.m; sourceTree = "<group>"; };
 		B4C3699C1DE754C100C50450 /* ICStubUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ICStubUtil.h; path = IngenicoConnectSDKTests/ICStubUtil.h; sourceTree = "<group>"; };
 		B4C3699D1DE754C100C50450 /* ICStubUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICStubUtil.m; path = IngenicoConnectSDKTests/ICStubUtil.m; sourceTree = "<group>"; };
@@ -444,6 +443,7 @@
 		B9EEF0EF68DF83D327360514 /* Pods-IngenicoConnectSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDKTests/Pods-IngenicoConnectSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF08A8A53CB540695EAEFB24 /* Pods-IngenicoConnectSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDK/Pods-IngenicoConnectSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		F5353A921E1F978C002A323E /* IngenicoConnectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IngenicoConnectSDK.bundle; sourceTree = "<group>"; };
+		F5E8785683750C1D6B24F034 /* libPods-IngenicoConnectSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IngenicoConnectSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5EC6CAE1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICValidatorBoletoBancarioRequiredness.h; sourceTree = "<group>"; };
 		F5EC6CAF1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICValidatorBoletoBancarioRequiredness.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -453,7 +453,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E3D65B848A6B9267A6369A9 /* Pods_IngenicoConnectSDK.framework in Frameworks */,
+				2AF54A5DB88AE1BE53646103 /* libPods-IngenicoConnectSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4D77C6B1DE72EB900F7B1C1 /* IngenicoConnectSDK.framework in Frameworks */,
-				7AF08AAC8B049A7109410C30 /* Pods_IngenicoConnectSDKTests.framework in Frameworks */,
+				B9B2CC376135A4E305A4E4D7 /* libPods-IngenicoConnectSDKTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,8 +483,8 @@
 		841814CF4293B6C8D8E19417 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A1555FCB3A5BE54C63C9C1EE /* Pods_IngenicoConnectSDK.framework */,
-				24104E7B4FD5170DB8F17F5F /* Pods_IngenicoConnectSDKTests.framework */,
+				A70514BF7A7F376716F06C7C /* libPods-IngenicoConnectSDK.a */,
+				F5E8785683750C1D6B24F034 /* libPods-IngenicoConnectSDKTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1414,7 +1414,7 @@
 				ICC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				ICC_WARN_UNUSED_FUNCTION = YES;
 				ICC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1461,7 +1461,7 @@
 				ICC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				ICC_WARN_UNUSED_FUNCTION = YES;
 				ICC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

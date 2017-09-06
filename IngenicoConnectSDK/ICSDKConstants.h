@@ -8,13 +8,14 @@
 
 #ifndef IngenicoConnectSDK_ICSDKConstants_h
 #define IngenicoConnectSDK_ICSDKConstants_h
+#import <IngenicoConnectSDK/ICSession.h>
 
 //Keys
 #define kICSDKLocalizable           @"ICSDKLocalizable"
 #define kICImageMapping             @"kICImageMapping"
 #define kICImageMappingInitialized  @"kICImageMappingInitialized"
 #define kICIINMapping               @"kICIINMapping"
-#define kICSDKBundlePath            [[NSBundle mainBundle] pathForResource:@"IngenicoConnectSDK" ofType:@"bundle"]
+#define kICSDKBundlePath            [[NSBundle bundleForClass:[ICSession class]] pathForResource:@"IngenicoConnectSDK" ofType:@"bundle"]
 
 #define StandardUserDefaults        [NSUserDefaults standardUserDefaults]
 #define DocumentsFolderPath         [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
