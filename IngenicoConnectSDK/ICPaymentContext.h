@@ -16,6 +16,7 @@
 @property (nonatomic, readonly) BOOL isRecurring;
 @property (strong, nonatomic, readonly) NSString *countryCode;
 @property (strong, nonatomic) NSString *locale;
+@property (assign, nonatomic) BOOL forceBasicFlow;
 
 - (instancetype)initWithAmountOfMoney:(ICPaymentAmountOfMoney *)amountOfMoney isRecurring:(BOOL)isRecurring countryCode:(NSString *)countryCode;
 

@@ -84,12 +84,32 @@
         [self updateImagesForPaymentItems:paymentItems baseURL:baseURL];
     });
 }
+- (void)updateImagesForPaymentItemsAsynchronously:(NSArray *)paymentItems baseURL:(NSString *)baseURL callback:(void(^)())callback
+{
+    dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(backgroundQueue, ^{
+        [self updateImagesForPaymentItems:paymentItems baseURL:baseURL];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            callback();
+        });
+    });
+}
 
 - (void)updateImagesForPaymentItemAsynchronously:(NSObject<ICPaymentItem> *)paymentItem baseURL:(NSString *)baseURL
 {
     dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(backgroundQueue, ^{
         [self updateImagesForPaymentItem:paymentItem baseURL:baseURL];
+    });
+}
+- (void)updateImagesForPaymentItemAsynchronously:(NSObject<ICPaymentItem> *)paymentItem baseURL:(NSString *)baseURL callback:(void(^)())callback
+{
+    dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(backgroundQueue, ^{
+        [self updateImagesForPaymentItem:paymentItem baseURL:baseURL];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            callback();
+        });
     });
 }
 

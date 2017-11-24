@@ -81,8 +81,10 @@
         self.paymentProducts = paymentProducts;
         self.paymentProducts.stringFormatter = self.stringFormatter;
         [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
-        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL]];
-        success(paymentProducts);
+        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL] callback:^{
+            [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
+            success(paymentProducts);
+        }];
     } failure:^(NSError *error) {
         failure(error);
     }];
@@ -101,36 +103,45 @@
         self.paymentProductGroups = paymentProductGroups;
         self.paymentProductGroups.stringFormatter = self.stringFormatter;
         [self.assetManager initializeImagesForPaymentItems:paymentProductGroups.paymentProductGroups];
-        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProductGroups.paymentProductGroups baseURL:[self.communicator assetsBaseURL]];
-        success(paymentProductGroups);
+        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProductGroups.paymentProductGroups baseURL:[self.communicator assetsBaseURL] callback:^{
+            [self.assetManager initializeImagesForPaymentItems:paymentProductGroups.paymentProductGroups];
+            success(paymentProductGroups);
+        }];
     } failure:^(NSError *error) {
         failure(error);
     }];
 
 }
-
+- (void)thirdPartyStatusForPayment:(NSString *)paymentId success:(void(^)(ICThirdPartyStatusResponse *thirdPartyStatusResponse))success failure:(void(^)(NSError *error))failure
+{
+    [self.communicator thirdPartyStatusForPayment:paymentId success:success failure:failure];
+}
 - (void)paymentItemsForContext:(ICPaymentContext *)context groupPaymentProducts:(BOOL)groupPaymentProducts success:(void (^)(ICPaymentItems *paymentItems))success failure:(void (^)(NSError *error))failure {
     [self.communicator paymentProductsForContext:context success:^(ICBasicPaymentProducts *paymentProducts) {
         self.paymentProducts = paymentProducts;
         self.paymentProducts.stringFormatter = self.stringFormatter;
         [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
-        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL]];
-
-        if (groupPaymentProducts) {
-            [self.communicator paymentProductGroupsForContext:context success:^(ICBasicPaymentProductGroups *paymentProductGroups) {
-                self.paymentProductGroups = paymentProductGroups;
-                self.paymentProductGroups.stringFormatter = self.stringFormatter;
-                [self.assetManager initializeImagesForPaymentItems:paymentProductGroups.paymentProductGroups];
-                [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProductGroups.paymentProductGroups baseURL:[self.communicator assetsBaseURL]];
-
-                ICPaymentItems *items = [[ICPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:paymentProductGroups];
+        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL] callback:^{
+            [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
+            if (groupPaymentProducts) {
+                [self.communicator paymentProductGroupsForContext:context success:^(ICBasicPaymentProductGroups *paymentProductGroups) {
+                    self.paymentProductGroups = paymentProductGroups;
+                    self.paymentProductGroups.stringFormatter = self.stringFormatter;
+                    [self.assetManager initializeImagesForPaymentItems:paymentProductGroups.paymentProductGroups];
+                    [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProductGroups.paymentProductGroups baseURL:[self.communicator assetsBaseURL] callback:^{
+                        [self.assetManager initializeImagesForPaymentItems:paymentProductGroups.paymentProductGroups];
+                        ICPaymentItems *items = [[ICPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:paymentProductGroups];
+                        success(items);
+                    }];
+                    
+                } failure:failure];
+            }
+            else {
+                ICPaymentItems *items = [[ICPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:nil];
                 success(items);
-            } failure:failure];
-        }
-        else {
-            ICPaymentItems *items = [[ICPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:nil];
-            success(items);
-        }
+            }
+        }];
+
     } failure:failure];
 }
 
@@ -144,8 +155,10 @@
         [self.communicator paymentProductWithId:paymentProductId context:context success:^(ICPaymentProduct *paymentProduct) {
             [self.paymentProductMapping setObject:paymentProduct forKey:key];
             [self.assetManager initializeImagesForPaymentItem:paymentProduct];
-            [self.assetManager updateImagesForPaymentItemAsynchronously:paymentProduct baseURL:[self.communicator assetsBaseURL]];
-            success(paymentProduct);
+            [self.assetManager updateImagesForPaymentItemAsynchronously:paymentProduct baseURL:[self.communicator assetsBaseURL] callback:^{
+                [self.assetManager initializeImagesForPaymentItem:paymentProduct];
+                success(paymentProduct);
+            }];
         } failure:^(NSError *error) {
             failure(error);
         }];
@@ -161,8 +174,10 @@
         [self.communicator paymentProductGroupWithId:paymentProductGroupId context:context success:^(ICPaymentProductGroup *paymentProductGroup) {
             [self.paymentProductGroupMapping setObject:paymentProductGroup forKey:key];
             [self.assetManager initializeImagesForPaymentItem:paymentProductGroup];
-            [self.assetManager updateImagesForPaymentItemAsynchronously:paymentProductGroup baseURL:[self.communicator assetsBaseURL]];
-            success(paymentProductGroup);
+            [self.assetManager updateImagesForPaymentItemAsynchronously:paymentProductGroup baseURL:[self.communicator assetsBaseURL] callback:^{
+                [self.assetManager initializeImagesForPaymentItem:paymentProductGroup];
+                success(paymentProductGroup);
+            }];
         } failure:^(NSError *error) {
             failure(error);
         }];

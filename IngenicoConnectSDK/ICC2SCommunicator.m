@@ -19,6 +19,8 @@
 #import <IngenicoConnectSDK/ICPaymentProductGroupsConverter.h>
 #import <IngenicoConnectSDK/ICPaymentProductGroupConverter.h>
 #import <IngenicoConnectSDK/ICSDKConstants.h>
+#import <IngenicoConnectSDK/ICThirdPartyStatusResponse.h>
+#import <IngenicoConnectSDK/ICThirdPartyStatusResponseConverter.h>
 #import <PassKit/PKPaymentAuthorizationViewController.h>
 
 @interface ICC2SCommunicator ()
@@ -48,7 +50,18 @@
             return NO;
     }
 }
+- (void)thirdPartyStatusForPayment:(NSString *)paymentId success:(void(^)(ICThirdPartyStatusResponse *thirdPartyStatusResponse))success failure:(void(^)(NSError *error))failure
+{
+    NSString *url = [NSString stringWithFormat:@"%@/%@/payments/%@/thirdpartystatus", self.baseURL, self.configuration.customerId, paymentId];
+    [self getResponseForURL:url success:^(id responseObject) {
+        ICThirdPartyStatusResponseConverter *converter = [[ICThirdPartyStatusResponseConverter alloc] init];
+        ICThirdPartyStatusResponse *response = [converter thirdPartyResponseFromJSON:(NSDictionary *)responseObject];
+        success(response);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
 
+}
 - (void)paymentProductsForContext:(ICPaymentContext *)context success:(void (^)(ICBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure
 {
     NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
@@ -127,7 +140,8 @@
 {
     [self checkAvailabilityForPaymentProductWithId:paymentProductId context:context success:^{
         NSString *isRecurring = context.isRecurring == YES ? @"true" : @"false";
-        NSString *URL = [NSString stringWithFormat:@"%@/%@/products/%@/?countryCode=%@&locale=%@&currencyCode=%@&amount=%lu&isRecurring=%@", [self baseURL], self.configuration.customerId, paymentProductId, context.countryCode, context.locale, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring];
+        NSString *forceBasicFlow = context.forceBasicFlow == YES ? @"true" : @"false";
+        NSString *URL = [NSString stringWithFormat:@"%@/%@/products/%@/?countryCode=%@&locale=%@&currencyCode=%@&amount=%lu&isRecurring=%@&forceBasicFlow=%@", [self baseURL], self.configuration.customerId, paymentProductId, context.countryCode, context.locale, context.amountOfMoney.currencyCode, (unsigned long)context.amountOfMoney.totalAmount, isRecurring, forceBasicFlow];
         [self getResponseForURL:URL success:^(id responseObject) {
             NSDictionary *rawPaymentProduct = (NSDictionary *)responseObject;
             ICPaymentProductConverter *converter = [[ICPaymentProductConverter alloc] init];

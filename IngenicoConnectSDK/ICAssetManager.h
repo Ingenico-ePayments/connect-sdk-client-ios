@@ -19,6 +19,8 @@
 - (void)initializeImagesForPaymentItem:(NSObject<ICPaymentItem> *)paymentItem;
 - (void)updateImagesForPaymentItemsAsynchronously:(NSArray *)paymentItems baseURL:(NSString *)baseURL;
 - (void)updateImagesForPaymentItemAsynchronously:(NSObject<ICPaymentItem> *)paymentItem baseURL:(NSString *)baseURL;
+- (void)updateImagesForPaymentItemsAsynchronously:(NSArray *)paymentItems baseURL:(NSString *)baseURL callback:(void(^)())callback;
+- (void)updateImagesForPaymentItemAsynchronously:(NSObject<ICPaymentItem> *)paymentItem baseURL:(NSString *)baseURL callback:(void(^)())callback;
 - (UIImage *)logoImageForPaymentItem:(NSString *)paymentItemId;
 - (UIImage *)tooltipImageForPaymentItem:(NSString *)paymentItemId field:(NSString *)paymentProductFieldId;
 

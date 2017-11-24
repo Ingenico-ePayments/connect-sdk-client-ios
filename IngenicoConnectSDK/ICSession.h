@@ -40,6 +40,7 @@
 - (void)directoryForPaymentProductId:(NSString *)paymentProductId countryCode:(NSString *)countryCode currencyCode:(NSString *)currencyCode success:(void (^)(ICDirectoryEntries *directoryEntries))success failure:(void (^)(NSError *error))failure;
 - (void)preparePaymentRequest:(ICPaymentRequest *)paymentRequest success:(void (^)(ICPreparedPaymentRequest *preparedPaymentRequest))success failure:(void (^)(NSError *error))failure;
 - (void)paymentProductNetworksForProductId:(NSString *)paymentProductId context:(ICPaymentContext *)context success:(void (^)(ICPaymentProductNetworks *paymentProductNetworks))success failure:(void (^)(NSError *error))failure;
+- (void)thirdPartyStatusForPayment:(NSString *)paymentId success:(void(^)(ICThirdPartyStatusResponse *thirdPartyStatusResponse))success failure:(void(^)(NSError *error))failure;
 
 - (BOOL)isEnvironmentTypeProduction;
 
