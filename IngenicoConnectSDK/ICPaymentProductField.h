@@ -19,8 +19,8 @@
 @property (strong, nonatomic) ICDataRestrictions *dataRestrictions;
 @property (strong, nonatomic) ICPaymentProductFieldDisplayHints *displayHints;
 @property (strong, nonatomic) NSString *identifier;
+@property (assign, nonatomic) BOOL usedForLookup;
 @property (nonatomic) ICType type;
-
 @property (strong, nonatomic) NSMutableArray *errors;
 
 - (void)validateValue:(NSString *)value DEPRECATED_ATTRIBUTE;

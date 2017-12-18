@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Erän summa";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Korko";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Erien määrä";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI-ehdot";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Maksettava kokonaissumma";
 "gc.general.paymentProductFields.installmentId.label" = "Valitse suunnitelma";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Valitse suunnitelma";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Sukunimi";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Hyväksy {linkki}";
 "gc.general.paymentProductFields.title.label" = "Titteli";
-"gc.general.paymentProductFields.title.options.miss" = "[First name Surname]";
-"gc.general.paymentProductFields.title.options.mr" = "[First name Surname]";
-"gc.general.paymentProductFields.title.options.mrs" = "[First name Surname]";
+"gc.general.paymentProductFields.title.options.Miss" = "[First name Surname]";
+"gc.general.paymentProductFields.title.options.Mr" = "[First name Surname]";
+"gc.general.paymentProductFields.title.options.Mrs" = "[First name Surname]";
 "gc.general.paymentProductFields.title.placeholder" = "Titteli";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Antamaasi korttia ei tueta. Anna jokin toinen kortti tai kokeile jotain toista maksutapaa.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Anna voimassa oleva sähköpostiosoite";

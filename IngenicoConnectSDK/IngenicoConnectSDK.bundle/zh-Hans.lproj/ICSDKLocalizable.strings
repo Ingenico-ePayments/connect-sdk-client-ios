@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "每期付款金额";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "利率";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "分期付款期数";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI 条款与条件";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "付款总额";
 "gc.general.paymentProductFields.installmentId.label" = "选择付款方式";
 "gc.general.paymentProductFields.installmentId.placeholder" = "选择付款方式";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "姓氏";
 "gc.general.paymentProductFields.termsAndConditions.label" = "接受 {link}";
 "gc.general.paymentProductFields.title.label" = "称呼";
-"gc.general.paymentProductFields.title.options.miss" = "小姐";
-"gc.general.paymentProductFields.title.options.mr" = "先生";
-"gc.general.paymentProductFields.title.options.mrs" = "女士";
+"gc.general.paymentProductFields.title.options.Miss" = "小姐";
+"gc.general.paymentProductFields.title.options.Mr" = "先生";
+"gc.general.paymentProductFields.title.options.Mrs" = "女士";
 "gc.general.paymentProductFields.title.placeholder" = "称呼";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "该卡不支持当前的交易。请绑定另一张卡或更改付款方式。";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "请提供有效的电子邮件地址";

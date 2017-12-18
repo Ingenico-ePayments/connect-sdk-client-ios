@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Сумма одного частичного платежа";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Процентная ставка";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Количество частичных платежей";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Условия и положения SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Общая сумма к оплате";
 "gc.general.paymentProductFields.installmentId.label" = "Выбрать план";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Выбрать план";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Фамилия";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Принять {link}";
 "gc.general.paymentProductFields.title.label" = "Форма обращения";
-"gc.general.paymentProductFields.title.options.miss" = "Г-жа";
-"gc.general.paymentProductFields.title.options.mr" = "Г-н";
-"gc.general.paymentProductFields.title.options.mrs" = "Г-жа";
+"gc.general.paymentProductFields.title.options.Miss" = "Г-жа";
+"gc.general.paymentProductFields.title.options.Mr" = "Г-н";
+"gc.general.paymentProductFields.title.options.Mrs" = "Г-жа";
 "gc.general.paymentProductFields.title.placeholder" = "Форма обращения";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Введенная карта не поддерживается. Введите другую карту или выберите другой способ оплаты.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Введите действительный адрес эл. почты";

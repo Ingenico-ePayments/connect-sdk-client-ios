@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "毎月のお支払い金額";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "利率";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "お支払い回数";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCIのご利用規約";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "お支払い総額";
 "gc.general.paymentProductFields.installmentId.label" = "プランを選択する";
 "gc.general.paymentProductFields.installmentId.placeholder" = "プランを選択する";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "姓";
 "gc.general.paymentProductFields.termsAndConditions.label" = "同意する{link}";
 "gc.general.paymentProductFields.title.label" = "敬称";
-"gc.general.paymentProductFields.title.options.miss" = "Miss";
-"gc.general.paymentProductFields.title.options.mr" = "Mr";
-"gc.general.paymentProductFields.title.options.mrs" = "Mrs";
+"gc.general.paymentProductFields.title.options.Miss" = "Miss";
+"gc.general.paymentProductFields.title.options.Mr" = "Mr";
+"gc.general.paymentProductFields.title.options.Mrs" = "Mrs";
 "gc.general.paymentProductFields.title.placeholder" = "敬称";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "情報を入力されたカードはご利用いただけないものです。他のカードの情報をご入力いただくか、別のお支払い方法をお選びください。";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "有効なメールアドレスを入力してください";

@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Valoarea ratei";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Rata dobânzii";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Număr de rate";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Termeni şi condiţii SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Valoare totală de plată";
 "gc.general.paymentProductFields.installmentId.label" = "Selectaţi un plan";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Selectaţi un plan";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Prenume";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Acceptare {legătură}";
 "gc.general.paymentProductFields.title.label" = "Titlu";
-"gc.general.paymentProductFields.title.options.miss" = "Dra";
-"gc.general.paymentProductFields.title.options.mr" = "Dl";
-"gc.general.paymentProductFields.title.options.mrs" = "Dna";
+"gc.general.paymentProductFields.title.options.Miss" = "Dra";
+"gc.general.paymentProductFields.title.options.Mr" = "Dl";
+"gc.general.paymentProductFields.title.options.Mrs" = "Dna";
 "gc.general.paymentProductFields.title.placeholder" = "Titlu";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Cardul introdus nu este suportat. Vă rugăm să introduceţi un alt card, sau încercaţi un alt mod de plată.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Furnizaţi o adresă de e-mail validă";

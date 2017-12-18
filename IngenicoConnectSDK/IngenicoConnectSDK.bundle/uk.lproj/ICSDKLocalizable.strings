@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Сума на періодичний платіж";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Процентна ставка";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Кількість періодичних платежів";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Умови та положення SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Загальна сума до сплати";
 "gc.general.paymentProductFields.installmentId.label" = "Виберіть план";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Виберіть план";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Прізвище";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Акцепт {link}";
 "gc.general.paymentProductFields.title.label" = "Назва";
-"gc.general.paymentProductFields.title.options.miss" = "Міс";
-"gc.general.paymentProductFields.title.options.mr" = "Пан";
-"gc.general.paymentProductFields.title.options.mrs" = "Пані";
+"gc.general.paymentProductFields.title.options.Miss" = "Міс";
+"gc.general.paymentProductFields.title.options.Mr" = "Пан";
+"gc.general.paymentProductFields.title.options.Mrs" = "Пані";
 "gc.general.paymentProductFields.title.placeholder" = "Назва";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Вставлена картка не підтримується. Вставте іншу картку або скористайтеся іншим способом оплати.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Введіть дійсну адресу електронної пошти";

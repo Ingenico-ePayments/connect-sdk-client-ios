@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Částka splátky";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Úroková sazba";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Počet splátek";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Obchodní podmínky a pravidla společnosti SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Celková částka ke splacení";
 "gc.general.paymentProductFields.installmentId.label" = "Zvolte plán";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Zvolte plán";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Příjmení";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Přijmout {link}";
 "gc.general.paymentProductFields.title.label" = "Titul";
-"gc.general.paymentProductFields.title.options.miss" = "Slečna";
-"gc.general.paymentProductFields.title.options.mr" = "Pan";
-"gc.general.paymentProductFields.title.options.mrs" = "Paní";
+"gc.general.paymentProductFields.title.options.Miss" = "Slečna";
+"gc.general.paymentProductFields.title.options.Mr" = "Pan";
+"gc.general.paymentProductFields.title.options.Mrs" = "Paní";
 "gc.general.paymentProductFields.title.placeholder" = "Titul";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Karta, kterou jste zadali, není podporovaná. Zadejte, prosím, jinou kartu nebo zkuste jinou platební metodu.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Zadejte platný e-mail";

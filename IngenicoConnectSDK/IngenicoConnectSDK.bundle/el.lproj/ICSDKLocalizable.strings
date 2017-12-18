@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Ποσό ανά δόση";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Επιτόκιο";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Αριθμός δόσεων";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Όροι και προϋποθέσεις SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Συνολικό ποσό πληρωμής";
 "gc.general.paymentProductFields.installmentId.label" = "Επιλέξτε ένα πρόγραμμα";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Επιλέξτε ένα πρόγραμμα";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Επώνυμο";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Αποδοχή {link}";
 "gc.general.paymentProductFields.title.label" = "Τίτλος";
-"gc.general.paymentProductFields.title.options.miss" = "Δις";
-"gc.general.paymentProductFields.title.options.mr" = "Κος";
-"gc.general.paymentProductFields.title.options.mrs" = "Κα";
+"gc.general.paymentProductFields.title.options.Miss" = "Δις";
+"gc.general.paymentProductFields.title.options.Mr" = "Κος";
+"gc.general.paymentProductFields.title.options.Mrs" = "Κα";
 "gc.general.paymentProductFields.title.placeholder" = "Τίτλος";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Η κάρτα που εισαγάγατε δεν υποστηρίζεται. Εισαγάγετε άλλη κάρτα ή επιλέξτε άλλον τρόπο πληρωμής.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Συμπληρώστε μια έγκυρη διεύθυνση email";

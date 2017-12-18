@@ -17,6 +17,7 @@
 #import <IngenicoConnectSDK/ICDirectoryEntries.h>
 #import <IngenicoConnectSDK/ICIINDetailsResponse.h>
 #import <IngenicoConnectSDK/ICPaymentProductNetworks.h>
+#import <IngenicoConnectSDK/ICCustomerDetails.h>
 
 @class ICBasicPaymentProductGroups;
 @class ICPaymentProductGroup;
@@ -34,6 +35,7 @@
 - (void)directoryForPaymentProductId:(NSString *)paymentProductId countryCode:(NSString *)countryCode currencyCode:(NSString *)currencyCode success:(void (^)(ICDirectoryEntries *directoryEntries))success failure:(void (^)(NSError *error))failure;
 - (void)paymentProductNetworksForProductId:(NSString *)paymentProductId context:(ICPaymentContext *)context success:(void (^)(ICPaymentProductNetworks *paymentProductNetworks))success failure:(void (^)(NSError *error))failure;
 - (void)thirdPartyStatusForPayment:(NSString *)paymentId success:(void(^)(ICThirdPartyStatusResponse *thirdPartyStatusResponse))success failure:(void(^)(NSError *error))failure;
+- (void)customerDetailsForProductId:(NSString *)productId withLookupValues:(NSArray<NSDictionary<NSString*, NSString*>*> *)values countryCode:(NSString *)countryCode success:(void (^)(ICCustomerDetails *))success failure:(void (^)(NSError *))failure;
 - (NSString *)base64EncodedClientMetaInfo;
 - (NSString *)baseURL;
 - (NSString *)assetsBaseURL;

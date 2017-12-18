@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Betrag pro Teilzahlung";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Zinsen";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Anzahl Teilzahlungen";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Allgemeine Bedingungen von SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Zu bezahlender Gesamtbetrag";
 "gc.general.paymentProductFields.installmentId.label" = "Plan auswählen";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Plan auswählen";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Nachname";
 "gc.general.paymentProductFields.termsAndConditions.label" = "{link} akzeptieren";
 "gc.general.paymentProductFields.title.label" = "Anrede";
-"gc.general.paymentProductFields.title.options.miss" = "Frau";
-"gc.general.paymentProductFields.title.options.mr" = "Herr";
-"gc.general.paymentProductFields.title.options.mrs" = "Frau";
+"gc.general.paymentProductFields.title.options.Miss" = "Frau";
+"gc.general.paymentProductFields.title.options.Mr" = "Herr";
+"gc.general.paymentProductFields.title.options.Mrs" = "Frau";
 "gc.general.paymentProductFields.title.placeholder" = "Anrede";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Die Karte, die Sie verwenden möchten, wird nicht unterstützt. Verwenden Sie bitte eine andere Karte oder wählen Sie eine andere Zahlungsmethode.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Bitte geben Sie eine gültige E-Mail-Adresse an";

@@ -14,6 +14,7 @@ typedef enum {
     ICIntegerKeyboard,
     ICEmailAddressKeyboard,
     ICPhoneNumberKeyboard,
+    ICDateKeyboard,
     ICNoKeyboard
 } ICPreferredInputType;
 

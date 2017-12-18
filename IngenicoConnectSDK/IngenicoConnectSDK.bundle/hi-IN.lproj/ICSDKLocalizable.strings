@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "प्रति किस्त राशि";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "ब्याज दर";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "किस्तों की संख्या";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI नियम और शर्तें";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "भुगतान की कुल राशि";
 "gc.general.paymentProductFields.installmentId.label" = "प्लान चुनें";
 "gc.general.paymentProductFields.installmentId.placeholder" = "प्लान चुनें";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "उपनाम";
 "gc.general.paymentProductFields.termsAndConditions.label" = "स्वीकार करें {link}";
 "gc.general.paymentProductFields.title.label" = "टाइटल";
-"gc.general.paymentProductFields.title.options.miss" = "सुश्री";
-"gc.general.paymentProductFields.title.options.mr" = "श्री";
-"gc.general.paymentProductFields.title.options.mrs" = "श्रीमती";
+"gc.general.paymentProductFields.title.options.Miss" = "सुश्री";
+"gc.general.paymentProductFields.title.options.Mr" = "श्री";
+"gc.general.paymentProductFields.title.options.Mrs" = "श्रीमती";
 "gc.general.paymentProductFields.title.placeholder" = "टाइटल";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "आपके द्वारा डाला गया कार्ड सपोर्टेड नहीं है। कृपया कोई अन्य कार्ड डालें करें या भुगतान की अन्य विधि को आज़माएं।";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "कृपया एक मान्य ईमेल पता प्रदान करें";

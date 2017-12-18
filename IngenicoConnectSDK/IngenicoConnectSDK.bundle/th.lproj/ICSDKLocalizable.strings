@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "จำนวนเงินต่องวด";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "อัตราดอกเบี้ย";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "จำนวนงวด";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "ข้อกำหนดและเงื่อนไขการให้บริการของ SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "จำนวนเงินที่ต้องชำระ";
 "gc.general.paymentProductFields.installmentId.label" = "เลือกแผน";
 "gc.general.paymentProductFields.installmentId.placeholder" = "เลือกแผน";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "นามสกุล";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Accept {link}";
 "gc.general.paymentProductFields.title.label" = "Title";
-"gc.general.paymentProductFields.title.options.miss" = "Miss";
-"gc.general.paymentProductFields.title.options.mr" = "Mr";
-"gc.general.paymentProductFields.title.options.mrs" = "Mrs";
+"gc.general.paymentProductFields.title.options.Miss" = "Miss";
+"gc.general.paymentProductFields.title.options.Mr" = "Mr";
+"gc.general.paymentProductFields.title.options.Mrs" = "Mrs";
 "gc.general.paymentProductFields.title.placeholder" = "Title";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "คุณไม่สามารถชำระเงินด้วยบัตรที่คุณกรอกได้ โปรดกรอกข้อมูลบัตรอื่นหรือลองวิธีการชำระเงินแบบอื่น";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "กรุณาระบุอีเมลแอดเดรสที่ถูกต้อง";

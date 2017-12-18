@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "مبلغ كل قسط";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "سعر الفائدة";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "عدد الأقساط";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "شروط وأحكام SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "المبلغ الإجمالي المطلوب دفعه";
 "gc.general.paymentProductFields.installmentId.label" = "حدد خطة";
 "gc.general.paymentProductFields.installmentId.placeholder" = "حدد خطة";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "اللقب";
 "gc.general.paymentProductFields.termsAndConditions.label" = "موافق {link}";
 "gc.general.paymentProductFields.title.label" = "اللقب";
-"gc.general.paymentProductFields.title.options.miss" = "الآنسة";
-"gc.general.paymentProductFields.title.options.mr" = "السيد";
-"gc.general.paymentProductFields.title.options.mrs" = "السيدة";
+"gc.general.paymentProductFields.title.options.Miss" = "الآنسة";
+"gc.general.paymentProductFields.title.options.Mr" = "السيد";
+"gc.general.paymentProductFields.title.options.Mrs" = "السيدة";
 "gc.general.paymentProductFields.title.placeholder" = "اللقب";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "البطاقة التي أدخلتها غير مدعومة. يرجى إدخال بطاقة أخرى أو تجربة طريقة أخرى للدفع.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "يرجى تحديد عنوان بريد إلكتروني صحيح";

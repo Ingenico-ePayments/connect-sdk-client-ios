@@ -72,6 +72,10 @@
             }
             case ICString:
                 break;
+            case ICBooleanString:
+                break;
+            case ICDateString:
+                break;
             default:
                 [NSException raise:@"Invalid type" format:@"Type %u is invalid", self.type];
                 break;

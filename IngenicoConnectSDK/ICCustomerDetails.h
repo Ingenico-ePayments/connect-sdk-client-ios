@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ICCustomerDetails : NSObject
-@property (nonatomic, retain) NSDictionary *dictionary;
+@property (nonatomic, retain) NSDictionary *values;
 @end

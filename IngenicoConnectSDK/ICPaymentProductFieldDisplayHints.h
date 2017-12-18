@@ -21,5 +21,7 @@
 @property (nonatomic) BOOL obfuscate;
 @property (nonatomic) ICPreferredInputType preferredInputType;
 @property (strong, nonatomic) ICTooltip *tooltip;
+@property (strong, nonatomic) NSString *label;
+@property (strong, nonatomic) NSURL *link;
 
 @end

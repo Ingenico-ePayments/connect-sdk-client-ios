@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Importo rata";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Tasso di interesse";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Numero rate";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Termini e condizioni SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Totale da pagare";
 "gc.general.paymentProductFields.installmentId.label" = "Selezionare un piano";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Selezionare un piano";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Cognome";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Accetta {link}";
 "gc.general.paymentProductFields.title.label" = "Titolo";
-"gc.general.paymentProductFields.title.options.miss" = "Sig.na";
-"gc.general.paymentProductFields.title.options.mr" = "Sig";
-"gc.general.paymentProductFields.title.options.mrs" = "Sig.ra";
+"gc.general.paymentProductFields.title.options.Miss" = "Sig.na";
+"gc.general.paymentProductFields.title.options.Mr" = "Sig";
+"gc.general.paymentProductFields.title.options.Mrs" = "Sig.ra";
 "gc.general.paymentProductFields.title.placeholder" = "Titolo";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "La carta inserita non è supportata. Inserire un'altra carta o provare con un metodo di pagamento diverso.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Fornire un indirizzo e-mail valido";

@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Valor de cada parcela";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Taxa de juros";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Número de parcelas";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Termos e condições SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Valor total a pagar";
 "gc.general.paymentProductFields.installmentId.label" = "Selecione um plano";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Selecione um plano";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Sobrenome";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Aceitar {link}";
 "gc.general.paymentProductFields.title.label" = "Tratamento";
-"gc.general.paymentProductFields.title.options.miss" = "Sra";
-"gc.general.paymentProductFields.title.options.mr" = "Sr";
-"gc.general.paymentProductFields.title.options.mrs" = "Sra";
+"gc.general.paymentProductFields.title.options.Miss" = "Sra";
+"gc.general.paymentProductFields.title.options.Mr" = "Sr";
+"gc.general.paymentProductFields.title.options.Mrs" = "Sra";
 "gc.general.paymentProductFields.title.placeholder" = "Tratamento";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "O cartão inserido não é suportado. Insira outro cartão ou utilize outro método de pagamento.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Indique um endereço de e-mail válido";

@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Bedrag per tranche";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Interestvoet";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Aantal tranches";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI algemene voorwaarden";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Totaal te betalen bedrag";
 "gc.general.paymentProductFields.installmentId.label" = "Selecteer een plan";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Selecteer een plan";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Familienaam";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Accepteren {link}";
 "gc.general.paymentProductFields.title.label" = "Titel";
-"gc.general.paymentProductFields.title.options.miss" = "Mej";
-"gc.general.paymentProductFields.title.options.mr" = "Dhr";
-"gc.general.paymentProductFields.title.options.mrs" = "Mevr";
+"gc.general.paymentProductFields.title.options.Miss" = "Mej";
+"gc.general.paymentProductFields.title.options.Mr" = "Dhr";
+"gc.general.paymentProductFields.title.options.Mrs" = "Mevr";
 "gc.general.paymentProductFields.title.placeholder" = "Titel";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "De kaart die u hebt ingevoerd, wordt niet ondersteund. Voer een andere kaart in of probeer een andere betaalmethode.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Geef een geldig e-mailadres op";

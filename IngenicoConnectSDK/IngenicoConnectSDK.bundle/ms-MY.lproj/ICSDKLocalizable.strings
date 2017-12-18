@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Amaun bagi setiap bayaran ansuran";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Kadar faedah";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Bilangan ansuran";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Terma dan syarat SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Jumlah perlu dibayar";
 "gc.general.paymentProductFields.installmentId.label" = "Pilih pelan";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Pilih pelan";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Nama keluarga";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Terima {link}";
 "gc.general.paymentProductFields.title.label" = "Gelaran";
-"gc.general.paymentProductFields.title.options.miss" = "Cik";
-"gc.general.paymentProductFields.title.options.mr" = "En";
-"gc.general.paymentProductFields.title.options.mrs" = "Pn";
+"gc.general.paymentProductFields.title.options.Miss" = "Cik";
+"gc.general.paymentProductFields.title.options.Mr" = "En";
+"gc.general.paymentProductFields.title.options.Mrs" = "Pn";
 "gc.general.paymentProductFields.title.placeholder" = "Gelaran";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Kad yang anda masukkan tidak disokong. Sila masukkan kad lain atau cuba kaedah pembayaran lain.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Sila berikan alamat e-mel yang sah";

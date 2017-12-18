@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Beløp per avdrag";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Rentesats";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Antall avdrag";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Vilkår og betingelser for SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Totalt beløp å betale";
 "gc.general.paymentProductFields.installmentId.label" = "Velg en plan";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Velg en plan";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Etternavn";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Godta {link}";
 "gc.general.paymentProductFields.title.label" = "Tittel";
-"gc.general.paymentProductFields.title.options.miss" = "Frøken";
-"gc.general.paymentProductFields.title.options.mr" = "Herr";
-"gc.general.paymentProductFields.title.options.mrs" = "Fru";
+"gc.general.paymentProductFields.title.options.Miss" = "Frøken";
+"gc.general.paymentProductFields.title.options.Mr" = "Herr";
+"gc.general.paymentProductFields.title.options.Mrs" = "Fru";
 "gc.general.paymentProductFields.title.placeholder" = "Tittel";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Kortet du oppga støttes ikke. Vennligst oppgi et annet kort eller prøve en annen betalingsmetode.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Vennligst oppgi en gyldig e-postadresse";

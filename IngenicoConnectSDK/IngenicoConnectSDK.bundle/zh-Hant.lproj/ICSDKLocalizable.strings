@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "每期金額";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "利率";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "分期數";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI 條款與條件";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "需支付總額";
 "gc.general.paymentProductFields.installmentId.label" = "選擇計畫";
 "gc.general.paymentProductFields.installmentId.placeholder" = "選擇計畫";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "姓氏";
 "gc.general.paymentProductFields.termsAndConditions.label" = "接受 {link}";
 "gc.general.paymentProductFields.title.label" = "稱呼";
-"gc.general.paymentProductFields.title.options.miss" = "小姐";
-"gc.general.paymentProductFields.title.options.mr" = "先生";
-"gc.general.paymentProductFields.title.options.mrs" = "女士";
+"gc.general.paymentProductFields.title.options.Miss" = "小姐";
+"gc.general.paymentProductFields.title.options.Mr" = "先生";
+"gc.general.paymentProductFields.title.options.Mrs" = "女士";
 "gc.general.paymentProductFields.title.placeholder" = "稱呼";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "您所插入的卡不支持。請插入另一張卡或嘗試其他付款的方式。";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "請提供一個有效的電子郵件地址";

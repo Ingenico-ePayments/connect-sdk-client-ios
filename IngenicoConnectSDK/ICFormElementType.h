@@ -12,7 +12,9 @@
 typedef enum {
     ICTextType,
     ICListType,
-    ICCurrencyType
+    ICCurrencyType,
+    ICBoolType,
+    ICDateType
 } ICFormElementType;
 
 #endif

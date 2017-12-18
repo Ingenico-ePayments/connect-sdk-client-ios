@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		2AF54A5DB88AE1BE53646103 /* libPods-IngenicoConnectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A70514BF7A7F376716F06C7C /* libPods-IngenicoConnectSDK.a */; };
+		738E97E31F85280F001C2CFE /* ICThirdPartyStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */; };
+		738E97E41F85280F001C2CFE /* ICThirdPartyStatusResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */; };
+		738E97E51F85280F001C2CFE /* ICThirdPartyStatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */; };
+		738E97E61F85280F001C2CFE /* ICThirdPartyStatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */; };
+		738E97E71F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97E11F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.h */; };
+		738E97E81F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E97E21F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m */; };
+		738E97E91F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E97E21F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m */; };
+		73C690301F56CDB200560FD1 /* ICCustomerDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C6902E1F56CDB200560FD1 /* ICCustomerDetails.h */; };
+		73C690311F56CDB200560FD1 /* ICCustomerDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C6902F1F56CDB200560FD1 /* ICCustomerDetails.m */; };
+		73C690371F56CDD600560FD1 /* ICDisplayElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C690321F56CDD600560FD1 /* ICDisplayElement.h */; };
+		73C690381F56CDD600560FD1 /* ICDisplayElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C690331F56CDD600560FD1 /* ICDisplayElement.m */; };
+		73C690391F56CDD600560FD1 /* ICDisplayElementsConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C690341F56CDD600560FD1 /* ICDisplayElementsConverter.h */; };
+		73C6903A1F56CDD600560FD1 /* ICDisplayElementsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C690351F56CDD600560FD1 /* ICDisplayElementsConverter.m */; };
+		73C6903B1F56CDD600560FD1 /* ICDisplayElementType.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C690361F56CDD600560FD1 /* ICDisplayElementType.h */; };
 		B4C369C91DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699A1DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m */; };
 		B4C369CA1DE754C100C50450 /* ICStubUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699D1DE754C100C50450 /* ICStubUtil.m */; };
 		B4C369CB1DE754C100C50450 /* ICJOSEEncryptorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699F1DE754C100C50450 /* ICJOSEEncryptorTestCase.m */; };
@@ -231,6 +245,18 @@
 /* Begin PBXFileReference section */
 		14746FB8345302C2CDF3D011 /* Pods-IngenicoConnectSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDKTests/Pods-IngenicoConnectSDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		3317A7442F6B5B5D2187727B /* Pods-IngenicoConnectSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDK/Pods-IngenicoConnectSDK.release.xcconfig"; sourceTree = "<group>"; };
+		738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatus.h; sourceTree = "<group>"; };
+		738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatusResponse.h; sourceTree = "<group>"; };
+		738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThirdPartyStatusResponse.m; sourceTree = "<group>"; };
+		738E97E11F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatusResponseConverter.h; sourceTree = "<group>"; };
+		738E97E21F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThirdPartyStatusResponseConverter.m; sourceTree = "<group>"; };
+		73C6902E1F56CDB200560FD1 /* ICCustomerDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCustomerDetails.h; sourceTree = "<group>"; };
+		73C6902F1F56CDB200560FD1 /* ICCustomerDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCustomerDetails.m; sourceTree = "<group>"; };
+		73C690321F56CDD600560FD1 /* ICDisplayElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDisplayElement.h; sourceTree = "<group>"; };
+		73C690331F56CDD600560FD1 /* ICDisplayElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDisplayElement.m; sourceTree = "<group>"; };
+		73C690341F56CDD600560FD1 /* ICDisplayElementsConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDisplayElementsConverter.h; sourceTree = "<group>"; };
+		73C690351F56CDD600560FD1 /* ICDisplayElementsConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDisplayElementsConverter.m; sourceTree = "<group>"; };
+		73C690361F56CDD600560FD1 /* ICDisplayElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDisplayElementType.h; sourceTree = "<group>"; };
 		A70514BF7A7F376716F06C7C /* libPods-IngenicoConnectSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IngenicoConnectSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C3699A1DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICAFNetworkingWrapperTestCase.m; path = IngenicoConnectSDKTests/ICAFNetworkingWrapperTestCase.m; sourceTree = "<group>"; };
 		B4C3699C1DE754C100C50450 /* ICStubUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ICStubUtil.h; path = IngenicoConnectSDKTests/ICStubUtil.h; sourceTree = "<group>"; };
@@ -478,6 +504,15 @@
 				14746FB8345302C2CDF3D011 /* Pods-IngenicoConnectSDKTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		73C6902D1F56CD9E00560FD1 /* CustomerDetails */ = {
+			isa = PBXGroup;
+			children = (
+				73C6902E1F56CDB200560FD1 /* ICCustomerDetails.h */,
+				73C6902F1F56CDB200560FD1 /* ICCustomerDetails.m */,
+			);
+			name = CustomerDetails;
 			sourceTree = "<group>";
 		};
 		841814CF4293B6C8D8E19417 /* Frameworks */ = {
@@ -780,6 +815,7 @@
 		B4D77E401DE730EC00F7B1C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				73C6902D1F56CD9E00560FD1 /* CustomerDetails */,
 				B4D77E411DE730F300F7B1C1 /* DirectoryEntries */,
 				B4D77E421DE730FE00F7B1C1 /* C2SPaymentProductContext */,
 				B4D77E431DE7310900F7B1C1 /* PaymentRequests */,
@@ -878,6 +914,16 @@
 		B4D77E481DE7317E00F7B1C1 /* PaymentProducts */ = {
 			isa = PBXGroup;
 			children = (
+				738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */,
+				738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */,
+				738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */,
+				738E97E11F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.h */,
+				738E97E21F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m */,
+				73C690321F56CDD600560FD1 /* ICDisplayElement.h */,
+				73C690331F56CDD600560FD1 /* ICDisplayElement.m */,
+				73C690341F56CDD600560FD1 /* ICDisplayElementsConverter.h */,
+				73C690351F56CDD600560FD1 /* ICDisplayElementsConverter.m */,
+				73C690361F56CDD600560FD1 /* ICDisplayElementType.h */,
 				F5EC6CAD1E678C5C0001E0E6 /* Validators */,
 				B4D77E9D1DE731D300F7B1C1 /* ICAccountOnFile.h */,
 				B4D77E9E1DE731D300F7B1C1 /* ICAccountOnFile.m */,
@@ -995,6 +1041,7 @@
 				B4D77E2D1DE7305100F7B1C1 /* ICFormElementType.h in Headers */,
 				B4D77F0F1DE731D300F7B1C1 /* ICLabelTemplateItem.h in Headers */,
 				B4D77E4D1DE7319700F7B1C1 /* ICDirectoryEntries.h in Headers */,
+				73C690371F56CDD600560FD1 /* ICDisplayElement.h in Headers */,
 				B4D77F051DE731D300F7B1C1 /* ICValidatorRange.h in Headers */,
 				B4D77EEB1DE731D300F7B1C1 /* ICBasicPaymentProduct.h in Headers */,
 				B4D77E351DE7305B00F7B1C1 /* ICMacros.h in Headers */,
@@ -1023,16 +1070,20 @@
 				B4D77F171DE731D300F7B1C1 /* ICPaymentItems.h in Headers */,
 				B4D77DC91DE72F4E00F7B1C1 /* ICSession.h in Headers */,
 				B4D77E2E1DE7305100F7B1C1 /* ICPreferredInputType.h in Headers */,
+				738E97E71F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.h in Headers */,
 				B4D77E1F1DE7303800F7B1C1 /* ICBasicPaymentProductGroupConverter.h in Headers */,
 				B4D77EE91DE731D300F7B1C1 /* ICToolTip.h in Headers */,
+				73C6903B1F56CDD600560FD1 /* ICDisplayElementType.h in Headers */,
 				B4D77E811DE731B200F7B1C1 /* ICValidationErrorFixedList.h in Headers */,
 				B4D77EFF1DE731D300F7B1C1 /* ICValueMappingItem.h in Headers */,
 				B4D77F071DE731D300F7B1C1 /* ICValidatorRegularExpression.h in Headers */,
 				B4D77E8D1DE731B200F7B1C1 /* ICValidationErrorEmailAddress.h in Headers */,
 				B4D77E2F1DE7305100F7B1C1 /* ICType.h in Headers */,
+				73C690301F56CDB200560FD1 /* ICCustomerDetails.h in Headers */,
 				B4D77EDF1DE731D300F7B1C1 /* ICAccountOnFileAttribute.h in Headers */,
 				B4D77F091DE731D300F7B1C1 /* ICValidatorEmailAddress.h in Headers */,
 				B4D77DE81DE7301900F7B1C1 /* ICBase64.h in Headers */,
+				738E97E31F85280F001C2CFE /* ICThirdPartyStatus.h in Headers */,
 				B4D77E7B1DE731B200F7B1C1 /* ICValidationErrorLength.h in Headers */,
 				F5EC6CB01E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h in Headers */,
 				B4D77EFB1DE731D300F7B1C1 /* ICValidatorExpirationDate.h in Headers */,
@@ -1042,7 +1093,9 @@
 				B4D77E5D1DE731A700F7B1C1 /* ICPaymentRequest.h in Headers */,
 				B4D77E311DE7305100F7B1C1 /* ICIINStatus.h in Headers */,
 				B4D77E0E1DE7303800F7B1C1 /* ICBasicPaymentProductsConverter.h in Headers */,
+				73C690391F56CDD600560FD1 /* ICDisplayElementsConverter.h in Headers */,
 				B4D77F1A1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h in Headers */,
+				738E97E41F85280F001C2CFE /* ICThirdPartyStatusResponse.h in Headers */,
 				B4D77E9C1DE731C900F7B1C1 /* ICIINDetail.h in Headers */,
 				B4D77E851DE731B200F7B1C1 /* ICValidationErrorRegularExpression.h in Headers */,
 				B4D77F111DE731D300F7B1C1 /* ICFormElement.h in Headers */,
@@ -1248,6 +1301,7 @@
 			files = (
 				B4D77E8A1DE731B200F7B1C1 /* ICValidationErrorInteger.m in Sources */,
 				B4D77F101DE731D300F7B1C1 /* ICLabelTemplateItem.m in Sources */,
+				73C690381F56CDD600560FD1 /* ICDisplayElement.m in Sources */,
 				B4D77E221DE7303800F7B1C1 /* ICPaymentItemConverter.m in Sources */,
 				B4D77EF61DE731D300F7B1C1 /* ICBasicPaymentProducts.m in Sources */,
 				B4D77E241DE7303800F7B1C1 /* ICPaymentProductGroupConverter.m in Sources */,
@@ -1286,6 +1340,7 @@
 				B4D77F061DE731D300F7B1C1 /* ICValidatorRange.m in Sources */,
 				B4D77F0C1DE731D300F7B1C1 /* ICAccountOnFileDisplayHints.m in Sources */,
 				B4D77DCE1DE72F4E00F7B1C1 /* ICC2SCommunicatorConfiguration.m in Sources */,
+				73C690311F56CDB200560FD1 /* ICCustomerDetails.m in Sources */,
 				B4D77DE91DE7301900F7B1C1 /* ICBase64.m in Sources */,
 				B4D77E1C1DE7303800F7B1C1 /* ICBasicPaymentItemConverter.m in Sources */,
 				B4D77EEA1DE731D300F7B1C1 /* ICToolTip.m in Sources */,
@@ -1305,6 +1360,8 @@
 				B4D77DF51DE7302E00F7B1C1 /* ICStringFormatter.m in Sources */,
 				B4D77E181DE7303800F7B1C1 /* ICPaymentContextConverter.m in Sources */,
 				B4D77E9A1DE731C900F7B1C1 /* ICIINDetailsResponse.m in Sources */,
+				738E97E51F85280F001C2CFE /* ICThirdPartyStatusResponse.m in Sources */,
+				738E97E81F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m in Sources */,
 				B4D77EEE1DE731D300F7B1C1 /* ICPaymentProduct.m in Sources */,
 				B4D77E571DE7319E00F7B1C1 /* ICPaymentAmountOfMoney.m in Sources */,
 				B4D77DF11DE7302500F7B1C1 /* ICJOSEEncryptor.m in Sources */,
@@ -1322,6 +1379,7 @@
 				B4D77E841DE731B200F7B1C1 /* ICValidationErrorLuhn.m in Sources */,
 				B4D77EEC1DE731D300F7B1C1 /* ICBasicPaymentProduct.m in Sources */,
 				B4D77E171DE7303800F7B1C1 /* ICDirectoryEntryConverter.m in Sources */,
+				73C6903A1F56CDD600560FD1 /* ICDisplayElementsConverter.m in Sources */,
 				B4D77E7E1DE731B200F7B1C1 /* ICValidationErrorRange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1352,9 +1410,11 @@
 				B4C369D01DE754C100C50450 /* ICPaymentProductsConverterTestCase.m in Sources */,
 				B4C369DC1DE754C100C50450 /* ICBasicPaymentProductTestCase.m in Sources */,
 				B4C369E11DE754C100C50450 /* ICValidatorFixedListTestCase.m in Sources */,
+				738E97E91F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m in Sources */,
 				B4C369CB1DE754C100C50450 /* ICJOSEEncryptorTestCase.m in Sources */,
 				B4C369DF1DE754C100C50450 /* ICPaymentProductsTestCase.m in Sources */,
 				B4C369E21DE754C100C50450 /* ICValidatorLengthTestCase.m in Sources */,
+				738E97E61F85280F001C2CFE /* ICThirdPartyStatusResponse.m in Sources */,
 				B4C369E51DE754C100C50450 /* ICValidatorRegularExpressionTestCase.m in Sources */,
 				B4C369DB1DE754C100C50450 /* ICLabelTemplateTestCase.m in Sources */,
 				B4C369D51DE754C100C50450 /* ICPaymentGroupsConverterTestCase.m in Sources */,

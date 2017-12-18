@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.installmentId.fields.installmentAmount.label" = "Įmokos suma";
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Palūkanų norma";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Įmokų skaičius";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI terminai ir sąlygos";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Mokėti iš viso";
 "gc.general.paymentProductFields.installmentId.label" = "Pasirinkite planą";
 "gc.general.paymentProductFields.installmentId.placeholder" = "Pasirinkite planą";
@@ -145,9 +145,9 @@
 "gc.general.paymentProductFields.surname.placeholder" = "Pavardė";
 "gc.general.paymentProductFields.termsAndConditions.label" = "Sutinku {link}";
 "gc.general.paymentProductFields.title.label" = "Kreipimosi forma";
-"gc.general.paymentProductFields.title.options.miss" = "Panelė";
-"gc.general.paymentProductFields.title.options.mr" = "Ponas";
-"gc.general.paymentProductFields.title.options.mrs" = "Ponia";
+"gc.general.paymentProductFields.title.options.Miss" = "Panelė";
+"gc.general.paymentProductFields.title.options.Mr" = "Ponas";
+"gc.general.paymentProductFields.title.options.Mrs" = "Ponia";
 "gc.general.paymentProductFields.title.placeholder" = "Kreipimosi forma";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Jūsų įvesta kortelė nepalaikoma. Įveskite kitą kortelę arba bandykite rinktis kitą mokėjimo metodą.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Nurodykite galiojantį el. pašto adresą";

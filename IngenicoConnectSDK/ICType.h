@@ -13,7 +13,9 @@ typedef enum {
     ICString,
     ICInteger,
     ICExpirationDate,
-    ICNumericString
+    ICNumericString,
+    ICBooleanString,
+    ICDateString
 } ICType;
 
 #endif

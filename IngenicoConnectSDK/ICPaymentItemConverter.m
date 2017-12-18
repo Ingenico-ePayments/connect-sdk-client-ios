@@ -21,7 +21,8 @@
 #import <IngenicoConnectSDK/ICValidatorLength.h>
 #import <IngenicoConnectSDK/ICValidatorFixedList.h>
 #import <IngenicoConnectSDK/ICValidatorBoletoBancarioRequiredness.h>
-
+#import <IngenicoConnectSDK/ICDisplayElementsConverter.h>
+#import <IngenicoConnectSDK/ICDisplayElement.h>
 @implementation ICPaymentItemConverter {
 
 }
@@ -46,6 +47,7 @@
     ICPaymentProductField *field = [[ICPaymentProductField alloc] init];
     [self setDataRestrictions:field.dataRestrictions JSON:[rawField objectForKey:@"dataRestrictions"]];
     field.identifier = [rawField objectForKey:@"id"];
+    field.usedForLookup = ((NSNumber *)[rawField objectForKey:@"usedForLookup"]).boolValue;
     [self setDisplayHints:field.displayHints JSON:[rawField objectForKey:@"displayHints"]];
     [self setType:field rawField:rawField];
 
@@ -55,14 +57,18 @@
 - (void)setType:(ICPaymentProductField *)field rawField:(NSDictionary *)rawField
 {
     NSString *rawType = [rawField objectForKey:@"type"];
-    if ([rawType isEqualToString:@"string"] == YES) {
+    if ([rawType isEqualToString:@"string"]) {
         field.type = ICString;
-    } else if ([rawType isEqualToString:@"integer"] == YES) {
+    } else if ([rawType isEqualToString:@"integer"]) {
         field.type = ICInteger;
-    } else if ([rawType isEqualToString:@"expirydate"] == YES) {
+    } else if ([rawType isEqualToString:@"expirydate"]) {
         field.type = ICExpirationDate;
-    } else if ([rawType isEqualToString:@"numericstring"] == YES) {
+    } else if ([rawType isEqualToString:@"numericstring"]) {
         field.type = ICNumericString;
+    } else if ([rawType isEqualToString:@"boolean"]){
+        field.type = ICBooleanString;
+    } else if ([rawType isEqualToString:@"date"]){
+        field.type = ICDateString;
     } else {
         DLog(@"Type %@ in JSON fragment %@ is invalid", rawType, rawField);
     }
@@ -75,6 +81,8 @@
     [self setFormElement:hints.formElement JSON:[rawHints objectForKey:@"formElement"]];
     hints.mask = [rawHints objectForKey:@"mask"];
     hints.obfuscate = [[rawHints objectForKey:@"obfuscate"] boolValue];
+    hints.label = [rawHints objectForKey:@"label"];
+    hints.link = [NSURL URLWithString:[rawHints objectForKey:@"link"]];
     [self setPreferredInputType:hints JSON:[rawHints objectForKey:@"preferredInputType"]];
     [self setTooltip:hints.tooltip JSON:[rawHints objectForKey:@"tooltip"]];
 }
@@ -89,6 +97,8 @@
         hints.preferredInputType = ICEmailAddressKeyboard;
     } else if ([rawPreferredInputType isEqualToString:@"PhoneNumberKeyboard"]) {
         hints.preferredInputType = ICPhoneNumberKeyboard;
+    } else if ([rawPreferredInputType isEqualToString:@"DateKeyboard"]) {
+        hints.preferredInputType = ICDateKeyboard;
     } else if (rawPreferredInputType == nil) {
         hints.preferredInputType = ICNoKeyboard;
     } else {
@@ -116,6 +126,10 @@
     } else if ([rawType isEqualToString:@"list"] == YES) {
         formElement.type = ICListType;
         [self setValueMapping:formElement JSON:[rawFormElement objectForKey:@"valueMapping"]];
+    } else if ([rawType isEqualToString:@"date"] == YES) {
+        formElement.type = ICDateType;
+    } else if ([rawType isEqualToString:@"boolean"] == YES) {
+        formElement.type = ICBoolType;
     } else {
         DLog(@"Form element %@ is invalid", rawFormElement);
     }
@@ -125,6 +139,33 @@
 {
     for (NSDictionary *rawValueMappingItem in rawValueMapping) {
         ICValueMappingItem *item = [[ICValueMappingItem alloc] init];
+        NSArray *displayElements = [rawValueMappingItem objectForKey:@"displayElements"];
+        BOOL foundDisplayElement = NO;
+        if (displayElements != nil) {
+            ICDisplayElementsConverter *converter = [[ICDisplayElementsConverter alloc]init];
+            item.displayElements = [converter displayElementsFromJSON:displayElements];
+            for (ICDisplayElement *el in [item displayElements]) {
+                if ([el.identifier isEqualToString:@"displayName"]) {
+                    item.displayName = el.value;
+                    foundDisplayElement = YES;
+                }
+            }
+            if (!foundDisplayElement && item.displayName != nil) {
+                ICDisplayElement *el = [[ICDisplayElement alloc]init];
+                el.identifier = @"displayName";
+                el.value = item.displayName;
+                el.type = ICDisplayElementTypeString;
+                [item setDisplayElements:[item.displayElements arrayByAddingObject:el]];
+            }
+        }
+        else {
+            item.displayName = [rawValueMappingItem objectForKey:@"displayName"];
+            ICDisplayElement *el = [[ICDisplayElement alloc]init];
+            el.identifier = @"displayName";
+            el.value = item.displayName;
+            el.type = ICDisplayElementTypeString;
+            item.displayElements = [NSArray arrayWithObject:el];
+        }
         item.displayName = [rawValueMappingItem objectForKey:@"displayName"];
         item.value = [rawValueMappingItem objectForKey:@"value"];
         [formElement.valueMapping addObject:item];
