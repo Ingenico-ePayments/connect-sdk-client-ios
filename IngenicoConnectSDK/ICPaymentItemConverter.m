@@ -23,6 +23,7 @@
 #import <IngenicoConnectSDK/ICValidatorBoletoBancarioRequiredness.h>
 #import <IngenicoConnectSDK/ICDisplayElementsConverter.h>
 #import <IngenicoConnectSDK/ICDisplayElement.h>
+#import <IngenicoConnectSDK/ICValidatorTermsAndConditions.h>
 @implementation ICPaymentItemConverter {
 
 }
@@ -207,6 +208,10 @@
     }
     if ([rawValidators objectForKey:@"regularExpression"] != nil) {
         validator = [self validatorRegularExpressionFromJSON:[rawValidators objectForKey:@"regularExpression"]];
+        [validators.validators addObject:validator];
+    }
+    if ([rawValidators objectForKey:@"termsAndConditions"] != nil) {
+        validator = [[ICValidatorTermsAndConditions alloc] init];
         [validators.validators addObject:validator];
     }
     if ([rawValidators objectForKey:@"boletoBancarioRequiredness"] != nil) {

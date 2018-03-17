@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2AF54A5DB88AE1BE53646103 /* libPods-IngenicoConnectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A70514BF7A7F376716F06C7C /* libPods-IngenicoConnectSDK.a */; };
+		732F866220051E1200A7DE68 /* ICValidatorTermsAndConditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 732F866020051E1200A7DE68 /* ICValidatorTermsAndConditions.h */; };
+		732F866320051E1200A7DE68 /* ICValidatorTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 732F866120051E1200A7DE68 /* ICValidatorTermsAndConditions.m */; };
+		732F866820052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 732F866620052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h */; };
+		732F866920052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 732F866720052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m */; };
 		738E97E31F85280F001C2CFE /* ICThirdPartyStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */; };
 		738E97E41F85280F001C2CFE /* ICThirdPartyStatusResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */; };
 		738E97E51F85280F001C2CFE /* ICThirdPartyStatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */; };
@@ -245,6 +249,10 @@
 /* Begin PBXFileReference section */
 		14746FB8345302C2CDF3D011 /* Pods-IngenicoConnectSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDKTests/Pods-IngenicoConnectSDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		3317A7442F6B5B5D2187727B /* Pods-IngenicoConnectSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDK/Pods-IngenicoConnectSDK.release.xcconfig"; sourceTree = "<group>"; };
+		732F866020051E1200A7DE68 /* ICValidatorTermsAndConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICValidatorTermsAndConditions.h; sourceTree = "<group>"; };
+		732F866120051E1200A7DE68 /* ICValidatorTermsAndConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICValidatorTermsAndConditions.m; sourceTree = "<group>"; };
+		732F866620052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICValidationErrorTermsAndConditions.h; sourceTree = "<group>"; };
+		732F866720052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICValidationErrorTermsAndConditions.m; sourceTree = "<group>"; };
 		738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatus.h; sourceTree = "<group>"; };
 		738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatusResponse.h; sourceTree = "<group>"; };
 		738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThirdPartyStatusResponse.m; sourceTree = "<group>"; };
@@ -887,6 +895,8 @@
 				B4D77E761DE731B200F7B1C1 /* ICValidationErrorEmailAddress.m */,
 				B4D77E771DE731B200F7B1C1 /* ICValidationErrorAllowed.m */,
 				B4D77E781DE731B200F7B1C1 /* ICValidationErrorAllowed.h */,
+				732F866620052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h */,
+				732F866720052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m */,
 			);
 			name = ValidationErrors;
 			sourceTree = "<group>";
@@ -998,6 +1008,8 @@
 				B4D77ECA1DE731D300F7B1C1 /* ICValidatorEmailAddress.m */,
 				F5EC6CAE1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h */,
 				F5EC6CAF1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m */,
+				732F866020051E1200A7DE68 /* ICValidatorTermsAndConditions.h */,
+				732F866120051E1200A7DE68 /* ICValidatorTermsAndConditions.m */,
 			);
 			name = Validators;
 			sourceTree = "<group>";
@@ -1023,6 +1035,7 @@
 				B4D77DF41DE7302E00F7B1C1 /* ICStringFormatter.h in Headers */,
 				B4D77EF11DE731D300F7B1C1 /* ICPaymentProductField.h in Headers */,
 				B4D77E321DE7305100F7B1C1 /* ICEnvironment.h in Headers */,
+				732F866820052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h in Headers */,
 				B4D77F031DE731D300F7B1C1 /* ICValidatorLuhn.h in Headers */,
 				B4D77F0D1DE731D300F7B1C1 /* ICLabelTemplate.h in Headers */,
 				B4D77E871DE731B200F7B1C1 /* ICValidationErrorIsRequired.h in Headers */,
@@ -1055,6 +1068,7 @@
 				B4D77E301DE7305100F7B1C1 /* ICRegion.h in Headers */,
 				B4D77DEE1DE7302500F7B1C1 /* ICEncryptor.h in Headers */,
 				B4D77E5F1DE731A700F7B1C1 /* ICPreparedPaymentRequest.h in Headers */,
+				732F866220051E1200A7DE68 /* ICValidatorTermsAndConditions.h in Headers */,
 				B4D77EE71DE731D300F7B1C1 /* ICPaymentProductFieldDisplayHints.h in Headers */,
 				B4D77F1B1DE731D300F7B1C1 /* ICPaymentProductNetworks.h in Headers */,
 				B4D77EF71DE731D300F7B1C1 /* ICValidators.h in Headers */,
@@ -1340,6 +1354,7 @@
 				B4D77F061DE731D300F7B1C1 /* ICValidatorRange.m in Sources */,
 				B4D77F0C1DE731D300F7B1C1 /* ICAccountOnFileDisplayHints.m in Sources */,
 				B4D77DCE1DE72F4E00F7B1C1 /* ICC2SCommunicatorConfiguration.m in Sources */,
+				732F866320051E1200A7DE68 /* ICValidatorTermsAndConditions.m in Sources */,
 				73C690311F56CDB200560FD1 /* ICCustomerDetails.m in Sources */,
 				B4D77DE91DE7301900F7B1C1 /* ICBase64.m in Sources */,
 				B4D77E1C1DE7303800F7B1C1 /* ICBasicPaymentItemConverter.m in Sources */,
@@ -1379,6 +1394,7 @@
 				B4D77E841DE731B200F7B1C1 /* ICValidationErrorLuhn.m in Sources */,
 				B4D77EEC1DE731D300F7B1C1 /* ICBasicPaymentProduct.m in Sources */,
 				B4D77E171DE7303800F7B1C1 /* ICDirectoryEntryConverter.m in Sources */,
+				732F866920052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m in Sources */,
 				73C6903A1F56CDD600560FD1 /* ICDisplayElementsConverter.m in Sources */,
 				B4D77E7E1DE731B200F7B1C1 /* ICValidationErrorRange.m in Sources */,
 			);

@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICValidatorRegularExpression.h>
+#import "ICValidatorRegularExpression.h"
 
 @interface ICValidatorRegularExpressionTestCase : XCTestCase
 
