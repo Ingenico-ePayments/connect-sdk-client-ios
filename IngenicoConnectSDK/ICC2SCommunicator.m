@@ -313,7 +313,12 @@
 {
     return [self.configuration baseURL];
 }
-
+-(void)setBaseURL:(NSString *)baseURL {
+    [self.configuration setBaseURL:baseURL];
+}
+-(void)setAssetsBaseURL:(NSString *)assetsBaseURL {
+    [self.configuration setAssetsBaseURL:assetsBaseURL];
+}
 - (NSString *)assetsBaseURL
 {
     return [self.configuration assetsBaseURL];

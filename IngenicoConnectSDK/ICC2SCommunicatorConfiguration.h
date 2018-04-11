@@ -12,7 +12,9 @@
 #import <IngenicoConnectSDK/ICUtil.h>
 #import <IngenicoConnectSDK/ICEnvironment.h>
 
-@interface ICC2SCommunicatorConfiguration : NSObject
+@interface ICC2SCommunicatorConfiguration : NSObject {
+    NSString *_baseURL;
+}
 
 @property (strong, nonatomic) NSString *clientSessionId;
 @property (strong, nonatomic) NSString *customerId;
@@ -22,11 +24,14 @@
 @property (nonatomic, strong) NSString *appIdentifier;
 @property (nonatomic, strong) NSString *ipAddress;
 
-- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment util:(ICUtil *)util __deprecated_msg("use method initWithClientSessionId:customerId:region:environment:appIdentifier:ipAddress:util: instead");
-- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment appIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress util:(ICUtil *)util;
-- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment appIdentifier:(NSString *)appIdentifier util:(ICUtil *)util;
-- (NSString *)baseURL;
-- (NSString *)assetsBaseURL;
+@property (nonatomic, strong) NSString *baseURL;
+@property (nonatomic, strong) NSString *assetsBaseURL;
+
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment util:(ICUtil *)util __deprecated_msg("use method initWithClientSessionId:baseURL:assetBaseURL:environment:appIdentifier:ipAddress:util: instead");
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment appIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress util:(ICUtil *)util __deprecated_msg("use method initWithClientSessionId:baseURL:assetBaseURL:environment:appIdentifier:ipAddress:util: instead");
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment appIdentifier:(NSString *)appIdentifier util:(ICUtil *)util __deprecated_msg("use method initWithClientSessionId:baseURL:assetBaseURL:environment:appIdentifier:ipAddress:util: instead");
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier util:(ICUtil *)util;
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress util:(ICUtil *)util;
 - (NSString *)base64EncodedClientMetaInfo;
 
 @end

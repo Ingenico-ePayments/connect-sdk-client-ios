@@ -24,6 +24,7 @@
 #import <IngenicoConnectSDK/ICDisplayElementsConverter.h>
 #import <IngenicoConnectSDK/ICDisplayElement.h>
 #import <IngenicoConnectSDK/ICValidatorTermsAndConditions.h>
+#import <IngenicoConnectSDK/ICValidatorIBAN.h>
 @implementation ICPaymentItemConverter {
 
 }
@@ -212,6 +213,10 @@
     }
     if ([rawValidators objectForKey:@"termsAndConditions"] != nil) {
         validator = [[ICValidatorTermsAndConditions alloc] init];
+        [validators.validators addObject:validator];
+    }
+    if ([rawValidators objectForKey:@"iban"] != nil) {
+        validator = [[ICValidatorIBAN alloc] init];
         [validators.validators addObject:validator];
     }
     if ([rawValidators objectForKey:@"boletoBancarioRequiredness"] != nil) {

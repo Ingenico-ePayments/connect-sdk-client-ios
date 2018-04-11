@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2AF54A5DB88AE1BE53646103 /* libPods-IngenicoConnectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A70514BF7A7F376716F06C7C /* libPods-IngenicoConnectSDK.a */; };
+		7312C64220502E17002496A5 /* ICValidationErrorIBAN.h in Headers */ = {isa = PBXBuildFile; fileRef = 7312C64120502E17002496A5 /* ICValidationErrorIBAN.h */; };
+		7312C64420502E47002496A5 /* ICValidationErrorIBAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 7312C64320502E47002496A5 /* ICValidationErrorIBAN.m */; };
 		732F866220051E1200A7DE68 /* ICValidatorTermsAndConditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 732F866020051E1200A7DE68 /* ICValidatorTermsAndConditions.h */; };
 		732F866320051E1200A7DE68 /* ICValidatorTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 732F866120051E1200A7DE68 /* ICValidatorTermsAndConditions.m */; };
 		732F866820052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 732F866620052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h */; };
 		732F866920052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 732F866720052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m */; };
+		733CCFA820484847008099C5 /* ICValidatorIBAN.h in Headers */ = {isa = PBXBuildFile; fileRef = 733CCFA620484847008099C5 /* ICValidatorIBAN.h */; };
+		733CCFA920484847008099C5 /* ICValidatorIBAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 733CCFA720484847008099C5 /* ICValidatorIBAN.m */; };
 		738E97E31F85280F001C2CFE /* ICThirdPartyStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */; };
 		738E97E41F85280F001C2CFE /* ICThirdPartyStatusResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */; };
 		738E97E51F85280F001C2CFE /* ICThirdPartyStatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */; };
@@ -249,10 +253,14 @@
 /* Begin PBXFileReference section */
 		14746FB8345302C2CDF3D011 /* Pods-IngenicoConnectSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDKTests/Pods-IngenicoConnectSDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		3317A7442F6B5B5D2187727B /* Pods-IngenicoConnectSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IngenicoConnectSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-IngenicoConnectSDK/Pods-IngenicoConnectSDK.release.xcconfig"; sourceTree = "<group>"; };
+		7312C64120502E17002496A5 /* ICValidationErrorIBAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICValidationErrorIBAN.h; sourceTree = "<group>"; };
+		7312C64320502E47002496A5 /* ICValidationErrorIBAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICValidationErrorIBAN.m; sourceTree = "<group>"; };
 		732F866020051E1200A7DE68 /* ICValidatorTermsAndConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICValidatorTermsAndConditions.h; sourceTree = "<group>"; };
 		732F866120051E1200A7DE68 /* ICValidatorTermsAndConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICValidatorTermsAndConditions.m; sourceTree = "<group>"; };
 		732F866620052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICValidationErrorTermsAndConditions.h; sourceTree = "<group>"; };
 		732F866720052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICValidationErrorTermsAndConditions.m; sourceTree = "<group>"; };
+		733CCFA620484847008099C5 /* ICValidatorIBAN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ICValidatorIBAN.h; path = IngenicoConnectSDK/ICValidatorIBAN.h; sourceTree = "<group>"; };
+		733CCFA720484847008099C5 /* ICValidatorIBAN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ICValidatorIBAN.m; path = IngenicoConnectSDK/ICValidatorIBAN.m; sourceTree = "<group>"; };
 		738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatus.h; sourceTree = "<group>"; };
 		738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatusResponse.h; sourceTree = "<group>"; };
 		738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThirdPartyStatusResponse.m; sourceTree = "<group>"; };
@@ -615,6 +623,8 @@
 				B4C369BD1DE754C100C50450 /* ICValidatorRangeTestCase.m */,
 				B4C369BE1DE754C100C50450 /* ICValidatorRegularExpressionTestCase.m */,
 				B4C369BF1DE754C100C50450 /* ICValidatorEmailAddressTestCase.m */,
+				733CCFA620484847008099C5 /* ICValidatorIBAN.h */,
+				733CCFA720484847008099C5 /* ICValidatorIBAN.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -880,7 +890,9 @@
 				B4D77E671DE731B200F7B1C1 /* ICValidationErrorExpirationDate.h */,
 				B4D77E681DE731B200F7B1C1 /* ICValidationErrorExpirationDate.m */,
 				B4D77E691DE731B200F7B1C1 /* ICValidationErrorFixedList.h */,
+				7312C64120502E17002496A5 /* ICValidationErrorIBAN.h */,
 				B4D77E6A1DE731B200F7B1C1 /* ICValidationErrorFixedList.m */,
+				7312C64320502E47002496A5 /* ICValidationErrorIBAN.m */,
 				B4D77E6B1DE731B200F7B1C1 /* ICValidationErrorLuhn.h */,
 				B4D77E6C1DE731B200F7B1C1 /* ICValidationErrorLuhn.m */,
 				B4D77E6D1DE731B200F7B1C1 /* ICValidationErrorRegularExpression.h */,
@@ -1033,6 +1045,7 @@
 				B4D77E161DE7303800F7B1C1 /* ICDirectoryEntryConverter.h in Headers */,
 				B4D77E7D1DE731B200F7B1C1 /* ICValidationErrorRange.h in Headers */,
 				B4D77DF41DE7302E00F7B1C1 /* ICStringFormatter.h in Headers */,
+				733CCFA820484847008099C5 /* ICValidatorIBAN.h in Headers */,
 				B4D77EF11DE731D300F7B1C1 /* ICPaymentProductField.h in Headers */,
 				B4D77E321DE7305100F7B1C1 /* ICEnvironment.h in Headers */,
 				732F866820052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h in Headers */,
@@ -1064,6 +1077,7 @@
 				B4D77EF31DE731D300F7B1C1 /* ICPaymentProductFields.h in Headers */,
 				B4D77DE41DE7301200F7B1C1 /* ICJSON.h in Headers */,
 				B4D77E3B1DE7306E00F7B1C1 /* ICPaymentItem.h in Headers */,
+				7312C64220502E17002496A5 /* ICValidationErrorIBAN.h in Headers */,
 				B4D77EE11DE731D300F7B1C1 /* ICAccountOnFileAttributes.h in Headers */,
 				B4D77E301DE7305100F7B1C1 /* ICRegion.h in Headers */,
 				B4D77DEE1DE7302500F7B1C1 /* ICEncryptor.h in Headers */,
@@ -1320,6 +1334,7 @@
 				B4D77EF61DE731D300F7B1C1 /* ICBasicPaymentProducts.m in Sources */,
 				B4D77E241DE7303800F7B1C1 /* ICPaymentProductGroupConverter.m in Sources */,
 				B4D77E821DE731B200F7B1C1 /* ICValidationErrorFixedList.m in Sources */,
+				733CCFA920484847008099C5 /* ICValidatorIBAN.m in Sources */,
 				B4D77EE41DE731D300F7B1C1 /* ICAccountsOnFile.m in Sources */,
 				B4D77E5E1DE731A700F7B1C1 /* ICPaymentRequest.m in Sources */,
 				B4D77F021DE731D300F7B1C1 /* ICValidatorLength.m in Sources */,
@@ -1361,6 +1376,7 @@
 				B4D77EEA1DE731D300F7B1C1 /* ICToolTip.m in Sources */,
 				B4D77E561DE7319E00F7B1C1 /* ICPaymentContext.m in Sources */,
 				B4D77E881DE731B200F7B1C1 /* ICValidationErrorIsRequired.m in Sources */,
+				7312C64420502E47002496A5 /* ICValidationErrorIBAN.m in Sources */,
 				B4D77E201DE7303800F7B1C1 /* ICPaymentProductGroupsConverter.m in Sources */,
 				B4D77DE51DE7301200F7B1C1 /* ICJSON.m in Sources */,
 				B4D77E131DE7303800F7B1C1 /* ICPaymentProductConverter.m in Sources */,
@@ -1411,6 +1427,7 @@
 				B4C369D31DE754C100C50450 /* ICBasicPaymentGroupConverterTestCase.m in Sources */,
 				B4C369DD1DE754C100C50450 /* ICPaymentProductTestCase.m in Sources */,
 				B4C369D81DE754C100C50450 /* ICAccountOnFileAttributesTestCase.m in Sources */,
+				733CCFAA20484847008099C5 /* ICValidatorIBAN.m in Sources */,
 				B4C369F31DE866E300C50450 /* ICUtilTestCase.m in Sources */,
 				B4C369D91DE754C100C50450 /* ICPaymentProductFieldsTestCase.m in Sources */,
 				B4C369D11DE754C100C50450 /* ICBasicPaymentProductConverterTestCase.m in Sources */,

@@ -22,11 +22,13 @@
 @class ICPaymentProductGroup;
 
 @interface ICSession : NSObject
+@property (nonatomic, strong) NSString *baseURL;
+@property (nonatomic, strong) NSString *assetsBaseURL;
 
 - (instancetype)initWithCommunicator:(ICC2SCommunicator *)communicator assetManager:(ICAssetManager *)assetManager encryptor:(ICEncryptor *)encryptor JOSEEncryptor:(ICJOSEEncryptor *)JOSEEncryptor stringFormatter:(ICStringFormatter *)stringFormatter;
-+ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment __deprecated_msg("use sessionWithClientSessionId:customerId:region:environment:appIdentifier: instead");
-+ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment appIdentifier:(NSString *)appIdentifier;
-
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment __deprecated_msg("use sessionWithClientSessionId:customerId:baseURL:assetBaseURL:appIdentifier: instead");
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment appIdentifier:(NSString *)appIdentifier __deprecated_msg("use sessionWithClientSessionId:customerId:baseURL:assetBaseURL:appIdentifier: instead");
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier;
 
 - (void)paymentProductsForContext:(ICPaymentContext *)context success:(void (^)(ICBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure;
 - (void)paymentProductGroupsForContext:(ICPaymentContext *)context success:(void (^)(ICBasicPaymentProductGroups *paymentProductGroups))success failure:(void (^)(NSError *error))failure;

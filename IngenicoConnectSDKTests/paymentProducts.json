@@ -295,17 +295,6 @@
             },
             "id": 122,
             "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
-        },
-        {
-            "allowsRecurring": false,
-            "allowsTokenization": false,
-            "displayHints": {
-                "displayOrder": 60,
-                "label": "cashU",
-                "logo": "/templates/master/global/css/img/ppimages/pp_logo_845_v1.png"
-            },
-            "id": 845,
-            "mobileIntegrationLevel": "OPTIMISED_SUPPORT"
         }
     ]
 }

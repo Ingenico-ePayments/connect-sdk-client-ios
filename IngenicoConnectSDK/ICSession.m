@@ -57,6 +57,24 @@
     return self;
 }
 
+-(NSString *)baseURL {
+    return [self.communicator baseURL];
+}
+
+-(NSString *)assetsBaseURL {
+    return [self.communicator assetsBaseURL];
+}
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier{
+    ICUtil *util = [[ICUtil alloc] init];
+    ICAssetManager *assetManager = [[ICAssetManager alloc] init];
+    ICStringFormatter *stringFormatter = [[ICStringFormatter alloc] init];
+    ICEncryptor *encryptor = [[ICEncryptor alloc] init];
+    ICC2SCommunicatorConfiguration *configuration = [[ICC2SCommunicatorConfiguration alloc] initWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetBaseURL appIdentifier:appIdentifier util:util];
+    ICC2SCommunicator *communicator = [[ICC2SCommunicator alloc] initWithConfiguration:configuration];
+    ICJOSEEncryptor *JOSEEncryptor = [[ICJOSEEncryptor alloc] initWithEncryptor:encryptor];
+    ICSession *session = [[ICSession alloc] initWithCommunicator:communicator assetManager:assetManager encryptor:encryptor JOSEEncryptor:JOSEEncryptor stringFormatter:stringFormatter];
+    return session;
+}
 + (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment
 {
     return [self sessionWithClientSessionId:clientSessionId customerId:customerId region:region environment:environment appIdentifier:nil];
