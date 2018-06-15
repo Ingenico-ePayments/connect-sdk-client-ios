@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <IngenicoConnectSDK/ICBasicPaymentItem.h>
-
+#import <IngenicoConnectSDK/ICAccountOnFile.h>
 @class ICStringFormatter;
 
 @interface ICBasicPaymentProductGroup : NSObject <ICBasicPaymentItem>
 
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) ICPaymentItemDisplayHints *displayHints;
-@property (strong, nonatomic) ICAccountsOnFile *accountsOnFile;
+@property (nonatomic, strong) ICAccountsOnFile *accountsOnFile;
+
 
 - (void)setStringFormatter:(ICStringFormatter *)stringFormatter;
+- (ICAccountOnFile *)accountOnFileWithIdentifier:(NSString *)accountOnFileIdentifier;
 
 @end
