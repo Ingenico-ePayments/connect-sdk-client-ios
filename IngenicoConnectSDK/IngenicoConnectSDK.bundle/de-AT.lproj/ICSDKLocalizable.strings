@@ -290,6 +290,7 @@
 "gc.general.paymentProducts.3119.name" = "CBC Online";
 "gc.general.paymentProducts.3120.name" = "KBC Online";
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
+"gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.320.name" = "Android Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
@@ -330,6 +331,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
+"gc.general.paymentProducts.806.name" = "Trustly";
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
