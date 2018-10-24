@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Godina";
 "gc.general.datetime.year.placeholder" = "Godina";
 "gc.general.errors.clientDateTime" = "Molimo vas da potvrdite jesu li datum i vrijeme na uređaju koji upotrebljavate za uplatu ispravni.";
+"gc.general.errors.generalError" = "Nešto nije u redu";
 "gc.general.errors.image.altText" = "Upozorenje";
 "gc.general.errors.incorrectMerchantId" = "Zbog tehničke pogreške nismo u mogućnosti pružiti vam ispravne upute za dovršavanje uplate: neispravni identifikacijski broj trgovca. Molimo vas da pokušate s drugim načinom plaćanja ili da kontaktirate tvrtku od koje kupujete.";
 "gc.general.errors.instructions.renderingProblem" = "Došlo je do tehničke pogreške dok smo vam pokušavali prikazati upute za dovršavanje uplate. Molimo vas da pokušate ponovno ili da odaberete drugi način plaćanja.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Poseban identifikacijski broj";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift oznaka";
 "gc.general.paymentProcessing" = "Vaša uplata se obrađuje. Pričekajte. Obrada vaše uplate može potrajati nekoliko sekundi.";
+"gc.general.paymentProduct.1503.errorMessage" = "Navedite važeću vrijednost od 11 ili 14 znakova za svoj CPF ili CNPJ broj.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Ime nositelja računa";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Ivan Horvat";
 "gc.general.paymentProductFields.accountNumber.label" = "Broj računa";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Završeno";
 "gc.general.paymentProducts.3012.processing" = "Vaša se uplata obrađuje... Molimo da provjerite svoju aplikaciju Bancontact.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Ili otvorite aplikaciju na svojem mobitelu, odaberite oznaku „Pay” („Plati”) i skenirajte QR kôd.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Otvorite aplikaciju na svojem mobitelu, kliknite „Pay” („Plati”) pa skenirajte QR kôd.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Osvježite status plaćanja";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Odaberite donji gumb za osvježenje statusa plaćanja.";
+"gc.general.paymentProducts.302.error" = "Plaćanje putem usluge Apple Pay trenutačno nije moguće. Ispričavamo se zbog neugodnosti.";
+"gc.general.paymentProducts.302.header" = "Priprema usluge Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript trenutačno je isključen u vašem pregledniku. Plaćanje putem usluge Apple Pay nije moguće ako je JavaScript isključen. Uključite JavaScript i osvježite stranicu.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Plaćanje putem usluge Google Pay trenutačno nije moguće. Ispričavamo se zbog neugodnosti.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript trenutačno je isključen u vašem pregledniku. Plaćanje putem usluge Google Pay nije moguće ako je JavaScript isključen. Uključite JavaScript i osvježite stranicu.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Priprema usluge Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "periodična plaćanja tvrtke QIWI";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Kako želite platiti?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Otvorite aplikaciju";
+"gc.general.paymentProducts.863.paymentStatus1" = "Započeto";
+"gc.general.paymentProducts.863.paymentStatus2" = "Autorizirano";
+"gc.general.paymentProducts.863.paymentStatus3" = "Završeno";
+"gc.general.paymentProducts.863.processing" = "Vaša se uplata obrađuje... Provjerite svoju aplikaciju WeChat.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Otvorite aplikaciju na svojem mobitelu, kliknite „Scan” („Skeniranje”) da biste skenirali QR kôd pa kliknite „Pay” („Plati”).";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Osvježite status plaćanja";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Odaberite donji gumb za osvježenje statusa plaćanja.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Ako ne možete izvršiti uplatu putem prethodnog načina plaćanja, dodirnite„Cancel” („Odustani”) pa odaberite drugi proizvod za plaćanje da biste dovršili plaćanje.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "obročno plaćanje AfterPay";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "AfterPay Invoice";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Prihvaćam odredbe i uvjete {link}";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "načina plaćanja AfterPay";
+"gc.general.preparing" = "Ovo bi trebalo potrajali svega nekoliko sekundi";
 "gc.general.processing" = "Molimo pričekajte, kupnja će se nastaviti za nekoliko sekundi";

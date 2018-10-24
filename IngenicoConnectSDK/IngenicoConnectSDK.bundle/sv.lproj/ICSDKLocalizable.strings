@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "År";
 "gc.general.datetime.year.placeholder" = "År";
 "gc.general.errors.clientDateTime" = "Verifiera huruvida datum och tid på enheten som du använder för denna betalning är korrekt inställda.";
+"gc.general.errors.generalError" = "Något gick fel";
 "gc.general.errors.image.altText" = "Varning";
 "gc.general.errors.incorrectMerchantId" = "Ett tekniskt fel uppstod vilket förhindrade oss från att visa dig rätt instruktioner för att slutföra din betalning: en felaktig Handlar-ID. Välj en annan betalningsmetod eller kontakta företaget du köper från.";
 "gc.general.errors.instructions.renderingProblem" = "Ett tekniskt fel uppstod när vi försökte visa instruktionerna för att slutföra din betalning. Försök igen eller välj en annan betalningsmetod.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Special-ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift-kod";
 "gc.general.paymentProcessing" = "Vi bearbetar din betalning. Vänta. Det kan ta flera sekunder att bearbeta din betalning.";
+"gc.general.paymentProduct.1503.errorMessage" = "Ange ett giltigt värde med 11 eller 14 tecken för ditt CPF- eller CNPJ-nummer.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Kontoinnehavarens namn";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Kontonummer";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Slutförd";
 "gc.general.paymentProducts.3012.processing" = "Din betalning bearbetas … Kontrollera din Bancontact-app.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Eller öppna appen på din telefon och klicka på \"Betala\" och skanna in QR-koden.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Öppna appen på din telefon, klicka på ”Betala” och skanna QR-koden.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Uppdatera betalningsstatus";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Klicka på knappen nedan för att uppdatera din betalningsstatus.";
+"gc.general.paymentProducts.302.error" = "Du kan inte betala med Apple Pay just nu. Vi beklagar olägenheten.";
+"gc.general.paymentProducts.302.header" = "Förbereder Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript är inte aktiverat i din webbläsare. Du kan inte betala med Apple Pay om JavaScript inte är aktiverat. Aktivera JavaScript och uppdatera denna sida.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Du kan inte betala med Google Pay just nu. Vi beklagar olägenheten.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript är inte aktiverat i din webbläsare. Du kan inte betala med Google Pay om JavaScript inte är aktiverat. Aktivera JavaScript och uppdatera denna sida.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Förbereder Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI återkommande";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Hur vill du betala?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Öppna din app";
+"gc.general.paymentProducts.863.paymentStatus1" = "Startad";
+"gc.general.paymentProducts.863.paymentStatus2" = "Godkänd";
+"gc.general.paymentProducts.863.paymentStatus3" = "Slutförd";
+"gc.general.paymentProducts.863.processing" = "Din betalning behandlas...kontrollera din WeChat-app.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Öppna appen på din telefon, klicka på ”skanna” för att skanna QR-koden, och klicka sedan på ”Betala”.";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Uppdatera betalningsstatus";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Klicka på knappen nedan för att uppdatera din betalningsstatus.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Om du inte kan betala med betalningsmetoden ovan klickar du på ”Avbryt” och väljer en annan betalningsprodukt för att slutföra din betalning.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay-omgångar";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "AfterPay-faktura";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Jag godkänner villkoren för {link}";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Detta bör bara ta några sekunder";
 "gc.general.processing" = "Vänta…om några sekunder kommer du att kunna fortsätta genom kassan";

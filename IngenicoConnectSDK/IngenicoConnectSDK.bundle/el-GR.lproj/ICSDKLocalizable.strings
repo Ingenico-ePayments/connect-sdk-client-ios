@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Έτος";
 "gc.general.datetime.year.placeholder" = "Έτος";
 "gc.general.errors.clientDateTime" = "Επιβεβαιώστε ότι η ημερομηνία και η ώρα της συσκευής που χρησιμοποιείτε για αυτή την πληρωμή έχουν ρυθμιστεί σωστά.";
+"gc.general.errors.generalError" = "Κάτι δεν πήγε καλά";
 "gc.general.errors.image.altText" = "Προειδοποίηση";
 "gc.general.errors.incorrectMerchantId" = "Παρουσιάστηκε τεχνικό σφάλμα που μας εμποδίζει να σας δείξουμε τις οδηγίες ολοκλήρωσης της πληρωμής σας: λανθασμένο αναγνωριστικό εμπόρου. Επιλέξτε άλλον τρόπο πληρωμής ή επικοινωνήστε με την εταιρεία από όπου κάνετε την αγορά.";
 "gc.general.errors.instructions.renderingProblem" = "Παρουσιάστηκε τεχνικό σφάλμα καθώς προσπαθούσαμε να σας δείξουμε τις οδηγίες ολοκλήρωσης της πληρωμής σας. Προσπαθήστε ξανά ή επιλέξτε άλλον τρόπο πληρωμής.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Ειδικό αναγνωριστικό";
 "gc.general.instructionFields.SWIFTCODE.label" = "Κωδικός Swift";
 "gc.general.paymentProcessing" = "Επεξεργαζόμαστε την πληρωμή σας. Παρακαλούμε περιμένετε. Μπορεί να χρειαστούν μερικά δευτερόλεπτα για την επεξεργασία της πληρωμής σας.";
+"gc.general.paymentProduct.1503.errorMessage" = "Για τον αριθμό σας CPF ή CNPJ, εισαγάγετε μια έγκυρη τιμή που να αποτελείται από 11 ή 14 χαρακτήρες.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Όνομα κατόχου λογαριασμού";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Αριθμός λογαριασμού";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Έχει ολοκληρωθεί";
 "gc.general.paymentProducts.3012.processing" = "Η πληρωμή σας είναι υπό επεξεργασία… Ελέγξτε την εφαρμογή Bancontact.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Ή ανοίξτε την εφαρμογή στο τηλέφωνό σας, πατήστε \"Pay\" (Πληρωμή) και σαρώστε τον κωδικό QR.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Ανοίξτε την εφαρμογή στο τηλέφωνό σας, κάντε κλικ στο «Πληρωμή» και σαρώστε τον κωδικό QR.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Ανανέωση κατάστασης πληρωμής";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Κάντε κλικ στο παρακάτω κουμπί για να ανανεωθεί η κατάσταση της πληρωμής σας.";
+"gc.general.paymentProducts.302.error" = "Η πληρωμή μέσω Apple Pay δεν είναι δυνατή αυτή τη στιγμή. Σας ζητούμε συγγνώμη για την αναστάτωση.";
+"gc.general.paymentProducts.302.header" = "Προετοιμασία Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "Το JavaScript είναι προς το παρόν απενεργοποιημένο στο πρόγραμμα περιήγησής σας. Εάν το JavaScript είναι απενεργοποιημένο, δεν είναι δυνατή η πληρωμή μέσω Apple Pay. Ενεργοποιήστε το JavaScript και πραγματοποιήστε ανανέωση σε αυτή τη σελίδα.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Η πληρωμή μέσω Google Pay δεν είναι δυνατή αυτή τη στιγμή. Σας ζητούμε συγγνώμη για την αναστάτωση.";
+"gc.general.paymentProducts.320.javaScriptOff" = "Το JavaScript είναι προς το παρόν απενεργοποιημένο στο πρόγραμμα περιήγησής σας. Εάν το JavaScript είναι απενεργοποιημένο, δεν είναι δυνατή η πληρωμή μέσω Google Pay. Ενεργοποιήστε το JavaScript και πραγματοποιήστε ανανέωση σε αυτή τη σελίδα.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Προετοιμασία Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI Επαναλαμβανόμενο";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Πώς θα θέλατε να πληρώσετε;";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Ανοίξτε την εφαρμογή σας";
+"gc.general.paymentProducts.863.paymentStatus1" = "Έχει ξεκινήσει";
+"gc.general.paymentProducts.863.paymentStatus2" = "Έχει εγκριθεί";
+"gc.general.paymentProducts.863.paymentStatus3" = "Έχει ολοκληρωθεί";
+"gc.general.paymentProducts.863.processing" = "Η πληρωμή σας βρίσκεται σε επεξεργασία... Ελέγξτε την εφαρμογή σας WeChat.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Ανοίξτε την εφαρμογή στο τηλέφωνό σας, κάντε κλικ στο «σάρωση» για να σαρώσετε τον κωδικό QR και κάντε κλικ στο «Πληρωμή».";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Ανανέωση κατάστασης πληρωμής";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Κάντε κλικ στο παρακάτω κουμπί για να ανανεωθεί η κατάσταση της πληρωμής σας.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Εάν δεν έχετε τη δυνατότητα να πληρώσετε με τον παραπάνω τρόπο πληρωμής, πατήστε «Ακύρωση» και επιλέξτε ένα άλλο μέσο πληρωμής για ολοκληρώσετε την πληρωμή σας.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Δόσεις AfterPay";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "Τιμολόγιο AfterPay";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Αποδέχομαι τους όρους και τις προϋποθέσεις του {link}";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Αυτό θα διαρκέσει μόνο λίγα δευτερόλεπτα";
 "gc.general.processing" = "Παρακαλούμε περιμένετε, θα μπορέσετε να ολοκληρώσετε την πληρωμή σας σε μερικά δευτερόλεπτα";

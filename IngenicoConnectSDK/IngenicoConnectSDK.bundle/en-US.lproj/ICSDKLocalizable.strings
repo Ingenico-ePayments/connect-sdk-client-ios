@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Year";
 "gc.general.datetime.year.placeholder" = "Year";
 "gc.general.errors.clientDateTime" = "Please validate whether the date and time of the device you use to make this payment are set correctly.";
+"gc.general.errors.generalError" = "Something went wrong";
 "gc.general.errors.image.altText" = "Warning";
 "gc.general.errors.incorrectMerchantId" = "A technical error occurred that prevented us from showing you the right instructions to finalize your payment: incorrect Merchant ID. Please try another payment method or contact the company you are buying from.";
 "gc.general.errors.instructions.renderingProblem" = "A technical error occurred while we were trying to show the instructions to finalize your payment. Please try again or try another payment method.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Special ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift code";
 "gc.general.paymentProcessing" = "We are processing your payment. Please wait. It may take several seconds to process your payment.";
+"gc.general.paymentProduct.1503.errorMessage" = "Please provide a valid value of 11 or 14 characters for your CPF or CNPJ number.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Account holder name";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Account number";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Completed";
 "gc.general.paymentProducts.3012.processing" = "Your payment is being processed… Please check your Bancontact app.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Or open the app on your phone, click ‘Pay’ and scan the QR code.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Open the app on your phone, click ‘Pay’ and scan the QR code.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Refresh payment status";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Click the button below to refresh your payment status.";
+"gc.general.paymentProducts.302.error" = "Paying with Apple Pay is currently not possible. We apologise for the inconvenience.";
+"gc.general.paymentProducts.302.header" = "Preparing Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript is currently turned off in your browser. Paying with Apple Pay is not possible with JavaScript off. Please turn on JavaScript and refresh this page.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Paying with Google Pay is currently not possible. We apologise for the inconvenience.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript is currently turned off in your browser. Paying with Google Pay is not possible with JavaScript off. Please turn on JavaScript and refresh this page.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Preparing Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI Recurring";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "How would you like to pay?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Open your app";
+"gc.general.paymentProducts.863.paymentStatus1" = "Started";
+"gc.general.paymentProducts.863.paymentStatus2" = "Authorized";
+"gc.general.paymentProducts.863.paymentStatus3" = "Completed";
+"gc.general.paymentProducts.863.processing" = "Your payment is being processed… Please check your WeChat app.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Open the app on your phone, click \"scan\" to scan the QR code and click ‘Pay’.";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Refresh payment status";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Click the button below to refresh your payment status.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "When you are unable to pay using the payment method above, please tap 'Cancel' and select another payment product to complete your payment.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay Installments";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "AfterPay Invoice";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "I accept the {link} terms and conditions";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "This should only take a few seconds";
 "gc.general.processing" = "Please wait, you will be able to continue your checkout within a few seconds";

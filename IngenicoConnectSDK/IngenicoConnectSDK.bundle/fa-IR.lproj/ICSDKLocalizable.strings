@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "سال";
 "gc.general.datetime.year.placeholder" = "سال";
 "gc.general.errors.clientDateTime" = "لطفاً بررسی کنید تاریخ و زمان دستگاهی که از آن برای انجام این پرداخت استفاده می‌کنید، به‌درستی تنظیم شده باشد.";
+"gc.general.errors.generalError" = "مشکلی رخ داده است";
 "gc.general.errors.image.altText" = "هشدار";
 "gc.general.errors.incorrectMerchantId" = "یک خطای فنی رخ داده است که اجازه نمی‌دهد دستورالعمل‌های صحیح مربوط به نهایی کردن پرداخت شما را نمایش دهیم: شناسه معامله‌گر نادرست است. لطفاً روش پرداخت دیگری را امتحان کنید یا با شرکتی که از آن خرید می‌نمایید تماس بگیرید.";
 "gc.general.errors.instructions.renderingProblem" = "هنگام تلاش برای نمایش دستورالعمل‌های مربوط به نهایی کردن پرداخت شما یک خطای فنی رخ داد. لطفاً دوباره تلاش کنید یا روش پرداخت دیگری را امتحان نمایید.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "شناسه خاص";
 "gc.general.instructionFields.SWIFTCODE.label" = "کد Swift";
 "gc.general.paymentProcessing" = "در حال پردازش پرداخت شما هستیم. لطفاً صبر کنید. پردازش پرداخت شما ممکن است چند ثانیه طول بکشد.";
+"gc.general.paymentProduct.1503.errorMessage" = "مقداری معتبر متشکل از 11 یا 14 نویسه برای شماره CPF یا CNPJ خود ارائه کنید.";
 "gc.general.paymentProductFields.accountHolderName.label" = "نام صاحب حساب";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "شماره حساب";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "انجام شده";
 "gc.general.paymentProducts.3012.processing" = "پرداخت شما در حال پردازش است… لطفاً برنامه Bancontact خود را بررسی کنید.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "یا برنامه را در تلفن خود باز کنید و بر روی گزینه Pay (پرداخت) کلیک نموده سپس کد QR را اسکن کنید.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "برنامه را در تلفن خود باز کنید و برای اسکن کردن کد QR بر روی «اسکن» (Scan) کلیک کنید.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "بازآوری وضعیت پرداخت";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "برای بازآوری وضعیت پرداخت خود، بر روی دکمه زیر کلیک کنید.";
+"gc.general.paymentProducts.302.error" = "پرداخت با Apple Pay فعلاً ممکن نیست. بابت مشکل پیش آمده از شما پوزش می‌خواهیم.";
+"gc.general.paymentProducts.302.header" = "آماده کردن Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript در مرورگر شما غیرفعال است. در صورت غیرفعال بودن JavaScript، پرداخت با Apple Pay امکان‌پذیر نخواهد بود. JavaScript را فعال و این صفحه را به‌روز کنید.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "پرداخت با Google Pay فعلاً ممکن نیست. بابت مشکل پیش آمده از شما پوزش می‌خواهیم.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript در مرورگر شما غیرفعال است. در صورت غیرفعال بودن JavaScript، پرداخت با Google Pay امکان‌پذیر نخواهد بود. JavaScript را فعال و این صفحه را به‌روز کنید.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "آماده کردن Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI مکرر";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "چگونه می‌خواهید پرداخت کنید؟";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "برنامه را باز کنید";
+"gc.general.paymentProducts.863.paymentStatus1" = "شروع شده";
+"gc.general.paymentProducts.863.paymentStatus2" = "مجاز";
+"gc.general.paymentProducts.863.paymentStatus3" = "انجام شده";
+"gc.general.paymentProducts.863.processing" = "پرداخت شما در مرحله پردازش است... برنامه WeChat خود را بررسی کنید.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "برنامه را در تلفن خود باز کنید، برای اسکن کردن کد QR بر روی «اسکن» (Scan) و سپس بر روی «پرداخت» (Pay) کلیک کنید.";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "بازآوری وضعیت پرداخت";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "برای بازآوری وضعیت پرداخت خود، بر روی دکمه زیر کلیک کنید.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "اگر نتوانید پرداخت را به روش پرداخت پیش-گفته انجام دهید، باید بر روی «لغو» (Cancel) تلنگر بزنید و روش پرداخت دیگری را برای تکمیل فرآیند پرداخت انتخاب کنید.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "اقساط AfterPay";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "صورتحساب AfterPay";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "شرایط و ضوابط {link} را می‌پذیرم";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "این کار فقط چند ثانیه زمان می‌برد";
 "gc.general.processing" = "لطفاً صبر کنید، مدت چند ثانیه دیگر می‌توانید پرداخت خود را ادامه دهید";

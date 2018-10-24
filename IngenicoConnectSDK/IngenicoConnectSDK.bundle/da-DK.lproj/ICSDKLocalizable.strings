@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "År";
 "gc.general.datetime.year.placeholder" = "År";
 "gc.general.errors.clientDateTime" = "Tjek venligst om dato og tid på enheden, du bruger for at sikre dig, at indstillinger i forbindelse med betalingen er korrekte.";
+"gc.general.errors.generalError" = "Noget gik galt";
 "gc.general.errors.image.altText" = "Advarsel";
 "gc.general.errors.incorrectMerchantId" = "Der opstod en teknisk fejl, som gjorde at vi ikke kunne vise dig de rigtige instruktioner om, hvordan betalingen fuldføres: Et forkert Merchant ID. Prøv venligst med en anden betalingsmetode eller kontakt virksomheden du køber hos.";
 "gc.general.errors.instructions.renderingProblem" = "Der opstod en teknisk fejl mens vi forsøgte at vise instruktionerne til fuldendelse af din betaling. Forsøg igen eller prøv at bruge en anden betalingsmetode.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Special-ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift-kode";
 "gc.general.paymentProcessing" = "Vi bearbejder din betaling Vent venligst. Det kan tage flere sekunder at bearbejde din betaling.";
+"gc.general.paymentProduct.1503.errorMessage" = "Angiv en gyldig værdi på 11 eller 14 tegn til dit CPF- eller CNPJ-nummer.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Kontoindehaverens navn";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Peter Jensen";
 "gc.general.paymentProductFields.accountNumber.label" = "Kontonummer";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Er fuldført";
 "gc.general.paymentProducts.3012.processing" = "Din betaling behandles… Tjek venligst din Bancontact app.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Eller åbn app´en på din telefon, klik \"Betal\" og scan QR-koden.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Åbn appen på din telefon, klik på ‘Betal’ og scan QR-koden.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Aktualisering af betalingsstatus";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Klik på knappen nedenfor for at aktualisere din betalingsstatus.";
+"gc.general.paymentProducts.302.error" = "Betaling med Apple Pay er ikke muligt i øjeblikket. Vi beklager ulejligheden.";
+"gc.general.paymentProducts.302.header" = "Forbereder Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript er i øjeblikket slået fra i din browser. Betaling med Apple Pay er ikke muligt med JavaScript slået fra. Slå JavaScript til og opdater denne side.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Betaling med Google Pay er ikke muligt i øjeblikket. Vi beklager ulejligheden.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript er i øjeblikket slået fra i din browser. Betaling med Google Pay er ikke muligt med JavaScript slået fra. Slå JavaScript til og opdater denne side.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Forbereder Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI Recurring";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Hvordan ønsker du at betale?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Åbn din app";
+"gc.general.paymentProducts.863.paymentStatus1" = "Er begyndt";
+"gc.general.paymentProducts.863.paymentStatus2" = "Er autoriseret";
+"gc.general.paymentProducts.863.paymentStatus3" = "Er fuldført";
+"gc.general.paymentProducts.863.processing" = "Din betaling behandles… Kontroller venligst din WeChat-app.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Åbn appen på din telefon, klik på \"scan\" for at scanne QR-koden og klik på ‘Betal’.";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Aktualisering af betalingsstatus";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Klik på knappen nedenfor for at aktualisere din betalingsstatus.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Hvis du ikke kan betale ved hjælp af betalingsmetoden ovenfor, skal du trykke på 'Annuller' og vælge et andet betalingsprodukt for at fuldføre din betaling.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay rater";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "AfterPay faktura";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Jeg accepterer {link} vilkår og betingelser";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Dette skulle kun tage nogle få sekunder";
 "gc.general.processing" = "Vent venligst – Du kan fortsætte med at tjekke ud om få sekunder.";

@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Jaar";
 "gc.general.datetime.year.placeholder" = "Jaar";
 "gc.general.errors.clientDateTime" = "Controleer of de tijd en datum van het apparaat waarmee u deze betaling doet goed zijn ingesteld.";
+"gc.general.errors.generalError" = "Er is iets fout gegaan";
 "gc.general.errors.image.altText" = "Waarschuwing";
 "gc.general.errors.incorrectMerchantId" = "We kunnen de juiste instructies voor het afronden van uw betaling niet weergeven vanwege een technische fout: een onjuiste handelaars-id. Probeer een andere betaalmethode of neem contact op met het bedrijf waarbij u deze aankoop probeert te doen.";
 "gc.general.errors.instructions.renderingProblem" = "Er is een technische fout opgetreden bij het weergeven van de instructies voor het afronden van uw betaling. Probeer het opnieuw of probeer een andere betaalmethode.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Bijzondere id";
 "gc.general.instructionFields.SWIFTCODE.label" = "BIC / Swift-code";
 "gc.general.paymentProcessing" = "Uw betaling wordt verwerkt. Een ogenblik geduld. Het verwerken van uw betaling kan enkele seconden duren.";
+"gc.general.paymentProduct.1503.errorMessage" = "Voor een geldig CPF- of CNPJ-nummer in van 11 of 14 cijfers.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Naam van de rekeninghouder";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Mark Peeters";
 "gc.general.paymentProductFields.accountNumber.label" = "Rekeningnummer";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Voltooid";
 "gc.general.paymentProducts.3012.processing" = "Uw betaling wordt verwerkt… Controleer uw Bancontact app.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Of open de app op uw telefoon, klik op ‘Betalen’ en scan de QR code.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Open de app op uw telefoon, klik op 'Betalen' en scan de QR-code.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Betaalstatus vernieuwen";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Klik op de onderstaande knop om uw betaalstatus te vernieuwen.";
+"gc.general.paymentProducts.302.error" = "Betalen met Apple Pay is momenteel niet mogelijk. Onze excuses voor het ongemak.";
+"gc.general.paymentProducts.302.header" = "Apple Pay voorbereiden";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript is momenteel uitgeschakeld in uw browser. U kunt niet betalen met Apple Pay wanneer JavaScript uitgeschakeld is. Schakel JavaScript in en ververs deze pagina.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Betalen met Google Pay is momenteel niet mogelijk. Onze excuses voor het ongemak.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript is momenteel uitgeschakeld in uw browser. U kunt niet betalen met Google Pay wanneer JavaScript uitgeschakeld is. Schakel JavaScript in en ververs deze pagina.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Google Pay voorbereiden";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "Terugkerende QIWI";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Hoe wilt u betalen?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Open uw app";
+"gc.general.paymentProducts.863.paymentStatus1" = "Gestart";
+"gc.general.paymentProducts.863.paymentStatus2" = "Geautoriseerd";
+"gc.general.paymentProducts.863.paymentStatus3" = "Voltooid";
+"gc.general.paymentProducts.863.processing" = "Uw betaling wordt verwerkt... Controleer uw WeChat-app.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Open de app op uw telefoon, klik op 'Scannen' om de QR-code te scannen en klik vervolgens op 'Betalen'.";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Betaalstatus vernieuwen";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Klik op de onderstaande knop om uw betaalstatus te vernieuwen.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Wanneer u niet kunt betalen via de bovenstaande betaalmethode, klik dan op 'Annuleren' en selecteer een andere betaalmethode om uw betaling af te ronden.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay tranches";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "AfterPay factuur";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Ik aanvaard de {link} algemene voorwaarden";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Dit duurt slechts een paar seconden";
 "gc.general.processing" = "Even geduld, u zal uw checkout-proces binnen enkele seconden kunnen verderzetten";

@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Rok";
 "gc.general.datetime.year.placeholder" = "Rok";
 "gc.general.errors.clientDateTime" = "Skontrolujte, že dátum a čas zariadenia, ktoré využívate na túto platbu, je správne.";
+"gc.general.errors.generalError" = "Vyskytol sa problém";
 "gc.general.errors.image.altText" = "Varovanie";
 "gc.general.errors.incorrectMerchantId" = "Vyskytla sa technická chyba, ktorá nám zabránila ukázať vám správne pokyny na finalizáciu vašej platby: nesprávne ID predajcu. Skúste iný spôsob platby alebo sa obráťte na spoločnosť, od ktorej nakupujete.";
 "gc.general.errors.instructions.renderingProblem" = "Pri pokuse o zobrazenie pokynov na finalizáciu platby sa vyskytla technická chyba. Skúste to znova alebo skúste využiť iný spôsob platby.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Špeciálne ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift kód";
 "gc.general.paymentProcessing" = "Spracúvame vašu platbu. Čakajte. Spracovanie vašej platby môže chvíľu trvať.";
+"gc.general.paymentProduct.1503.errorMessage" = "Zadajte platné číslo CPF alebo CNPJ (požadovaná dĺžka je 11, resp. 14 znakov).";
 "gc.general.paymentProductFields.accountHolderName.label" = "Meno majiteľa účtu";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Fero Mrkvička";
 "gc.general.paymentProductFields.accountNumber.label" = "Číslo účtu";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Dokončené";
 "gc.general.paymentProducts.3012.processing" = "Vaša platba sa spracúva...Skontrolujte aplikáciu Bancontact.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Alebo otvorte aplikáciu na svojom telefóne. Kliknite na možnosť „Zaplatiť“ a naskenujte QR kód.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Otvorte aplikáciu v telefóne, kliknite na možnosť „Pay“ (Zaplatiť) a oskenujte QR kód.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Obnoviť stav platby";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Kliknite na nižšie uvedené tlačidlo a obnovte si stav platby.";
+"gc.general.paymentProducts.302.error" = "Vykonávanie platieb cez Apple Pay momentálne nie je možné. Ospravedlňujeme sa za komplikácie.";
+"gc.general.paymentProducts.302.header" = "Pripravuje sa služba Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "Používanie jazyka JavaScript vo vašom prehliadači je momentálne vypnuté. Keď je vypnuté používanie jazyka JavaScript, nemožno vykonávať platby cez Apple Pay. Zapnite používanie jazyka JavaScript a obnovte túto stránku.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Vykonávanie platieb cez Google Pay momentálne nie možné. Ospravedlňujeme sa za komplikácie.";
+"gc.general.paymentProducts.320.javaScriptOff" = "Používanie jazyka JavaScript vo vašom prehliadači je momentálne vypnuté. Keď je vypnuté používanie jazyka JavaScript, nemožno vykonávať platby cez Google Pay. Zapnite používanie jazyka JavaScript a obnovte túto stránku.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Pripravuje sa služba Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI, opakované";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Ako by ste chceli platiť?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Otvorte aplikáciu";
+"gc.general.paymentProducts.863.paymentStatus1" = "Začaté";
+"gc.general.paymentProducts.863.paymentStatus2" = "Autorizované";
+"gc.general.paymentProducts.863.paymentStatus3" = "Dokončené";
+"gc.general.paymentProducts.863.processing" = "Vaša platba sa spracováva... Skontrolujte aplikáciu WeChat.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Otvorte aplikáciu v telefóne, kliknutím na položku „Scan“ (Skenovať) oskenujte QR kód a kliknite na možnosť „Pay“ (Zaplatiť).";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Obnoviť stav platby";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Kliknite na nižšie uvedené tlačidlo a obnovte si stav platby.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Ak sa nedarí vykonať platbu pomocou spôsobu platby uvedeného vyššie, ťuknite na položku „Cancel“ (Zrušiť) a vyberte inú možnosť platby.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Splátky AfterPay";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "Faktúra AfterPay";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Súhlasím s {link} podmienkami používania";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Malo by to trvať iba niekoľko sekúnd";
 "gc.general.processing" = "Čakajte, prosím. O chvíľu budete môcť pokračovať k platbe";

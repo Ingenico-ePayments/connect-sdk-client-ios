@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Aasta";
 "gc.general.datetime.year.placeholder" = "Aasta";
 "gc.general.errors.clientDateTime" = "Palun kinnitage, et makse tegemiseks kasutatava seadme kuupäev ja kellaaeg on õiged.";
+"gc.general.errors.generalError" = "Miski läks valesti";
 "gc.general.errors.image.altText" = "Hoiatus";
 "gc.general.errors.incorrectMerchantId" = "Teie makse lõpetamiseks õigete juhiste näitamisel tekkis tehniline viga: vale kaupmehe ID-number. Palun proovige muud makseviisi või võtke ühendust müügiettevõttega.";
 "gc.general.errors.instructions.renderingProblem" = "Teie makse lõpetamiseks juhiste näitamisel tekkis tehniline viga. Palun proovige uuesti või proovige muud makseviisi.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Spetsiaalne ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "SWIFT kood";
 "gc.general.paymentProcessing" = "Me töötleme teie makset. Palun oodake. Teie makse töötlemiseks kulub mõni sekund.";
+"gc.general.paymentProduct.1503.errorMessage" = "Palun sisestage oma kehtiv 11- või 14-kohaline CPF- või CNPJ-number.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Konto omaniku nimi";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Konto number";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Lõpetatud";
 "gc.general.paymentProducts.3012.processing" = "Teie makset töödeldakse… Palun kontrollige oma Bancontact rakendust.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Või avage rakendus oma telefonis, vajutage ‘Maksa’ ja skaneerige QR-kood.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Avage telefonis rakendus, toksake „Pay“ ja skannige QR-kood.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Makse staatuse värskendamine";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Vajutage all olevale nupule, et värskendada oma makse staatust.";
+"gc.general.paymentProducts.302.error" = "Apple Payga tasumine ei ole praegu võimalik. Palume vabandust ebamugavuste pärast.";
+"gc.general.paymentProducts.302.header" = "Apple Pay ettevalmistamine";
+"gc.general.paymentProducts.302.javaScriptOff" = "Teie brauseris on JavaScript praegu keelatud. Kui JavaScript on keelatud, ei ole Apple Payga tasumine võimalik. Palun lubage JavaScript ja värskendage seda lehte.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Google Payga tasumine ei ole praegu võimalik. Palume vabandust ebamugavuste pärast.";
+"gc.general.paymentProducts.320.javaScriptOff" = "Teie brauseris on JavaScript praegu keelatud. Kui JavaScript on keelatud, ei ole Google Payga tasumine võimalik. Palun lubage JavaScript ja värskendage seda lehte.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Google Pay ettevalmistamine";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI Korduv";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Kuidas sooviksite maksta?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Avage oma rakendus";
+"gc.general.paymentProducts.863.paymentStatus1" = "Alustatud";
+"gc.general.paymentProducts.863.paymentStatus2" = "Kinnitatud";
+"gc.general.paymentProducts.863.paymentStatus3" = "Lõpetatud";
+"gc.general.paymentProducts.863.processing" = "Teie makset töödeldakse. Palun vaadake oma rakendusse WeChat.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Avage telefonis rakendus, toksake QR-koodi skannimiseks „Scan“ ja seejärel toksake „Pay“.";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Makse staatuse värskendamine";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Vajutage all olevale nupule, et värskendada oma makse staatust.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Kui te ei saa kirjeldatud maksemeetodit kasutades tasuda, toksake „Cancel“ ja valige makse sooritamiseks muu võimalus.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay osamaksed";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "AfterPay arve";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Nõustun {link} tingimustega";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "See peaks võtma aega vaid mõne sekundi";
 "gc.general.processing" = "Palun oodake, saate ostu sooritamist jätkata mõne sekundi pärast";

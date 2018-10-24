@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Рік";
 "gc.general.datetime.year.placeholder" = "Рік";
 "gc.general.errors.clientDateTime" = "Перевірте, чи правильно встановлено дату й час на пристрої, який використовується для здійснення цього платежу.";
+"gc.general.errors.generalError" = "Сталася помилка";
 "gc.general.errors.image.altText" = "Попередження";
 "gc.general.errors.incorrectMerchantId" = "Сталася технічна помилка, через яку неможливо відобразити відповідні інструкції для завершення платежу: невірний ідентифікатор продавця. Скористайтеся іншим способом оплати або зв'яжіться з компанією-продавцем.";
 "gc.general.errors.instructions.renderingProblem" = "Під час спроби відображення інструкцій щодо завершення платежу сталася технічна помилка. Повторіть спробу або скористайтеся іншим способом оплати.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Спеціальний ідентифікатор";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift код";
 "gc.general.paymentProcessing" = "Триває обробка платежу. Зачекайте. Обробка платежу може тривати кілька секунд.";
+"gc.general.paymentProduct.1503.errorMessage" = "Укажіть дійсне значення свого номера CPF або CNPJ, яке має складатися з 11 або 14 символів.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Ім'я власника рахунку";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Джон Доу";
 "gc.general.paymentProductFields.accountNumber.label" = "Номер рахунку";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Завершено";
 "gc.general.paymentProducts.3012.processing" = "Ваш платіж обробляється… Перевірте свій додаток Bancontact.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Або відкрийте додаток на телефоні, натисніть кнопку «Оплатити» та відскануйте QR-код.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Запустіть додаток на телефоні, натисніть «Оплатити» і відскануйте QR-код.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Оновити статус платежу";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Натисніть кнопку нижче, щоб оновити статус платежу.";
+"gc.general.paymentProducts.302.error" = "Здійснити оплату за допомогою Apple Pay наразі неможливо. Просимо вибачення за незручності.";
+"gc.general.paymentProducts.302.header" = "Підготовка Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "Зараз у вашому браузері вимкнено JavaScript. Якщо JavaScript вимкнено, здійснити оплату за допомогою Apple Pay неможливо. Увімкніть JavaScript та оновіть сторінку.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Здійснити оплату за допомогою Google Pay наразі неможливо. Просимо вибачення за незручності.";
+"gc.general.paymentProducts.320.javaScriptOff" = "Зараз у вашому браузері вимкнено JavaScript. Якщо JavaScript вимкнено, здійснити оплату за допомогою Google Pay неможливо. Увімкніть JavaScript та оновіть сторінку.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Підготовка Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "Регулярний платіж QIWI";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Як ви хочете оплатити?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Відкрийте додаток";
+"gc.general.paymentProducts.863.paymentStatus1" = "Почато";
+"gc.general.paymentProducts.863.paymentStatus2" = "Авторизовано";
+"gc.general.paymentProducts.863.paymentStatus3" = "Завершено";
+"gc.general.paymentProducts.863.processing" = "Триває обробка платежу... Перевірте перебіг у своєму додатку WeChat.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Запустіть додаток на телефоні, натисніть «Сканувати», щоб відсканувати QR-код, а потім клацніть «Оплатити».";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Оновити статус платежу";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Натисніть кнопку нижче, щоб оновити статус платежу.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Якщо вам не вдається здійснити оплату за допомогою описаного вище способу, натисніть «Скасувати» та виберіть інший платіжний інструмент для здійснення платежу.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Періодичні платежі AfterPay";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "Рахунок-фактура AfterPay";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Я приймаю Умови та положення {link}";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Це займе лише кілька секунд";
 "gc.general.processing" = "Зачекайте, будь ласка. Оплатити ваше замовлення можна буде за кілька секунд.";

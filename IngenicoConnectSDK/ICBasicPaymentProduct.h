@@ -13,6 +13,9 @@
 #import <IngenicoConnectSDK/ICPaymentItemDisplayHints.h>
 #import <IngenicoConnectSDK/ICPaymentItem.h>
 #import <IngenicoConnectSDK/ICBasicPaymentItem.h>
+#import <IngenicoConnectSDK/ICPaymentProduct302SpecificData.h>
+#import <IngenicoConnectSDK/ICPaymentProduct320SpecificData.h>
+#import <IngenicoConnectSDK/ICPaymentProduct863SpecificData.h>
 
 @interface ICBasicPaymentProduct : NSObject <ICBasicPaymentItem>
 
@@ -25,6 +28,10 @@
 
 @property (nonatomic) NSString *paymentMethod;
 @property (nonatomic) NSString *paymentProductGroup;
+
+@property (strong, nonatomic) ICPaymentProduct302SpecificData *paymentProduct302SpecificData;
+@property (strong, nonatomic) ICPaymentProduct320SpecificData *paymentProduct320SpecificData;
+@property (strong, nonatomic) ICPaymentProduct863SpecificData *paymentProduct863SpecificData;
 
 - (ICAccountOnFile *)accountOnFileWithIdentifier:(NSString *)accountOnFileIdentifier;
 - (void)setStringFormatter:(ICStringFormatter *)stringFormatter;

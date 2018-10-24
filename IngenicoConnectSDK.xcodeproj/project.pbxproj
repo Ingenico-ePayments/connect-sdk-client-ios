@@ -16,6 +16,12 @@
 		732F866920052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 732F866720052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m */; };
 		733CCFA820484847008099C5 /* ICValidatorIBAN.h in Headers */ = {isa = PBXBuildFile; fileRef = 733CCFA620484847008099C5 /* ICValidatorIBAN.h */; };
 		733CCFA920484847008099C5 /* ICValidatorIBAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 733CCFA720484847008099C5 /* ICValidatorIBAN.m */; };
+		735404462153B9E500771041 /* ICPaymentProduct302SpecificData.h in Headers */ = {isa = PBXBuildFile; fileRef = 735404402153B9E400771041 /* ICPaymentProduct302SpecificData.h */; };
+		735404472153B9E500771041 /* ICPaymentProduct863SpecificData.h in Headers */ = {isa = PBXBuildFile; fileRef = 735404412153B9E500771041 /* ICPaymentProduct863SpecificData.h */; };
+		735404482153B9E500771041 /* ICPaymentProduct302SpecificData.m in Sources */ = {isa = PBXBuildFile; fileRef = 735404422153B9E500771041 /* ICPaymentProduct302SpecificData.m */; };
+		735404492153B9E500771041 /* ICPaymentProduct320SpecificData.m in Sources */ = {isa = PBXBuildFile; fileRef = 735404432153B9E500771041 /* ICPaymentProduct320SpecificData.m */; };
+		7354044A2153B9E500771041 /* ICPaymentProduct863SpecificData.m in Sources */ = {isa = PBXBuildFile; fileRef = 735404442153B9E500771041 /* ICPaymentProduct863SpecificData.m */; };
+		7354044B2153B9E500771041 /* ICPaymentProduct320SpecificData.h in Headers */ = {isa = PBXBuildFile; fileRef = 735404452153B9E500771041 /* ICPaymentProduct320SpecificData.h */; };
 		738E97E31F85280F001C2CFE /* ICThirdPartyStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */; };
 		738E97E41F85280F001C2CFE /* ICThirdPartyStatusResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */; };
 		738E97E51F85280F001C2CFE /* ICThirdPartyStatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */; };
@@ -261,6 +267,12 @@
 		732F866720052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICValidationErrorTermsAndConditions.m; sourceTree = "<group>"; };
 		733CCFA620484847008099C5 /* ICValidatorIBAN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ICValidatorIBAN.h; path = IngenicoConnectSDK/ICValidatorIBAN.h; sourceTree = "<group>"; };
 		733CCFA720484847008099C5 /* ICValidatorIBAN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ICValidatorIBAN.m; path = IngenicoConnectSDK/ICValidatorIBAN.m; sourceTree = "<group>"; };
+		735404402153B9E400771041 /* ICPaymentProduct302SpecificData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPaymentProduct302SpecificData.h; sourceTree = "<group>"; };
+		735404412153B9E500771041 /* ICPaymentProduct863SpecificData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPaymentProduct863SpecificData.h; sourceTree = "<group>"; };
+		735404422153B9E500771041 /* ICPaymentProduct302SpecificData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPaymentProduct302SpecificData.m; sourceTree = "<group>"; };
+		735404432153B9E500771041 /* ICPaymentProduct320SpecificData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPaymentProduct320SpecificData.m; sourceTree = "<group>"; };
+		735404442153B9E500771041 /* ICPaymentProduct863SpecificData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPaymentProduct863SpecificData.m; sourceTree = "<group>"; };
+		735404452153B9E500771041 /* ICPaymentProduct320SpecificData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPaymentProduct320SpecificData.h; sourceTree = "<group>"; };
 		738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatus.h; sourceTree = "<group>"; };
 		738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatusResponse.h; sourceTree = "<group>"; };
 		738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThirdPartyStatusResponse.m; sourceTree = "<group>"; };
@@ -936,6 +948,12 @@
 		B4D77E481DE7317E00F7B1C1 /* PaymentProducts */ = {
 			isa = PBXGroup;
 			children = (
+				735404402153B9E400771041 /* ICPaymentProduct302SpecificData.h */,
+				735404422153B9E500771041 /* ICPaymentProduct302SpecificData.m */,
+				735404452153B9E500771041 /* ICPaymentProduct320SpecificData.h */,
+				735404432153B9E500771041 /* ICPaymentProduct320SpecificData.m */,
+				735404412153B9E500771041 /* ICPaymentProduct863SpecificData.h */,
+				735404442153B9E500771041 /* ICPaymentProduct863SpecificData.m */,
 				738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */,
 				738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */,
 				738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */,
@@ -1034,6 +1052,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4D77EE51DE731D300F7B1C1 /* ICDataRestrictions.h in Headers */,
+				735404462153B9E500771041 /* ICPaymentProduct302SpecificData.h in Headers */,
+				B4D77C721DE72EB900F7B1C1 /* IngenicoConnectSDK.h in Headers */,
+				7354044B2153B9E500771041 /* ICPaymentProduct320SpecificData.h in Headers */,
+				735404472153B9E500771041 /* ICPaymentProduct863SpecificData.h in Headers */,
 				B4D77E251DE7303800F7B1C1 /* ICPaymentProductGroupConverter.h in Headers */,
 				B4D77E101DE7303800F7B1C1 /* ICBasicPaymentProductConverter.h in Headers */,
 				B4D77DF01DE7302500F7B1C1 /* ICJOSEEncryptor.h in Headers */,
@@ -1327,6 +1349,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735404482153B9E500771041 /* ICPaymentProduct302SpecificData.m in Sources */,
+				735404492153B9E500771041 /* ICPaymentProduct320SpecificData.m in Sources */,
+				7354044A2153B9E500771041 /* ICPaymentProduct863SpecificData.m in Sources */,
 				B4D77E8A1DE731B200F7B1C1 /* ICValidationErrorInteger.m in Sources */,
 				B4D77F101DE731D300F7B1C1 /* ICLabelTemplateItem.m in Sources */,
 				73C690381F56CDD600560FD1 /* ICDisplayElement.m in Sources */,

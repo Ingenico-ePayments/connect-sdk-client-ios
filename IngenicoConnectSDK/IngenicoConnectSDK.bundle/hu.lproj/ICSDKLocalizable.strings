@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Év";
 "gc.general.datetime.year.placeholder" = "Év";
 "gc.general.errors.clientDateTime" = "Kérjük, ellenőrizze, hogy a fizetéshez használt fizetőeszköz érvényességi ideje megfelelően szerepel.";
+"gc.general.errors.generalError" = "Hiba történt";
 "gc.general.errors.image.altText" = "Figyelmeztetés";
 "gc.general.errors.incorrectMerchantId" = "Technikai hiba történt, ami megakadályozta a fizetés megfelelő véglegesítési utasításainak megjelenítését: helytelen Kereskedő ID. Kérjük, próbálkozzon más fizetési móddal, vagy vegye fel a kapcsolatot a céggel, amelyiktől vásárol.";
 "gc.general.errors.instructions.renderingProblem" = "A fizetés véglegesítési utasításainak megjelenítése közben technikai hiba történt. Kérjük, próbálkozzon újra vagy más fizetési móddal.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Különleges azonosító";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift-kód";
 "gc.general.paymentProcessing" = "Fizetése feldolgozás alatt áll. Kérjük, várjon. A fizetése feldolgozása eltarthat néhány másodpercig.";
+"gc.general.paymentProduct.1503.errorMessage" = "Kérjük, adja meg CPF- vagy CNPJ-számának 11 vagy 14 érvényes karakterét.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Számlatulajdonos neve";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Ismeretlen Személy";
 "gc.general.paymentProductFields.accountNumber.label" = "Bankszámlaszám";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Teljesítve";
 "gc.general.paymentProducts.3012.processing" = "A befizetése feldolgozás alatt… Ellenőrizze Bancontact alkalmazását.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Vagy nyissa meg az alkalmazást a telefonján, koppintson a „Fizetés” lehetőségre, és olvassa be a QR-kódot.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Nyissa meg az alkalmazást telefonján, koppintson a „Fizetés” elemre, majd olvassa be a QR-kódot.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "A fizetési állapot frissítése";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Kattintson az alábbi gombra a fizetési állapota frissítéséhez.";
+"gc.general.paymentProducts.302.error" = "Jelenleg nem lehetséges az Apple Pay szolgáltatással történő fizetés. Elnézést kérünk a kényelmetlenségért!";
+"gc.general.paymentProducts.302.header" = "Az Apple Pay előkészítése";
+"gc.general.paymentProducts.302.javaScriptOff" = "A JavaScript jelenleg ki van kapcsolva böngészőjében. Ha a JavaScript ki van kapcsolva, akkor nem tud az Apple Pay szolgáltatással fizetni. Kapcsolja be a JavaScriptet, és frissítse ezt az oldalt.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Jelenleg nem lehetséges a Google Pay szolgáltatással történő fizetés. Elnézést kérünk a kényelmetlenségért!";
+"gc.general.paymentProducts.320.javaScriptOff" = "A JavaScript jelenleg ki van kapcsolva böngészőjében. Ha a JavaScript ki van kapcsolva, akkor nem tud a Google Pay szolgáltatással fizetni. Kapcsolja be a JavaScriptet, és frissítse ezt az oldalt.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "A Google Pay előkészítése";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI ismétlődő";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Hogyan szeretne fizetni?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Az alkalmazás megnyitása";
+"gc.general.paymentProducts.863.paymentStatus1" = "Megkezdve";
+"gc.general.paymentProducts.863.paymentStatus2" = "Jóváhagyva";
+"gc.general.paymentProducts.863.paymentStatus3" = "Teljesítve";
+"gc.general.paymentProducts.863.processing" = "Fizetési tranzakciójának feldolgozása folyamatban van… Ellenőrizze WeChat alkalmazását.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Nyissa meg az alkalmazást telefonján, koppintson a „Beolvasás” elemre a QR-kód beolvasásához, majd ezt követően koppintson a „Fizetés” elemre.";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "A fizetési állapot frissítése";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Kattintson az alábbi gombra a fizetési állapota frissítéséhez.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Ha a fenti fizetési móddal nem tud fizetni, koppintson a „Mégse” elemre, és válasszon másik fizetőterméket a fizetés végrehajtásához.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay-törlesztőrészletek";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "AfterPay számla";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Elfogadom az {link} feltételeit és rendelkezéseit";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Ez csupán néhány pillanatig tart";
 "gc.general.processing" = "Kérjük, várjon! Pár másodpercen belül folytathatja a fizetést.";

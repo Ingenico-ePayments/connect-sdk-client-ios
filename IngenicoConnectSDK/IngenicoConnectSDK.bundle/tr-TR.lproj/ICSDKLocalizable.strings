@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Yıl";
 "gc.general.datetime.year.placeholder" = "Yıl";
 "gc.general.errors.clientDateTime" = "Lütfen bu ödemeyi yapmak için kullandığınız cihazın tarihi ve saatinin doğru ayarlandığını onaylayın.";
+"gc.general.errors.generalError" = "Bir yanlışlık oldu";
 "gc.general.errors.image.altText" = "Uyarı";
 "gc.general.errors.incorrectMerchantId" = "Ödemenizi sonlandırmaya ilişkin talimatları size göstermemizi engelleyen teknik bir hata meydana geldi: yanlış Satıcı kimliği. Lütfen başka bir ödeme yöntemi deneyin veya satın aldığınız firma ile iletişime geçin.";
 "gc.general.errors.instructions.renderingProblem" = "Ödemenizi sonlandırmaya ilişkin talimatları göstermeye çalışırken teknik bir hata meydana geldi. Lütfen tekrar deneyin veya başka bir ödeme şekli kullanın.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Özel tanımlama kodu";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift kodu";
 "gc.general.paymentProcessing" = "Ödemenizi işleme alıyoruz. Lütfen bekleyin. Ödemenizi işleme almak birkaç saniye sürebilir.";
+"gc.general.paymentProduct.1503.errorMessage" = "Lütfen CPF veya CNPJ numaranız olarak 11 veya 14 karakterli ve geçerli bir değer verin.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Hesap sahibinin adı";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Hesap numarası";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Tamamlandı";
 "gc.general.paymentProducts.3012.processing" = "Ödemeniz işleniyor… Lütfen Bancontact uygulamanızı kontrol edin.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Veya telefonunuzdaki uygulamayı açın, “Öde” seçeneğine tıklayın ve QR kodunu tarayın.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Telefonunuzda uygulamayı açın, ‘Öde’ düğmesine tıklayın ve kare kodu tarayın.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Ödeme durumunu yenileyin";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Ödeme durumunuzu yenilemek için aşağıdaki düğmeyi tıklayın.";
+"gc.general.paymentProducts.302.error" = "Apple Pay ile ödeme yapmak şu anda mümkün değildir. Bu sorun nedeniyle özür dileriz.";
+"gc.general.paymentProducts.302.header" = "Apple Pay hazırlanıyor.";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript şu anda tarayıcınızda devre dışı. JavaScript devre dışı durumdayken Apple Pay ile ödeme yapmak mümkün değildir. Lütfen JavaScript’i etkinleştirin ve bu sayfayı yenileyin.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Google Pay ile ödeme yapmak şu anda mümkün değildir. Bu sorun nedeniyle özür dileriz.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript şu anda tarayıcınızda devre dışı. JavaScript devre dışı durumdayken Google Pay ile ödeme yapmak mümkün değildir. Lütfen JavaScript’i etkinleştirin ve bu sayfayı yenileyin.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Google Pay hazırlanıyor";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI Tekrarlı Ödeme";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Nasıl ödemek istersiniz?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Uygulamanızı açın";
+"gc.general.paymentProducts.863.paymentStatus1" = "Başlatıldı";
+"gc.general.paymentProducts.863.paymentStatus2" = "Onaylandı";
+"gc.general.paymentProducts.863.paymentStatus3" = "Tamamlandı";
+"gc.general.paymentProducts.863.processing" = "Ödemeniz gerçekleştiriliyor... Lütfen WeChat uygulamanızı kontrol edin.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Telefonunuzda uygulamayı açın, “tara” düğmesine tıklayarak kare kodu tarayın ve ‘Öde’ düğmesine tıklayın.";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Ödeme durumunu yenileyin";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Ödeme durumunuzu yenilemek için aşağıdaki düğmeyi tıklayın.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Yukarıda belirtilen ödeme yöntemiyle ödeme yapamıyorsanız lütfen ‘İptal’ düğmesine tıklayın ve başka bir ödeme ürününü seçerek ödemenizi tamamlayın.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay taksitleri";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "AfterPay faturası";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "{link} şart ve koşullarını kabul ediyorum";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Sadece birkaç saniye sürecektir";
 "gc.general.processing" = "Lütfen bekleyin, alışverişinizi tamamlamaya birkaç saniye içinde devam edebileceksiniz.";

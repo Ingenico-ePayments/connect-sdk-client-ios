@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "שנה";
 "gc.general.datetime.year.placeholder" = "שנה";
 "gc.general.errors.clientDateTime" = "ודא שהתאריך והזמן המוגדרים במכשיר שבו אתה משתמש לביצוע התשלום נכונים.";
+"gc.general.errors.generalError" = "משהו השתבש";
 "gc.general.errors.image.altText" = "אזהרה";
 "gc.general.errors.incorrectMerchantId" = "אירעה תקלה טכנית המונעת מאיתנו להציג לך את ההנחיות הנכונות כדי לסיים את התשלום: מזהה הסוחר (Merchant ID) שגוי. אנא נסה להשתמש באמצעי תשלום אחר או פנה לחברה שממנה בוצעה הרכישה.";
 "gc.general.errors.instructions.renderingProblem" = "כאשר ניסינו להציג את ההנחיות להשלמת התשלום אירעה תקלה טכנית. אנא נסה שוב או נסה להשתמש באמצעי תשלום אחר.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "מזהה מיוחד";
 "gc.general.instructionFields.SWIFTCODE.label" = "קוד Swift";
 "gc.general.paymentProcessing" = "אנו מעבדים את התשלום. אנא המתן. ייתכן שעיבוד התשלום ייקח כמה שניות.";
+"gc.general.paymentProduct.1503.errorMessage" = "מסור ערך חוקי בן 11 או 14 תווים עבור מספר CPE או CNPJ שלך.";
 "gc.general.paymentProductFields.accountHolderName.label" = "שם בעל החשבון";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "פלוני אלמוני";
 "gc.general.paymentProductFields.accountNumber.label" = "מספר חשבון";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "הושלם";
 "gc.general.paymentProducts.3012.processing" = "מעבד את התשלום שלך… בדוק באפליקציה של Bancontact.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "לחלופין, פתח את האפליקציה בטלפון, לחץ על Pay (תשלום), וסרוק את קוד ה-QR.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "פתח את האפליקציה בטלפון, לחץ על Pay (שלם) וסרוק את קוד QR.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "רענן מצב תשלום";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "לחץ על הלחצן למטה כדי לרענן את מצב התשלום.";
+"gc.general.paymentProducts.302.error" = "לא ניתן כרגע לשלם עם Apple Pay. אנו מתנצלים על אי הנוחות.";
+"gc.general.paymentProducts.302.header" = "מכין את Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript כבוי כרגע בדפדפן לא ניתן לשלם עם Apple Pay כאשר JavaScript כבוי. הפעל את JavaScript ורענן את הדף.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "לא ניתן כרגע לשלם עם Google Pay. אנו מתנצלים על אי הנוחות.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript כבוי כרגע בדפדפן לא ניתן לשלם עם Google Pay כאשר JavaScript כבוי. הפעל את JavaScript ורענן את הדף.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "מכין את Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI חוזר";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "כיצד תרצה לשלם?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "פתח את האפליקציה";
+"gc.general.paymentProducts.863.paymentStatus1" = "התחיל";
+"gc.general.paymentProducts.863.paymentStatus2" = "אושר";
+"gc.general.paymentProducts.863.paymentStatus3" = "הושלם";
+"gc.general.paymentProducts.863.processing" = "התשלום שלך מטופל כעת... בדוק את אפליקציית WeChat.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "פתח את האפליקציה בטלפון, לחץ על Scan (סרוק) כדי לסרוק את קוד QR, ולחץ על Pay (שלם).";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "רענן מצב תשלום";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "לחץ על הלחצן למטה כדי לרענן את מצב התשלום.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "אם לא ניתן לשלם בשיטת התשלום המוצעת למעלה, הקש על Cancel (ביטול) ובחר בשיטת תשלום אחרת כדי לסגור את עניין התשלום.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "תשלומים בAfterPay";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "חשבונית AfterPay";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "אני מקבל את התנאים של {link}";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "אין צורך ביותר ממספר שניות";
 "gc.general.processing" = "המתן, תוכל להמשיך לקופה בעוד מספר שניות";

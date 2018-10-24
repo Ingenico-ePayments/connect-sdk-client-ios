@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Year";
 "gc.general.datetime.year.placeholder" = "Year";
 "gc.general.errors.clientDateTime" = "โปรดตรวจสอบวันที่และเวลาในอุปกรณ์ที่คุณใช้เพื่อให้การชำระเงินนี้ถูกตั้งค่าได้อย่างถูกต้อง";
+"gc.general.errors.generalError" = "เกิดข้อผิดพลาดขึ้น";
 "gc.general.errors.image.altText" = "คำเตือน";
 "gc.general.errors.incorrectMerchantId" = "เกิดข้อผิดพลาดทางเทคนิคไม่ให้เราแสดงวิธีที่ถูกต้องเพื่อให้การชำระเงินของคุณเสร็จสมบูรณ์: รหัสร้านค้าไม่ถูกต้อง โปรดลองวิธีการชำระเงินแบบอื่นหรือติดต่อบริษัทที่คุณได้ซื้อสินค้า";
 "gc.general.errors.instructions.renderingProblem" = "เกิดข้อผิดพลาดทางเทคนิคในขณะที่เราพยายามแสดงวิธีการเพื่อให้การชำระเงินของคุณเสร็จสมบูรณ์ โปรดลองใหม่อีกครั้งหรือลองวิธีการชำระเงินแบบอื่น";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "หมายเลขประจำตัวพิเศษ";
 "gc.general.instructionFields.SWIFTCODE.label" = "รหัส Swift Code";
 "gc.general.paymentProcessing" = "เรากำลังดำเนินการชำระเงินของคุณ โปรดรอ อาจใช้เวลาหลายวินาทีในการดำเนินการชำระเงิน";
+"gc.general.paymentProduct.1503.errorMessage" = "โปรดระบุค่า CPF ของคุณที่ถูกต้อง 11 หรือ 14 ตัว หรือหมายเลข CNPJ";
 "gc.general.paymentProductFields.accountHolderName.label" = "ชื่อเจ้าของบัญชี";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "สมชาย ใจดี";
 "gc.general.paymentProductFields.accountNumber.label" = "หมายเลขบัญชี";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "สำเร็จเรียบร้อยแล้ว";
 "gc.general.paymentProducts.3012.processing" = "กำลังดำเนินการชำระเงินของคุณ… โปรดตรวจสอบแอปพลิเคชัน Bancontact ของคุณ";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "หรือเปิดแอปพลิเคชันบนโทรศัพท์ของคุณ คลิกคำว่า \"ชำระเงิน\" และสแกนรหัสคิวอาร์";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "เปิดแอปพลิเคชันบนโทรศัพท์ของคุณ คลิก “ชำระเงิน” และสแกนรหัส QR";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "รีเฟรชสถานะการชำระเงิน";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "คลิกปุ่มด้านล่างเพื่อรีเพรชสถานะการชำระเงินของคุณ";
+"gc.general.paymentProducts.302.error" = "ขณะนี้ไม่สามารถชำระเงินด้วย Apple Pay ได้ เราต้องขออภัยในความไม่สะดวก";
+"gc.general.paymentProducts.302.header" = "กำลังเปิด Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "ขณะนี้ JavaScript ถูกปิดใช้งานบนเบราเซอร์ของคุณ ไม่สามารถชำระเงินด้วย Apple Pay ได้หาก JavaScript ถูกปิดใช้งาน โปรดเปิดใช้งาน JavaScript และรีเฟรชหน้านี้";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "ขณะนี้ไม่สามารถชำระเงินด้วย Google Pay ได้ เราต้องขออภัยในความไม่สะดวก";
+"gc.general.paymentProducts.320.javaScriptOff" = "ขณะนี้ JavaScript ถูกปิดใช้งานบนเบราเซอร์ของคุณ ไม่สามารถชำระเงินด้วย Google Pay ได้หาก JavaScript ถูกปิดใช้งาน โปรดเปิดใช้งาน JavaScript และรีเฟรชหน้านี้";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "กำลังเปิด Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI แบบประจำ";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "คุณต้องการชำระเงินอย่างไร";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "เปิดแอปพลิเคชันของคุณ";
+"gc.general.paymentProducts.863.paymentStatus1" = "เริ่มต้นแล้ว";
+"gc.general.paymentProducts.863.paymentStatus2" = "ได้รับการอนุญาต";
+"gc.general.paymentProducts.863.paymentStatus3" = "สำเร็จเรียบร้อยแล้ว";
+"gc.general.paymentProducts.863.processing" = "กำลังประมวลผลการชำระเงินของคุณ โปรดตรวจสอบแอปพลิเคชัน WeChat ของคุณ";
+"gc.general.paymentProducts.863.qrCodeLabel" = "เปิดแอปพลิเคชันบนโทรศัพท์ของคุณ คลิก “สแกน” เพื่อสแกนรหัส QR และคลิก “ชำระเงิน”";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "รีเฟรชสถานะการชำระเงิน";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "คลิกปุ่มด้านล่างเพื่อรีเพรชสถานะการชำระเงินของคุณ";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "เมื่อคุณไม่สามารถชำระเงินด้วยวิธีชำระเงินข้างต้นได้ โปรดคลิก “ยกเลิก” และเลือกวิธีการชำระเงินแบบอื่นเพื่อชำระเงินของคุณ";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "งวด AfterPay";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "ใบแจ้งหนี้ AfterPay";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "เรายอมรับข้อกำหนดและเงื่อนไขของ {link}";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "ขั้นตอนนี้ใช้เวลาเพียงไม่กี่วินาทีเท่านั้น";
 "gc.general.processing" = "Please wait, you will be able to continue your checkout within a few seconds";

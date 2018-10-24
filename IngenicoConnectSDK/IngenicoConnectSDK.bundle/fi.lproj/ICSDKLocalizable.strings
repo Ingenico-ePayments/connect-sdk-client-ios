@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Vuosi";
 "gc.general.datetime.year.placeholder" = "Vuosi";
 "gc.general.errors.clientDateTime" = "Vahvista, onko maksamiseen käyttämäsi laitteen päivämäärä ja kellonaika asetettu oikein.";
+"gc.general.errors.generalError" = "Tapahtui virhe";
 "gc.general.errors.image.altText" = "Varoitus";
 "gc.general.errors.incorrectMerchantId" = "Tapahtui tekninen virhe, joka esti meitä näyttämästä sinulle oikeita ohjeita maksusi viimeistelyä varten: virheellinen kauppiastunnus. Kokeile jotain toista maksutapaa tai ota yhteyttä yritykseen, jolta olet ostamassa.";
 "gc.general.errors.instructions.renderingProblem" = "Yrittäessämme näyttää ohjeet maksusi viimeistelyä varten tapahtui tekninen virhe. Yritä uudelleen tai kokeile jotain toista maksutapaa.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Erityistunnus";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift-koodi";
 "gc.general.paymentProcessing" = "Maksuasi käsitellään. Odota. Maksun käsittely voi kestää useita sekunteja.";
+"gc.general.paymentProduct.1503.errorMessage" = "Anna kelvollinen CPF- tai CNPJ-numero, jossa on 11 tai 14 merkkiä.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Tilinomistajan nimi";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Tilinumero";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Valmis";
 "gc.general.paymentProducts.3012.processing" = "Maksuasi käsitellään… Tarkista Bancontact-sovelluksesi.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Tai avaa sovellus puhelimessasi, napsauta \"Maksa\" ja skannaa QR-koodi.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Avaa sovellus puhelimessasi, napsauta \"Maksa\" ja lue QR-koodi.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Päivitä maksun tila";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Päivitä maksun tila napsauttamalla alla olevaa painiketta.";
+"gc.general.paymentProducts.302.error" = "Maksaminen Apple Paylla ei ole tällä hetkellä mahdollista. Pahoittelemme aiheutunutta haittaa.";
+"gc.general.paymentProducts.302.header" = "Valmistellaan Apple Payta";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript on poistettu käytöstä selaimessasi. Maksaminen Apple Paylla ei ole mahdollista, jos JavaScript ei ole käytössä. Ota JavaScript käyttöön ja päivitä tämä sivu.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Maksaminen Google Paylla ei ole tällä hetkellä mahdollista. Pahoittelemme aiheutunutta haittaa.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript on poistettu käytöstä selaimessasi. Maksaminen Google Paylla ei ole mahdollista, jos JavaScript ei ole käytössä. Ota JavaScript käyttöön ja päivitä tämä sivu.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Valmistellaan Google Payta";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "QIWI Recurring";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Miten haluat maksaa?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Avaa sovellus";
+"gc.general.paymentProducts.863.paymentStatus1" = "Aloitettu";
+"gc.general.paymentProducts.863.paymentStatus2" = "Valtuutettu";
+"gc.general.paymentProducts.863.paymentStatus3" = "Valmis";
+"gc.general.paymentProducts.863.processing" = "Maksuasi käsitellään... Tarkista WeChat-sovellus.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Avaa sovellus puhelimessasi, lue QR-koodi napsauttamalla \"lue\" ja napsauta \"Maksa\".";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Päivitä maksun tila";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Päivitä maksun tila napsauttamalla alla olevaa painiketta.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Jos maksaminen edellä olevalla tavalla ei onnistu, napauta \"peruuta\" ja valitse jokin toinen maksutuote maksun suorittamiseksi.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay-erät";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "AfterPay-lasku";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Hyväksyn {link} ehdot";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Tämän pitäisi kestää vain muutama sekunti";
 "gc.general.processing" = "Odota hetki, pääset jatkamaan tilausta muutaman sekunnin kuluttua";

@@ -59,6 +59,7 @@
 "gc.general.datetime.year.label" = "Год";
 "gc.general.datetime.year.placeholder" = "Год";
 "gc.general.errors.clientDateTime" = "Проверьте правильность настройки даты и времени на устройстве, которое используете для оплаты.";
+"gc.general.errors.generalError" = "Произошла ошибка";
 "gc.general.errors.image.altText" = "Предупреждение";
 "gc.general.errors.incorrectMerchantId" = "Возникла техническая ошибка, не позволяющая отобразить соответствующие инструкции при завершении платежа: неверный ID продавца. Выберите другой способ оплаты или свяжитесь с компанией-продавцом.";
 "gc.general.errors.instructions.renderingProblem" = "Возникла техническая ошибка при отображении инструкций на последнем этапе проведения платежа. Повторите попытку или выберите другой способ оплаты.";
@@ -87,6 +88,7 @@
 "gc.general.instructionFields.SPECIALID.label" = "Специальный идентификатор";
 "gc.general.instructionFields.SWIFTCODE.label" = "Код SWIFT";
 "gc.general.paymentProcessing" = "Мы обрабатываем Ваш платеж. Пожалуйста, подождите. Обработка платежа может занять несколько секунд.";
+"gc.general.paymentProduct.1503.errorMessage" = "Укажите номер CPF или CNPJ, содержащий действительное значение с 11 или 14 символами.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Имя владельца счета";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Джон Доу";
 "gc.general.paymentProductFields.accountNumber.label" = "Номер счета";
@@ -268,8 +270,12 @@
 "gc.general.paymentProducts.3012.paymentStatus3" = "Завершено";
 "gc.general.paymentProducts.3012.processing" = "Ваш платеж обрабатывается… Проверьте приложение Bancontact.";
 "gc.general.paymentProducts.3012.qrCodeLabel" = "Или откройте приложение на своем телефоне, нажмите «Оплатить» и отсканируйте QR-код.";
+"gc.general.paymentProducts.3012.qrCodeLabel.noButton" = "Откройте приложение на телефоне, нажмите «Оплатить» и отсканируйте QR-код.";
 "gc.general.paymentProducts.3012.refreshPaymentButtonText" = "Обновить статус платежа";
 "gc.general.paymentProducts.3012.refreshPaymentLabel" = "Нажмите кнопку ниже, чтобы обновить статус вашего платежа.";
+"gc.general.paymentProducts.302.error" = "Оплата с помощью Apple Pay в данный момент невозможна. Приносим извинения за неудобства.";
+"gc.general.paymentProducts.302.header" = "Подготовка Apple Pay";
+"gc.general.paymentProducts.302.javaScriptOff" = "JavaScript отключен в вашем браузере. Для оплаты с помощью Apple Pay необходимо включить JavaScript. Включите JavaScript и обновите страницу.";
 "gc.general.paymentProducts.302.name" = "Apple Pay";
 "gc.general.paymentProducts.3101.name" = "ANCV";
 "gc.general.paymentProducts.3103.name" = "CADO Carte";
@@ -293,7 +299,10 @@
 "gc.general.paymentProducts.3124.name" = "Przelewy24";
 "gc.general.paymentProducts.3130.name" = "TWINT";
 "gc.general.paymentProducts.3131.name" = "Swiss Billing";
-"gc.general.paymentProducts.320.name" = "Android Pay";
+"gc.general.paymentProducts.320.error" = "Оплата с помощью Google Pay в данный момент невозможна. Приносим извинения за неудобства.";
+"gc.general.paymentProducts.320.javaScriptOff" = "JavaScript отключен в вашем браузере. Для оплаты с помощью Google Pay необходимо включить JavaScript. Включите JavaScript и обновите страницу.";
+"gc.general.paymentProducts.320.name" = "Google Pay";
+"gc.general.paymentProducts.320.preparing" = "Подготовка Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
@@ -351,6 +360,17 @@
 "gc.general.paymentProducts.8583.name" = "Периодические платежи QIWI";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.861.name" = "Alipay";
+"gc.general.paymentProducts.863.introduction" = "Каким способом вы хотите совершить оплату?";
+"gc.general.paymentProducts.863.name" = "WeChat Pay";
+"gc.general.paymentProducts.863.payWithAppButtonText" = "Открыть приложение";
+"gc.general.paymentProducts.863.paymentStatus1" = "В процессе";
+"gc.general.paymentProducts.863.paymentStatus2" = "Одобрено";
+"gc.general.paymentProducts.863.paymentStatus3" = "Завершено";
+"gc.general.paymentProducts.863.processing" = "Ваш платеж обрабатывается… Проверьте приложение WeChat.";
+"gc.general.paymentProducts.863.qrCodeLabel" = "Откройте приложение на телефоне, нажмите «Сканировать», отсканируйте QR-код и нажмите «Оплатить».";
+"gc.general.paymentProducts.863.refreshPaymentButtonText" = "Обновить статус платежа";
+"gc.general.paymentProducts.863.refreshPaymentLabel" = "Нажмите кнопку ниже, чтобы обновить статус вашего платежа.";
+"gc.general.paymentProducts.863.wrongPaymentMethod" = "Если вам не удается оплатить указанным способом, нажмите «Отмена» и выберите другой способ оплаты для проведения платежа.";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Оплата в рассрочку AfterPay";
@@ -359,4 +379,5 @@
 "gc.general.paymentProducts.9001.name" = "Счет AfterPay";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.label" = "Я принимаю условия и положения {link}";
 "gc.general.paymentProducts.9001.paymentProductFields.termsAndConditions.link.label" = "AfterPay";
+"gc.general.preparing" = "Это может занять несколько секунд";
 "gc.general.processing" = "Пожалуйста, подождите. Вы сможете продолжить оформление и оплату заказа через несколько секунд";
