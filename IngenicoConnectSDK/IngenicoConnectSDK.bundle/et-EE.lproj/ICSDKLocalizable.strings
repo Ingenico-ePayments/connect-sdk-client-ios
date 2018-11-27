@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Vajutage all olevale nupule, et värskendada oma makse staatust.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Kui te ei saa kirjeldatud maksemeetodit kasutades tasuda, toksake „Cancel“ ja valige makse sooritamiseks muu võimalus.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay osamaksed";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Nõustun {link} tingimustega";

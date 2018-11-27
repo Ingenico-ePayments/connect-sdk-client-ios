@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Clic pe butonul de mai jos pentru reactualizarea statusului plăţii.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Atunci când nu puteți plăti utilizând metoda de plată de mai sus, vă rugăm să atingeți „Cancel” (anulare) și să selectați alt produs de plată pentru a vă finaliza plata.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Rate AfterPay";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Accept termenii şi condiţiile {link}";

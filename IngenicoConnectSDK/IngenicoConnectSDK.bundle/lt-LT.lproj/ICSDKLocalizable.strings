@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Paspauskite žemiau esantį mygtuką, kad atnaujintumėte mokėjimo būseną.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Jei negalite sumokėti pirmiau nurodytu būdu, palieskite „Cancel“ (atšaukti) ir pasirinkite kitą mokėjimo priemonę mokėjimui atlikti.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "„AfterPay“ įmokos";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Sutinku su „{link}“ terminais ir sąlygomis";

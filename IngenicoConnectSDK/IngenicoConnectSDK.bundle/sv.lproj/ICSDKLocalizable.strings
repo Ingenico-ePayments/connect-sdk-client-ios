@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Klicka på knappen nedan för att uppdatera din betalningsstatus.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Om du inte kan betala med betalningsmetoden ovan klickar du på ”Avbryt” och väljer en annan betalningsprodukt för att slutföra din betalning.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay-omgångar";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Jag godkänner villkoren för {link}";

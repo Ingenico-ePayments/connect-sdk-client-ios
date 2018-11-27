@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Haga clic en el botón que aparece a continuación para actualizar su estado de pago.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Si no puede realizar el pago con el método anterior, pulse «Cancelar» y escoja otro producto de pago para completar el proceso.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Plazos de AfterPay";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Acepto las condiciones de {link}";

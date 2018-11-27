@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "انقر فوق الزر أدناه لتحديث حالة الدفع الخاصة بك.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "عندما لا تستطيع الدفع باستخدام طريقة الدفع الواردة أعلاه، يُرجى لمس \"إلغاء\" واختيار منتج دفع آخر لإتمام عملية الدفع.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "أقساط AfterPay";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "أنا أوافق على شروط وأحكام {link}";

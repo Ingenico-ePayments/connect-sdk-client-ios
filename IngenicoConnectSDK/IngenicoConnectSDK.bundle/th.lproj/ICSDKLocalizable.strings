@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "คลิกปุ่มด้านล่างเพื่อรีเพรชสถานะการชำระเงินของคุณ";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "เมื่อคุณไม่สามารถชำระเงินด้วยวิธีชำระเงินข้างต้นได้ โปรดคลิก “ยกเลิก” และเลือกวิธีการชำระเงินแบบอื่นเพื่อชำระเงินของคุณ";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "งวด AfterPay";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "เรายอมรับข้อกำหนดและเงื่อนไขของ {link}";

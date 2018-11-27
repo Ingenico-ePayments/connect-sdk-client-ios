@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "برای بازآوری وضعیت پرداخت خود، بر روی دکمه زیر کلیک کنید.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "اگر نتوانید پرداخت را به روش پرداخت پیش-گفته انجام دهید، باید بر روی «لغو» (Cancel) تلنگر بزنید و روش پرداخت دیگری را برای تکمیل فرآیند پرداخت انتخاب کنید.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "اقساط AfterPay";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "شرایط و ضوابط {link} را می‌پذیرم";

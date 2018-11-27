@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "點按下方的按鈕以重新整理您的付款狀態。";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "如果您無法使用上述方式付款，請按下「取消」，然後選擇其他付款方式以完成付款。";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay 分期";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "我接受 {link} 條款與條件";

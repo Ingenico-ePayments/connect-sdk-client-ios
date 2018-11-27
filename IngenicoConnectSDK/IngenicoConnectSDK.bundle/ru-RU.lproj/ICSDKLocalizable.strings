@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Нажмите кнопку ниже, чтобы обновить статус вашего платежа.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Если вам не удается оплатить указанным способом, нажмите «Отмена» и выберите другой способ оплаты для проведения платежа.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Оплата в рассрочку AfterPay";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Я принимаю условия и положения {link}";

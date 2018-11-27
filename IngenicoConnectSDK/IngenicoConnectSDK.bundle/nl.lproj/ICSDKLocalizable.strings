@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Klik op de onderstaande knop om uw betalingsstatus te vernieuwen.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Wanneer u niet kunt betalen via de bovenstaande betaalmethode, klik dan op 'Annuleren' en selecteer een andere betaalmethode om uw betaling af te ronden.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay-termijnen";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Ik ga akkoord met de algemene voorwaarden van {link}";

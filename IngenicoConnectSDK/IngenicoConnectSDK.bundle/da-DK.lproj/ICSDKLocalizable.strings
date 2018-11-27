@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Klik på knappen nedenfor for at aktualisere din betalingsstatus.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Hvis du ikke kan betale ved hjælp af betalingsmetoden ovenfor, skal du trykke på 'Annuller' og vælge et andet betalingsprodukt for at fuldføre din betaling.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay rater";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Jeg accepterer {link} vilkår og betingelser";

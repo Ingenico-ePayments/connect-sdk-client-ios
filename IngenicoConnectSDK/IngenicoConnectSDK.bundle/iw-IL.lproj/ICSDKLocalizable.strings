@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "לחץ על הלחצן למטה כדי לרענן את מצב התשלום.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "אם לא ניתן לשלם בשיטת התשלום המוצעת למעלה, הקש על Cancel (ביטול) ובחר בשיטת תשלום אחרת כדי לסגור את עניין התשלום.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "תשלומים בAfterPay";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "אני מקבל את התנאים של {link}";

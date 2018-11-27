@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "결제 상태를 새로 고침 하려면 아래 버튼을 클릭하십시오.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "위 결제 방법으로 결제할 수 없으면 '취소'를 탭하고 다른 결제 상품을 선택하여 결제를 완료하세요.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay 할부결제";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "본인은 {link} 이용 약관에 동의합니다";

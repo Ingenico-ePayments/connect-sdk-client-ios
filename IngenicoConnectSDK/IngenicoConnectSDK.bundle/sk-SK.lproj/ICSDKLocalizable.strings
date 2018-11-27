@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Kliknite na nižšie uvedené tlačidlo a obnovte si stav platby.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ak sa nedarí vykonať platbu pomocou spôsobu platby uvedeného vyššie, ťuknite na položku „Cancel“ (Zrušiť) a vyberte inú možnosť platby.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Splátky AfterPay";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Súhlasím s {link} podmienkami používania";

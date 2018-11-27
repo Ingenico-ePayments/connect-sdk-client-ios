@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Натисніть кнопку нижче, щоб оновити статус платежу.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Якщо вам не вдається здійснити оплату за допомогою описаного вище способу, натисніть «Скасувати» та виберіть інший платіжний інструмент для здійснення платежу.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Періодичні платежі AfterPay";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Я приймаю Умови та положення {link}";

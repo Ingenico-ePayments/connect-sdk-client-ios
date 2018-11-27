@@ -372,6 +372,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Kattintson az alábbi gombra a fizetési állapota frissítéséhez.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ha a fenti fizetési móddal nem tud fizetni, koppintson a „Mégse” elemre, és válasszon másik fizetőterméket a fizetés végrehajtásához.";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay-törlesztőrészletek";
 "gc.general.paymentProducts.9000.paymentProductFields.termsAndConditions.label" = "Elfogadom az {link} feltételeit és rendelkezéseit";
