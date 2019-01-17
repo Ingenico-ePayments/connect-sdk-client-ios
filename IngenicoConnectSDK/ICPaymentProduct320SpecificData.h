@@ -10,6 +10,7 @@
 
 @interface ICPaymentProduct320SpecificData : NSObject
 
+@property (strong, nonatomic) NSString *gateway;
 @property (strong, nonatomic) NSMutableArray *networks;
 
 @end

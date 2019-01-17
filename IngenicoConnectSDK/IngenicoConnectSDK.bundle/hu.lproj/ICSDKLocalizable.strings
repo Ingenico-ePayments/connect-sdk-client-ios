@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Különleges azonosító";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift-kód";
 "gc.general.paymentProcessing" = "Fizetése feldolgozás alatt áll. Kérjük, várjon. A fizetése feldolgozása eltarthat néhány másodpercig.";
-"gc.general.paymentProduct.1503.errorMessage" = "Kérjük, adja meg CPF- vagy CNPJ-számának 11 vagy 14 érvényes karakterét.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Számlatulajdonos neve";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Ismeretlen Személy";
 "gc.general.paymentProductFields.accountNumber.label" = "Bankszámlaszám";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "A megadott kártya nem támogatott. Kérjük, adjon meg másik kártyát, vagy próbálkozzon más fizetési móddal.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Kérjük, hogy érvényes e-mail címet adjon meg";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Kérjük, hogy érvényes lejárati dátumot adjon meg";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Kérjük, adja meg CPF- vagy CNPJ-számának 11 vagy 14 érvényes karakterét.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Kérjük, hogy válasszon a listában szereplő értékek közül";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Kérjük, hogy érvényes kártyaszámot adjon meg";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Kérjük, {minLength} és {maxLength} karakter közötti értéket adjon meg.";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Jóváhagyva";
 "gc.general.paymentProducts.863.paymentStatus3" = "Teljesítve";
 "gc.general.paymentProducts.863.processing" = "Fizetési tranzakciójának feldolgozása folyamatban van… Ellenőrizze WeChat alkalmazását.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Nyissa meg az alkalmazást telefonján, koppintson a „Beolvasás” elemre a QR-kód beolvasásához, majd ezt követően koppintson a „Fizetés” elemre.";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Nyissa meg az alkalmazást telefonján, koppintson a „Beolvasás” elemre a QR-kód beolvasásához, majd ezt követően koppintson a „Fizetés” elemre.";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "A fizetési állapot frissítése";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Kattintson az alábbi gombra a fizetési állapota frissítéséhez.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ha a fenti fizetési móddal nem tud fizetni, koppintson a „Mégse” elemre, és válasszon másik fizetőterméket a fizetés végrehajtásához.";

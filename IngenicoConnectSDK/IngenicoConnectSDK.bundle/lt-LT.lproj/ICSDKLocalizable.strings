@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Specialus kodas";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift kodas";
 "gc.general.paymentProcessing" = "Apdorojame jūsų mokėjimą. Palaukite. Gali užtrukti keletą sekundžių, kol apdorosime jūsų mokėjimą.";
-"gc.general.paymentProduct.1503.errorMessage" = "Pateikite tinkamą CPF arba CNPJ numerio vertę, sudarytą iš 11 arba 14 ženklų.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Sąskaitos savininko pavadinimas";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Vardenis Pavardenis";
 "gc.general.paymentProductFields.accountNumber.label" = "Sąskaitos Nr.";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Jūsų įvesta kortelė nepalaikoma. Įveskite kitą kortelę arba bandykite rinktis kitą mokėjimo metodą.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Nurodykite galiojantį el. pašto adresą";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Nurodykite tinkamą galiojimo datą";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Pateikite tinkamą CPF arba CNPJ numerio vertę, sudarytą iš 11 arba 14 ženklų.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Pasirinkite vieną iš sąrašo verčių";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Nurodykite galiojantį kortelės numerį";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Nurodykite vertę tarp {minLength} ir {maxLength} simbolių";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Patvirtinta";
 "gc.general.paymentProducts.863.paymentStatus3" = "Atlikta";
 "gc.general.paymentProducts.863.processing" = "Jūsų mokėjimas apdorojamas… Pasitikrinkite programėlę „WeChat“.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Atverkite programėlę telefone, spustelėkite „Scan“ (nuskaityti), kad nuskaitytumėte QR kodą, tada spustelėkite „Pay“ (mokėti).";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Atverkite programėlę telefone, spustelėkite „Scan“ (nuskaityti), kad nuskaitytumėte QR kodą, tada spustelėkite „Pay“ (mokėti).";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Atnaujinkite mokėjimo būseną";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Paspauskite žemiau esantį mygtuką, kad atnaujintumėte mokėjimo būseną.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Jei negalite sumokėti pirmiau nurodytu būdu, palieskite „Cancel“ (atšaukti) ir pasirinkite kitą mokėjimo priemonę mokėjimui atlikti.";

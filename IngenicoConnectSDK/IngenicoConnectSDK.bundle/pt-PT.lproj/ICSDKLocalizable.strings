@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "ID especial";
 "gc.general.instructionFields.SWIFTCODE.label" = "Código Swift";
 "gc.general.paymentProcessing" = "Estamos a processar o seu pagamento. Aguarde. Pode demorar alguns segundos a processar o seu pagamento.";
-"gc.general.paymentProduct.1503.errorMessage" = "Forneça um valor válido com 11 ou 14 caracteres para o seu número CPF ou CNPJ.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Nome do titular da conta";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Número de conta";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "O cartão introduzido não é suportado. Introduza outro cartão ou outro método de pagamento.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Indique um endereço de e-mail válido";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Indique uma data de expiração válida";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Forneça um valor válido com 11 ou 14 caracteres para o seu número CPF ou CNPJ.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Seleccione um dos valores da lista";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Indique um número de cartão válido";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Introduza um valor entre {minLength} e {maxLength} carateres";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Autorizado";
 "gc.general.paymentProducts.863.paymentStatus3" = "Concluído";
 "gc.general.paymentProducts.863.processing" = "O seu pagamento está a ser processado… Verifique a sua aplicação WeChat.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Abra a aplicação no telemóvel, clique em \"scan\" (ler) para ler o código QR e clique em \"Pay\" (Pagar).";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Abra a aplicação no telemóvel, clique em \"scan\" (ler) para ler o código QR e clique em \"Pay\" (Pagar).";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Atualizar estado do pagamento";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Clique no botão abaixo para atualizar o estado do seu pagamento.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Se não conseguir pagar usando o método de pagamento acima descrito, toque em \"Cancel\" (Cancelar) e selecione outro produto de pagamento para efetuar o pagamento.";

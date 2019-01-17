@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Kitambulisho maalum";
 "gc.general.instructionFields.SWIFTCODE.label" = "Msimbo wa swift";
 "gc.general.paymentProcessing" = "Tunachakata malipo yako. Tafadhali subiri. Inaweza kuchukua sekunde kadhaa kuchakata malipo yako.";
-"gc.general.paymentProduct.1503.errorMessage" = "Tafadhali weka nambari yako sahihi ya CPF au CNPJ yenye tarakimu 11 au 14.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Jina la mmiliki wa akaunti";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Nambari ya akaunti";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Kadi uliyoweka haitumiki. Tafadhali weka kadi nyingine au jaribu mbinu nyingine ya malipo.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Tafadhali toa anwani sahihi ya barua pepe";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Tafadhali toa tarehe sahihi ya mwisho";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Tafadhali weka nambari yako sahihi ya CPF au CNPJ yenye tarakimu 11 au 14.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Tafadhali teua moja  ya nambari kutoka kwenye orodha";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Tafadhali toa nambari sahihi ya kadi";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Tafadhali weka thamani kati ya herufi {minLength} na {maxLength}";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Imeidhinishwa";
 "gc.general.paymentProducts.863.paymentStatus3" = "Imekamilishwa";
 "gc.general.paymentProducts.863.processing" = "Malipo yako yanachakatwa...Tafadhali angalia programu yako ya WeChat.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Fungua programu kwenye simu yako, bofya \"changanua\" ili uchanganue msimbo wa QR kisha ubofye 'Lipa'.";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Fungua programu kwenye simu yako, bofya \"changanua\" ili uchanganue msimbo wa QR kisha ubofye 'Lipa'.";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Onyesha upya hali ya malipo";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Bofya kitufe hapa chini ili uonyeshe upya hali yako ya malipo.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ukishindwa kulipa ukitumia mbinu ya malipo iliyo hapo juu, tafadhali gusa 'Ghairi' kisha uchague bidhaa nyingine ya malipo ili ukamilishe malipo yako.";

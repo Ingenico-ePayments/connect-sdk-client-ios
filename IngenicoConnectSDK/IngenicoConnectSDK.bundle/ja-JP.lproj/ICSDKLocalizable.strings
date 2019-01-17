@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "特別ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "SWIFTコード";
 "gc.general.paymentProcessing" = "ただいまお支払いを処理しております。どうぞお待ちください。お支払い処理完了までにはしばらくかかることがあります。";
-"gc.general.paymentProduct.1503.errorMessage" = "11桁または14桁の有効なCPFまたはCNPJ番号を入力してください。";
 "gc.general.paymentProductFields.accountHolderName.label" = "口座名義人名";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "ジョン･ドウ";
 "gc.general.paymentProductFields.accountNumber.label" = "口座番号";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "情報を入力されたカードはご利用いただけないものです。他のカードの情報をご入力いただくか、別のお支払い方法をお選びください。";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "有効なメールアドレスを入力してください";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "有効な有効期限を入力してください";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "11桁または14桁の有効なCPFまたはCNPJ番号を入力してください。";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "リストから値の1つを選択してください";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "有効なカード番号を入力してください";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "{minLength}から{maxLength}文字以内で数値を入力してください";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "承認されました";
 "gc.general.paymentProducts.863.paymentStatus3" = "完了されました";
 "gc.general.paymentProducts.863.processing" = "お支払いの処理中です…WeChatアプリを確認してください。";
-"gc.general.paymentProducts.863.qrCodeLabel" = "スマートフォンでアプリを立ち上げ、「QRコードのスキャン」を選んでスキャンを行い、「支払い」を押します。";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "スマートフォンでアプリを立ち上げ、「QRコードのスキャン」を選んでスキャンを行い、「支払い」を押します。";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "お支払い状況を更新する";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "下のボタンをクリックしてお支払い状況を更新します。";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "上記の方法でお支払いができない場合は、「取り消し」を押し、他の方法を選択してお支払いを完了してください。";

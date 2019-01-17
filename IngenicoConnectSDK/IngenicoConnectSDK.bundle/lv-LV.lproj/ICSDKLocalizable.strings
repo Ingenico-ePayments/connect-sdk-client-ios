@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Papildu ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "SWIFT kods";
 "gc.general.paymentProcessing" = "Mēs apstrādājam jūsu maksājumu. Lūdzu, uzgaidiet. Jūsu maksājuma apstrāde var ilgt vairākas sekundes.";
-"gc.general.paymentProduct.1503.errorMessage" = "Lūdzu, ievadiet derīgu vērtību no 11 vai 14 simboliem, kas ir Jūsu CPF vai CNPJ numurs.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Konta īpašnieka vārds";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Konta numurs";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Jūsu ievietotā karte netiek atbalstīta. Lūdzu, ievietojiet citu karti vai mēģiniet izmantot citu maksāšanas veidu.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Lūdzu, norādiet derīgu e-pasta adresi";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Lūdzu, norādiet derīgu beigu datumu";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Lūdzu, ievadiet derīgu vērtību no 11 vai 14 simboliem, kas ir Jūsu CPF vai CNPJ numurs.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Lūdzu, atlasiet kādu no vērtībām šajā sarakstā";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Lūdzu, norādiet derīgu kartes numuru";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Lūdzu, norādiet vērtību no {minLength} līdz {maxLength} zīmēm.";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Apstiprināts";
 "gc.general.paymentProducts.863.paymentStatus3" = "Pabeigts";
 "gc.general.paymentProducts.863.processing" = "Jūsu maksājums tiek apstrādāts…Lūdzu, pārbaudiet savu WeChat lietotni.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Atveriet lietotni savā telefonā, klikšķiniet uz „skenēt”, lai noskenētu QR kodu, un izvēlieties opciju „Maksāt”.";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Atveriet lietotni savā telefonā, klikšķiniet uz „skenēt”, lai noskenētu QR kodu, un izvēlieties opciju „Maksāt”.";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Atjaunināt maksājuma statusu";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Nospiediet pogu zemāk, lai atjauninātu jūsu maksājuma statusu.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ja nevarat veikt maksājumu, izmantojot augstāk minēto maksāšanas metodi, klikšķiniet uz „Atcelt” un maksājuma veikšanai izvēlieties citu maksāšanas produktu.";

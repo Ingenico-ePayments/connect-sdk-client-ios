@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Špeciálne ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift kód";
 "gc.general.paymentProcessing" = "Spracúvame vašu platbu. Čakajte. Spracovanie vašej platby môže chvíľu trvať.";
-"gc.general.paymentProduct.1503.errorMessage" = "Zadajte platné číslo CPF alebo CNPJ (požadovaná dĺžka je 11, resp. 14 znakov).";
 "gc.general.paymentProductFields.accountHolderName.label" = "Meno majiteľa účtu";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Fero Mrkvička";
 "gc.general.paymentProductFields.accountNumber.label" = "Číslo účtu";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Zadaná karta nie je podporovaná. Vložte inú kartu alebo skúste iný spôsob karty.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Zadajte platnú e-mailovú adresu";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Zadajte platný dátum vypršania platnosti";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Zadajte platné číslo CPF alebo CNPJ (požadovaná dĺžka je 11, resp. 14 znakov).";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Zvoľte si zo zoznamu niektorú hodnotu";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Zadajte platné číslo karty";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Zadajte hodnotu medzi {minLength} a {maxLength} znakmi";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Autorizované";
 "gc.general.paymentProducts.863.paymentStatus3" = "Dokončené";
 "gc.general.paymentProducts.863.processing" = "Vaša platba sa spracováva... Skontrolujte aplikáciu WeChat.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Otvorte aplikáciu v telefóne, kliknutím na položku „Scan“ (Skenovať) oskenujte QR kód a kliknite na možnosť „Pay“ (Zaplatiť).";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Otvorte aplikáciu v telefóne, kliknutím na položku „Scan“ (Skenovať) oskenujte QR kód a kliknite na možnosť „Pay“ (Zaplatiť).";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Obnoviť stav platby";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Kliknite na nižšie uvedené tlačidlo a obnovte si stav platby.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ak sa nedarí vykonať platbu pomocou spôsobu platby uvedeného vyššie, ťuknite na položku „Cancel“ (Zrušiť) a vyberte inú možnosť platby.";

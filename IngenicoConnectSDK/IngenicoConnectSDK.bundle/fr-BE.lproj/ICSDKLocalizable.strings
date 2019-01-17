@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Identifiant spécial";
 "gc.general.instructionFields.SWIFTCODE.label" = "Code Swift";
 "gc.general.paymentProcessing" = "Nous traitons votre paiement. Veuillez patienter. Le traitement de votre paiement peut prendre plusieurs secondes.";
-"gc.general.paymentProduct.1503.errorMessage" = "Veuillez saisir une valeur valide comprenant entre 11 et 14 caractères pour votre numéro CPF ou CNPJ.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Nom du titulaire du compte";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Numéro de compte";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "La carte dont vous avez saisi les informations n'est pas prise en charge. Veuillez saisir les informations d'une autre carte ou essayer un autre mode de paiement.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Veuillez indiquer une adresse email valide";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Veuillez indiquer une date d'expiration valide";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Veuillez saisir une valeur valide comprenant entre 11 et 14 caractères pour votre numéro CPF ou CNPJ.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Veuillez sélectionner une valeur dans la liste";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Veuillez indiquer un numéro de carte valide";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Veuillez fournir une valeur comprise entre {minLength} et {maxLength} caractères.";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Autorisé";
 "gc.general.paymentProducts.863.paymentStatus3" = "Terminé";
 "gc.general.paymentProducts.863.processing" = "Votre paiement est en cours de traitement... Veuillez consulter votre application WeChat.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Veuillez lancer l’application sur votre téléphone, cliquer sur « Scan » pour scanner le QR code et cliquer sur « Payer ».";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Veuillez lancer l’application sur votre téléphone, cliquer sur « Scan » pour scanner le QR code et cliquer sur « Payer ».";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Actualiser le statut de paiement";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Cliquez sur le bouton ci-dessous pour actualiser votre statut de paiement.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Si vous êtes dans l’incapacité de payer au moyen de la méthode ci-dessus, veuillez appuyer sur « Annuler » et sélectionner un autre moyen de paiement afin de finaliser la transaction.";

@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Ειδικό αναγνωριστικό";
 "gc.general.instructionFields.SWIFTCODE.label" = "Κωδικός Swift";
 "gc.general.paymentProcessing" = "Επεξεργαζόμαστε την πληρωμή σας. Παρακαλούμε περιμένετε. Μπορεί να χρειαστούν μερικά δευτερόλεπτα για την επεξεργασία της πληρωμής σας.";
-"gc.general.paymentProduct.1503.errorMessage" = "Για τον αριθμό σας CPF ή CNPJ, εισαγάγετε μια έγκυρη τιμή που να αποτελείται από 11 ή 14 χαρακτήρες.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Όνομα κατόχου λογαριασμού";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Αριθμός λογαριασμού";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Η κάρτα που εισαγάγατε δεν υποστηρίζεται. Εισαγάγετε άλλη κάρτα ή επιλέξτε άλλον τρόπο πληρωμής.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Συμπληρώστε μια έγκυρη διεύθυνση email";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Συμπληρώστε μια έγκυρη ημερομηνία λήξης";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Για τον αριθμό σας CPF ή CNPJ, εισαγάγετε μια έγκυρη τιμή που να αποτελείται από 11 ή 14 χαρακτήρες.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Επιλέξτε μία από τις τιμές της λίστας";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Συμπληρώστε έναν έγκυρο αριθμό κάρτας";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Δώστε μια τιμή μεταξύ {minLength} και {maxLength} χαρακτήρων";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Έχει εγκριθεί";
 "gc.general.paymentProducts.863.paymentStatus3" = "Έχει ολοκληρωθεί";
 "gc.general.paymentProducts.863.processing" = "Η πληρωμή σας βρίσκεται σε επεξεργασία... Ελέγξτε την εφαρμογή σας WeChat.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Ανοίξτε την εφαρμογή στο τηλέφωνό σας, κάντε κλικ στο «σάρωση» για να σαρώσετε τον κωδικό QR και κάντε κλικ στο «Πληρωμή».";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Ανοίξτε την εφαρμογή στο τηλέφωνό σας, κάντε κλικ στο «σάρωση» για να σαρώσετε τον κωδικό QR και κάντε κλικ στο «Πληρωμή».";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Ανανέωση κατάστασης πληρωμής";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Κάντε κλικ στο παρακάτω κουμπί για να ανανεωθεί η κατάσταση της πληρωμής σας.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Εάν δεν έχετε τη δυνατότητα να πληρώσετε με τον παραπάνω τρόπο πληρωμής, πατήστε «Ακύρωση» και επιλέξτε ένα άλλο μέσο πληρωμής για ολοκληρώσετε την πληρωμή σας.";

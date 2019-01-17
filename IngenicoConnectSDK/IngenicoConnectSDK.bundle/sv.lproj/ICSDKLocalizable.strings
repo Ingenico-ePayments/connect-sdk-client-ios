@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Special-ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift-kod";
 "gc.general.paymentProcessing" = "Vi bearbetar din betalning. Vänta. Det kan ta flera sekunder att bearbeta din betalning.";
-"gc.general.paymentProduct.1503.errorMessage" = "Ange ett giltigt värde med 11 eller 14 tecken för ditt CPF- eller CNPJ-nummer.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Kontoinnehavarens namn";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Kontonummer";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Kortet du har angivit accepteras inte. Ange ett annat kort eller välj en annan betalningsmetod.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Ange en giltig e-postadress";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Ange ett giltig förfallodatum";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Ange ett giltigt värde med 11 eller 14 tecken för ditt CPF- eller CNPJ-nummer.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Välj ett av värdena från listan";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Ange ett giltig kortnummer";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Ange ett värde med mellan {minLength} och {maxLength} tecken";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Godkänd";
 "gc.general.paymentProducts.863.paymentStatus3" = "Slutförd";
 "gc.general.paymentProducts.863.processing" = "Din betalning behandlas...kontrollera din WeChat-app.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Öppna appen på din telefon, klicka på ”skanna” för att skanna QR-koden, och klicka sedan på ”Betala”.";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Öppna appen på din telefon, klicka på ”skanna” för att skanna QR-koden, och klicka sedan på ”Betala”.";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Uppdatera betalningsstatus";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Klicka på knappen nedan för att uppdatera din betalningsstatus.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Om du inte kan betala med betalningsmetoden ovan klickar du på ”Avbryt” och väljer en annan betalningsprodukt för att slutföra din betalning.";

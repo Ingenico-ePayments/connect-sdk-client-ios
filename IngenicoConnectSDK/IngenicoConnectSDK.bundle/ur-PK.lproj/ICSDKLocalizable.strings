@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "خصوصی آئی ڈی";
 "gc.general.instructionFields.SWIFTCODE.label" = "سویفٹ کوڈ";
 "gc.general.paymentProcessing" = "ہم آپ کی ادائیگی پراسیس کر رہے ہیں۔ برائے مہربانی انتظار کریں۔ آپ کی ادائیگی پراسیس کرنے میں کئی سیکنڈز لگ سکتے ہیں۔";
-"gc.general.paymentProduct.1503.errorMessage" = "اپنے CPF یا CNPJ نمبر کے لیے 11 یا 14 حروف کی ایک درست قدر مہیا کریں۔";
 "gc.general.paymentProductFields.accountHolderName.label" = "کھاتہ دار کا نام";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "جان ڈوئے";
 "gc.general.paymentProductFields.accountNumber.label" = "کھاتہ نمبر";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "آپ نے جو کارڈ داخل کیا ہے وہ سپورٹ یافتہ نہیں ہے۔ برائے مہربانی کوئی دیگر کارڈ داخل کریں یا ادائیگی کا کوئی دوسرا طریقہ آزمائیں۔";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "براہ کرم کوئی درست ای میل پتہ فراہم کریں";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "براہ کرم کوئی درست تاریخ تنسیخ فراہم کریں";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "اپنے CPF یا CNPJ نمبر کے لیے 11 یا 14 حروف کی ایک درست قدر مہیا کریں۔";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "براہ کرم فہرست سے کوئی ایک عددی قیمت منتخب کریں";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "براہ کرم کوئی درست کارڈ نمبر فراہم کریں";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "براہ کرم {minLength} اور {maxLength} حروف کے بیچ ایک درست قدر فراہم کریں";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "اجازت مل گئی";
 "gc.general.paymentProducts.863.paymentStatus3" = "مکمل ہو گئی";
 "gc.general.paymentProducts.863.processing" = "آپ کی رقم کی ادائیگی پر کارروائی ہو رہی ہے۔۔۔ براہِ کرم اپنی WeChat ایپ دیکھیں۔";
-"gc.general.paymentProducts.863.qrCodeLabel" = "اپنے فون پر ایپ کھولیں، QR کوڈ سکین کرنے کے لیے \"scan\" پر کلک کریں اور 'pay' پر کلک کریں۔";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "اپنے فون پر ایپ کھولیں، QR کوڈ سکین کرنے کے لیے \"scan\" پر کلک کریں اور 'pay' پر کلک کریں۔";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "ادائیگی کا اسٹیٹس ریفریش کریں";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "اپنی ادائیگی کا اسٹیٹس ریفریش کرنے کے لیے نیچے بٹن پر کلک کریں۔";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "جب آپ مندرجہ بالا ادائیگی کا طریقہ استعمال کرتے ہوئے ادائیگی کرنے سے قاصر ہوں، تو براہِ کرم 'Cancel' پر انگلی سے ضرب لگائیں اور اپنی رقم کی ادائیگی مکمل کرنے کے لیے کوئی اور ادائیگی والی پراڈکٹ منتخب کریں۔";

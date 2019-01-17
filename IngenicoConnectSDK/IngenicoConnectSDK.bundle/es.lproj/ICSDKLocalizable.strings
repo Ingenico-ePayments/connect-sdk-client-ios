@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "ID especial";
 "gc.general.instructionFields.SWIFTCODE.label" = "Código SWIFT";
 "gc.general.paymentProcessing" = "Estamos procesando su pago. Por favor, espere. El procesamiento de su pago puede durar varios segundos.";
-"gc.general.paymentProduct.1503.errorMessage" = "Introduzca un valor válido de entre 11 y 14 caracteres para su número de CPF o CNPJ.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Nombre del titular de la cuenta";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Número de cuenta";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "No se admite la tarjeta que ha introducido. Introduzca otra tarjeta o pruebe con otro método de pago.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Introduzca una dirección de e-mail válida";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Introduzca una fecha de vencimiento válida";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Introduzca un valor válido de entre 11 y 14 caracteres para su número de CPF o CNPJ.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Seleccione uno de los valores en la lista";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Introduzca un número de tarjeta válido";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Introduzca un valor entre {minLength} y {maxLength} caracteres";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Autorizado";
 "gc.general.paymentProducts.863.paymentStatus3" = "Completado";
 "gc.general.paymentProducts.863.processing" = "Se está procesando el pago. Compruebe la aplicación de WeChat.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Abra la aplicación en su móvil, haga clic en «Escanear» para escanear el código QR y, a continuación, pulse «Pagar».";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Abra la aplicación en su móvil, haga clic en «Escanear» para escanear el código QR y, a continuación, pulse «Pagar».";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Actualizar estado de pago";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Haga clic en el botón que aparece a continuación para actualizar su estado de pago.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Si no puede realizar el pago con el método anterior, pulse «Cancelar» y escoja otro producto de pago para completar el proceso.";

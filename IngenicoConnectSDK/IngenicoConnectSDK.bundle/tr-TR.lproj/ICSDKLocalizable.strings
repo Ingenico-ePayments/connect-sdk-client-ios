@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Özel tanımlama kodu";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift kodu";
 "gc.general.paymentProcessing" = "Ödemenizi işleme alıyoruz. Lütfen bekleyin. Ödemenizi işleme almak birkaç saniye sürebilir.";
-"gc.general.paymentProduct.1503.errorMessage" = "Lütfen CPF veya CNPJ numaranız olarak 11 veya 14 karakterli ve geçerli bir değer verin.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Hesap sahibinin adı";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Hesap numarası";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Girdiğiniz kart desteklenmiyor. Lütfen başka bir kart girin veya başka bir ödeme yöntemi deneyin.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Lütfen geçerli bir e-posta adresi girin";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Lütfen geçerli bir son kullanma tarihi girin";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Lütfen CPF veya CNPJ numaranız olarak 11 veya 14 karakterli ve geçerli bir değer verin.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Lütfen listedeki değerlerden birini seçin";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Lütfen geçerli bir kart numarası girin";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Lütfen {minLength} ve {maxLength} karakter arasında bir değer girin";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Onaylandı";
 "gc.general.paymentProducts.863.paymentStatus3" = "Tamamlandı";
 "gc.general.paymentProducts.863.processing" = "Ödemeniz gerçekleştiriliyor... Lütfen WeChat uygulamanızı kontrol edin.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Telefonunuzda uygulamayı açın, “tara” düğmesine tıklayarak kare kodu tarayın ve ‘Öde’ düğmesine tıklayın.";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Telefonunuzda uygulamayı açın, “tara” düğmesine tıklayarak kare kodu tarayın ve ‘Öde’ düğmesine tıklayın.";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Ödeme durumunu yenileyin";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Ödeme durumunuzu yenilemek için aşağıdaki düğmeyi tıklayın.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Yukarıda belirtilen ödeme yöntemiyle ödeme yapamıyorsanız lütfen ‘İptal’ düğmesine tıklayın ve başka bir ödeme ürününü seçerek ödemenizi tamamlayın.";

@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Специальный идентификатор";
 "gc.general.instructionFields.SWIFTCODE.label" = "Код SWIFT";
 "gc.general.paymentProcessing" = "Мы обрабатываем Ваш платеж. Пожалуйста, подождите. Обработка платежа может занять несколько секунд.";
-"gc.general.paymentProduct.1503.errorMessage" = "Укажите номер CPF или CNPJ, содержащий действительное значение с 11 или 14 символами.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Имя владельца счета";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Джон Доу";
 "gc.general.paymentProductFields.accountNumber.label" = "Номер счета";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Введенная карта не поддерживается. Введите другую карту или выберите другой способ оплаты.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Введите действительный адрес эл. почты";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Введите действительную дату истечения срока действия";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Укажите номер CPF или CNPJ, содержащий действительное значение с 11 или 14 символами.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Выберите одно значение из списка";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Укажите действительный номер карты";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Укажите значение в диапазоне от {minLength} до {maxLength} символов.";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Одобрено";
 "gc.general.paymentProducts.863.paymentStatus3" = "Завершено";
 "gc.general.paymentProducts.863.processing" = "Ваш платеж обрабатывается… Проверьте приложение WeChat.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Откройте приложение на телефоне, нажмите «Сканировать», отсканируйте QR-код и нажмите «Оплатить».";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Откройте приложение на телефоне, нажмите «Сканировать», отсканируйте QR-код и нажмите «Оплатить».";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Обновить статус платежа";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Нажмите кнопку ниже, чтобы обновить статус вашего платежа.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Если вам не удается оплатить указанным способом, нажмите «Отмена» и выберите другой способ оплаты для проведения платежа.";

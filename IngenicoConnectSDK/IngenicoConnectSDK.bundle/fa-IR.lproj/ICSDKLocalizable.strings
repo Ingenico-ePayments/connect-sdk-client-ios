@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "شناسه خاص";
 "gc.general.instructionFields.SWIFTCODE.label" = "کد Swift";
 "gc.general.paymentProcessing" = "در حال پردازش پرداخت شما هستیم. لطفاً صبر کنید. پردازش پرداخت شما ممکن است چند ثانیه طول بکشد.";
-"gc.general.paymentProduct.1503.errorMessage" = "مقداری معتبر متشکل از 11 یا 14 نویسه برای شماره CPF یا CNPJ خود ارائه کنید.";
 "gc.general.paymentProductFields.accountHolderName.label" = "نام صاحب حساب";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "شماره حساب";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "کارتی که وارد کرده‌اید پشتیبانی نمی‌شود. لطفاً کارت دیگری را وارد کنید یا روش پرداخت دیگری را امتحان نمایید.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "لطفاً یک آدرس ایمیل معتبر اعلام کنید";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "لطفاً یک تاریخ انقضای معتبر اعلام کنید";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "مقداری معتبر متشکل از 11 یا 14 نویسه برای شماره CPF یا CNPJ خود ارائه کنید.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "لطفاً یکی از مقادیر داخل فهرست را انتخاب کنید";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "لطفاً یک شماره کارت معتبر اعلام کنید";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "لطفاً مقداری بین {minLength} و {maxLength} کاراکتر ارائه دهید";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "مجاز";
 "gc.general.paymentProducts.863.paymentStatus3" = "انجام شده";
 "gc.general.paymentProducts.863.processing" = "پرداخت شما در مرحله پردازش است... برنامه WeChat خود را بررسی کنید.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "برنامه را در تلفن خود باز کنید، برای اسکن کردن کد QR بر روی «اسکن» (Scan) و سپس بر روی «پرداخت» (Pay) کلیک کنید.";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "برنامه را در تلفن خود باز کنید، برای اسکن کردن کد QR بر روی «اسکن» (Scan) و سپس بر روی «پرداخت» (Pay) کلیک کنید.";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "بازآوری وضعیت پرداخت";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "برای بازآوری وضعیت پرداخت خود، بر روی دکمه زیر کلیک کنید.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "اگر نتوانید پرداخت را به روش پرداخت پیش-گفته انجام دهید، باید بر روی «لغو» (Cancel) تلنگر بزنید و روش پرداخت دیگری را برای تکمیل فرآیند پرداخت انتخاب کنید.";

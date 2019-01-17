@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "מזהה מיוחד";
 "gc.general.instructionFields.SWIFTCODE.label" = "קוד Swift";
 "gc.general.paymentProcessing" = "אנו מעבדים את התשלום. אנא המתן. ייתכן שעיבוד התשלום ייקח כמה שניות.";
-"gc.general.paymentProduct.1503.errorMessage" = "מסור ערך חוקי בן 11 או 14 תווים עבור מספר CPE או CNPJ שלך.";
 "gc.general.paymentProductFields.accountHolderName.label" = "שם בעל החשבון";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "פלוני אלמוני";
 "gc.general.paymentProductFields.accountNumber.label" = "מספר חשבון";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "אין תמיכה בכרטיס שהזנת. אנא הזן כרטיס אחר או השתמש באמצעי תשלום אחר.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "נא הזן כתובת דואר אלקטרוני תקפה";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "נא הזן תאריך פקיעת תוקף חוקי";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "מסור ערך חוקי בן 11 או 14 תווים עבור מספר CPE או CNPJ שלך.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "בחר אחד מהערכים ברשימה";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "ספק מספר כרטיס תקף";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "הזן ערך שאורכו בין {minLength} ל-{maxLength} תווים";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "אושר";
 "gc.general.paymentProducts.863.paymentStatus3" = "הושלם";
 "gc.general.paymentProducts.863.processing" = "התשלום שלך מטופל כעת... בדוק את אפליקציית WeChat.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "פתח את האפליקציה בטלפון, לחץ על Scan (סרוק) כדי לסרוק את קוד QR, ולחץ על Pay (שלם).";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "פתח את האפליקציה בטלפון, לחץ על Scan (סרוק) כדי לסרוק את קוד QR, ולחץ על Pay (שלם).";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "רענן מצב תשלום";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "לחץ על הלחצן למטה כדי לרענן את מצב התשלום.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "אם לא ניתן לשלם בשיטת התשלום המוצעת למעלה, הקש על Cancel (ביטול) ובחר בשיטת תשלום אחרת כדי לסגור את עניין התשלום.";

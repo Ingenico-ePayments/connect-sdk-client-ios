@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "ID khas";
 "gc.general.instructionFields.SWIFTCODE.label" = "Kod Swift";
 "gc.general.paymentProcessing" = "Kami sedang memproses pembayaran anda. Sila tunggu. Pemprosesan pembayaran akan mengambil masa beberapa saat.";
-"gc.general.paymentProduct.1503.errorMessage" = "Sila berikan nilai sah sebanyak 11 atau 14 aksara bagi nombor CPF atau CNPJ anda.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Nama pemegang akaun";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "John Doe";
 "gc.general.paymentProductFields.accountNumber.label" = "Nombor akaun";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Kad yang anda masukkan tidak disokong. Sila masukkan kad lain atau cuba kaedah pembayaran lain.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Sila berikan alamat e-mel yang sah";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Sila berikan tarikh tamat tempoh yang sah";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Sila berikan nilai sah sebanyak 11 atau 14 aksara bagi nombor CPF atau CNPJ anda.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Sila pilih salah satu nilai daripada senarai";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Sila berikan nombor kad yang sah";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Sila berikan satu nilai antara {minLength} hingga {maxLength} aksara";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Dibenarkan";
 "gc.general.paymentProducts.863.paymentStatus3" = "Selesai";
 "gc.general.paymentProducts.863.processing" = "Pembayaran anda sedang diproses... Sila periksa aplikasi WeChat anda.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Buka aplikasi di telefon anda, klik “Imbas” untuk mengimbas kod QR dan klik “Bayar”.";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Buka aplikasi di telefon anda, klik “Imbas” untuk mengimbas kod QR dan klik “Bayar”.";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Muat semula status pembayaran";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Klik butang di bawah untuk memuatkan semula status pembayaran anda.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Apabila anda tidak boleh membayar menggunakan kaedah pembayaran di atas, sila ketik ‘Batal’ dan pilih produk pembayaran yang lain untuk melengkapkan pembayaran anda.";

@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Special-ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swift-kode";
 "gc.general.paymentProcessing" = "Vi bearbejder din betaling Vent venligst. Det kan tage flere sekunder at bearbejde din betaling.";
-"gc.general.paymentProduct.1503.errorMessage" = "Angiv en gyldig værdi på 11 eller 14 tegn til dit CPF- eller CNPJ-nummer.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Kontoindehaverens navn";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Peter Jensen";
 "gc.general.paymentProductFields.accountNumber.label" = "Kontonummer";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Dit kort kan desværre ikke bruges her. Prøv at indsætte et andet kort eller prøv med en anden betalingsmetode.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Angiv en gyldig e-mail-adresse";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Angiv en gyldig udløbsdato";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Angiv en gyldig værdi på 11 eller 14 tegn til dit CPF- eller CNPJ-nummer.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Vælg en værdi på listen";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Angiv et gyldigt kortnummer";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Angiv venligst en værdi imellem {minLength} og {maxLength} tegn";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Er autoriseret";
 "gc.general.paymentProducts.863.paymentStatus3" = "Er fuldført";
 "gc.general.paymentProducts.863.processing" = "Din betaling behandles… Kontroller venligst din WeChat-app.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Åbn appen på din telefon, klik på \"scan\" for at scanne QR-koden og klik på ‘Betal’.";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Åbn appen på din telefon, klik på \"scan\" for at scanne QR-koden og klik på ‘Betal’.";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Aktualisering af betalingsstatus";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Klik på knappen nedenfor for at aktualisere din betalingsstatus.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Hvis du ikke kan betale ved hjælp af betalingsmetoden ovenfor, skal du trykke på 'Annuller' og vælge et andet betalingsprodukt for at fuldføre din betaling.";

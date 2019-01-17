@@ -88,7 +88,6 @@
 "gc.general.instructionFields.SPECIALID.label" = "Speciale ID";
 "gc.general.instructionFields.SWIFTCODE.label" = "Swiftcode";
 "gc.general.paymentProcessing" = "Uw betaling wordt verwerkt. Een ogenblik geduld. Het verwerken van uw betaling kan enkele seconden duren.";
-"gc.general.paymentProduct.1503.errorMessage" = "Voor een geldig CPF- of CNPJ-nummer in van 11 of 14 cijfers.";
 "gc.general.paymentProductFields.accountHolderName.label" = "Naam rekeninghouder";
 "gc.general.paymentProductFields.accountHolderName.placeholder" = "Jan Jansen";
 "gc.general.paymentProductFields.accountNumber.label" = "Rekeningnummer";
@@ -175,6 +174,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "De kaart die u hebt ingevoerd, wordt niet ondersteund. Voer een andere kaart in of probeer een andere betaalmethode.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Voer een geldig e-mailadres in a.u.b.";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Voer een geldige vervaldatum in a.u.b.";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Voor een geldig CPF- of CNPJ-nummer in van 11 of 14 cijfers.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Selecteer een van de waarden uit de lijst a.u.b.";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Voer een geldig kaartnummer in a.u.b.";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Vul een waarde in tussen de {minLength} en {maxLength} karakters";
@@ -367,7 +367,7 @@
 "gc.general.paymentProducts.863.paymentStatus2" = "Goedgekeurd";
 "gc.general.paymentProducts.863.paymentStatus3" = "Voltooid";
 "gc.general.paymentProducts.863.processing" = "Uw betaling wordt verwerkt... Controleer uw WeChat-app.";
-"gc.general.paymentProducts.863.qrCodeLabel" = "Open de app op uw telefoon, klik op 'Scannen' om de QR-code te scannen en klik vervolgens op 'Betalen'.";
+"gc.general.paymentProducts.863.qrCodeLabel.noButton" = "Open de app op uw telefoon, klik op 'Scannen' om de QR-code te scannen en klik vervolgens op 'Betalen'.";
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Betalingsstatus vernieuwen";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Klik op de onderstaande knop om uw betalingsstatus te vernieuwen.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Wanneer u niet kunt betalen via de bovenstaande betaalmethode, klik dan op 'Annuleren' en selecteer een andere betaalmethode om uw betaling af te ronden.";
