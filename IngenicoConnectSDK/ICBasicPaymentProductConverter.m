@@ -53,7 +53,7 @@
 
 - (void)setPaymentProduct320SpecificData:(ICPaymentProduct320SpecificData *)paymentProduct320SpecificData JSON:(NSDictionary *)rawPaymentProduct320SpecificData
 {
-    paymentProduct320SpecificData.gateway = [[rawAccount objectForKey:@"gateway"] stringValue];
+    paymentProduct320SpecificData.gateway = [[rawPaymentProduct320SpecificData objectForKey:@"gateway"] stringValue];
     NSArray *rawNetworks = [rawPaymentProduct320SpecificData objectForKey:@"networks"];
     for (NSString *network in rawNetworks) {
         [paymentProduct320SpecificData.networks addObject:network];
