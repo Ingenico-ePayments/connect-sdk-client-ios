@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Räntesats";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "Månadsavgift";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Antal omgångar";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Läs mer om SECCI";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "Startavgift";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Totalt belopp att betala";
 "gc.general.paymentProductFields.installmentId.label" = "Välj en plan";

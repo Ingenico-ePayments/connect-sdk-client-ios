@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Rentesats";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "Månedlig avgift";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Antall avdrag";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Les mer om SECCI";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "Oppstartsavgift";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Totalt beløp å betale";
 "gc.general.paymentProductFields.installmentId.label" = "Velg en plan";

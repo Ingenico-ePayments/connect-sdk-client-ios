@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Tipo de interés";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "Tarifa mensual";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Número de plazos";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Leer más acerca de SECCI";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "Tarifa inicial";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Importe total a pagar";
 "gc.general.paymentProductFields.installmentId.label" = "Seleccione un plan";

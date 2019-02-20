@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Kamatna stopa";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "Mjesečna naknada";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Broj obroka";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Odredbe i uvjeti prema Standardnoj europskoj informaciji o potrošačkom kreditu (SECCI)";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Saznajte više o SECCI-ju";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "Naknada za pokretanje";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Ukupni iznos plaćanja";
 "gc.general.paymentProductFields.installmentId.label" = "Odaberite plan plaćanja";

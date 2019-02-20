@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "شرح سود";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "ماہانہ فیس";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "قسطوں کی تعداد";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI کے متعلق مزید پڑھیں";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "آغاز کی فیس";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "کل قابل ادائیگی رقم";
 "gc.general.paymentProductFields.installmentId.label" = "ایک منصوبہ منتخب کریں";

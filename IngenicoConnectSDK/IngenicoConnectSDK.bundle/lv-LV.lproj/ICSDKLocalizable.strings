@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Procentu likme";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "Mēneša maksa";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Maksājumu skaits";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Lasīt vairāk par SECCI";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "Sākummaksa";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Kopējā summa apmaksai";
 "gc.general.paymentProductFields.installmentId.label" = "Izvēlieties plānu";

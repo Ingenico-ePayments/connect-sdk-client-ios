@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "利率";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "月费";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "分期付款期数";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "阅读更多关 SECCI 的信息";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "启动费用";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "付款总额";
 "gc.general.paymentProductFields.installmentId.label" = "选择付款方式";

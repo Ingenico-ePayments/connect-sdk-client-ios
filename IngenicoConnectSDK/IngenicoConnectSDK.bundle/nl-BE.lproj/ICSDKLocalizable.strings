@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Interestvoet";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "Maandbedrag";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Aantal tranches";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Lees meer over SECCI.";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "Opstartkost";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Totaal te betalen bedrag";
 "gc.general.paymentProductFields.installmentId.label" = "Selecteer een plan";

@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "سعر الفائدة";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "الرسوم الشهرية";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "عدد الأقساط";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "اقرأ أكثر عن SECCI";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "رسوم الإنشاء";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "المبلغ الإجمالي المطلوب دفعه";
 "gc.general.paymentProductFields.installmentId.label" = "حدد خطة";

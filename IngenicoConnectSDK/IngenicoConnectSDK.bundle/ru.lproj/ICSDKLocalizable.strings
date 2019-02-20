@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Процентная ставка";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "Ежемесячный платеж";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Количество частичных платежей";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Подробнее о SECCI";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "Первоначальный платеж";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Общая сумма к оплате";
 "gc.general.paymentProductFields.installmentId.label" = "Выбрать план";

@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Επιτόκιο";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "Μηνιαία αμοιβή";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Αριθμός δόσεων";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Διαβάστε περισσότερα σχετικά με το SECCI (Standard European Consumer Credit Information – Τυποποιημένες Ευρωπαϊκές Πληροφορίες Καταναλωτικής Πίστης)";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "Αμοιβή έναρξης";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Συνολικό ποσό πληρωμής";
 "gc.general.paymentProductFields.installmentId.label" = "Επιλέξτε ένα πρόγραμμα";

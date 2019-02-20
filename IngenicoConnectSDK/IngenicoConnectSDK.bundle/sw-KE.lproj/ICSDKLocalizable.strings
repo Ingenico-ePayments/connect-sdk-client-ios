@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Kiwango cha riba";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "मासिक शुल्क";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Idadi ya mafungu";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Soma zaidi kuhusu SECCI";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "आरंभिक शुल्क";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Kiasi cha jumla kilicholipwa";
 "gc.general.paymentProductFields.installmentId.label" = "Chagua mpango";

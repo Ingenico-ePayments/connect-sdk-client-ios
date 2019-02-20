@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "อัตราดอกเบี้ย";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "ค่าธรรมเนียมรายเดือน";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "จำนวนงวด";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "อ่านเพิ่มเติมเกี่ยวกับ SECCI";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "ค่าธรรมเนียมในการเริ่มต้น";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "จำนวนเงินที่ต้องชำระ";
 "gc.general.paymentProductFields.installmentId.label" = "เลือกแผน";

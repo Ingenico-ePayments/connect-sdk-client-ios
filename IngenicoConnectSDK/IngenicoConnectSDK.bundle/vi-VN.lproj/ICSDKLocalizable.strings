@@ -148,7 +148,7 @@
 "gc.general.paymentProductFields.installmentId.fields.interestRate.label" = "Lãi suất";
 "gc.general.paymentProductFields.installmentId.fields.monthlyFee.label" = "Phí hàng tháng";
 "gc.general.paymentProductFields.installmentId.fields.numberOfInstallments.label" = "Thời hạn";
-"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "SECCI";
+"gc.general.paymentProductFields.installmentId.fields.secciUrl.label" = "Đọc thêm về SECCI";
 "gc.general.paymentProductFields.installmentId.fields.startupFee.label" = "Phí đăng ký";
 "gc.general.paymentProductFields.installmentId.fields.totalAmount.label" = "Tổng số tiền thanh toán";
 "gc.general.paymentProductFields.installmentId.label" = "Chọn một phương án";
