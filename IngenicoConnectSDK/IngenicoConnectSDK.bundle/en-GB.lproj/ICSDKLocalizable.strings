@@ -128,7 +128,7 @@
 "gc.general.paymentProductFields.cvv.label" = "CVV";
 "gc.general.paymentProductFields.cvv.placeholder" = "123";
 "gc.general.paymentProductFields.cvv.tooltipImage" = "/templates/master/global/css/img/ppimages/ppf_cvv_v1.png";
-"gc.general.paymentProductFields.cvv.tooltipText" = "Please enter your security code as shown in the image";
+"gc.general.paymentProductFields.cvv.tooltipText" = "Please enter your CVV code as shown in the image";
 "gc.general.paymentProductFields.dateOfBirth.label" = "Date of birth";
 "gc.general.paymentProductFields.dateOfBirth.placeholder" = "dd-mm-yyyy";
 "gc.general.paymentProductFields.emailAddress.label" = "E-mail address";
@@ -207,6 +207,7 @@
 "gc.general.paymentProducts.128.name" = "Discover";
 "gc.general.paymentProducts.128.paymentProductFields.cvv.label" = "CID";
 "gc.general.paymentProducts.128.paymentProductFields.cvv.tooltipImage" = "/templates/master/global/css/img/ppimages/ppf_cvv_128_v1.png";
+"gc.general.paymentProducts.128.paymentProductFields.cvv.tooltipText" = "Please enter your CID code as shown in the image";
 "gc.general.paymentProducts.130.name" = "Carte Bancaire";
 "gc.general.paymentProducts.132.name" = "Diners Club";
 "gc.general.paymentProducts.135.name" = "Cabal";
@@ -246,10 +247,12 @@
 "gc.general.paymentProducts.2.paymentProductFields.cvv.label" = "CID";
 "gc.general.paymentProducts.2.paymentProductFields.cvv.placeholder" = "1234";
 "gc.general.paymentProducts.2.paymentProductFields.cvv.tooltipImage" = "/templates/master/global/css/img/ppimages/ppf_cvv_2_v1.png";
+"gc.general.paymentProducts.2.paymentProductFields.cvv.tooltipText" = "Please enter your CID code as shown in the image";
 "gc.general.paymentProducts.201.name" = "Invoice";
 "gc.general.paymentProducts.3.name" = "MasterCard";
 "gc.general.paymentProducts.3.paymentProductFields.cvv.label" = "CVC2";
 "gc.general.paymentProducts.3.paymentProductFields.cvv.tooltipImage" = "/templates/master/global/css/img/ppimages/ppf_cvv_3_v2.png";
+"gc.general.paymentProducts.3.paymentProductFields.cvv.tooltipText" = "Please enter your CVC2 code as shown in the image";
 "gc.general.paymentProducts.3001.name" = "AIRPLUS";
 "gc.general.paymentProducts.3002.name" = "Accor Business Account";
 "gc.general.paymentProducts.3003.name" = "Alsolia";

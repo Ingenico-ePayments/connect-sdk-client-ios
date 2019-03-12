@@ -35,8 +35,14 @@
         ICValidationErrorExpirationDate *error = [[ICValidationErrorExpirationDate alloc] init];
         [self.errors addObject:error];
     } else {
+        // Add one month to the submitted date to make sure that the current month is also an allowed value
+        NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+        [dateComponents setMonth:1];
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSDate *submittedDatePlusOneMonth = [calendar dateByAddingComponents:dateComponents toDate:submittedDate options:0];
+
         NSDate *today = [NSDate date];
-        NSComparisonResult result = [today compare:submittedDate];
+        NSComparisonResult result = [today compare:submittedDatePlusOneMonth];
         if (result == NSOrderedDescending) {
             ICValidationErrorExpirationDate *error = [[ICValidationErrorExpirationDate alloc] init];
             [self.errors addObject:error];

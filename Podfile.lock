@@ -30,6 +30,11 @@ DEPENDENCIES:
   - AFNetworkingActivityLogger (from `https://github.com/RomainBoulay/AFNetworkingActivityLogger`)
   - SVProgressHUD
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - SVProgressHUD
+
 EXTERNAL SOURCES:
   AFNetworkingActivityLogger:
     :git: https://github.com/RomainBoulay/AFNetworkingActivityLogger
@@ -46,4 +51,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cb5167c97201fd23c2a5662e933dc35858a1e0e1
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.0
