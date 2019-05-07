@@ -95,14 +95,6 @@
     }
 }
 
-- (void)setAccountOnFile:(ICAccountOnFile *)accountOnFile
-{
-    _accountOnFile = accountOnFile;
-    for (ICAccountOnFileAttribute *attribute in accountOnFile.attributes.attributes) {
-        [self.fieldValues setObject:attribute.value forKey:attribute.key];
-    }
-}
-
 - (NSString *)maskForField:(NSString *)paymentProductFieldId
 {
     ICPaymentProductField *field = [self.paymentProduct paymentProductFieldWithId:paymentProductFieldId];
