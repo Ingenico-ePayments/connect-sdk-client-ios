@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "Nombor sudah disalin.";
 "gc.app.general.errors.noInternetConnection.bodytext" = "Nampaknya tiada sambungan ke Internet, jadi sila sahkan dan cuba semula.";
 "gc.app.general.errors.noInternetConnection.button" = "OK";
 "gc.app.general.errors.noInternetConnection.title" = "Ralat sambungan Internet";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "Ralat teknikal berlaku dan kami tidak dapat menunjukkan arahan yang betul untuk memuktamadkan pembayaran anda: ID Pedagang salah. Sila cuba kaedah pembayaran lain atau hubungi syarikat penjual.";
 "gc.general.errors.instructions.renderingProblem" = "Ralat teknikal berlaku semasa kami cuba menunjukkan arahan untuk memuktamadkan pembayaran anda. Sila cuba semula atau cuba kaedah pembayaran lain.";
 "gc.general.errors.invalidSubdomain" = "Ralat teknikal berlaku disebabkan ralat konfigurasi: subdomain tidak sah. Sila cuba semula atau cuba kaedah pembayaran lain.";
+"gc.general.errors.mandates.technicalProblem" = "Ralat teknikal berlaku ketika kami cuba memproses mandat anda. Sila cuba lagi.";
+"gc.general.errors.mandates.title" = "Status mandat anda";
 "gc.general.errors.productUnavailable" = "Produk yang anda pilih tidak tersedia pada masa ini, sila pilih yang lain.";
 "gc.general.errors.techicalProblem" = "Ralat teknikal berlaku semasa kami cuba memproses pembayaran anda. Sila cuba semula atau cuba kaedah pembayaran lain.";
 "gc.general.errors.title" = "Pembayaran gagal";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Sila berikan tarikh tamat tempoh yang sah";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Sila berikan nilai sah sebanyak 11 atau 14 aksara bagi nombor CPF atau CNPJ anda.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Sila pilih salah satu nilai daripada senarai";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "Sila masukkan IBAN yang sah";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Sila berikan nombor kad yang sah";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "Sila berikan nilai dalam format yang betul";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Sila berikan satu nilai antara {minLength} hingga {maxLength} aksara";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "Sila berikan satu nilai {maxLength} aksara sahaja";
 "gc.general.paymentProductFields.validationErrors.length.label" = "Sila berikan nilai yang mempunyai {maxLength} aksara maksimum";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "Kod syarikat";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "Nama syarikat";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "Nombor fiskal";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "Nama pembayar";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort";
 "gc.general.paymentProducts.840.name" = "PayPal";

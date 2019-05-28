@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "Numerot on kopioitu.";
 "gc.app.general.errors.noInternetConnection.bodytext" = "Vaikuttaa, ettei käytössä ole Internet-yhteyttä. Tarkista asia ja yritä uudelleen.";
 "gc.app.general.errors.noInternetConnection.button" = "OK";
 "gc.app.general.errors.noInternetConnection.title" = "Internet-yhteysvirhe";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "Tapahtui tekninen virhe, joka esti meitä näyttämästä sinulle oikeita ohjeita maksusi viimeistelyä varten: virheellinen kauppiastunnus. Kokeile jotain toista maksutapaa tai ota yhteyttä yritykseen, jolta olet ostamassa.";
 "gc.general.errors.instructions.renderingProblem" = "Yrittäessämme näyttää ohjeet maksusi viimeistelyä varten tapahtui tekninen virhe. Yritä uudelleen tai kokeile jotain toista maksutapaa.";
 "gc.general.errors.invalidSubdomain" = "Tapahtui tekninen virhe, jonka aiheutti määritysvirhe:  alitoimialue ei kelpaa. Yritä uudelleen tai kokeile jotain toista maksutapaa.";
+"gc.general.errors.mandates.technicalProblem" = "Toimeksiantosi käsittelyn aikana tapahtui tekninen virhe. Yritä uudelleen.";
+"gc.general.errors.mandates.title" = "Toimeksiantosi tila";
 "gc.general.errors.productUnavailable" = "Valitsemasi tuote ei ole juuri nyt saatavilla. Valitse toinen tuote.";
 "gc.general.errors.techicalProblem" = "Maksusi käsittelyn aikana tapahtui tekninen virhe. Yritä uudelleen tai kokeile jotain toista maksutapaa.";
 "gc.general.errors.title" = "Maksu epäonnistui";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Anna voimassa oleva päättymispäivä";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Anna kelvollinen CPF- tai CNPJ-numero, jossa on 11 tai 14 merkkiä.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Valitse yksi arvo listasta";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "Syötä kelvollinen IBAN";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Anna voimassa olevan kortin numero";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "Anna oikean formaatin arvo";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Anna arvo, jossa on {minLength} – {maxLength} merkkiä";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "Anna arvo, jossa on tasan {maxLength} merkkiä";
 "gc.general.paymentProductFields.validationErrors.length.label" = "Valitse maksimi {maxLength} merkkien määrä";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "Yhtiön tunnus";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "Yhtiön nimi";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "Verotuksen numero";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "Maksajan nimi";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort";
 "gc.general.paymentProducts.840.name" = "PayPal";

@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "Številke so kopirane.";
 "gc.app.general.errors.noInternetConnection.bodytext" = "Očitno ni povezave z internetom. Preverite in poskusite znova.";
 "gc.app.general.errors.noInternetConnection.button" = "V redu";
 "gc.app.general.errors.noInternetConnection.title" = "Napaka internetne povezave";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "Prišlo je do tehnične napake, ki preprečuje prikaz pravilnih navodil za dokončanje plačila: nepravilen ID trgovca. Izberite drug način plačila ali pa se obrnite na podjetje, pri katerem opravljate nakup.";
 "gc.general.errors.instructions.renderingProblem" = "Pri poskusu prikaza navodil za dokončanje plačila je prišlo do tehnične napake. Poskusite znova ali pa izberite drug način plačila.";
 "gc.general.errors.invalidSubdomain" = "Do tehnične napake je prišlo zaradi napake pri konfiguraciji:  poddomena ni veljavna. Poskusite znova ali pa izberite drug način plačila.";
+"gc.general.errors.mandates.technicalProblem" = "Med obdelavo vaše zahteve je prišlo do tehnične napake. Poskusite znova.";
+"gc.general.errors.mandates.title" = "Stanje vaše zahteve";
 "gc.general.errors.productUnavailable" = "Izbran izdelek trenutno ni na voljo, prosimo, izberite drug izdelek.";
 "gc.general.errors.techicalProblem" = "Med obdelavo plačila je prišlo do tehnične napake. Poskusite znova ali pa izberite drug način plačila.";
 "gc.general.errors.title" = "Napaka pri plačilu";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Prosimo, vnesite veljaven datum poteka veljavnosti";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Za številko CPF ali CNPJ navedite vrednost, dolgo 11 ali 14 znakov.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Prosimo, izberite eno izmed vrednosti na seznamu";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "Prosimo, vnesite veljavno številko IBAN";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Prosimo, vnesite veljavno številko kartice";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "Prosimo, vnesite pravilno obliko vrednosti";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Vnesite vrednost z med {minLength} in {maxLength} znaki";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "Vnesite vrednost s točno {maxLength} znaki";
 "gc.general.paymentProductFields.validationErrors.length.label" = "Prosimo, vnesite vrednost z največ {maxLength} znaki";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "Koda podjetja";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "Ime podjetja";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "Fiskalna številka";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "Ime plačnika";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort";
 "gc.general.paymentProducts.840.name" = "PayPal";

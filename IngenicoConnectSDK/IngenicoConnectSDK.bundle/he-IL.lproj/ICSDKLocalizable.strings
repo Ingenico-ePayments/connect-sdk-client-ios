@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "המספרים הועתקו.";
 "gc.app.general.errors.noInternetConnection.bodytext" = "נראה שאין חיבור לאינטרנט. בדוק את החיבור ונסה שוב.";
 "gc.app.general.errors.noInternetConnection.button" = "אישור";
 "gc.app.general.errors.noInternetConnection.title" = "שגיאה בחיבור לאינטרנט";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "אירעה תקלה טכנית המונעת מאיתנו להציג לך את ההנחיות הנכונות כדי לסיים את התשלום: מזהה הסוחר (Merchant ID) שגוי. אנא נסה להשתמש באמצעי תשלום אחר או פנה לחברה שממנה בוצעה הרכישה.";
 "gc.general.errors.instructions.renderingProblem" = "כאשר ניסינו להציג את ההנחיות להשלמת התשלום אירעה תקלה טכנית. אנא נסה שוב או נסה להשתמש באמצעי תשלום אחר.";
 "gc.general.errors.invalidSubdomain" = "אירעה תקלה טכנית בעקבות שגיאת קונפיגורציה:  דומיין המשנה אינו חוקי. אנא נסה שוב או נסה להשתמש באמצעי תשלום אחר.";
+"gc.general.errors.mandates.technicalProblem" = "אירעה שגיאה טכנית בזמן שניסינו לעבד את ההרשאה שלך. אנא נסה/י שוב.";
+"gc.general.errors.mandates.title" = "סטטוס ההרשאה שלך";
 "gc.general.errors.productUnavailable" = "המוצר שבחרת אינו זמין כרגע, בחר אחד אחר.";
 "gc.general.errors.techicalProblem" = "כאשר ניסינו לעבד את התשלום שלך אירעה תקלה טכנית. אנא נסה שוב או נסה להשתמש באמצעי תשלום אחר.";
 "gc.general.errors.title" = "תשלום שנכשל";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "נא הזן תאריך פקיעת תוקף חוקי";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "מסור ערך חוקי בן 11 או 14 תווים עבור מספר CPE או CNPJ שלך.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "בחר אחד מהערכים ברשימה";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "הקלד קוד IBAN תקף";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "ספק מספר כרטיס תקף";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "ספק ערך במבנה הנכון";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "הזן ערך שאורכו בין {minLength} ל-{maxLength} תווים";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "הזן ערך שאורכו בדיוק {maxLength} תווים";
 "gc.general.paymentProductFields.validationErrors.length.label" = "ספק ערך בעל {maxLength} תווים לכל היותר";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "קוד חברה";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "שם החברה";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "מספר פיסקלי";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "שם המשלם";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort";
 "gc.general.paymentProducts.840.name" = "PayPal";

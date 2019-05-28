@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "Os números foram copiados.";
 "gc.app.general.errors.noInternetConnection.bodytext" = "Aparentemente, não existe ligação à Internet, verifique a sua ligação e tente novamente.";
 "gc.app.general.errors.noInternetConnection.button" = "OK";
 "gc.app.general.errors.noInternetConnection.title" = "Erro de ligação à Internet";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "Ocorreu um erro técnico que nos impediu de mostrar as instruções corretas para finalizar o seu pagamento: ID de comerciante incorreto. Tente outro método de pagamento ou contacte a empresa vendedora.";
 "gc.general.errors.instructions.renderingProblem" = "Ocorreu um erro técnico ao tentarmos mostrar as instruções para finalizar o pagamento. Tente novamente ou utilize outro método de pagamento.";
 "gc.general.errors.invalidSubdomain" = "Ocorreu um erro técnico devido a um erro de configuração: o subdomínio não é válido. Tente novamente ou utilize outro método de pagamento.";
+"gc.general.errors.mandates.technicalProblem" = "Ocorreu um erro técnico enquanto tentávamos processar o seu mandato. Tente novamente.";
+"gc.general.errors.mandates.title" = "O estado do seu mandato";
 "gc.general.errors.productUnavailable" = "O produto que selecionou não está disponível neste momento. Selecione outro produto.";
 "gc.general.errors.techicalProblem" = "Ocorreu um erro técnico ao tentarmos processar o seu pagamento. Tente novamente ou utilize outro método de pagamento.";
 "gc.general.errors.title" = "O pagamento falhou";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Indique uma data de expiração válida";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Forneça um valor válido com 11 ou 14 caracteres para o seu número CPF ou CNPJ.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Seleccione um dos valores da lista";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "Introduza um IBAN válido";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Indique um número de cartão válido";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "Indique um valor com o formato correcto";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Introduza um valor entre {minLength} e {maxLength} carateres";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "Introduza um valor com exatamente {maxLength} carateres";
 "gc.general.paymentProductFields.validationErrors.length.label" = "Indique um valor com, no máximo, {maxLength} caracteres";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "Código da empresa";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "Nome da empresa";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "Número de contribuinte";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "Nome da entidade pagadora";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort";
 "gc.general.paymentProducts.840.name" = "PayPal";

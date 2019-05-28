@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "Numaralar kopyalandı.";
 "gc.app.general.errors.noInternetConnection.bodytext" = "İnternet bağlantısı yok gibi gözüküyor, lütfen bu durumu kontrol edin ve tekrar deneyin.";
 "gc.app.general.errors.noInternetConnection.button" = "Tamam";
 "gc.app.general.errors.noInternetConnection.title" = "İnternet bağlantı hatası";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "Ödemenizi sonlandırmaya ilişkin talimatları size göstermemizi engelleyen teknik bir hata meydana geldi: yanlış Satıcı kimliği. Lütfen başka bir ödeme yöntemi deneyin veya satın aldığınız firma ile iletişime geçin.";
 "gc.general.errors.instructions.renderingProblem" = "Ödemenizi sonlandırmaya ilişkin talimatları göstermeye çalışırken teknik bir hata meydana geldi. Lütfen tekrar deneyin veya başka bir ödeme şekli kullanın.";
 "gc.general.errors.invalidSubdomain" = "Bir konfigürasyon hatası nedeniyle teknik bir hata meydana geldi: Alt alan geçerli değil. Lütfen tekrar deneyin veya başka bir ödeme şekli kullanın.";
+"gc.general.errors.mandates.technicalProblem" = "Talimatınızı gerçekleştirmeye çalışırken teknik bir problem oluştu. Lütfen tekrar deneyin.";
+"gc.general.errors.mandates.title" = "Talimatınızın durumu";
 "gc.general.errors.productUnavailable" = "Seçtiğiniz ürün şu anda mevcut değil, lütfen başka bir ürün seçin.";
 "gc.general.errors.techicalProblem" = "Ödemenizi işleme almayı denerken teknik bir hata meydana geldi. Lütfen tekrar deneyin veya başka bir ödeme şekli kullanın.";
 "gc.general.errors.title" = "Ödemede hata";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Lütfen geçerli bir son kullanma tarihi girin";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Lütfen CPF veya CNPJ numaranız olarak 11 veya 14 karakterli ve geçerli bir değer verin.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Lütfen listedeki değerlerden birini seçin";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "Lütfen geçerli bir IBAN girin";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Lütfen geçerli bir kart numarası girin";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "Lütfen girdiğiniz değerin doğru formatta olmasına dikkat edin";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Lütfen {minLength} ve {maxLength} karakter arasında bir değer girin";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "Lütfen tam olarak {maxLength} karakter girin";
 "gc.general.paymentProductFields.validationErrors.length.label" = "Lütfen en fazla {maxLength} karakterden oluşan bir değer girin";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "Şirket kodu";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "Şirket adı";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "Vergi numarası";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "Ödeyen kişinin adı";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort";
 "gc.general.paymentProducts.840.name" = "PayPal";

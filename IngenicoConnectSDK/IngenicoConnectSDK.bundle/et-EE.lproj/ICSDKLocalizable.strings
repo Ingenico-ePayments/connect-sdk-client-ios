@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "Numbrid on kopeeritud.";
 "gc.app.general.errors.noInternetConnection.bodytext" = "Tundub, et internetiühendus puudub, seega palun kontrollige seda ja proovige uuesti.";
 "gc.app.general.errors.noInternetConnection.button" = "OK";
 "gc.app.general.errors.noInternetConnection.title" = "Internetiühenduse viga";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "Teie makse lõpetamiseks õigete juhiste näitamisel tekkis tehniline viga: vale kaupmehe ID-number. Palun proovige muud makseviisi või võtke ühendust müügiettevõttega.";
 "gc.general.errors.instructions.renderingProblem" = "Teie makse lõpetamiseks juhiste näitamisel tekkis tehniline viga. Palun proovige uuesti või proovige muud makseviisi.";
 "gc.general.errors.invalidSubdomain" = "Tehniline viga tekkis konfiguratsiooni vea tõttu:  alamdomeen ei ole kehtiv. Palun proovige uuesti või proovige muud makseviisi.";
+"gc.general.errors.mandates.technicalProblem" = "Teie korralduse käsitlemise ajal tekkis tehniline tõrge. Proovige uuesti.";
+"gc.general.errors.mandates.title" = "Teie korralduse olek";
 "gc.general.errors.productUnavailable" = "Valitud toode ei ole praegu saadaval, palun valige teine toode.";
 "gc.general.errors.techicalProblem" = "Teie makse töötlemisel tekkis tehniline viga. Palun proovige uuesti või proovige muud makseviisi.";
 "gc.general.errors.title" = "Maksehäire";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Palun märkige õige aegumise kuupäev";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Palun sisestage oma kehtiv 11- või 14-kohaline CPF- või CNPJ-number.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Palun valige loetelust üks väärtus";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "Palun sisestage kehtiv IBAN";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Palun märkige õige kaardi number";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "Palun märkige õige formaadi väärtus";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Palun sisestage tähemärkide arv, mis oleks vahemikus {minLength} ja {maxLength}";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "Palun sisestage täpselt {maxLength} tähemärki";
 "gc.general.paymentProductFields.validationErrors.length.label" = "Palun märkige maksimaalne märkide {maxLength} väärtus";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "Ettevõtte kood";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "Ettevõtte nimi";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "Maksunumber";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "Maksja nimi";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort";
 "gc.general.paymentProducts.840.name" = "PayPal";

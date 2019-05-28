@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "Skaičiai nukopijuoti.";
 "gc.app.general.errors.noInternetConnection.bodytext" = "Nėra ryšio su internetu. Prašome patikrinti ryšį ir bandyti kartą.";
 "gc.app.general.errors.noInternetConnection.button" = "Gerai";
 "gc.app.general.errors.noInternetConnection.title" = "Interneto ryšio klaida";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "Dėl įvykusios techninės klaidos negalėjome parodyti jums tinkamų instrukcijų, kaip baigti mokėjimą. Išbandykite kitą mokėjimo metodą arba susisiekite su įmone, iš kurios perkate.";
 "gc.general.errors.instructions.renderingProblem" = "Bandant parodyti instrukcijas, kaip baigti mokėjimą, įvyko techninė klaida. Bandykite mokėti iš naujo arba rinktis kitą mokėjimo metodą.";
 "gc.general.errors.invalidSubdomain" = "Techninė klaida įvyko dėl klaidingos konfigūracijos: netinkamas subdomenas. Bandykite mokėti iš naujo arba rinktis kitą mokėjimo metodą.";
+"gc.general.errors.mandates.technicalProblem" = "Bandant apdoroti jūsų pavedimą, įvyko techninė klaida. Bandykite dar kartą.";
+"gc.general.errors.mandates.title" = "Jūsų pavedimo būsena";
 "gc.general.errors.productUnavailable" = "Jūsų pasirinkto produkto šiuo metu nėra, pasirinkite kitą produktą.";
 "gc.general.errors.techicalProblem" = "Bandant apdoroti jūsų mokėjimą įvyko techninė klaida. Bandykite mokėti iš naujo arba rinktis kitą mokėjimo metodą.";
 "gc.general.errors.title" = "Sumokėti nepavyko";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Nurodykite tinkamą galiojimo datą";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Pateikite tinkamą CPF arba CNPJ numerio vertę, sudarytą iš 11 arba 14 ženklų.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Pasirinkite vieną iš sąrašo verčių";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "Įveskite galiojantį IBAN";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Nurodykite galiojantį kortelės numerį";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "Nurodykite tinkamo formato vertę";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Nurodykite vertę tarp {minLength} ir {maxLength} simbolių";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "Nurodykite tikslią {maxLength} simbolių vertę";
 "gc.general.paymentProductFields.validationErrors.length.label" = "Pasirinkite vertę, sudarytą daugiausiai iš {maxLength} ženklų";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "Bendrovės kodas";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "Bendrovės pavadinimas";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "Fiskalinis numeris";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "Mokėtojo vardas ir pavardė";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort";
 "gc.general.paymentProducts.840.name" = "PayPal";

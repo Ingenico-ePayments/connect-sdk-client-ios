@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "नंबर कॉपी हो गया है।";
 "gc.app.general.errors.noInternetConnection.bodytext" = "ऐसा लगता है कि इंटरनेट से कनेक्शन नहीं है, इसलिए कृपया इसकी जाँच करें और फिर से कोशिश करें।";
 "gc.app.general.errors.noInternetConnection.button" = "ओके";
 "gc.app.general.errors.noInternetConnection.title" = "इंटरनेट कनेक्शन त्रुटि";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "एक तकनीकी त्रुटि हुई जिसने हमें आपके भुगतान को अंतिम रूप देने के लिए आपको सही निर्देश दिखाने से रोक दिया: गलत मर्चेंट आईडी। कृपया भुगतान की अन्य विधि आज़माएं या उस कंपनी से संपर्क करें जिससे आप खरीदारी कर रहे हैं।";
 "gc.general.errors.instructions.renderingProblem" = "जब हमने आपके भुगतान को अंतिम रूप देने के लिए निर्देश दिखाने की कोशिश की तो एक तकनीकी त्रुटि हुई। कृपया फिर से प्रयास करें या भुगतान की अन्य विधि को आज़माएं।";
 "gc.general.errors.invalidSubdomain" = "कंफिगरेशन त्रुटि के कारण से एक तकनीकी त्रुटि हुई:  उपडोमेन मान्य नहीं है। कृपया फिर से प्रयास करें या भुगतान की अन्य विधि को आज़माएं।";
+"gc.general.errors.mandates.technicalProblem" = "जब हम आपके मेनडेट पर प्रक्रिया करने का प्रयास कर रहे थे, तब तकनीकी त्रुटि हुई है। कृपया फिर से प्रयास करें।";
+"gc.general.errors.mandates.title" = "आपके मेनडेट की स्थिति";
 "gc.general.errors.productUnavailable" = "आप द्वारा चुना गया उत्पाद इस समय उपलब्ध नहीं है, कृपया कोई अन्य उत्पाद चुनें।";
 "gc.general.errors.techicalProblem" = "जब हमने आपके भुगतान को प्रोसेस करने की कोशिश की तो एक तकनीकी त्रुटि हुई। कृपया फिर से प्रयास करें या अन्य भुगतान विधि को आज़माएं।";
 "gc.general.errors.title" = "भुगतान विफल";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "कृपया एक मान्य समाप्ति तारीख प्रदान करें";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "कृपया अपने सीपीएफ या सीएनपीजे नंबर के लिए 11 या 14 वर्णों का वैध मान प्रदान करें।";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "कृपया सूची के मानों में से एक मान (value) चुनें";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "कृपया वैलिड IBAN दर्ज करें";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "कृपया एक मान्य कार्ड संख्या प्रदान करें";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "कृपया सही स्वरूप का मान प्रदान करें";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "कृपया {minLength} और {maxLength} कैरेक्टरों के बीच का मूल्य प्रदान करें";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "कृपया ठीक {maxLength} कैरेक्टरों का मूल्य प्रदान करें";
 "gc.general.paymentProductFields.validationErrors.length.label" = "कृपया अधिकतम {maxLength} वर्णों का मान प्रदान करें";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "कंपनी कोड";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "कंपनी का नाम";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "राजकोषीय संख्या";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "भुगतानकर्ता का नाम";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort";
 "gc.general.paymentProducts.840.name" = "PayPal";

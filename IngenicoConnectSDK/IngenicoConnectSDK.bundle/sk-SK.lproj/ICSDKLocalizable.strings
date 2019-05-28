@@ -1,3 +1,4 @@
+"gc.app.general.clipboard.feedback" = "Čísla sú skopírované.";
 "gc.app.general.errors.noInternetConnection.bodytext" = "Zdá sa, že nemáte pripojenie na internet. Preverte to a skúste to znova.";
 "gc.app.general.errors.noInternetConnection.button" = "OK";
 "gc.app.general.errors.noInternetConnection.title" = "Chyba internetového pripojenia";
@@ -64,6 +65,8 @@
 "gc.general.errors.incorrectMerchantId" = "Vyskytla sa technická chyba, ktorá nám zabránila ukázať vám správne pokyny na finalizáciu vašej platby: nesprávne ID predajcu. Skúste iný spôsob platby alebo sa obráťte na spoločnosť, od ktorej nakupujete.";
 "gc.general.errors.instructions.renderingProblem" = "Pri pokuse o zobrazenie pokynov na finalizáciu platby sa vyskytla technická chyba. Skúste to znova alebo skúste využiť iný spôsob platby.";
 "gc.general.errors.invalidSubdomain" = "Vyskytla sa technická chyba spôsobená chybou konfigurácie: subdoména nie je platná. Skúste to znova alebo skúste využiť iný spôsob platby.";
+"gc.general.errors.mandates.technicalProblem" = "Počas spracovania vášho poverenia došlo k technickej chybe. Skúste to znova.";
+"gc.general.errors.mandates.title" = "Stav vášho poverenia";
 "gc.general.errors.productUnavailable" = "Vybratý produkt momentálne nie je dostupný. Skúste si zvoliť iný produkt.";
 "gc.general.errors.techicalProblem" = "Pri pokuse o spracovanie platby sa vyskytla technická chyba. Skúste to znova alebo skúste využiť iný spôsob platby.";
 "gc.general.errors.title" = "Chyba platby";
@@ -176,7 +179,9 @@
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Zadajte platný dátum vypršania platnosti";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Zadajte platné číslo CPF alebo CNPJ (požadovaná dĺžka je 11, resp. 14 znakov).";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Zvoľte si zo zoznamu niektorú hodnotu";
+"gc.general.paymentProductFields.validationErrors.iban.label" = "Zadajte, prosím, platný IBAN";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Zadajte platné číslo karty";
+"gc.general.paymentProductFields.validationErrors.invalidContent.label" = "Zadajte hodnotu správneho formátu";
 "gc.general.paymentProductFields.validationErrors.length.between.label" = "Zadajte hodnotu medzi {minLength} a {maxLength} znakmi";
 "gc.general.paymentProductFields.validationErrors.length.exact.label" = "Zadajte hodnotu pozostávajúcu presne z {maxLength} znakov";
 "gc.general.paymentProductFields.validationErrors.length.label" = "Zadajte hodnotu pozostávajúcu maximálne z {maxLength} znakov";
@@ -225,6 +230,9 @@
 "gc.general.paymentProducts.1501.instructionFields.COMPANYCODE.label" = "Kód spoločnosti";
 "gc.general.paymentProducts.1501.instructionFields.COMPANYNAME.label" = "Názov spoločnosti";
 "gc.general.paymentProducts.1501.name" = "Western Union";
+"gc.general.paymentProducts.1503.bank.name" = "Banco do Brasil";
+"gc.general.paymentProducts.1503.instructionFields.CPFCNPJ.label" = "Fiškálne číslo";
+"gc.general.paymentProducts.1503.instructionFields.PAYERNAME.label" = "Meno platiteľa";
 "gc.general.paymentProducts.1503.name" = "Boleto Bancário";
 "gc.general.paymentProducts.1503.paymentProductFields.zip.placeholder" = "00000-000";
 "gc.general.paymentProducts.1504.name" = "Konbini";
@@ -346,8 +354,6 @@
 "gc.general.paymentProducts.809.name" = "iDEAL";
 "gc.general.paymentProducts.810.name" = "eNETS";
 "gc.general.paymentProducts.816.name" = "giropay";
-"gc.general.paymentProducts.818.name" = "Danske Bank";
-"gc.general.paymentProducts.819.name" = "Aktia";
 "gc.general.paymentProducts.830.name" = "paysafecard";
 "gc.general.paymentProducts.836.name" = "Sofort Überweisung";
 "gc.general.paymentProducts.840.name" = "PayPal";
