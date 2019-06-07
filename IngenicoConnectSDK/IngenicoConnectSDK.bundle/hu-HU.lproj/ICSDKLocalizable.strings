@@ -247,6 +247,11 @@
 "gc.general.paymentProducts.1506.instructionFields.SECONDEXPIRATIONDATE.label" = "Másodlagos lejárati dátum";
 "gc.general.paymentProducts.1506.instructionFields.SECONDEXPIRATIONSURCHARGE.label" = "Másodlagos lejárati pótdíj";
 "gc.general.paymentProducts.1506.name" = "Pago Fácil";
+"gc.general.paymentProducts.1521.name" = "e-Pay";
+"gc.general.paymentProducts.1522.name" = "Tesco - paysbuy Cash";
+"gc.general.paymentProducts.1523.name" = "ATM Transfers Indonesia";
+"gc.general.paymentProducts.1524.name" = "DragonPay";
+"gc.general.paymentProducts.1526.name" = "7-11 MOLPay Cash";
 "gc.general.paymentProducts.163.name" = "Hiper";
 "gc.general.paymentProducts.164.name" = "MIR";
 "gc.general.paymentProducts.2.name" = "American Express";
