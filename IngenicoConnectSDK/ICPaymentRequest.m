@@ -86,20 +86,23 @@
     return [self.accountOnFile hasValueForField:paymentProductFieldId];
 }
 
+- (BOOL)fieldIsPartOfAccountOnFileAndHasNotChanged:(NSString *)paymentProductFieldId
+{
+    if ([self fieldIsPartOfAccountOnFile:paymentProductFieldId]
+            && ([self fieldIsReadOnly:paymentProductFieldId]
+                    // Values that are not altered, should not be added to the Payment Request. nil values are therefore considered un-altered.
+                    || [self unmaskedValueForField:paymentProductFieldId].length == 0)) {
+        return YES;
+    }
+    return NO;
+}
+
 - (BOOL)fieldIsReadOnly:(NSString *)paymentProductFieldId
 {
     if ([self fieldIsPartOfAccountOnFile:paymentProductFieldId] == NO) {
         return NO;
     } else {
         return [self.accountOnFile fieldIsReadOnly:paymentProductFieldId];
-    }
-}
-
-- (void)setAccountOnFile:(ICAccountOnFile *)accountOnFile
-{
-    _accountOnFile = accountOnFile;
-    for (ICAccountOnFileAttribute *attribute in accountOnFile.attributes.attributes) {
-        [self.fieldValues setObject:attribute.value forKey:attribute.key];
     }
 }
 
@@ -118,7 +121,7 @@
 
     [self.errors removeAllObjects];
     for (ICPaymentProductField *field in self.paymentProduct.fields.paymentProductFields) {
-        if ([self fieldIsPartOfAccountOnFile:field.identifier] == NO) {
+        if ([self fieldIsPartOfAccountOnFileAndHasNotChanged:field.identifier] == NO) {
             NSString *fieldValue = [self unmaskedValueForField:field.identifier];
             [field validateValue:fieldValue forPaymentRequest:self];
             [self.errors addObjectsFromArray:field.errors];
