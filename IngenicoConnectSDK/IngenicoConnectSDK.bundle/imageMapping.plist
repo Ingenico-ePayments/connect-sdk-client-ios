@@ -5,11 +5,11 @@
 	<key>pp_logo_cards</key>
 	<string>templates/master/global/css/img/ppimages/group-card.png</string>
 	<key>pp_logo_1</key>
-	<string>templates/master/global/css/img/ppimages/pp_logo_1_v1.png</string>
+	<string>templates/master/global/css/img/ppimages/pp_logo_1_v2.png</string>
 	<key>pp_logo_2</key>
-	<string>templates/master/global/css/img/ppimages/pp_logo_2_v1.png</string>
+	<string>templates/master/global/css/img/ppimages/pp_logo_2_v2.png</string>
 	<key>pp_logo_3</key>
-	<string>templates/master/global/css/img/ppimages/pp_logo_3_v2.png</string>
+	<string>templates/master/global/css/img/ppimages/pp_logo_3_v3.png</string>
 	<key>pp_logo_11</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_11_v1.png</string>
 	<key>pp_logo_51</key>
@@ -19,15 +19,15 @@
 	<key>pp_logo_56</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_56_v1.png</string>
 	<key>pp_logo_114</key>
-	<string>templates/master/global/css/img/ppimages/pp_logo_114_v1.png</string>
+	<string>templates/master/global/css/img/ppimages/pp_logo_114_v2.png</string>
 	<key>pp_logo_117</key>
-	<string>templates/master/global/css/img/ppimages/pp_logo_117_v2.png</string>
+	<string>templates/master/global/css/img/ppimages/pp_logo_117_v3.png</string>
 	<key>pp_logo_119</key>
-	<string>templates/master/global/css/img/ppimages/pp_logo_119_v3.png</string>
+	<string>templates/master/global/css/img/ppimages/pp_logo_119_v4.png</string>
 	<key>pp_logo_120</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_120_v1.png</string>
 	<key>pp_logo_122</key>
-	<string>templates/master/global/css/img/ppimages/pp_logo_122_v1.png</string>
+	<string>templates/master/global/css/img/ppimages/pp_logo_122_v2.png</string>
 	<key>pp_logo_123</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_123_v1.png</string>
 	<key>pp_logo_125</key>
@@ -126,6 +126,8 @@
 	<string>templates/master/global/css/img/ppimages/pp_logo_861_v2.png</string>
 	<key>pp_logo_863</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_863_v1.png</string>
+	<key>pp_logo_869</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_869_v1.png</string>
 	<key>pp_logo_870</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_870_v2.png</string>
 	<key>pp_logo_880</key>
