@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICJOSEEncryptor.h>
-#import <IngenicoConnectSDK/ICBase64.h>
+#import  "ICJOSEEncryptor.h"
+#import  "ICBase64.h"
 
 @interface ICJOSEEncryptor ()
 

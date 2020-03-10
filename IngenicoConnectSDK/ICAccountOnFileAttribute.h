@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICAccountOnFileAttributeStatus.h>
+#import  "ICAccountOnFileAttributeStatus.h"
 
 @interface ICAccountOnFileAttribute : NSObject
 

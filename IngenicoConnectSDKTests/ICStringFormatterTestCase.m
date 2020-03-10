@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICStringFormatter.h>
+#import  "ICStringFormatter.h"
 
 @interface ICStringFormatterTestCase : XCTestCase
 

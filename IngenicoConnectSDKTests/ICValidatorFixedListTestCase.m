@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICValidatorFixedList.h>
+#import  "ICValidatorFixedList.h"
 
 @interface ICValidatorFixedListTestCase : XCTestCase
 
@@ -30,13 +30,13 @@
 
 - (void)testValidateCorrect
 {
-    [self.validator validate:@"1"];
+    [self.validator validate:@"1" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid value considered invalid");
 }
 
 - (void)testValidateIncorrect
 {
-    [self.validator validate:@"X"];
+    [self.validator validate:@"X" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid value considered valid");
 }
 

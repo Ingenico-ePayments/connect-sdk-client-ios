@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICPaymentProductFields.h>
-#import <IngenicoConnectSDK/ICPaymentProductField.h>
+#import  "ICPaymentProductFields.h"
+#import  "ICPaymentProductField.h"
 
 @implementation ICPaymentProductFields
 

@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Lūdzu, norādiet vērtību, kas atrodas robežās no {minValue} līdz {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Lūdzu, norādiet vērtību pareizā formātā";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Lūdzu, norādiet vērtību";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Lūdzu, norādiet vērtību pareizā formātā";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Lūdzu, norādiet vērtību pareizā formātā";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Lūdzu, piekrītiet noteikumiem un nosacījumiem";
 "gc.general.paymentProductFields.zip.label" = "Pasta indekss";
 "gc.general.paymentProductFields.zip.placeholder" = "Pasta indekss";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Daudzums";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Bankas nosaukums";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Uzņēmuma nosaukums";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Līguma numurs";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Valūtas kods";

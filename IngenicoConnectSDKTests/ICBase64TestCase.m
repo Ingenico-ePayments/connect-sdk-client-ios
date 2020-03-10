@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICBase64.h>
+#import  "ICBase64.h"
 
 @interface ICBase64TestCase : XCTestCase
 

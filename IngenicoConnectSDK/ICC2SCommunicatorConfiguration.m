@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICC2SCommunicatorConfiguration.h>
+#import  "ICC2SCommunicatorConfiguration.h"
 #import "ICSDKConstants.h"
 @interface ICC2SCommunicatorConfiguration ()
 

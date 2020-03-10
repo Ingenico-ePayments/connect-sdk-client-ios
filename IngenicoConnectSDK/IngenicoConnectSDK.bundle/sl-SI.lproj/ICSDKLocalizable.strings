@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Prosimo, vnesite vrednost med {minValue} in {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Prosimo, vnesite pravilno obliko vrednosti";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Prosimo, vnesite vrednost";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Prosimo, vnesite pravilno obliko vrednosti";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Prosimo, vnesite pravilno obliko vrednosti";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Prosimo, da sprejmete pogoje.";
 "gc.general.paymentProductFields.zip.label" = "Poštna številka";
 "gc.general.paymentProductFields.zip.placeholder" = "Poštna številka";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Znesek";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Ime banke";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Ime podjetja";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Številka pogodbe";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Koda valute";

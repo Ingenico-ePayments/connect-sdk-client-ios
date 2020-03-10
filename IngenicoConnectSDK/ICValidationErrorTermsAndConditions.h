@@ -6,7 +6,7 @@
 //  Copyright © 2018 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICValidationError.h>
+#import  "ICValidationError.h"
 
 @interface ICValidationErrorTermsAndConditions : ICValidationError
 

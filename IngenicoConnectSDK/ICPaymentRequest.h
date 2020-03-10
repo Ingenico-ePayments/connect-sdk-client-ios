@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICPaymentProduct.h>
-#import <IngenicoConnectSDK/ICPaymentRequest.h>
+#import  "ICPaymentProduct.h"
+#import  "ICPaymentRequest.h"
 
 @interface ICPaymentRequest : NSObject
 

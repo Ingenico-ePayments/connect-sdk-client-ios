@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICPaymentProductFieldDisplayHints.h>
-#import <IngenicoConnectSDK/ICDataRestrictions.h>
-#import <IngenicoConnectSDK/ICType.h>
+#import  "ICPaymentProductFieldDisplayHints.h"
+#import  "ICDataRestrictions.h"
+#import  "ICType.h"
 
 @class ICPaymentRequest;
 

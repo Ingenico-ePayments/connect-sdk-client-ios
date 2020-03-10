@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICValidatorLuhn.h>
-#import <IngenicoConnectSDK/ICValidationErrorLuhn.h>
+#import  "ICValidatorLuhn.h"
+#import  "ICValidationErrorLuhn.h"
 
 @implementation ICValidatorLuhn
 

@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICIINDetailsResponseConverter.h>
-#import <IngenicoConnectSDK/ICIINDetail.h>
+#import  "ICIINDetailsResponseConverter.h"
+#import  "ICIINDetail.h"
 
 @implementation ICIINDetailsResponseConverter {
 

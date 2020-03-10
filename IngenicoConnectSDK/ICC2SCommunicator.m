@@ -6,23 +6,23 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICC2SCommunicator.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProductsConverter.h>
-#import <IngenicoConnectSDK/ICPaymentProductConverter.h>
-#import <IngenicoConnectSDK/ICDirectoryEntriesConverter.h>
-#import <IngenicoConnectSDK/ICAFNetworkingWrapper.h>
-#import <IngenicoConnectSDK/ICPaymentAmountOfMoney.h>
-#import <IngenicoConnectSDK/ICPaymentContextConverter.h>
-#import <IngenicoConnectSDK/ICIINDetailsResponseConverter.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProductGroups.h>
-#import <IngenicoConnectSDK/ICPaymentProductGroup.h>
-#import <IngenicoConnectSDK/ICPaymentProductGroupsConverter.h>
-#import <IngenicoConnectSDK/ICPaymentProductGroupConverter.h>
-#import <IngenicoConnectSDK/ICSDKConstants.h>
-#import <IngenicoConnectSDK/ICThirdPartyStatusResponse.h>
-#import <IngenicoConnectSDK/ICThirdPartyStatusResponseConverter.h>
+#import  "ICC2SCommunicator.h"
+#import  "ICBasicPaymentProductsConverter.h"
+#import  "ICPaymentProductConverter.h"
+#import  "ICDirectoryEntriesConverter.h"
+#import  "ICAFNetworkingWrapper.h"
+#import  "ICPaymentAmountOfMoney.h"
+#import  "ICPaymentContextConverter.h"
+#import  "ICIINDetailsResponseConverter.h"
+#import  "ICBasicPaymentProductGroups.h"
+#import  "ICPaymentProductGroup.h"
+#import  "ICPaymentProductGroupsConverter.h"
+#import  "ICPaymentProductGroupConverter.h"
+#import  "ICSDKConstants.h"
+#import  "ICThirdPartyStatusResponse.h"
+#import  "ICThirdPartyStatusResponseConverter.h"
 #import <PassKit/PKPaymentAuthorizationViewController.h>
-#import <IngenicoConnectSDK/ICCustomerDetails.h>
+#import  "ICCustomerDetails.h"
 @interface ICC2SCommunicator ()
 
 @property (strong, nonatomic) ICC2SCommunicatorConfiguration *configuration;

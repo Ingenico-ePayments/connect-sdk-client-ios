@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICPaymentAmountOfMoney.h>
-#import <IngenicoConnectSDK/ICSDKConstants.h>
+#import  "ICPaymentAmountOfMoney.h"
+#import  "ICSDKConstants.h"
 
 @implementation ICPaymentAmountOfMoney {
 

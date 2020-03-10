@@ -6,9 +6,9 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICPaymentRequest.h>
-#import <IngenicoConnectSDK/ICAccountOnFileAttribute.h>
-#import <IngenicoConnectSDK/ICValidatorFixedList.h>
+#import  "ICPaymentRequest.h"
+#import  "ICAccountOnFileAttribute.h"
+#import  "ICValidatorFixedList.h"
 
 @interface ICPaymentRequest ()
 

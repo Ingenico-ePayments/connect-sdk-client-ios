@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <sys/sysctl.h>
 
-#import <IngenicoConnectSDK/ICUtil.h>
-#import <IngenicoConnectSDK/ICBase64.h>
-#import <IngenicoConnectSDK/ICMacros.h>
+#import  "ICUtil.h"
+#import  "ICBase64.h"
+#import  "ICMacros.h"
 
 @interface ICUtil ()
 
@@ -33,7 +33,7 @@
         NSString *deviceType = [self deviceType];
         self.metaInfo = @{
             @"platformIdentifier": platformIdentifier,
-            @"sdkIdentifier": @"iOSClientSDK/v3.20.0",
+            @"sdkIdentifier": @"iOSClientSDK/v4.0.0",
             @"sdkCreator": @"Ingenico",
             @"screenSize": screenSize,
             @"deviceBrand": @"Apple",

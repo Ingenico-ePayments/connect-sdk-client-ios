@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICRegion.h>
-#import <IngenicoConnectSDK/ICUtil.h>
-#import <IngenicoConnectSDK/ICEnvironment.h>
+#import  "ICRegion.h"
+#import  "ICUtil.h"
+#import  "ICEnvironment.h"
 
 @interface ICC2SCommunicatorConfiguration : NSObject {
     NSString *_baseURL;

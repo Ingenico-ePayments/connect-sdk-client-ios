@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Συμπληρώστε μια τιμή μεταξύ {minValue} και {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Συμπληρώστε μια τιμή με τη σωστή μορφή";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Συμπληρώστε μια τιμή";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Συμπληρώστε μια τιμή με τη σωστή μορφή";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Συμπληρώστε μια τιμή με τη σωστή μορφή";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Παρακαλούμε αποδεχτείτε τους όρους και τις προϋποθέσεις";
 "gc.general.paymentProductFields.zip.label" = "Ταχυδρομικός κώδικας";
 "gc.general.paymentProductFields.zip.placeholder" = "Ταχυδρομικός κώδικας";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Ποσό";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Όνομα τράπεζας";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Όνομα εταιρείας";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Αριθμός σύμβασης";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Κωδικός νομίσματος";

@@ -6,11 +6,11 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICBasicPaymentProductGroups.h>
-#import <IngenicoConnectSDK/ICStringFormatter.h>
-#import <IngenicoConnectSDK/ICAccountsOnFile.h>
-#import <IngenicoConnectSDK/ICPaymentItemDisplayHints.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProductGroup.h>
+#import  "ICBasicPaymentProductGroups.h"
+#import  "ICStringFormatter.h"
+#import  "ICAccountsOnFile.h"
+#import  "ICPaymentItemDisplayHints.h"
+#import  "ICBasicPaymentProductGroup.h"
 
 @interface ICBasicPaymentProductGroups ()
 

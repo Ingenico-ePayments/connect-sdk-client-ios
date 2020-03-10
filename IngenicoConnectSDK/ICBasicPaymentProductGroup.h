@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICBasicPaymentItem.h>
-#import <IngenicoConnectSDK/ICAccountOnFile.h>
+#import  "ICBasicPaymentItem.h"
+#import  "ICAccountOnFile.h"
 @class ICStringFormatter;
 
 @interface ICBasicPaymentProductGroup : NSObject <ICBasicPaymentItem>

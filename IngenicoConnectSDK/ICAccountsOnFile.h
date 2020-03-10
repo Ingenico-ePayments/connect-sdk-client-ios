@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICAccountOnFile.h>
+#import  "ICAccountOnFile.h"
 
 @interface ICAccountsOnFile : NSObject
 

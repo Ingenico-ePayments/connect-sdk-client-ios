@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICJSON.h>
-#import <IngenicoConnectSDK/ICMacros.h>
+#import  "ICJSON.h"
+#import  "ICMacros.h"
 
 @implementation ICJSON
 

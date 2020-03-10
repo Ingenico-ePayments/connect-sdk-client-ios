@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICRegion.h>
-#import <IngenicoConnectSDK/ICEnvironment.h>
+#import  "ICRegion.h"
+#import  "ICEnvironment.h"
 
 @interface ICUtil : NSObject
 

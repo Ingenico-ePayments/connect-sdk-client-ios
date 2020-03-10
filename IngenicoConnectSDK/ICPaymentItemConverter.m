@@ -6,25 +6,25 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICPaymentItemConverter.h>
-#import <IngenicoConnectSDK/ICPaymentItem.h>
-#import <IngenicoConnectSDK/ICPaymentProductFields.h>
-#import <IngenicoConnectSDK/ICPaymentProductField.h>
-#import <IngenicoConnectSDK/ICMacros.h>
-#import <IngenicoConnectSDK/ICValueMappingItem.h>
-#import <IngenicoConnectSDK/ICValidator.h>
-#import <IngenicoConnectSDK/ICValidatorLuhn.h>
-#import <IngenicoConnectSDK/ICValidatorExpirationDate.h>
-#import <IngenicoConnectSDK/ICValidatorEmailAddress.h>
-#import <IngenicoConnectSDK/ICValidatorRegularExpression.h>
-#import <IngenicoConnectSDK/ICValidatorRange.h>
-#import <IngenicoConnectSDK/ICValidatorLength.h>
-#import <IngenicoConnectSDK/ICValidatorFixedList.h>
-#import <IngenicoConnectSDK/ICValidatorBoletoBancarioRequiredness.h>
-#import <IngenicoConnectSDK/ICDisplayElementsConverter.h>
-#import <IngenicoConnectSDK/ICDisplayElement.h>
-#import <IngenicoConnectSDK/ICValidatorTermsAndConditions.h>
-#import <IngenicoConnectSDK/ICValidatorIBAN.h>
+#import  "ICPaymentItemConverter.h"
+#import  "ICPaymentItem.h"
+#import  "ICPaymentProductFields.h"
+#import  "ICPaymentProductField.h"
+#import  "ICMacros.h"
+#import  "ICValueMappingItem.h"
+#import  "ICValidator.h"
+#import  "ICValidatorLuhn.h"
+#import  "ICValidatorExpirationDate.h"
+#import  "ICValidatorEmailAddress.h"
+#import  "ICValidatorRegularExpression.h"
+#import  "ICValidatorRange.h"
+#import  "ICValidatorLength.h"
+#import  "ICValidatorFixedList.h"
+#import  "ICValidatorBoletoBancarioRequiredness.h"
+#import  "ICDisplayElementsConverter.h"
+#import  "ICDisplayElement.h"
+#import  "ICValidatorTermsAndConditions.h"
+#import  "ICValidatorIBAN.h"
 @implementation ICPaymentItemConverter {
 
 }

@@ -6,13 +6,13 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICSession.h>
-#import <IngenicoConnectSDK/ICBase64.h>
-#import <IngenicoConnectSDK/ICJSON.h>
-#import <IngenicoConnectSDK/ICSDKConstants.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProductGroups.h>
-#import <IngenicoConnectSDK/ICPaymentProductGroup.h>
-#import <IngenicoConnectSDK/ICPaymentItems.h>
+#import  "ICSession.h"
+#import  "ICBase64.h"
+#import  "ICJSON.h"
+#import  "ICSDKConstants.h"
+#import  "ICBasicPaymentProductGroups.h"
+#import  "ICPaymentProductGroup.h"
+#import  "ICPaymentItems.h"
 #import <PassKit/PassKit.h>
 
 @interface ICSession ()

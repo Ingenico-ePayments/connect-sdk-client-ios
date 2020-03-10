@@ -31,13 +31,13 @@
 
 - (void)testValidateCorrect
 {
-    [self.validator validate:@"123"];
+    [self.validator validate:@"123" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid value considered invalid");
 }
 
 - (void)testValidateIncorrect
 {
-    [self.validator validate:@"abc"];
+    [self.validator validate:@"abc" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid value considered valid");
 }
 

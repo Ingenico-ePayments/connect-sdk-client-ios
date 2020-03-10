@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Kérjük, hogy {minValue} és {maxValue} közötti értéket adjon meg";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Kérjük, hogy az értéket megfelelő formátumban adja meg";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Kérjük, adja meg az értéket";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Kérjük, hogy az értéket megfelelő formátumban adja meg";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Kérjük, hogy az értéket megfelelő formátumban adja meg";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Kérjük, fogadja el az Általános Szerződési Feltételeket";
 "gc.general.paymentProductFields.zip.label" = "Irányítószám";
 "gc.general.paymentProductFields.zip.placeholder" = "Irányítószám";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Összeg";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Bank neve";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Cégnév";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Szerződésszám";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Valutakód";

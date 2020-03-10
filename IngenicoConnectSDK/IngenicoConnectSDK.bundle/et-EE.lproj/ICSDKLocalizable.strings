@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Palun märkige väärtus vahemikus {minValue} ja {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Palun märkige õige formaadi väärtus";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Palun märkige väärtus";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Palun märkige õige formaadi väärtus";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Palun märkige õige formaadi väärtus";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Palun nõustuge kasutustingimustega";
 "gc.general.paymentProductFields.zip.label" = "Postiindeks";
 "gc.general.paymentProductFields.zip.placeholder" = "Postiindeks";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Summa";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Panga nimi";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Ettevõtte nimi";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Lepingu number";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Vääringu kood";

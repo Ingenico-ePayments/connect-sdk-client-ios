@@ -6,9 +6,9 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICBasicPaymentProduct.h>
-#import <IngenicoConnectSDK/ICPaymentProductFields.h>
-#import <IngenicoConnectSDK/ICPaymentProductField.h>
+#import  "ICBasicPaymentProduct.h"
+#import  "ICPaymentProductFields.h"
+#import  "ICPaymentProductField.h"
 
 @interface ICPaymentProduct : ICBasicPaymentProduct <ICPaymentItem>
 

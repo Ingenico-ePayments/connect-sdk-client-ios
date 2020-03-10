@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICDirectoryEntry.h>
+#import  "ICDirectoryEntry.h"
 
 @interface ICDirectoryEntryConverter : NSObject
 

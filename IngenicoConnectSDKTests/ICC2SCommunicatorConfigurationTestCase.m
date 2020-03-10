@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICC2SCommunicatorConfiguration.h>
-#import <IngenicoConnectSDK/ICStubUtil.h>
+#import  "ICC2SCommunicatorConfiguration.h"
+#import  "ICStubUtil.h"
 
 @interface ICC2SCommunicatorConfigurationTestCase : XCTestCase
 

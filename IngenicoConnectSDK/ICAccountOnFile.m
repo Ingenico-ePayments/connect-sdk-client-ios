@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICAccountOnFile.h>
-#import <IngenicoConnectSDK/ICLabelTemplateItem.h>
+#import  "ICAccountOnFile.h"
+#import  "ICLabelTemplateItem.h"
 
 @interface ICAccountOnFile ()
 

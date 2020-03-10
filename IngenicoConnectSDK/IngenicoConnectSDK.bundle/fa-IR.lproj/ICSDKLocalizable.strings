@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "لطفاً مقداری را بین {minValue} تا {maxValue} اعلام کنید";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "لطفاً مقداری را با فرمت صحیح اعلام کنید";
 "gc.general.paymentProductFields.validationErrors.required.label" = "لطفاً مقداری را اعلام کنید";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "لطفاً مقداری را با فرمت صحیح اعلام کنید";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "لطفاً مقداری را با فرمت صحیح اعلام کنید";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "لطفا شرایط و ضوابط را بپذیرید";
 "gc.general.paymentProductFields.zip.label" = "کد پستی";
 "gc.general.paymentProductFields.zip.placeholder" = "کد پستی";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "مبلغ";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "نام بانک";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "نام شرکت";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "شماره قرارداد";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "کد ارز";

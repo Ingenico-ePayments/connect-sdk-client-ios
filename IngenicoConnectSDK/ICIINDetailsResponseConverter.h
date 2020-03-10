@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICIINDetailsResponse.h>
+#import  "ICIINDetailsResponse.h"
 
 @interface ICIINDetailsResponseConverter : NSObject
 

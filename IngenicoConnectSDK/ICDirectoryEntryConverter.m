@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICDirectoryEntryConverter.h>
+#import  "ICDirectoryEntryConverter.h"
 
 @implementation ICDirectoryEntryConverter
 

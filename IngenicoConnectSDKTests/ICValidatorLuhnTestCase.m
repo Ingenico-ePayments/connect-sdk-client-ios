@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICValidatorLuhn.h>
+#import  "ICValidatorLuhn.h"
 
 @interface ICValidatorLuhnTestCase : XCTestCase
 
@@ -30,13 +30,13 @@
 
 - (void)testValidateCorrect
 {
-    [self.validator validate:@"4242424242424242"];
+    [self.validator validate:@"4242424242424242" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid value considered invalid");
 }
 
 - (void)testValidateIncorrect
 {
-    [self.validator validate:@"1111"];
+    [self.validator validate:@"1111" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid value considered valid");
 }
 

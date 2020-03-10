@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICLabelTemplate.h>
+#import  "ICLabelTemplate.h"
 
 @interface ICAccountOnFileDisplayHints : NSObject
 

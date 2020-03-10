@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICValidatorFixedList.h>
-#import <IngenicoConnectSDK/ICValidationErrorFixedList.h>
+#import  "ICValidatorFixedList.h"
+#import  "ICValidationErrorFixedList.h"
 
 @implementation ICValidatorFixedList
 

@@ -8,8 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import <CommonCrypto/CommonHMAC.h>
-#import <IngenicoConnectSDK/ICEncryptor.h>
-#import <IngenicoConnectSDK/ICBase64.h>
+#import  "ICEncryptor.h"
+#import  "ICBase64.h"
 
 @interface ICEncryptorTestCase : XCTestCase
 

@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Veuillez indiquer une valeur entre {minValue} et {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Veuillez indiquer une valeur dans le bon format";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Veuillez indiquer une valeur";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Veuillez indiquer une valeur dans le bon format";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Veuillez indiquer une valeur dans le bon format";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Veuillez accepter les conditions générales";
 "gc.general.paymentProductFields.zip.label" = "Code postal";
 "gc.general.paymentProductFields.zip.placeholder" = "Code postal";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Montant";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Nom de la banque";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Nom de l'entreprise";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Numéro de contrat";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Code devise";

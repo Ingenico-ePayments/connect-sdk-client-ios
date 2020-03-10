@@ -14,6 +14,6 @@ FOUNDATION_EXPORT double IngenicoConnectSDKVersionNumber;
 //! Project version string for IngenicoConnectSDK.
 FOUNDATION_EXPORT const unsigned char IngenicoConnectSDKVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <IngenicoConnectSDK/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import  "PublicHeader.h"
 
 

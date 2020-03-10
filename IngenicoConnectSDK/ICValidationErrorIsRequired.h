@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <IngenicoConnectSDK/ICValidationError.h>
+#import  "ICValidationError.h"
 
 @interface ICValidationErrorIsRequired : ICValidationError
 

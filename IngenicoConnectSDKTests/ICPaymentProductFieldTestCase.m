@@ -7,9 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICPaymentProductField.h>
-#import <IngenicoConnectSDK/ICValidatorLength.h>
-#import <IngenicoConnectSDK/ICValidatorRange.h>
+#import  "ICPaymentProductField.h"
+#import  "ICValidatorLength.h"
+#import  "ICValidatorRange.h"
 
 @interface ICPaymentProductFieldTestCase : XCTestCase
 

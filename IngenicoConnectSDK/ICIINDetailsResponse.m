@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICIINDetailsResponse.h>
+#import  "ICIINDetailsResponse.h"
 
 @implementation ICIINDetailsResponse
 

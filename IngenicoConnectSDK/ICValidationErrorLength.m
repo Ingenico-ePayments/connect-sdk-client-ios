@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICValidationErrorLength.h>
+#import  "ICValidationErrorLength.h"
 
 @implementation ICValidationErrorLength
 

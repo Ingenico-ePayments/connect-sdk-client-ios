@@ -1,30 +1,22 @@
 Ingenico Connect iOS SDK (Objective-C)
 =======================
 
-The Ingenico Connect Objective-C iOS SDK provides a convenient way to support a large number of payment methods inside your iOS app.
+The Ingenico Connect objective-C iOS SDK provides a convenient way to support a large number of payment methods inside your iOS app.
 It supports iOS 6.1 and up out-of-the-box.
-The Objective-C iOS SDK comes with an [example app](https://github.com/Ingenico-ePayments/connect-sdk-client-ios-example) that illustrates the use of the SDK and the services provided by Ingenico ePayments on the Ingenico ePayments platform.
+The objective-C iOS SDK comes with an [example app](https://github.com/Ingenico-ePayments/connect-sdk-client-ios-example) that illustrates the use of the SDK and the services provided by Ingenico ePayments on the Ingenico ePayments platform.
 
 See the [Ingenico Connect Developer Hub](https://epayments.developer-ingenico.com/documentation/sdk/mobile/ios/) for more information on how to use the SDK.
 
-Prerequisites
-------------
+Use the SDK with Carthage or CocoaPods
+---------------------------------------
+The Ingenico Connect objective-c SDK is available via two package managers: [CocoaPods](https://cocoapods.org/) or [Carthage](https://github.com/Carthage/Carthage).
 
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Swift and Objective-C Cocoa projects.
- To install the dependencies this SDK requires, you will need to install the CocoaPods Ruby gem:
+### CocoaPods
 
-```
-$ sudo gem install cocoapods
-```
-
-
-Use the SDK with CocoaPods
----------------------------
-
-You can add the Objective-C iOS SDK as a pod to your project by adding the following to your `Podfile`:
+You can add the objective-c SDK as a pod to your project by adding the following to your `Podfile`:
 
 ```
-$ pod 'IngenicoConnectSDK'
+$ pod 'IngenicoConnectKit'
 ```
 
 Afterwards, run the following command:
@@ -33,20 +25,33 @@ Afterwards, run the following command:
 $ pod install
 ```
 
+### Carthage
+
+You can add the objective-c SDK with Carthage, by adding the following to your `Cartfile`:
+
+```
+$ github "Ingenico-ePayments/connect-sdk-client-ios"
+```
+
+Afterwards, run the following command:
+
+```
+$ carthage update
+```
+
 
 Run the SDK locally
 ------------
-
-To obtain the Objective-C iOS SDK, first clone the code from GitHub:
+To obtain the objective-c SDK, first clone the code from GitHub:
 
 ```
 $ git clone https://github.com/Ingenico-ePayments/connect-sdk-client-ios.git
 ```
 
-Then run the following command to install the dependencies with CocoaPods:
-
-```
-$ pod install
-```
-
+Open the Xcode project that is included to test the SDK.
 Afterwards, you can open and run the Xcode workspace that is now created to test the SDK.
+
+
+Known issues
+------------
+There are known issues with the AFNetworking Library when it is built in xCode 11. If you include our SDK via Carthage, it is likely that you will encounter this issue. Please see [this Github issue](https://github.com/AFNetworking/AFNetworking/issues/4408) for more information and workarounds. 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICIINStatus.h>
+#import  "ICIINStatus.h"
 
 @interface ICIINDetailsResponse : NSObject
 

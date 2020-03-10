@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICBasicPaymentProducts.h>
-#import <IngenicoConnectSDK/ICAssetManager.h>
-#import <IngenicoConnectSDK/ICStringFormatter.h>
+#import  "ICBasicPaymentProducts.h"
+#import  "ICAssetManager.h"
+#import  "ICStringFormatter.h"
 
 @interface ICBasicPaymentProductsConverter : NSObject
 

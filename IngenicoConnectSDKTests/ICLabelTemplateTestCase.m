@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICLabelTemplate.h>
-#import <IngenicoConnectSDK/ICLabelTemplateItem.h>
+#import  "ICLabelTemplate.h"
+#import  "ICLabelTemplateItem.h"
 
 @interface ICLabelTemplateTestCase : XCTestCase
 

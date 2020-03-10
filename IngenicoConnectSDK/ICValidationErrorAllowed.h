@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICValidationError.h>
+#import  "ICValidationError.h"
 
 @interface ICValidationErrorAllowed : ICValidationError
 @end

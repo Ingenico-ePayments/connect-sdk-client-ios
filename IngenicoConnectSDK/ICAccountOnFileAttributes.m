@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICAccountOnFileAttributes.h>
-#import <IngenicoConnectSDK/ICAccountOnFileAttribute.h>
+#import  "ICAccountOnFileAttributes.h"
+#import  "ICAccountOnFileAttribute.h"
 
 @implementation ICAccountOnFileAttributes
 

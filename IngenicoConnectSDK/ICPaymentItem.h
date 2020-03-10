@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICBasicPaymentItem.h>
+#import  "ICBasicPaymentItem.h"
 
 @class ICPaymentItemDisplayHints;
 @class ICAccountsOnFile;

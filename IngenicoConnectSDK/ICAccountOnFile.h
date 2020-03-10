@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICAccountOnFileAttributes.h>
-#import <IngenicoConnectSDK/ICAccountOnFileDisplayHints.h>
-#import <IngenicoConnectSDK/ICStringFormatter.h>
+#import  "ICAccountOnFileAttributes.h"
+#import  "ICAccountOnFileDisplayHints.h"
+#import  "ICStringFormatter.h"
 
 @interface ICAccountOnFile : NSObject
 

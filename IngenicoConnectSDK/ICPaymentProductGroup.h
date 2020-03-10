@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICPaymentItem.h>
+#import  "ICPaymentItem.h"
 
 @class ICStringFormatter;
 @class ICAccountOnFile;

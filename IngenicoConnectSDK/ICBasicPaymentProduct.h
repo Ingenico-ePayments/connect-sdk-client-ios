@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICAccountsOnFile.h>
-#import <IngenicoConnectSDK/ICAccountOnFile.h>
-#import <IngenicoConnectSDK/ICPaymentItemDisplayHints.h>
-#import <IngenicoConnectSDK/ICPaymentItem.h>
-#import <IngenicoConnectSDK/ICBasicPaymentItem.h>
-#import <IngenicoConnectSDK/ICPaymentProduct302SpecificData.h>
-#import <IngenicoConnectSDK/ICPaymentProduct320SpecificData.h>
-#import <IngenicoConnectSDK/ICPaymentProduct863SpecificData.h>
+#import  "ICAccountsOnFile.h"
+#import  "ICAccountOnFile.h"
+#import  "ICPaymentItemDisplayHints.h"
+#import  "ICPaymentItem.h"
+#import  "ICBasicPaymentItem.h"
+#import  "ICPaymentProduct302SpecificData.h"
+#import  "ICPaymentProduct320SpecificData.h"
+#import  "ICPaymentProduct863SpecificData.h"
 
 @interface ICBasicPaymentProduct : NSObject <ICBasicPaymentItem>
 

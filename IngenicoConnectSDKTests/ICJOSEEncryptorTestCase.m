@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICEncryptor.h>
-#import <IngenicoConnectSDK/ICJOSEEncryptor.h>
+#import  "ICEncryptor.h"
+#import  "ICJOSEEncryptor.h"
 
 @interface ICJOSEEncryptorTestCase : XCTestCase
 

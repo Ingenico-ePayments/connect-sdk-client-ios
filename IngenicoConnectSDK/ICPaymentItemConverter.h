@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICBasicPaymentItemConverter.h>
+#import  "ICBasicPaymentItemConverter.h"
 
 @protocol ICPaymentItem;
 

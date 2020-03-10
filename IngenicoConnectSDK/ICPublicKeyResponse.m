@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICPublicKeyResponse.h>
+#import  "ICPublicKeyResponse.h"
 
 @implementation ICPublicKeyResponse
 

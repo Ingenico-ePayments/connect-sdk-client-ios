@@ -6,11 +6,11 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICPaymentProductField.h>
-#import <IngenicoConnectSDK/ICValidator.h>
-#import <IngenicoConnectSDK/ICValidationErrorIsRequired.h>
-#import <IngenicoConnectSDK/ICValidationErrorInteger.h>
-#import <IngenicoConnectSDK/ICValidationErrorNumericString.h>
+#import  "ICPaymentProductField.h"
+#import  "ICValidator.h"
+#import  "ICValidationErrorIsRequired.h"
+#import  "ICValidationErrorInteger.h"
+#import  "ICValidationErrorNumericString.h"
 
 @interface ICPaymentProductField ()
 

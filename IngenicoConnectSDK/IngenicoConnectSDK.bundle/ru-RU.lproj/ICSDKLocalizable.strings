@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Укажите значение в диапазоне от {minValue} до {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Введите значение в правильном формате";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Введите значение";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Введите значение в правильном формате";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Введите значение в правильном формате";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Подтвердите свое согласие с условиями и положениями";
 "gc.general.paymentProductFields.zip.label" = "Почтовый индекс";
 "gc.general.paymentProductFields.zip.placeholder" = "Почтовый индекс";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Сумма";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Название банка";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Название компании";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Номер договора";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Код валюты";

@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICValidatorRegularExpression.h>
-#import <IngenicoConnectSDK/ICValidationErrorRegularExpression.h>
+#import  "ICValidatorRegularExpression.h"
+#import  "ICValidationErrorRegularExpression.h"
 
 @implementation ICValidatorRegularExpression
 

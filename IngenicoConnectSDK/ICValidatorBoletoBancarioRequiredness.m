@@ -6,9 +6,9 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICValidatorBoletoBancarioRequiredness.h>
-#import <IngenicoConnectSDK/ICPaymentRequest.h>
-#import <IngenicoConnectSDK/ICValidationErrorIsRequired.h>
+#import  "ICValidatorBoletoBancarioRequiredness.h"
+#import  "ICPaymentRequest.h"
+#import  "ICValidationErrorIsRequired.h"
 
 @implementation ICValidatorBoletoBancarioRequiredness
 

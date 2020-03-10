@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICValidatorEmailAddress.h>
+#import  "ICValidatorEmailAddress.h"
 
 @interface ICValidatorEmailAddressTestCase : XCTestCase
 
@@ -30,97 +30,91 @@
 
 - (void)testValidateCorrect1
 {
-    [self.validator validate:@"test@example.com"];
-    XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
-}
-
-// The following examples of valid e-mail addresses are taken from Haacked.com
-// (http://haacked.com/archive/2007/08/21/i-knew-how-to-validate-an-email-address-until-i.aspx/)
-
-- (void)testValidateCorrect2
-{
-   [self.validator validate:@"\"Abc\\@def\"@example.com"];
+    [self.validator validate:@"test@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
 }
 
 - (void)testValidateCorrect3
 {
-    [self.validator validate:@"\"Fred Bloggs\"@example.com"];
+    [self.validator validate:@"\"Fred Bloggs\"@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
 }
 
 - (void)testValidateCorrect4
 {
-    [self.validator validate:@"\"Joe\\Blow\"@example.com"];
-    XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
-}
-
-- (void)testValidateCorrect5
-{
-    [self.validator validate:@"\"Abc@def\"@example.com"];
+    [self.validator validate:@"\"Joe\\Blow\"@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
 }
 
 - (void)testValidateCorrect6
 {
-    [self.validator validate:@"customer/department=shipping@example.com"];
+    [self.validator validate:@"customer/department=shipping@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
 }
 
 - (void)testValidateCorrect7
 {
-    [self.validator validate:@"$A12345@example.com"];
+    [self.validator validate:@"$A12345@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
 }
 
 - (void)testValidateCorrect8
 {
-    [self.validator validate:@"!def!xyz%abc@example.com"];
+    [self.validator validate:@"!def!xyz%abc@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
 }
 
 - (void)testValidateCorrect9
 {
-    [self.validator validate:@"_somename@example.com"];
+    [self.validator validate:@"_somename@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
 }
 
-// The following examples of invalid e-mail addresses are taken from Wikipedia
-// (http://en.wikipedia.org/wiki/Email_address)
+- (void)testValidateCorrect10
+{
+    [self.validator validate:@"\"b(c)d,e:f;g<h>i[j\\k]l@example.com"];
+    XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
+}
+
+- (void)testValidateCorrect11
+{
+    [self.validator validate:@"just\"not\"right@example.com" forPaymentRequest:nil];
+    XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
+}
+
+- (void)testValidateCorrect12
+{
+    [self.validator validate:@"this is\"not\allowed@example.com" forPaymentRequest:nil];
+    XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
+}
+
+- (void)testValidateCorrect13
+{
+    [self.validator validate:@"this\\ still\"not\\allowed@example.com" forPaymentRequest:nil];
+    XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
+}
 
 - (void)testValidateIncorrect1
 {
-    [self.validator validate:@"Abc.example.com"];
+    [self.validator validate:@"Abc.example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid address is considered valid");
 }
 
 - (void)testValidateIncorrect2
 {
-    [self.validator validate:@"A@b@c@example.com"];
+    [self.validator validate:@"A@b@c@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid address is considered valid");
 }
 
-- (void)testValidateIncorrect3
+- (void)testValidateInCorrect7
 {
-    [self.validator validate:@"\"b(c)d,e:f;g<h>i[j\\k]l@example.com"];
+   [self.validator validate:@"\"Abc\\@def\"@example.com"];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid address is considered valid");
 }
 
-- (void)testValidateIncorrect4
+- (void)testValidateInCorrect8
 {
-    [self.validator validate:@"just\"not\"right@example.com"];
-    XCTAssertTrue(self.validator.errors.count != 0, @"Invalid address is considered valid");
-}
-
-- (void)testValidateIncorrect5
-{
-    [self.validator validate:@"this is\"not\allowed@example.com"];
-    XCTAssertTrue(self.validator.errors.count != 0, @"Invalid address is considered valid");
-}
-
-- (void)testValidateIncorrect6
-{
-    [self.validator validate:@"this\\ still\"not\\allowed@example.com"];
+    [self.validator validate:@"\"Abc@def\"@example.com"];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid address is considered valid");
 }
 

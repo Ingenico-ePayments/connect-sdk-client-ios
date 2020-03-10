@@ -8,7 +8,7 @@
 
 #ifndef IngenicoConnectSDK_ICSDKConstants_h
 #define IngenicoConnectSDK_ICSDKConstants_h
-#import <IngenicoConnectSDK/ICSession.h>
+#import  "ICSession.h"
 
 //Keys
 #define kICSDKLocalizable           @"ICSDKLocalizable"

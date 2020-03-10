@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICUtil.h>
+#import  "ICUtil.h"
 
 @interface ICStubUtil : ICUtil
 

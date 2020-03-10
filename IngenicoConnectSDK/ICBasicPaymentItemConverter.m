@@ -6,13 +6,13 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICBasicPaymentItemConverter.h>
-#import <IngenicoConnectSDK/ICValidator.h>
-#import <IngenicoConnectSDK/ICBasicPaymentItem.h>
-#import <IngenicoConnectSDK/ICMacros.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProductConverter.h>
-#import <IngenicoConnectSDK/ICAccountOnFileAttribute.h>
-#import <IngenicoConnectSDK/ICLabelTemplateItem.h>
+#import  "ICBasicPaymentItemConverter.h"
+#import  "ICValidator.h"
+#import  "ICBasicPaymentItem.h"
+#import  "ICMacros.h"
+#import  "ICBasicPaymentProductConverter.h"
+#import  "ICAccountOnFileAttribute.h"
+#import  "ICLabelTemplateItem.h"
 
 @implementation ICBasicPaymentItemConverter {
 

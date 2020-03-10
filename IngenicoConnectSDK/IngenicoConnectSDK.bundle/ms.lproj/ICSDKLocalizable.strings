@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Sila berikan nilai antara {minValue} dan {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Sila berikan nilai dalam format yang betul";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Sila berikan nilai";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Sila berikan nilai dalam format yang betul";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Sila berikan nilai dalam format yang betul";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Sila terima terma dan syarat";
 "gc.general.paymentProductFields.zip.label" = "Kod zip";
 "gc.general.paymentProductFields.zip.placeholder" = "Kod zip";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Amaun";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Nama bank";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Nama syarikat";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Nombor kontrak";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Kod mata wang";

@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICPaymentRequest.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProducts.h>
-#import <IngenicoConnectSDK/ICC2SCommunicator.h>
-#import <IngenicoConnectSDK/ICIINDetailsResponse.h>
-#import <IngenicoConnectSDK/ICPreparedPaymentRequest.h>
-#import <IngenicoConnectSDK/ICPaymentContext.h>
-#import <IngenicoConnectSDK/ICAssetManager.h>
-#import <IngenicoConnectSDK/ICJOSEEncryptor.h>
-#import <IngenicoConnectSDK/ICDirectoryEntries.h>
+#import  "ICPaymentRequest.h"
+#import  "ICBasicPaymentProducts.h"
+#import  "ICC2SCommunicator.h"
+#import  "ICIINDetailsResponse.h"
+#import  "ICPreparedPaymentRequest.h"
+#import  "ICPaymentContext.h"
+#import  "ICAssetManager.h"
+#import  "ICJOSEEncryptor.h"
+#import  "ICDirectoryEntries.h"
 
 @class ICBasicPaymentProductGroups;
 @class ICPaymentProductGroup;

@@ -7,10 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICPaymentProductConverter.h>
-#import <IngenicoConnectSDK/ICValidator.h>
-#import <IngenicoConnectSDK/ICValidatorLength.h>
-#import <IngenicoConnectSDK/ICAccountOnFileAttribute.h>
+#import  "ICPaymentProductConverter.h"
+#import  "ICValidator.h"
+#import  "ICValidatorLength.h"
+#import  "ICAccountOnFileAttribute.h"
 
 @interface ICPaymentProductConverterTestCase : XCTestCase
 

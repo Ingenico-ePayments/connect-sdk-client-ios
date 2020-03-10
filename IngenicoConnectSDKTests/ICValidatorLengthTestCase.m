@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICValidatorLength.h>
+#import  "ICValidatorLength.h"
 
 @interface ICValidatorLengthTestCase : XCTestCase
 
@@ -32,13 +32,13 @@
 
 - (void)testValidateCorrect1
 {
-    [self.validator validate:@"1"];
+    [self.validator validate:@"1" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid value considered invalid");
 }
 
 - (void)testValidateCorrect2
 {
-    [self.validator validate:@"12"];
+    [self.validator validate:@"12" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid value considered invalid");
 }
 

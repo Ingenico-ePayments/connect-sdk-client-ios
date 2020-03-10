@@ -6,9 +6,9 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICAssetManager.h>
-#import <IngenicoConnectSDK/ICSDKConstants.h>
-#import <IngenicoConnectSDK/ICMacros.h>
+#import  "ICAssetManager.h"
+#import  "ICSDKConstants.h"
+#import  "ICMacros.h"
 
 @interface ICAssetManager ()
 

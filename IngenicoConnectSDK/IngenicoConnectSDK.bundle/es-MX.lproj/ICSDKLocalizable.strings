@@ -213,7 +213,7 @@
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "No se admite la tarjeta que ha introducido. Introduzca otra tarjeta o pruebe con otro método de pago.";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Introduzca una dirección de e-mail válida";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Introduzca una fecha de vencimiento válida";
-"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Proporcione un valor válido de 11 o 14 caracteres para su número de CNPJ O CPF.";
+"gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Proporcione un valor válido de 11 o 14 caracteres para su número de CNPJ o CPF.";
 "gc.general.paymentProductFields.validationErrors.fixedList.label" = "Seleccione uno de los valores en la lista";
 "gc.general.paymentProductFields.validationErrors.iban.label" = "Ingrese un IBAN válido";
 "gc.general.paymentProductFields.validationErrors.iin.label" = "Introduzca un número de tarjeta válido";
@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Introduzca un valor entre {minValue} y {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Introduzca un valor con el formato correcto";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Introduzca un valor";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Introduzca un valor con el formato correcto";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Introduzca un valor con el formato correcto";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Sírvase aceptar los siguientes términos y condiciones";
 "gc.general.paymentProductFields.zip.label" = "Código postal";
 "gc.general.paymentProductFields.zip.placeholder" = "Código postal";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Importe";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Nombre del banco";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Nombre de la empresa";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Número de contrato";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Código de la divisa";

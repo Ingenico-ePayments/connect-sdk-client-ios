@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICValidators.h>
+#import  "ICValidators.h"
 
 @implementation ICValidators
 

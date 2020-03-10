@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICBase64.h>
+#import  "ICBase64.h"
 
 @implementation ICBase64
 

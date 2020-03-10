@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICJSON.h>
+#import  "ICJSON.h"
 
 @interface ICJSONTestCase : XCTestCase
 

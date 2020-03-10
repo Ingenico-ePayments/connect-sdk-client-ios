@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Geef een waarde tussen {minValue} en {maxValue} op";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Geef een waarde in het juiste formaat op";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Geef een waarde op";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Geef een waarde in het juiste formaat op";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Geef een waarde in het juiste formaat op";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Accepteer de algemene voorwaarden";
 "gc.general.paymentProductFields.zip.label" = "Postcode";
 "gc.general.paymentProductFields.zip.placeholder" = "Postcode";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Bedrag";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Banknaam";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Bedrijfsnaam";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Contractnummer";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Valutacode";

@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Введіть значення між {minValue} та {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Введіть значення у правильному форматі";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Введіть значення";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Введіть значення у правильному форматі";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Введіть значення у правильному форматі";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Просимо прийняти умови";
 "gc.general.paymentProductFields.zip.label" = "Поштовий індекс";
 "gc.general.paymentProductFields.zip.placeholder" = "Поштовий індекс";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Сума";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Назва банку";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Назва компанії";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Номер контракту";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Код валюти";

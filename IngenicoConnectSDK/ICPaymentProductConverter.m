@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICPaymentProductConverter.h>
+#import  "ICPaymentProductConverter.h"
 
 @implementation ICPaymentProductConverter
 

@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "ספק ערך בטווח שבין {minValue} לבין {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "ספק ערך במבנה הנכון";
 "gc.general.paymentProductFields.validationErrors.required.label" = "ספק ערך";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "ספק ערך במבנה הנכון";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "ספק ערך במבנה הנכון";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "נא לאשר את תנאי השימוש";
 "gc.general.paymentProductFields.zip.label" = "מיקוד";
 "gc.general.paymentProductFields.zip.placeholder" = "מיקוד";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "סכום";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "שם הבנק";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "שם החברה";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "מספר חוזה";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "קוד מטבע";

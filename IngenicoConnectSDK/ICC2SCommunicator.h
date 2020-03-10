@@ -7,17 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICC2SCommunicatorConfiguration.h>
-#import <IngenicoConnectSDK/ICPaymentContext.h>
-#import <IngenicoConnectSDK/ICPublicKeyResponse.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProducts.h>
-#import <IngenicoConnectSDK/ICPaymentProduct.h>
-#import <IngenicoConnectSDK/ICAssetManager.h>
-#import <IngenicoConnectSDK/ICStringFormatter.h>
-#import <IngenicoConnectSDK/ICDirectoryEntries.h>
-#import <IngenicoConnectSDK/ICIINDetailsResponse.h>
-#import <IngenicoConnectSDK/ICPaymentProductNetworks.h>
-#import <IngenicoConnectSDK/ICCustomerDetails.h>
+#import  "ICC2SCommunicatorConfiguration.h"
+#import  "ICPaymentContext.h"
+#import  "ICPublicKeyResponse.h"
+#import  "ICBasicPaymentProducts.h"
+#import  "ICPaymentProduct.h"
+#import  "ICAssetManager.h"
+#import  "ICStringFormatter.h"
+#import  "ICDirectoryEntries.h"
+#import  "ICIINDetailsResponse.h"
+#import  "ICPaymentProductNetworks.h"
+#import  "ICCustomerDetails.h"
 
 @class ICBasicPaymentProductGroups;
 @class ICPaymentProductGroup;

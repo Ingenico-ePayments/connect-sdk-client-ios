@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICValidators.h>
+#import  "ICValidators.h"
 
 @interface ICDataRestrictions : NSObject
 

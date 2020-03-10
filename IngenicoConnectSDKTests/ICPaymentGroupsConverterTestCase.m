@@ -1,8 +1,8 @@
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICPaymentItemDisplayHints.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProductGroup.h>
-#import <IngenicoConnectSDK/ICPaymentProductGroupsConverter.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProductGroups.h>
+#import  "ICPaymentItemDisplayHints.h"
+#import  "ICBasicPaymentProductGroup.h"
+#import  "ICPaymentProductGroupsConverter.h"
+#import  "ICBasicPaymentProductGroups.h"
 
 @interface ICPaymentGroupsConverterTestCase : XCTestCase
 

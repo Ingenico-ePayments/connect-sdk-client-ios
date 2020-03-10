@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICFormElementType.h>
+#import  "ICFormElementType.h"
 
 @interface ICFormElement : NSObject
 

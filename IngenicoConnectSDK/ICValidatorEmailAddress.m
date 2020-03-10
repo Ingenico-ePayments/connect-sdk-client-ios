@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICValidatorEmailAddress.h>
-#import <IngenicoConnectSDK/ICValidationErrorEmailAddress.h>
+#import  "ICValidatorEmailAddress.h"
+#import  "ICValidationErrorEmailAddress.h"
 
 @interface ICValidatorEmailAddress ()
 

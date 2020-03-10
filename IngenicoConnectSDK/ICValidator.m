@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICValidator.h>
-#import <IngenicoConnectSDK/ICPaymentRequest.h>
+#import  "ICValidator.h"
+#import  "ICPaymentRequest.h"
 
 @implementation ICValidator
 

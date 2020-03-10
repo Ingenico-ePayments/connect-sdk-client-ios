@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICPaymentItemConverter.h>
+#import  "ICPaymentItemConverter.h"
 
 @class ICPaymentProductGroup;
 

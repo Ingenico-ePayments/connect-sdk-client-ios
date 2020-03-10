@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICAccountOnFileAttributes.h>
-#import <IngenicoConnectSDK/ICAccountOnFileAttribute.h>
+#import  "ICAccountOnFileAttributes.h"
+#import  "ICAccountOnFileAttribute.h"
 
 @interface ICAccountOnFileAttributesTestCase : XCTestCase
 

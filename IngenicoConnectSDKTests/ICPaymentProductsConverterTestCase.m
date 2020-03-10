@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICBasicPaymentProductsConverter.h>
+#import  "ICBasicPaymentProductsConverter.h"
 
 @interface ICPaymentProductsConverterTestCase : XCTestCase
 
@@ -35,7 +35,7 @@
     NSData *paymentProductsData = [fileManager contentsAtPath:paymentProductsPath];
     NSDictionary *paymentProductsJSON = [NSJSONSerialization JSONObjectWithData:paymentProductsData options:0 error:NULL];
     ICBasicPaymentProducts *paymentProducts = [self.converter paymentProductsFromJSON:[paymentProductsJSON objectForKey:@"paymentProducts"]];
-    if (paymentProducts.paymentProducts.count != 26) {
+    if (paymentProducts.paymentProducts.count != 24) {
         XCTFail(@"Wrong number of payment products.");
     }
     for (ICBasicPaymentProduct *product in paymentProducts.paymentProducts) {

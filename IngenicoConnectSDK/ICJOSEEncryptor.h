@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IngenicoConnectSDK/ICEncryptor.h>
+#import  "ICEncryptor.h"
 
 @interface ICJOSEEncryptor : NSObject
 

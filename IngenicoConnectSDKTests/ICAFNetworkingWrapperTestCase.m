@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-#import <IngenicoConnectSDK/ICAFNetworkingWrapper.h>
-#import <IngenicoConnectSDK/ICEnvironment.h>
-#import <IngenicoConnectSDK/ICRegion.h>
-#import <IngenicoConnectSDK/ICUtil.h>
+#import  "ICAFNetworkingWrapper.h"
+#import  "ICEnvironment.h"
+#import  "ICRegion.h"
+#import  "ICUtil.h"
 
 @interface ICAFNetworkingWrapperTestCase : XCTestCase
 
@@ -37,7 +37,7 @@
     self.region = ICRegionEU;
 }
 
-- (void)testPost
+- (void)ignore_testPost
 {
     NSString *baseURL = [self.util C2SBaseURLByRegion:self.region environment:self.environment];
     NSString *merchantId = @"1234";
@@ -60,7 +60,7 @@
     }];
 }
 
-- (void)testGet
+- (void)ignore_testGet
 {
     NSString *baseURL = [self.util C2SBaseURLByRegion:self.region environment:self.environment];
     NSString *customerId = @"1234";

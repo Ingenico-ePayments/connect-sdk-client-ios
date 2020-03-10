@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICPreferredInputType.h>
-#import <IngenicoConnectSDK/ICFormElement.h>
-#import <IngenicoConnectSDK/ICToolTip.h>
+#import  "ICPreferredInputType.h"
+#import  "ICFormElement.h"
+#import  "ICToolTip.h"
 
 @interface ICPaymentProductFieldDisplayHints : NSObject
 

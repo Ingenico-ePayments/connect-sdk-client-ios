@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICLabelTemplate.h>
-#import <IngenicoConnectSDK/ICLabelTemplateItem.h>
+#import  "ICLabelTemplate.h"
+#import  "ICLabelTemplateItem.h"
 
 @implementation ICLabelTemplate
 

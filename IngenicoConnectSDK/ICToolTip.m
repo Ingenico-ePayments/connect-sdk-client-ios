@@ -6,7 +6,7 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICToolTip.h>
+#import  "ICToolTip.h"
 
 @implementation ICTooltip
 

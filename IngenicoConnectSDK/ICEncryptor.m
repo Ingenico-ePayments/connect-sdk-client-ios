@@ -6,8 +6,8 @@
 //  Copyright © 2017 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICEncryptor.h>
-#import <IngenicoConnectSDK/ICMacros.h>
+#import  "ICEncryptor.h"
+#import  "ICMacros.h"
 
 #import <CommonCrypto/CommonCryptor.h>
 #import <CommonCrypto/CommonHMAC.h>

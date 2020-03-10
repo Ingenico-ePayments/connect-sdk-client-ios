@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Zadejte hodnotu mezi {minValue} a {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Zadejte hodnotu ve správném formátu";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Zadejte hodnotu";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Zadejte hodnotu ve správném formátu";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Zadejte hodnotu ve správném formátu";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Přijměte prosím podmínky a ujednání";
 "gc.general.paymentProductFields.zip.label" = "PSČ";
 "gc.general.paymentProductFields.zip.placeholder" = "PSČ";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Částka";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Název banky";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Název společnosti";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Číslo smlouvy";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Kód měny";

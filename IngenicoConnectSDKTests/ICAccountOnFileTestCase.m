@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICAccountOnFile.h>
-#import <IngenicoConnectSDK/ICPaymentProductConverter.h>
+#import  "ICAccountOnFile.h"
+#import  "ICPaymentProductConverter.h"
 
 @interface ICAccountOnFileTestCase : XCTestCase
 

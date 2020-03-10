@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "{minValue}と{maxValue}の間の値を入力してください";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "正しいフォーマットの値を入力してください";
 "gc.general.paymentProductFields.validationErrors.required.label" = "値を入力してください";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "正しいフォーマットの値を入力してください";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "正しいフォーマットの値を入力してください";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "ご利用規約に同意してください";
 "gc.general.paymentProductFields.zip.label" = "ジップコード";
 "gc.general.paymentProductFields.zip.placeholder" = "ジップコード";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "金額";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "銀行名";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "会社名";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "連絡先電話番号";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "通貨コード";

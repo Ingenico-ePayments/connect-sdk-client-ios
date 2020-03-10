@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Angiv en værdi mellem {minValue} og {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Angiv en værdi i det korrekte format";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Angiv en værdi";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Angiv en værdi i det korrekte format";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Angiv en værdi i det korrekte format";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Du bedes acceptere vores vilkår og betingelser";
 "gc.general.paymentProductFields.zip.label" = "Postnummer";
 "gc.general.paymentProductFields.zip.placeholder" = "Postnummer";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Beløb";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Bankens navn";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Firmanavn";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Kontraktnummer";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Valutakode";

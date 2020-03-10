@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Anna arvo väliltä {minValue} ja {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Anna oikean formaatin arvo";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Anna arvo";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Anna oikean formaatin arvo";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Anna oikean formaatin arvo";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Hyväksy ehdot";
 "gc.general.paymentProductFields.zip.label" = "Postinumero";
 "gc.general.paymentProductFields.zip.placeholder" = "Postinumero";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Määrä";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Pankin nimi";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Yhtiön nimi";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Sopimusnumero";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Valuuttakoodi";

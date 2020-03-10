@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICBasicPaymentProduct.h>
-#import <IngenicoConnectSDK/ICAssetManager.h>
-#import <IngenicoConnectSDK/ICStringFormatter.h>
-#import <IngenicoConnectSDK/ICBasicPaymentItemConverter.h>
+#import  "ICBasicPaymentProduct.h"
+#import  "ICAssetManager.h"
+#import  "ICStringFormatter.h"
+#import  "ICBasicPaymentItemConverter.h"
 
 @interface ICBasicPaymentProductConverter : ICBasicPaymentItemConverter
 

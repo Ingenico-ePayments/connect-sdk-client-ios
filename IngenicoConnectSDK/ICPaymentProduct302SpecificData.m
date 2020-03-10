@@ -6,7 +6,7 @@
 //  Copyright © 2018 Global Collect Services. All rights reserved.
 //
 
-#import <IngenicoConnectSDK/ICPaymentProduct302SpecificData.h>
+#import  "ICPaymentProduct302SpecificData.h"
 
 @implementation ICPaymentProduct302SpecificData
 

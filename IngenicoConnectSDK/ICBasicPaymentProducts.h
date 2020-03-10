@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IngenicoConnectSDK/ICBasicPaymentProduct.h>
+#import  "ICBasicPaymentProduct.h"
 
 @interface ICBasicPaymentProducts : NSObject
 

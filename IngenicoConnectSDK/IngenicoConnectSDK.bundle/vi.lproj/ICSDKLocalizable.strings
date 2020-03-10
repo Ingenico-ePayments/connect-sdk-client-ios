@@ -226,6 +226,8 @@
 "gc.general.paymentProductFields.validationErrors.range.label" = "Vui lòng cung cấp một giá trị từ {minValue} đến {maxValue}";
 "gc.general.paymentProductFields.validationErrors.regularExpression.label" = "Vui lòng cung cấp một giá trị đúng định dạng";
 "gc.general.paymentProductFields.validationErrors.required.label" = "Vui lòng cung cấp một giá trị";
+"gc.general.paymentProductFields.validationErrors.residentIdName" = "Vui lòng cung cấp một giá trị đúng định dạng";
+"gc.general.paymentProductFields.validationErrors.residentIdNumber" = "Vui lòng cung cấp một giá trị đúng định dạng";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Xin chấp thuận các điều khoản và điều kiện";
 "gc.general.paymentProductFields.zip.label" = "Mã zip";
 "gc.general.paymentProductFields.zip.placeholder" = "Mã zip";
@@ -275,7 +277,7 @@
 "gc.general.paymentProducts.1504.name" = "Konbini";
 "gc.general.paymentProducts.1506.instructionFields.AMOUNT.label" = "Số tiền";
 "gc.general.paymentProducts.1506.instructionFields.BANKNAME.label" = "Tên ngân hàng";
-"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "";
+"gc.general.paymentProducts.1506.instructionFields.BARCODE.label" = "No need to translate this text (it's always empty)";
 "gc.general.paymentProducts.1506.instructionFields.COMPANYNAME.label" = "Tên công ty";
 "gc.general.paymentProducts.1506.instructionFields.CONTRACTNUMBER.label" = "Số hợp đồng";
 "gc.general.paymentProducts.1506.instructionFields.CURRENCYCODE.label" = "Mã tiền tệ";

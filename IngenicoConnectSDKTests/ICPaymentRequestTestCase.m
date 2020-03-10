@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <IngenicoConnectSDK/ICPaymentRequest.h>
-#import <IngenicoConnectSDK/ICPaymentProductConverter.h>
+#import  "ICPaymentRequest.h"
+#import  "ICPaymentProductConverter.h"
 
 @interface ICPaymentRequestTestCase : XCTestCase
 
