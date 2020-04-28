@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Mevr";
 "gc.general.paymentProductFields.title.placeholder" = "Titel";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "De kaart die u hebt ingevoerd, wordt niet ondersteund. Voer een andere kaart in of probeer een andere betaalmethode.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Geef een waarde in het juiste formaat op";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Geef een geldig e-mailadres op";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Geef een geldige vervaldatum op";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Voor een geldig CPF- of CNPJ-nummer in van 11 of 14 cijfers.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Uw betalingsreferentie is";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Bijzondere id";
 "gc.general.paymentProducts.51.name" = "Bankoverschrijving Brazilië (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Naam van de rekeninghouder";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Rekeningnummer";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Controlecijfer van de bank";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Bankcode";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Sort code";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Uw betalingsreferentie is";
-"gc.general.paymentProducts.53.name" = "Bankoverschrijving";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Uw betalingsreferentie is";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Referentienummer";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Mobiele telefoonnummer";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay tranches";

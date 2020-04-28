@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Pr";
 "gc.general.paymentProductFields.title.placeholder" = "Pöördumine";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Sisestatud kaarti ei toetata. Palun sisestage muu kaart või proovige muud makseviisi.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Palun märkige õige formaadi väärtus";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Palun märkige õige meiliaadress";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Palun märkige õige aegumise kuupäev";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Palun sisestage oma kehtiv 11- või 14-kohaline CPF- või CNPJ-number.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Teie makse viide on";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Spetsiaalne ID";
 "gc.general.paymentProducts.51.name" = "Brasiilia pangaülekanne (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Konto omaniku nimi";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Konto number";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Panga tšeki number";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Panga kood";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Liigi kood";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Teie makse viide on";
-"gc.general.paymentProducts.53.name" = "Pangaülekanne";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Teie makse viide on";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Viitenumber";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Mobiilinumber";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay osamaksed";

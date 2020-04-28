@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "[First name Surname]";
 "gc.general.paymentProductFields.title.placeholder" = "Titteli";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Antamaasi korttia ei tueta. Anna jokin toinen kortti tai kokeile jotain toista maksutapaa.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Anna oikean formaatin arvo";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Anna voimassa oleva sähköpostiosoite";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Anna voimassa oleva päättymispäivä";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Anna kelvollinen CPF- tai CNPJ-numero, jossa on 11 tai 14 merkkiä.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Sinun maksuviitteesi on";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Erityinen tunnus";
 "gc.general.paymentProducts.51.name" = "Pankkisiirto Brasilia (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Tilin haltijan nimi";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Tilinumero";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Pankkishekin numero";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Pankkikoodi";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Pankkitunnus";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Sinun maksuviitteesi on";
-"gc.general.paymentProducts.53.name" = "Pankkisiirto";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Sinun maksuviitteesi on";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Viitenumero";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Matkapuhelinnumero";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay-erät";

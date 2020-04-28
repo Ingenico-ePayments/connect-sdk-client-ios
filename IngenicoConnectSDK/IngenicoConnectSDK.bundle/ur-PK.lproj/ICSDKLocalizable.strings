@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "مسز";
 "gc.general.paymentProductFields.title.placeholder" = "لقب";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "آپ نے جو کارڈ داخل کیا ہے وہ سپورٹ یافتہ نہیں ہے۔ برائے مہربانی کوئی دیگر کارڈ داخل کریں یا ادائیگی کا کوئی دوسرا طریقہ آزمائیں۔";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "براہ کرم درست فارمیٹ کی کوئی عددی قیمت فراہم کریں";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "براہ کرم کوئی درست ای میل پتہ فراہم کریں";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "براہ کرم کوئی درست تاریخ تنسیخ فراہم کریں";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "اپنے CPF یا CNPJ نمبر کے لیے 11 یا 14 حروف کی ایک درست قدر مہیا کریں۔";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "آپ کی ادائیگی کا حوالہ نمبر ہے";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "خصوصی آئی ڈی";
 "gc.general.paymentProducts.51.name" = "بینک ٹرانسفر برازیل (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "کھاتہ دار کا نام";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "کھاتہ نمبر";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "بینک چیک ڈیجٹ";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "بینک کوڈ";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "سارٹ کوڈ";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "آپ کی ادائیگی کا حوالہ نمبر ہے";
-"gc.general.paymentProducts.53.name" = "بینک ٹرانسفر";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "آپ کی ادائیگی کا حوالہ نمبر ہے";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "حوالہ نمبر";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "موبائل فون نمبر";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay کی قسطیں";

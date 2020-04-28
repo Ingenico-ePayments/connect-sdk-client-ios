@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Ponia";
 "gc.general.paymentProductFields.title.placeholder" = "Kreipimosi forma";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Jūsų įvesta kortelė nepalaikoma. Įveskite kitą kortelę arba bandykite rinktis kitą mokėjimo metodą.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Nurodykite tinkamo formato vertę";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Nurodykite galiojantį el. pašto adresą";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Nurodykite tinkamą galiojimo datą";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Pateikite tinkamą CPF arba CNPJ numerio vertę, sudarytą iš 11 arba 14 ženklų.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Jūsų mokėjimo nuoroda yra";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Specialus kodas";
 "gc.general.paymentProducts.51.name" = "Banko pervedimas Brazilija (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Sąskaitos savininko pavadinimas";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Sąskaitos Nr.";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Banko kvito skaitmuo";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Banko kodas";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Rūšiavimo kodas";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Jūsų mokėjimo nuoroda yra";
-"gc.general.paymentProducts.53.name" = "Banko perlaida";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Jūsų mokėjimo nuoroda yra";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Nuorodos numeris";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Mobiliojo telefono numeris";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "„AfterPay“ įmokos";

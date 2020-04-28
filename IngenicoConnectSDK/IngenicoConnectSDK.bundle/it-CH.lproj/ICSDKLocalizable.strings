@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "";
 "gc.general.paymentProductFields.title.placeholder" = "Titolo";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "La carta inserita non è supportata. Inserire un'altra carta o provare con un metodo di pagamento diverso.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Inserire l'importo nel formato corretto";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Fornire un indirizzo e-mail valido";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Indicare una data di scadenza valida";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Inserisci un valore valido di 11 o 14 caratteri per il tuo codice fiscale CPF o CNPJ.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Il numero di riferimento del tuo pagamento è";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "ID speciale";
 "gc.general.paymentProducts.51.name" = "Trasferimento bancario Brasile (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Nome del titolare del conto";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Numero di conto";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Numero assegno bancario";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Codice bancario";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Sort code";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Il numero di riferimento del tuo pagamento è";
-"gc.general.paymentProducts.53.name" = "Trasferimento bancario";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Il numero di riferimento del tuo pagamento è";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Numero di riferimento";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Numero di cellulare";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Rate AfterPay";

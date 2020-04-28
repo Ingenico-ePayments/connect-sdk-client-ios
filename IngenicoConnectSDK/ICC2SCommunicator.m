@@ -10,7 +10,7 @@
 #import  "ICBasicPaymentProductsConverter.h"
 #import  "ICPaymentProductConverter.h"
 #import  "ICDirectoryEntriesConverter.h"
-#import  "ICAFNetworkingWrapper.h"
+#import  "ICNetworkingWrapper.h"
 #import  "ICPaymentAmountOfMoney.h"
 #import  "ICPaymentContextConverter.h"
 #import  "ICIINDetailsResponseConverter.h"
@@ -26,7 +26,7 @@
 @interface ICC2SCommunicator ()
 
 @property (strong, nonatomic) ICC2SCommunicatorConfiguration *configuration;
-@property (strong, nonatomic) ICAFNetworkingWrapper *afNetworkingWrapper;
+@property (strong, nonatomic) ICNetworkingWrapper *networkingWrapper;
 
 @end
 
@@ -37,7 +37,7 @@
     self = [super init];
     if (self != nil) {
         self.configuration = configuration;
-        self.afNetworkingWrapper = [[ICAFNetworkingWrapper alloc] init];
+        self.networkingWrapper = [[ICNetworkingWrapper alloc] init];
     }
     return self;
 }
@@ -301,12 +301,12 @@
 
 - (void)getResponseForURL:(NSString *)URL success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure
 {
-    [self.afNetworkingWrapper getResponseForURL:URL headers:[self headers] additionalAcceptableStatusCodes:nil success:success failure:failure];
+    [self.networkingWrapper getResponseForURL:URL headers:[self headers] additionalAcceptableStatusCodes:nil success:success failure:failure];
 }
 
 - (void)postResponseForURL:(NSString *)URL withParameters:(NSDictionary *)parameters additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure
 {
-    [self.afNetworkingWrapper postResponseForURL:URL headers:[self headers] withParameters:parameters additionalAcceptableStatusCodes:additionalAcceptableStatusCodes success:success failure:failure];
+    [self.networkingWrapper postResponseForURL:URL headers:[self headers] withParameters:parameters additionalAcceptableStatusCodes:additionalAcceptableStatusCodes success:success failure:failure];
 }
 
 - (NSString *)baseURL

@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Г-жа";
 "gc.general.paymentProductFields.title.placeholder" = "Форма обращения";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Введенная карта не поддерживается. Введите другую карту или выберите другой способ оплаты.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Введите значение в правильном формате";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Введите действительный адрес эл. почты";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Введите действительную дату истечения срока действия";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Укажите номер CPF или CNPJ, содержащий действительное значение с 11 или 14 символами.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Ваш идентификатор платежа —";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Специальный идентификатор";
 "gc.general.paymentProducts.51.name" = "Банковский перевод, Бразилия (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Имя владельца счета";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Номер счета";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Контрольная цифра банка";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Код банка";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Код отделения банка";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Ваш идентификатор платежа —";
-"gc.general.paymentProducts.53.name" = "Банковский перевод";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Ваш идентификатор платежа —";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Идентификационный номер";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Номер мобильного телефона";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Оплата в рассрочку AfterPay";

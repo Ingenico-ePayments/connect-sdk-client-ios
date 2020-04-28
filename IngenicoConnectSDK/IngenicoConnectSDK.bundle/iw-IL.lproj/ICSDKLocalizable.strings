@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "גברת";
 "gc.general.paymentProductFields.title.placeholder" = "תואר";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "אין תמיכה בכרטיס שהזנת. אנא הזן כרטיס אחר או השתמש באמצעי תשלום אחר.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "ספק ערך במבנה הנכון";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "נא הזן כתובת דואר אלקטרוני תקפה";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "נא הזן תאריך פקיעת תוקף חוקי";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "מסור ערך חוקי בן 11 או 14 תווים עבור מספר CPE או CNPJ שלך.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "מספר הסימוכין של התשלום שלך הוא";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "מזהה מיוחד";
 "gc.general.paymentProducts.51.name" = "העברה בנקאית לברזיל (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "שם בעל החשבון";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "מספר חשבון";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "ספרת ביקורת של הבנק";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "קוד הבנק";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "קוד מיון";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "מספר הסימוכין של התשלום שלך הוא";
-"gc.general.paymentProducts.53.name" = "העברה בנקאית";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "מספר הסימוכין של התשלום שלך הוא";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "מספר סימוכין";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "מספר טלפון נייד";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "‎+ 86*** **** ****‎";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "תשלומים בAfterPay";

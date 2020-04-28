@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Fru";
 "gc.general.paymentProductFields.title.placeholder" = "Tittel";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Kortet du oppga støttes ikke. Vennligst oppgi et annet kort eller prøve en annen betalingsmetode.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Vennligst oppgi en verdi i korrekt format";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Vennligst oppgi en gyldig e-postadresse";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Vennligst oppgi en gyldig utløpsdato";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Oppgi en gyldig verdi på 11 eller 14 tegn for ditt CPF- eller CNPJ-nummer.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Din betalingsreferanse er";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Spesial-ID";
 "gc.general.paymentProducts.51.name" = "Bankoverføring Brasil (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Kontoinnehavers navn";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Kontonummer";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Kontrollsiffer";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Bankkode";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Sort code";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Din betalingsreferanse er";
-"gc.general.paymentProducts.53.name" = "Bankoverføring";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Din betalingsreferanse er";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Referansenummer";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Mobilnummer";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay-avdrag";

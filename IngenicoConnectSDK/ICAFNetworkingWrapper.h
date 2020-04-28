@@ -10,7 +10,7 @@
 
 @interface ICAFNetworkingWrapper : NSObject
 
-- (void)getResponseForURL:(NSString *)URL headers:(NSDictionary *)headers additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
-- (void)postResponseForURL:(NSString *)URL headers:(NSDictionary *)headers withParameters:(NSDictionary *)parameters additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+- (void)getResponseForURL:(NSString *)URL headers:(NSDictionary *)headers additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure DEPRECATED_ATTRIBUTE __deprecated_msg("use ICNetworkingWrapper#getResponseForUrl:headers:additionalAcceptableStatusCodes:success:failure instead");
+- (void)postResponseForURL:(NSString *)URL headers:(NSDictionary *)headers withParameters:(NSDictionary *)parameters additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure DEPRECATED_ATTRIBUTE __deprecated_msg("use ICNetworkingWrapper#postResponseForUrl:headers:additionalAcceptableStatusCodes:success:failure instead");;
 
 @end

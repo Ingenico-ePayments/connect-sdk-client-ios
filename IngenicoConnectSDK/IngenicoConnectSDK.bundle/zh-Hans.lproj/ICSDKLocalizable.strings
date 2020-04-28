@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "女士";
 "gc.general.paymentProductFields.title.placeholder" = "称呼";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "该卡不支持当前的交易。请绑定另一张卡或更改付款方式。";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "请提供格式正确的值";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "请提供有效的电子邮件地址";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "请提供有效的失效日期";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "请为您的 CPF 或 CNPJ 号码提供 11 或 14 个字符的有效值。";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "您的支付参考号为";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "特殊 ID";
 "gc.general.paymentProducts.51.name" = "银行转账（巴西 Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "帐户持有人姓名";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "帐号";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "银行校验码";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "银行代码";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "分支代码";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "您的支付参考号为";
-"gc.general.paymentProducts.53.name" = "银行转账";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "您的支付参考号为";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "参考号";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "移动电话号码";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay 分期付款";

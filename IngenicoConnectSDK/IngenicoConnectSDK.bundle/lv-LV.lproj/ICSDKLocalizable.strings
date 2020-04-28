@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Cien.";
 "gc.general.paymentProductFields.title.placeholder" = "Uzruna";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Jūsu ievietotā karte netiek atbalstīta. Lūdzu, ievietojiet citu karti vai mēģiniet izmantot citu maksāšanas veidu.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Lūdzu, norādiet vērtību pareizā formātā";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Lūdzu, norādiet derīgu e-pasta adresi";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Lūdzu, norādiet derīgu beigu datumu";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Lūdzu, ievadiet derīgu vērtību no 11 vai 14 simboliem, kas ir Jūsu CPF vai CNPJ numurs.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Jūsu maksājuma atsauce ir";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Papildu ID";
 "gc.general.paymentProducts.51.name" = "Bankas pārskaitījums Brazīlijā (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Konta īpašnieka vārds";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Konta numurs";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Bankas kontrolcipars";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Bankas kods";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Bankas filiāles kods";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Jūsu maksājuma atsauce ir";
-"gc.general.paymentProducts.53.name" = "Bankas pārskaitījums";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Jūsu maksājuma atsauce ir";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Atsauces numurs";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Mobilā tālruņa numurs";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay maksājumi";

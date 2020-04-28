@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Bayan";
 "gc.general.paymentProductFields.title.placeholder" = "Unvan";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Girdiğiniz kart desteklenmiyor. Lütfen başka bir kart girin veya başka bir ödeme yöntemi deneyin.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Lütfen girdiğiniz değerin doğru formatta olmasına dikkat edin";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Lütfen geçerli bir e-posta adresi girin";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Lütfen geçerli bir son kullanma tarihi girin";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Lütfen CPF veya CNPJ numaranız olarak 11 veya 14 karakterli ve geçerli bir değer verin.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Ödeme referansınız";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Özel tanımlama kodu";
 "gc.general.paymentProducts.51.name" = "Brezilya için Banka Havalesi (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Hesap sahibinin adı";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Hesap numarası";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Tek haneli banka kontrol kodu";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Banka kodu";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Sıralama kodu";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Ödeme referansınız";
-"gc.general.paymentProducts.53.name" = "Banka Havalesi";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Ödeme referansınız";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Referans numarası";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Cep telefonu numarası";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay taksitleri";

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "IngenicoConnectSDK"
-  s.version       = "4.0.0"
+  s.version       = "5.0.0"
   s.summary       = "Ingenico Connect iOS SDK"
   s.description   = <<-DESC
                     This native iOS SDK facilitates handling payments in your apps
@@ -15,7 +15,5 @@ Pod::Spec.new do |s|
   s.source        = { :git => "https://github.com/Ingenico-ePayments/connect-sdk-client-ios.git", :tag => s.version }
   s.source_files  = "IngenicoConnectSDK"
   s.resource      = "IngenicoConnectSDK/IngenicoConnectSDK.bundle"
-
-  s.dependency 'AFNetworking', '~> 3.0'
 
 end

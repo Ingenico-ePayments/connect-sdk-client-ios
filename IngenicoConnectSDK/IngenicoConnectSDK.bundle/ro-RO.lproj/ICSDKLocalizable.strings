@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Dna";
 "gc.general.paymentProductFields.title.placeholder" = "Titlu";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Cardul introdus nu este suportat. Vă rugăm să introduceţi un alt card, sau încercaţi un alt mod de plată.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Furnizaţi o valoare în format corect";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Furnizaţi o adresă de e-mail validă";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Furnizaţi o dată de expirare validă";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Vă rugăm să introduceți o valoare validă de 11 sau 14 caractere pentru numărul dumneavoastră CPF (registrul persoanelor fizice) sau CNPJ (registrul național al persoanelor juridice).";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Referinţa plăţii dvs. este";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "ID special";
 "gc.general.paymentProducts.51.name" = "Transfer bancar Brazilia (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Nume titular cont";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Număr cont";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Cifră cec bancar";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Cod bancă";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Cod de sortare";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Referinţa plăţii dvs. este";
-"gc.general.paymentProducts.53.name" = "Transfer bancar";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Referinţa plăţii dvs. este";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Număr de referinţă";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Numărul de telefon mobil";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Rate AfterPay";

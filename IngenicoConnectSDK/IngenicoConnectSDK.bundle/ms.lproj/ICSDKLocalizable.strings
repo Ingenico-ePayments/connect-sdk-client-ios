@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Pn";
 "gc.general.paymentProductFields.title.placeholder" = "Gelaran";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Kad yang anda masukkan tidak disokong. Sila masukkan kad lain atau cuba kaedah pembayaran lain.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Sila berikan nilai dalam format yang betul";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Sila berikan alamat e-mel yang sah";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Sila berikan tarikh tamat tempoh yang sah";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Sila berikan nilai sah sebanyak 11 atau 14 aksara bagi nombor CPF atau CNPJ anda.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Rujukan pembayaran anda ialah";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "ID khas";
 "gc.general.paymentProducts.51.name" = "Pindahan Bank Brazil (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Nama pemegang akaun";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Nombor akaun";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Digit semak bank";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Kod bank";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Kod isih";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Rujukan pembayaran anda ialah";
-"gc.general.paymentProducts.53.name" = "Pindahan Bank";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Rujukan pembayaran anda ialah";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Nombor rujukan";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Nombor telefon bimbit";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Ansuran AfterPay";

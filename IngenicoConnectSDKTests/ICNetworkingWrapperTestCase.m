@@ -1,5 +1,5 @@
 //
-//  ICAFNetworkingWrapperTestCase.m
+//  ICNetworkingWrapperTestCase.m
 //  IngenicoConnectSDK
 //
 //  Created for Ingenico ePayments on 15/12/2016.
@@ -9,28 +9,28 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-#import  "ICAFNetworkingWrapper.h"
+#import  "ICNetworkingWrapper.h"
 #import  "ICEnvironment.h"
 #import  "ICRegion.h"
 #import  "ICUtil.h"
 
-@interface ICAFNetworkingWrapperTestCase : XCTestCase
+@interface ICNetworkingWrapperTestCase : XCTestCase
 
-@property (strong, nonatomic) ICAFNetworkingWrapper *wrapper;
+@property (strong, nonatomic) ICNetworkingWrapper *wrapper;
 @property (nonatomic) ICRegion region;
 @property (nonatomic) ICEnvironment environment;
 @property (strong, nonatomic) ICUtil *util;
 
 @end
 
-@implementation ICAFNetworkingWrapperTestCase
+@implementation ICNetworkingWrapperTestCase
 
 - (void)setUp
 {
     [super setUp];
     
     self.util = [[ICUtil alloc] init];
-    self.wrapper = [[ICAFNetworkingWrapper alloc] init];
+    self.wrapper = [[ICNetworkingWrapper alloc] init];
     
     // The following value must be updated to reflect your situation for this test to succeed.
     self.environment = ICSandbox;

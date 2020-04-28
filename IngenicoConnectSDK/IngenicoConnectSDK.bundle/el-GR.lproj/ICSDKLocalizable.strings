@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Κα";
 "gc.general.paymentProductFields.title.placeholder" = "Τίτλος";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Η κάρτα που εισαγάγατε δεν υποστηρίζεται. Εισαγάγετε άλλη κάρτα ή επιλέξτε άλλον τρόπο πληρωμής.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Συμπληρώστε μια τιμή με τη σωστή μορφή";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Συμπληρώστε μια έγκυρη διεύθυνση email";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Συμπληρώστε μια έγκυρη ημερομηνία λήξης";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Για τον αριθμό σας CPF ή CNPJ, εισαγάγετε μια έγκυρη τιμή που να αποτελείται από 11 ή 14 χαρακτήρες.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Ο αριθμός πληρωμής σας είναι";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Ειδικό αναγνωριστικό";
 "gc.general.paymentProducts.51.name" = "Τραπεζική μεταφορά, Βραζιλία (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Όνομα κατόχου λογαριασμού";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Αριθμός λογαριασμού";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Ψηφίο ελέγχου τράπεζας";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Κωδικός τράπεζας";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Σύντομος κωδικός";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Ο αριθμός πληρωμής σας είναι";
-"gc.general.paymentProducts.53.name" = "Τραπεζική μεταφορά";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Ο αριθμός πληρωμής σας είναι";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Αριθμός αναφοράς";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Αριθμός κινητού τηλεφώνου";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Δόσεις AfterPay";

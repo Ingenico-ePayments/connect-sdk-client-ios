@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Mrs";
 "gc.general.paymentProductFields.title.placeholder" = "성별";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "입력한 카드는 이용하실 수 없습니다. 다른 카드를 입력하거나 다른 결제 수단을 이용해 주십시오.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "올바른 형식의 값을 입력하십시오";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "유효한 이메일 주소를 입력하십시오";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "유효한 만료일을 입력하십시오";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "CPF 또는 CNPJ 번호에 대한 11 또는 14개 문자의 유효한 값을 입력하십시오.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "귀하의 지불 참조 번호:";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "특별 ID";
 "gc.general.paymentProducts.51.name" = "은행 송금(브라질)(Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "예금주명";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "계좌 번호";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "은행 수표 숫자";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "은행 코드";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "분류 코드(Sort code)";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "귀하의 지불 참조 번호:";
-"gc.general.paymentProducts.53.name" = "은행 송금";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "귀하의 지불 참조 번호:";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "참조 번호";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "휴대전화번호";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay 할부결제";

@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "श्रीमती";
 "gc.general.paymentProductFields.title.placeholder" = "टाइटल";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "आपके द्वारा डाला गया कार्ड सपोर्टेड नहीं है। कृपया कोई अन्य कार्ड डालें करें या भुगतान की अन्य विधि को आज़माएं।";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "कृपया सही स्वरूप का मान प्रदान करें";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "कृपया एक मान्य ईमेल पता प्रदान करें";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "कृपया एक मान्य समाप्ति तारीख प्रदान करें";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "कृपया अपने सीपीएफ या सीएनपीजे नंबर के लिए 11 या 14 वर्णों का वैध मान प्रदान करें।";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "आपका भुगतान संदर्भ है";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "विशेष ID";
 "gc.general.paymentProducts.51.name" = "बैंक ट्रांसफर ब्राजील (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "खाता धारक का नाम";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "खाता संख्या";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "बैंक चैक अंक";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "बैंक कोड";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "कोड छाँटें";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "आपका भुगतान संदर्भ है";
-"gc.general.paymentProducts.53.name" = "बैंक ट्रांसफर";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "आपका भुगतान संदर्भ है";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "संदर्भ संख्या";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "मोबाइल फोन संख्या";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay किस्तें";

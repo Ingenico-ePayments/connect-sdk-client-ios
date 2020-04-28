@@ -57,7 +57,19 @@ respective headers for the terms of their individual licenses.
 
 *** Notices for AFNetworking library
 
-Copyright (c) 2013-2015 AFNetworking (http://afnetworking.com)
+Parts of the AFNetworking and AFNetworkActivityLogger library have been
+used in the following files:
+
+- ICNetworkingActivityConsoleLogger.h
+- ICNetworkingActivityConsoleLogger.m
+- ICNetworkingActivityLogger.h
+- ICNetworkingActivityLogger.m
+- ICNetworkingActivityLoggerProtocol.h 
+- ICNetworkingWrapper.h
+- ICNetworkingWrapper.m
+
+
+Copyright (c) 2018 AFNetworking (http://afnetworking.com/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

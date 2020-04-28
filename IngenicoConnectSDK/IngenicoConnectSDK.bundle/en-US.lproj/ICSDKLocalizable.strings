@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "Mrs";
 "gc.general.paymentProductFields.title.placeholder" = "Title";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "The card you entered is not supported. Please enter another card or try another payment method.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Please provide the name as exactly written on your card";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Please provide a valid email address";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Please provide a valid expiration date";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Please provide a valid value of 11 or 14 characters for your CPF or CNPJ number.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Your payment reference is";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Special ID";
 "gc.general.paymentProducts.51.name" = "Bank Transfer Brazil (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Account holder name";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Account number";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Bank cheque number";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Bank code";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Sort code";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Your payment reference is";
-"gc.general.paymentProducts.53.name" = "Bank transfer";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Your payment reference is";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Reference number";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Cell phone number";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "AfterPay Installments";

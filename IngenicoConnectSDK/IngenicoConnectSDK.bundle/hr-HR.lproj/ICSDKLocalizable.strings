@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "";
 "gc.general.paymentProductFields.title.placeholder" = "Titula";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Unesena kartica nije podržana. Molimo vas da unesete drugu karticu ili odaberete drugi način plaćanja.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Molimo da unesete vrijednost u ispravnom formatu";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Molimo da unesete valjanu adresu e-pošte";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Molimo da unesete važeći rok valjanosti";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Navedite važeću vrijednost od 11 ili 14 znakova za svoj CPF ili CNPJ broj.";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Vaš poziv na broj je";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Poseban identifikacijski broj";
 "gc.general.paymentProducts.51.name" = "Bank Transfer Brazil (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Ime nositelja računa";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Broj računa";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Broj bankovnog čeka";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Kôd banke";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Oznaka banke";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Vaš poziv na broj je";
-"gc.general.paymentProducts.53.name" = "Bank Transfer Argentina";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Vaš poziv na broj je";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Poziv na broj";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Broj mobilnog telefona";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "obročno plaćanje AfterPay";

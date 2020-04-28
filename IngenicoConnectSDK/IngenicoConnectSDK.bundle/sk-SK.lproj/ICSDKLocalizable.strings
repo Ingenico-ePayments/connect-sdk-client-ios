@@ -211,6 +211,7 @@
 "gc.general.paymentProductFields.title.options.mrs" = "";
 "gc.general.paymentProductFields.title.placeholder" = "Oslovenie";
 "gc.general.paymentProductFields.validationErrors.allowedInContext.label" = "Zadaná karta nie je podporovaná. Vložte inú kartu alebo skúste iný spôsob karty.";
+"gc.general.paymentProductFields.validationErrors.cardholderName.label" = "Zadajte hodnotu správneho formátu";
 "gc.general.paymentProductFields.validationErrors.emailAddress.label" = "Zadajte platnú e-mailovú adresu";
 "gc.general.paymentProductFields.validationErrors.expirationDate.label" = "Zadajte platný dátum vypršania platnosti";
 "gc.general.paymentProductFields.validationErrors.fiscalNumberBoletoBancario.label" = "Zadajte platné číslo CPF alebo CNPJ (požadovaná dĺžka je 11, resp. 14 znakov).";
@@ -375,13 +376,6 @@
 "gc.general.paymentProducts.51.instructionFields.PAYMENTREFERENCE.label" = "Referencia vašej platby –";
 "gc.general.paymentProducts.51.instructionFields.SPECIALID.label" = "Špeciálne ID";
 "gc.general.paymentProducts.51.name" = "Bankový prevod, Brazília (Depósito Identificado)";
-"gc.general.paymentProducts.53.instructionFields.ACCOUNTHOLDER.label" = "Meno majiteľa účtu";
-"gc.general.paymentProducts.53.instructionFields.BANKACCOUNTNUMBER.label" = "Číslo účtu";
-"gc.general.paymentProducts.53.instructionFields.BANKCHECKDIGIT.label" = "Číslo bankového šeku";
-"gc.general.paymentProducts.53.instructionFields.BANKCODE.label" = "Kód banky";
-"gc.general.paymentProducts.53.instructionFields.BRANCHCODE.label" = "Kód zoradenia";
-"gc.general.paymentProducts.53.instructionFields.PAYMENTREFERENCE.label" = "Referencia vašej platby –";
-"gc.general.paymentProducts.53.name" = "Bankový prevod, Argentína";
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Referencia vašej platby –";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Referenčné číslo";
@@ -437,6 +431,7 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.label" = "Číslo mobilného telefónu";
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
+"gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.9000.name" = "Splátky AfterPay";

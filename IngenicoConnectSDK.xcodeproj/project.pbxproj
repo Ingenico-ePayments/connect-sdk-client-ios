@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,7 +35,7 @@
 		73C690391F56CDD600560FD1 /* ICDisplayElementsConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C690341F56CDD600560FD1 /* ICDisplayElementsConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73C6903A1F56CDD600560FD1 /* ICDisplayElementsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C690351F56CDD600560FD1 /* ICDisplayElementsConverter.m */; };
 		73C6903B1F56CDD600560FD1 /* ICDisplayElementType.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C690361F56CDD600560FD1 /* ICDisplayElementType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4C369C91DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699A1DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m */; };
+		B4C369C91DE754C100C50450 /* ICNetworkingWrapperTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699A1DE754C100C50450 /* ICNetworkingWrapperTestCase.m */; };
 		B4C369CA1DE754C100C50450 /* ICStubUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699D1DE754C100C50450 /* ICStubUtil.m */; };
 		B4C369CB1DE754C100C50450 /* ICJOSEEncryptorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699F1DE754C100C50450 /* ICJOSEEncryptorTestCase.m */; };
 		B4C369CC1DE754C100C50450 /* ICEncryptorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C369A01DE754C100C50450 /* ICEncryptorTestCase.m */; };
@@ -85,8 +85,6 @@
 		B4D77DD01DE72F4E00F7B1C1 /* ICAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D77DC61DE72F4E00F7B1C1 /* ICAssetManager.m */; };
 		B4D77DD11DE72F4E00F7B1C1 /* ICUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77DC71DE72F4E00F7B1C1 /* ICUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4D77DD21DE72F4E00F7B1C1 /* ICUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D77DC81DE72F4E00F7B1C1 /* ICUtil.m */; };
-		B4D77DE01DE7300800F7B1C1 /* ICAFNetworkingWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77DDE1DE7300800F7B1C1 /* ICAFNetworkingWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4D77DE11DE7300800F7B1C1 /* ICAFNetworkingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D77DDF1DE7300800F7B1C1 /* ICAFNetworkingWrapper.m */; };
 		B4D77DE41DE7301200F7B1C1 /* ICJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77DE21DE7301200F7B1C1 /* ICJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4D77DE51DE7301200F7B1C1 /* ICJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D77DE31DE7301200F7B1C1 /* ICJSON.m */; };
 		B4D77DE81DE7301900F7B1C1 /* ICBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77DE61DE7301900F7B1C1 /* ICBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -238,8 +236,15 @@
 		B4D77F1A1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77EDA1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4D77F1B1DE731D300F7B1C1 /* ICPaymentProductNetworks.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77EDB1DE731D300F7B1C1 /* ICPaymentProductNetworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4D77F1C1DE731D300F7B1C1 /* ICPaymentProductNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D77EDC1DE731D300F7B1C1 /* ICPaymentProductNetworks.m */; };
-		B9B900382330DBF8007993DD /* AFNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B900362330DBF8007993DD /* AFNetworkActivityLogger.framework */; platformFilter = ios; };
-		B9B900392330DBF8007993DD /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B900372330DBF8007993DD /* AFNetworking.framework */; platformFilter = ios; };
+		B91E15FE241FADF200E28E4B /* ICNetworkingActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B91E15FD241FADF200E28E4B /* ICNetworkingActivityLogger.m */; };
+		B9BEFF452422B69E00D5039D /* ICAFNetworkingWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B9BEFF442422B69900D5039D /* ICAFNetworkingWrapper.h */; };
+		B9BEFF462422B6A600D5039D /* ICNetworkingActivityLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = B91E15FF241FAE5C00E28E4B /* ICNetworkingActivityLogger.h */; };
+		B9BEFF472422B6AB00D5039D /* ICNetworkingActivityConsoleLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E71D46241FDAA700EFCFEB /* ICNetworkingActivityConsoleLogger.h */; };
+		B9BEFF482422B6B000D5039D /* ICNetworkingActivityLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E71D4A241FDBB000EFCFEB /* ICNetworkingActivityLoggerProtocol.h */; };
+		B9BEFF4A2422B6EE00D5039D /* ICAFNetworkingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BEFF492422B6EE00D5039D /* ICAFNetworkingWrapper.m */; };
+		B9D72B64241104BB0020F3F1 /* ICNetworkingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D72B63241104BB0020F3F1 /* ICNetworkingWrapper.m */; };
+		B9D72B66241105430020F3F1 /* ICNetworkingWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B9D72B65241105430020F3F1 /* ICNetworkingWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9E71D48241FDAC700EFCFEB /* ICNetworkingActivityConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E71D47241FDAC700EFCFEB /* ICNetworkingActivityConsoleLogger.m */; };
 		F5353A931E1F978C002A323E /* IngenicoConnectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5353A921E1F978C002A323E /* IngenicoConnectSDK.bundle */; };
 		F5EC6CB01E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h in Headers */ = {isa = PBXBuildFile; fileRef = F5EC6CAE1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5EC6CB11E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EC6CAF1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m */; };
@@ -282,7 +287,7 @@
 		73C690341F56CDD600560FD1 /* ICDisplayElementsConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDisplayElementsConverter.h; sourceTree = "<group>"; };
 		73C690351F56CDD600560FD1 /* ICDisplayElementsConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDisplayElementsConverter.m; sourceTree = "<group>"; };
 		73C690361F56CDD600560FD1 /* ICDisplayElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDisplayElementType.h; sourceTree = "<group>"; };
-		B4C3699A1DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICAFNetworkingWrapperTestCase.m; path = IngenicoConnectSDKTests/ICAFNetworkingWrapperTestCase.m; sourceTree = "<group>"; };
+		B4C3699A1DE754C100C50450 /* ICNetworkingWrapperTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICNetworkingWrapperTestCase.m; path = IngenicoConnectSDKTests/ICNetworkingWrapperTestCase.m; sourceTree = "<group>"; };
 		B4C3699C1DE754C100C50450 /* ICStubUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ICStubUtil.h; path = IngenicoConnectSDKTests/ICStubUtil.h; sourceTree = "<group>"; };
 		B4C3699D1DE754C100C50450 /* ICStubUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICStubUtil.m; path = IngenicoConnectSDKTests/ICStubUtil.m; sourceTree = "<group>"; };
 		B4C3699F1DE754C100C50450 /* ICJOSEEncryptorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICJOSEEncryptorTestCase.m; path = IngenicoConnectSDKTests/ICJOSEEncryptorTestCase.m; sourceTree = "<group>"; };
@@ -337,8 +342,6 @@
 		B4D77DC61DE72F4E00F7B1C1 /* ICAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICAssetManager.m; sourceTree = "<group>"; };
 		B4D77DC71DE72F4E00F7B1C1 /* ICUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUtil.h; sourceTree = "<group>"; };
 		B4D77DC81DE72F4E00F7B1C1 /* ICUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUtil.m; sourceTree = "<group>"; };
-		B4D77DDE1DE7300800F7B1C1 /* ICAFNetworkingWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICAFNetworkingWrapper.h; sourceTree = "<group>"; };
-		B4D77DDF1DE7300800F7B1C1 /* ICAFNetworkingWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICAFNetworkingWrapper.m; sourceTree = "<group>"; };
 		B4D77DE21DE7301200F7B1C1 /* ICJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICJSON.h; sourceTree = "<group>"; };
 		B4D77DE31DE7301200F7B1C1 /* ICJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICJSON.m; sourceTree = "<group>"; };
 		B4D77DE61DE7301900F7B1C1 /* ICBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBase64.h; sourceTree = "<group>"; };
@@ -490,8 +493,15 @@
 		B4D77EDA1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBasicPaymentProductGroup.h; sourceTree = "<group>"; };
 		B4D77EDB1DE731D300F7B1C1 /* ICPaymentProductNetworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPaymentProductNetworks.h; sourceTree = "<group>"; };
 		B4D77EDC1DE731D300F7B1C1 /* ICPaymentProductNetworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPaymentProductNetworks.m; sourceTree = "<group>"; };
-		B9B900362330DBF8007993DD /* AFNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworkActivityLogger.framework; path = Carthage/Build/iOS/AFNetworkActivityLogger.framework; sourceTree = "<group>"; };
-		B9B900372330DBF8007993DD /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		B91E15FD241FADF200E28E4B /* ICNetworkingActivityLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICNetworkingActivityLogger.m; sourceTree = "<group>"; };
+		B91E15FF241FAE5C00E28E4B /* ICNetworkingActivityLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICNetworkingActivityLogger.h; sourceTree = "<group>"; };
+		B9BEFF442422B69900D5039D /* ICAFNetworkingWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICAFNetworkingWrapper.h; sourceTree = "<group>"; };
+		B9BEFF492422B6EE00D5039D /* ICAFNetworkingWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICAFNetworkingWrapper.m; sourceTree = "<group>"; };
+		B9D72B63241104BB0020F3F1 /* ICNetworkingWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICNetworkingWrapper.m; sourceTree = "<group>"; };
+		B9D72B65241105430020F3F1 /* ICNetworkingWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICNetworkingWrapper.h; sourceTree = "<group>"; };
+		B9E71D46241FDAA700EFCFEB /* ICNetworkingActivityConsoleLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICNetworkingActivityConsoleLogger.h; sourceTree = "<group>"; };
+		B9E71D47241FDAC700EFCFEB /* ICNetworkingActivityConsoleLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICNetworkingActivityConsoleLogger.m; sourceTree = "<group>"; };
+		B9E71D4A241FDBB000EFCFEB /* ICNetworkingActivityLoggerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICNetworkingActivityLoggerProtocol.h; sourceTree = "<group>"; };
 		F5353A921E1F978C002A323E /* IngenicoConnectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IngenicoConnectSDK.bundle; sourceTree = "<group>"; };
 		F5EC6CAE1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICValidatorBoletoBancarioRequiredness.h; sourceTree = "<group>"; };
 		F5EC6CAF1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICValidatorBoletoBancarioRequiredness.m; sourceTree = "<group>"; };
@@ -502,8 +512,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B900382330DBF8007993DD /* AFNetworkActivityLogger.framework in Frameworks */,
-				B9B900392330DBF8007993DD /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +538,7 @@
 		B4C3699B1DE754C100C50450 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				B4C3699A1DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m */,
+				B4C3699A1DE754C100C50450 /* ICNetworkingWrapperTestCase.m */,
 			);
 			name = Wrappers;
 			sourceTree = "<group>";
@@ -702,8 +710,11 @@
 		B4D77DD31DE72F9E00F7B1C1 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				B4D77DDE1DE7300800F7B1C1 /* ICAFNetworkingWrapper.h */,
-				B4D77DDF1DE7300800F7B1C1 /* ICAFNetworkingWrapper.m */,
+				B9E71D49241FDB7500EFCFEB /* NetworkingLogger */,
+				B9D72B65241105430020F3F1 /* ICNetworkingWrapper.h */,
+				B9D72B63241104BB0020F3F1 /* ICNetworkingWrapper.m */,
+				B9BEFF442422B69900D5039D /* ICAFNetworkingWrapper.h */,
+				B9BEFF492422B6EE00D5039D /* ICAFNetworkingWrapper.m */,
 			);
 			name = Wrappers;
 			sourceTree = "<group>";
@@ -990,10 +1001,20 @@
 		B9B900352330DBF8007993DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B9B900362330DBF8007993DD /* AFNetworkActivityLogger.framework */,
-				B9B900372330DBF8007993DD /* AFNetworking.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9E71D49241FDB7500EFCFEB /* NetworkingLogger */ = {
+			isa = PBXGroup;
+			children = (
+				B91E15FF241FAE5C00E28E4B /* ICNetworkingActivityLogger.h */,
+				B91E15FD241FADF200E28E4B /* ICNetworkingActivityLogger.m */,
+				B9E71D46241FDAA700EFCFEB /* ICNetworkingActivityConsoleLogger.h */,
+				B9E71D47241FDAC700EFCFEB /* ICNetworkingActivityConsoleLogger.m */,
+				B9E71D4A241FDBB000EFCFEB /* ICNetworkingActivityLoggerProtocol.h */,
+			);
+			name = NetworkingLogger;
 			sourceTree = "<group>";
 		};
 		F5EC6CAD1E678C5C0001E0E6 /* Validators */ = {
@@ -1045,11 +1066,11 @@
 				B4D77DF01DE7302500F7B1C1 /* ICJOSEEncryptor.h in Headers */,
 				B4D77EE31DE731D300F7B1C1 /* ICAccountsOnFile.h in Headers */,
 				B4D77E891DE731B200F7B1C1 /* ICValidationErrorInteger.h in Headers */,
-				B4D77DE01DE7300800F7B1C1 /* ICAFNetworkingWrapper.h in Headers */,
 				B4D77E331DE7305100F7B1C1 /* ICAccountOnFileAttributeStatus.h in Headers */,
 				B4D77EEF1DE731D300F7B1C1 /* ICPaymentItemDisplayHints.h in Headers */,
 				B4D77E161DE7303800F7B1C1 /* ICDirectoryEntryConverter.h in Headers */,
 				B4D77E7D1DE731B200F7B1C1 /* ICValidationErrorRange.h in Headers */,
+				B9BEFF452422B69E00D5039D /* ICAFNetworkingWrapper.h in Headers */,
 				B4D77DF41DE7302E00F7B1C1 /* ICStringFormatter.h in Headers */,
 				B4D77EF11DE731D300F7B1C1 /* ICPaymentProductField.h in Headers */,
 				B4D77E321DE7305100F7B1C1 /* ICEnvironment.h in Headers */,
@@ -1079,6 +1100,7 @@
 				B4D77EF91DE731D300F7B1C1 /* ICValidator.h in Headers */,
 				B4D77E791DE731B200F7B1C1 /* ICValidationError.h in Headers */,
 				B4D77F0B1DE731D300F7B1C1 /* ICAccountOnFileDisplayHints.h in Headers */,
+				B9BEFF482422B6B000D5039D /* ICNetworkingActivityLoggerProtocol.h in Headers */,
 				B4D77EF31DE731D300F7B1C1 /* ICPaymentProductFields.h in Headers */,
 				B4D77DE41DE7301200F7B1C1 /* ICJSON.h in Headers */,
 				B4D77E3B1DE7306E00F7B1C1 /* ICPaymentItem.h in Headers */,
@@ -1087,6 +1109,7 @@
 				B4D77E301DE7305100F7B1C1 /* ICRegion.h in Headers */,
 				B4D77DEE1DE7302500F7B1C1 /* ICEncryptor.h in Headers */,
 				B4D77E5F1DE731A700F7B1C1 /* ICPreparedPaymentRequest.h in Headers */,
+				B9BEFF462422B6A600D5039D /* ICNetworkingActivityLogger.h in Headers */,
 				732F866220051E1200A7DE68 /* ICValidatorTermsAndConditions.h in Headers */,
 				B4D77EE71DE731D300F7B1C1 /* ICPaymentProductFieldDisplayHints.h in Headers */,
 				B4D77F1B1DE731D300F7B1C1 /* ICPaymentProductNetworks.h in Headers */,
@@ -1126,6 +1149,7 @@
 				B4D77E5D1DE731A700F7B1C1 /* ICPaymentRequest.h in Headers */,
 				B4D77E311DE7305100F7B1C1 /* ICIINStatus.h in Headers */,
 				B4D77E0E1DE7303800F7B1C1 /* ICBasicPaymentProductsConverter.h in Headers */,
+				B9BEFF472422B6AB00D5039D /* ICNetworkingActivityConsoleLogger.h in Headers */,
 				73C690391F56CDD600560FD1 /* ICDisplayElementsConverter.h in Headers */,
 				B4D77F1A1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h in Headers */,
 				738E97E41F85280F001C2CFE /* ICThirdPartyStatusResponse.h in Headers */,
@@ -1137,6 +1161,7 @@
 				B4D77E3A1DE7306E00F7B1C1 /* ICBasicPaymentItem.h in Headers */,
 				B4D77E931DE731C100F7B1C1 /* ICPublicKeyResponse.h in Headers */,
 				B4D77E991DE731C900F7B1C1 /* ICIINDetailsResponse.h in Headers */,
+				B9D72B66241105430020F3F1 /* ICNetworkingWrapper.h in Headers */,
 				B4D77E581DE7319E00F7B1C1 /* ICPaymentAmountOfMoney.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1254,14 +1279,10 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AFNetworkActivityLogger.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AFNetworking.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AFNetworkActivityLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1280,6 +1301,7 @@
 				B4D77E8A1DE731B200F7B1C1 /* ICValidationErrorInteger.m in Sources */,
 				B4D77F101DE731D300F7B1C1 /* ICLabelTemplateItem.m in Sources */,
 				73C690381F56CDD600560FD1 /* ICDisplayElement.m in Sources */,
+				B9BEFF4A2422B6EE00D5039D /* ICAFNetworkingWrapper.m in Sources */,
 				B4D77E221DE7303800F7B1C1 /* ICPaymentItemConverter.m in Sources */,
 				B4D77EF61DE731D300F7B1C1 /* ICBasicPaymentProducts.m in Sources */,
 				B4D77E241DE7303800F7B1C1 /* ICPaymentProductGroupConverter.m in Sources */,
@@ -1297,6 +1319,7 @@
 				B4D77E7A1DE731B200F7B1C1 /* ICValidationError.m in Sources */,
 				B4D77E1E1DE7303800F7B1C1 /* ICBasicPaymentProductGroupConverter.m in Sources */,
 				B4D77E8E1DE731B200F7B1C1 /* ICValidationErrorEmailAddress.m in Sources */,
+				B9D72B64241104BB0020F3F1 /* ICNetworkingWrapper.m in Sources */,
 				B4D77EE21DE731D300F7B1C1 /* ICAccountOnFileAttributes.m in Sources */,
 				B4D77EFE1DE731D300F7B1C1 /* ICValidatorFixedList.m in Sources */,
 				B4D77E501DE7319700F7B1C1 /* ICDirectoryEntry.m in Sources */,
@@ -1305,7 +1328,6 @@
 				B4D77E111DE7303800F7B1C1 /* ICBasicPaymentProductConverter.m in Sources */,
 				B4D77E861DE731B200F7B1C1 /* ICValidationErrorRegularExpression.m in Sources */,
 				B4D77F151DE731D300F7B1C1 /* ICBasicPaymentProductGroups.m in Sources */,
-				B4D77DE11DE7300800F7B1C1 /* ICAFNetworkingWrapper.m in Sources */,
 				B4D77EF21DE731D300F7B1C1 /* ICPaymentProductField.m in Sources */,
 				B4D77DEF1DE7302500F7B1C1 /* ICEncryptor.m in Sources */,
 				B4D77EF01DE731D300F7B1C1 /* ICPaymentItemDisplayHints.m in Sources */,
@@ -1347,6 +1369,7 @@
 				B4D77E571DE7319E00F7B1C1 /* ICPaymentAmountOfMoney.m in Sources */,
 				B4D77DF11DE7302500F7B1C1 /* ICJOSEEncryptor.m in Sources */,
 				B4D77F041DE731D300F7B1C1 /* ICValidatorLuhn.m in Sources */,
+				B9E71D48241FDAC700EFCFEB /* ICNetworkingActivityConsoleLogger.m in Sources */,
 				B4D77EE81DE731D300F7B1C1 /* ICPaymentProductFieldDisplayHints.m in Sources */,
 				B4D77EFA1DE731D300F7B1C1 /* ICValidator.m in Sources */,
 				B4D77E601DE731A700F7B1C1 /* ICPreparedPaymentRequest.m in Sources */,
@@ -1359,6 +1382,7 @@
 				B4D77DCC1DE72F4E00F7B1C1 /* ICC2SCommunicator.m in Sources */,
 				B4D77E841DE731B200F7B1C1 /* ICValidationErrorLuhn.m in Sources */,
 				B4D77EEC1DE731D300F7B1C1 /* ICBasicPaymentProduct.m in Sources */,
+				B91E15FE241FADF200E28E4B /* ICNetworkingActivityLogger.m in Sources */,
 				B4D77E171DE7303800F7B1C1 /* ICDirectoryEntryConverter.m in Sources */,
 				732F866920052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m in Sources */,
 				73C6903A1F56CDD600560FD1 /* ICDisplayElementsConverter.m in Sources */,
@@ -1373,7 +1397,7 @@
 				B4C369CF1DE754C100C50450 /* ICStringFormatterTestCase.m in Sources */,
 				B4C369D21DE754C100C50450 /* ICPaymentProductConverterTestCase.m in Sources */,
 				B4C369D61DE754C100C50450 /* ICPaymentRequestTestCase.m in Sources */,
-				B4C369C91DE754C100C50450 /* ICAFNetworkingWrapperTestCase.m in Sources */,
+				B4C369C91DE754C100C50450 /* ICNetworkingWrapperTestCase.m in Sources */,
 				B4C369D31DE754C100C50450 /* ICBasicPaymentGroupConverterTestCase.m in Sources */,
 				B4C369DD1DE754C100C50450 /* ICPaymentProductTestCase.m in Sources */,
 				B4C369D81DE754C100C50450 /* ICAccountOnFileAttributesTestCase.m in Sources */,
@@ -1506,8 +1530,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1532,11 +1555,7 @@
 				INFOPLIST_FILE = IngenicoConnectSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ingenicoconnect.IngenicoConnectSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1561,11 +1580,7 @@
 				INFOPLIST_FILE = IngenicoConnectSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ingenicoconnect.IngenicoConnectSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1579,11 +1594,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IngenicoConnectSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ingenicoconnect.IngenicoConnectSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "IngenicoConnectSDKTests/IngenicoConnectSDKTests-Bridging-Header.h";
@@ -1597,11 +1608,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IngenicoConnectSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ingenicoconnect.IngenicoConnectSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "IngenicoConnectSDKTests/IngenicoConnectSDKTests-Bridging-Header.h";
