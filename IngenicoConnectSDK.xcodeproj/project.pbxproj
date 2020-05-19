@@ -236,6 +236,7 @@
 		B4D77F1A1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77EDA1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4D77F1B1DE731D300F7B1C1 /* ICPaymentProductNetworks.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D77EDB1DE731D300F7B1C1 /* ICPaymentProductNetworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4D77F1C1DE731D300F7B1C1 /* ICPaymentProductNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D77EDC1DE731D300F7B1C1 /* ICPaymentProductNetworks.m */; };
+		B91B3F1D245085F300678F89 /* ICC2SCommunicatorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B91B3F1B2450859800678F89 /* ICC2SCommunicatorTestCase.m */; };
 		B91E15FE241FADF200E28E4B /* ICNetworkingActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B91E15FD241FADF200E28E4B /* ICNetworkingActivityLogger.m */; };
 		B9BEFF452422B69E00D5039D /* ICAFNetworkingWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B9BEFF442422B69900D5039D /* ICAFNetworkingWrapper.h */; };
 		B9BEFF462422B6A600D5039D /* ICNetworkingActivityLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = B91E15FF241FAE5C00E28E4B /* ICNetworkingActivityLogger.h */; };
@@ -493,6 +494,7 @@
 		B4D77EDA1DE731D300F7B1C1 /* ICBasicPaymentProductGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBasicPaymentProductGroup.h; sourceTree = "<group>"; };
 		B4D77EDB1DE731D300F7B1C1 /* ICPaymentProductNetworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPaymentProductNetworks.h; sourceTree = "<group>"; };
 		B4D77EDC1DE731D300F7B1C1 /* ICPaymentProductNetworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPaymentProductNetworks.m; sourceTree = "<group>"; };
+		B91B3F1B2450859800678F89 /* ICC2SCommunicatorTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ICC2SCommunicatorTestCase.m; path = IngenicoConnectSDKTests/ICC2SCommunicatorTestCase.m; sourceTree = "<group>"; };
 		B91E15FD241FADF200E28E4B /* ICNetworkingActivityLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICNetworkingActivityLogger.m; sourceTree = "<group>"; };
 		B91E15FF241FAE5C00E28E4B /* ICNetworkingActivityLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICNetworkingActivityLogger.h; sourceTree = "<group>"; };
 		B9BEFF442422B69900D5039D /* ICAFNetworkingWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICAFNetworkingWrapper.h; sourceTree = "<group>"; };
@@ -699,6 +701,7 @@
 				B4C369AE1DE754C100C50450 /* Converters */,
 				B4C369C01DE754C100C50450 /* Models */,
 				B4C369C81DE754C100C50450 /* Supporting Files */,
+				B91B3F1B2450859800678F89 /* ICC2SCommunicatorTestCase.m */,
 				B4C369EE1DE866E300C50450 /* ICC2SCommunicatorConfigurationTestCase.m */,
 				B4C369EF1DE866E300C50450 /* ICUtilTestCase.m */,
 				B4C369F01DE866E300C50450 /* IngenicoConnectSDKTests-Bridging-Header.h */,
@@ -1428,6 +1431,7 @@
 				B4C369CD1DE754C100C50450 /* ICJSONTestCase.m in Sources */,
 				B4C369E31DE754C100C50450 /* ICValidatorLuhnTestCase.m in Sources */,
 				B4C369D41DE754C100C50450 /* ICPaymentGroupConverterTestCase.m in Sources */,
+				B91B3F1D245085F300678F89 /* ICC2SCommunicatorTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

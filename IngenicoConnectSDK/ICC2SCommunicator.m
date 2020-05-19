@@ -241,8 +241,7 @@
 - (void)paymentProductIdByPartialCreditCardNumber:(NSString *)partialCreditCardNumber context:(ICPaymentContext *)context success:(void (^)(ICIINDetailsResponse *iinDetailsResponse))success failure:(void (^)(NSError *error))failure {
     NSString *URL = [NSString stringWithFormat:@"%@/%@/services/getIINdetails", [self baseURL], self.configuration.customerId];
 
-    int max = (int) MIN(partialCreditCardNumber.length, 6);
-    NSString *trimmedPartialCreditCardNumber = [partialCreditCardNumber substringToIndex:max];
+    NSString *trimmedPartialCreditCardNumber = [self getIINDigitsFrom:partialCreditCardNumber];
 
     NSDictionary *parameters;
     ICPaymentContextConverter *converter = [[ICPaymentContextConverter alloc] init];
@@ -263,7 +262,17 @@
     } failure:^(NSError *error) {
         failure(error);
     }];
+}
 
+- (NSString *)getIINDigitsFrom:(NSString *)partialCreditCardNumber {
+    int max;
+    if (partialCreditCardNumber.length >= 8) {
+     max = 8;
+    }
+    else {
+     max = (int) MIN(partialCreditCardNumber.length, 6);
+    }
+    return [partialCreditCardNumber substringToIndex:max];
 }
 
 - (void)convertAmount:(long)amountInCents withSource:(NSString *)source target:(NSString *)target success:(void (^)(long convertedAmountInCents))success failure:(void (^)(NSError *error))failure
