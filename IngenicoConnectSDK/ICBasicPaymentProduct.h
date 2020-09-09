@@ -25,6 +25,7 @@
 @property (nonatomic) BOOL allowsTokenization;
 @property (nonatomic) BOOL allowsRecurring;
 @property (nonatomic) BOOL autoTokenized;
+@property (nonatomic) BOOL allowsInstallments;
 
 @property (nonatomic) NSString *paymentMethod;
 @property (nonatomic) NSString *paymentProductGroup;

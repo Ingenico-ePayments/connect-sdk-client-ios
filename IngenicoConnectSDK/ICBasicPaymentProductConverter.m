@@ -23,6 +23,7 @@
     basicProduct.allowsRecurring = [[rawBasicProduct objectForKey:@"allowsRecurring"] boolValue];
     basicProduct.allowsTokenization = [[rawBasicProduct objectForKey:@"allowsTokenization"] boolValue];
     basicProduct.autoTokenized = [[rawBasicProduct objectForKey:@"autoTokenized"] boolValue];
+    basicProduct.allowsInstallments = [[rawBasicProduct objectForKey:@"allowsInstallments"] boolValue];
     basicProduct.paymentMethod = [rawBasicProduct objectForKey:@"paymentMethod"];
     basicProduct.paymentProductGroup = [rawBasicProduct objectForKey:@"paymentProductGroup"];
 
