@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) ICPaymentItemDisplayHints *displayHints;
 @property (strong, nonatomic) ICAccountsOnFile *accountsOnFile;
+@property (nonatomic, strong) NSString *acquirerCountry;
 @property (nonatomic) BOOL allowsTokenization;
 @property (nonatomic) BOOL allowsRecurring;
 @property (nonatomic) BOOL autoTokenized;

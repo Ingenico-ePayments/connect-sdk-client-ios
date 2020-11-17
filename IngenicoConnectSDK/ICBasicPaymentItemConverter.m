@@ -28,6 +28,7 @@
 
     [self setPaymentProductDisplayHints:paymentItem.displayHints JSON:[rawPaymentItem objectForKey:@"displayHints"]];
     [self setAccountsOnFile:paymentItem.accountsOnFile JSON:[rawPaymentItem objectForKey:@"accountsOnFile"]];
+    paymentItem.acquirerCountry = [rawPaymentItem objectForKey:@"acquirerCountry"];
 }
 
 - (void)setPaymentProductDisplayHints:(ICPaymentItemDisplayHints *)displayHints JSON:(NSDictionary *)rawDisplayHints

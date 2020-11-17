@@ -39,6 +39,7 @@
          "paymentProductId":1
       }
    ],
+   "acquirerCountry":"NL",
    "allowsRecurring":true,
    "allowsTokenization":true,
    "displayHints":{  

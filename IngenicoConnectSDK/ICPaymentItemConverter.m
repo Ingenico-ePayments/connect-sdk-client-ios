@@ -25,6 +25,7 @@
 #import  "ICDisplayElement.h"
 #import  "ICValidatorTermsAndConditions.h"
 #import  "ICValidatorIBAN.h"
+#import  "ICValidatorResidentIdNumber.h"
 @implementation ICPaymentItemConverter {
 
 }
@@ -223,6 +224,10 @@
         validator = [self validatorBoletoBancarioRequirednessFromJSON:[rawValidators objectForKey:@"boletoBancarioRequiredness"]];
         [validators.validators addObject:validator];
         validators.containsSomeTimesRequiredValidator = YES;
+    }
+    if ([rawValidators objectForKey:@"residentIdNumber"] != nil) {
+        validator = [[ICValidatorResidentIdNumber alloc] init];
+        [validators.validators addObject:validator];
     }
 }
 

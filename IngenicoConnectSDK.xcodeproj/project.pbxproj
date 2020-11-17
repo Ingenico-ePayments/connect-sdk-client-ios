@@ -35,6 +35,10 @@
 		73C690391F56CDD600560FD1 /* ICDisplayElementsConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C690341F56CDD600560FD1 /* ICDisplayElementsConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73C6903A1F56CDD600560FD1 /* ICDisplayElementsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C690351F56CDD600560FD1 /* ICDisplayElementsConverter.m */; };
 		73C6903B1F56CDD600560FD1 /* ICDisplayElementType.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C690361F56CDD600560FD1 /* ICDisplayElementType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74A17216251C9EFE004C23AA /* ICValidatorResidentIdNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A17215251C9EFE004C23AA /* ICValidatorResidentIdNumber.m */; };
+		74A17218251C9F6E004C23AA /* ICValidatorResidentIdNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A17217251C9F6E004C23AA /* ICValidatorResidentIdNumber.h */; };
+		74A1721B251CA458004C23AA /* ICValidatorResidentIdNumberTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A17219251CA454004C23AA /* ICValidatorResidentIdNumberTestCase.m */; };
+		74A1721D251CD6F7004C23AA /* ICResidentIdNumberError.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A1721C251CD6F7004C23AA /* ICResidentIdNumberError.m */; };
 		B4C369C91DE754C100C50450 /* ICNetworkingWrapperTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699A1DE754C100C50450 /* ICNetworkingWrapperTestCase.m */; };
 		B4C369CA1DE754C100C50450 /* ICStubUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699D1DE754C100C50450 /* ICStubUtil.m */; };
 		B4C369CB1DE754C100C50450 /* ICJOSEEncryptorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699F1DE754C100C50450 /* ICJOSEEncryptorTestCase.m */; };
@@ -288,6 +292,11 @@
 		73C690341F56CDD600560FD1 /* ICDisplayElementsConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDisplayElementsConverter.h; sourceTree = "<group>"; };
 		73C690351F56CDD600560FD1 /* ICDisplayElementsConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDisplayElementsConverter.m; sourceTree = "<group>"; };
 		73C690361F56CDD600560FD1 /* ICDisplayElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDisplayElementType.h; sourceTree = "<group>"; };
+		74A17215251C9EFE004C23AA /* ICValidatorResidentIdNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICValidatorResidentIdNumber.m; sourceTree = "<group>"; };
+		74A17217251C9F6E004C23AA /* ICValidatorResidentIdNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICValidatorResidentIdNumber.h; sourceTree = "<group>"; };
+		74A17219251CA454004C23AA /* ICValidatorResidentIdNumberTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICValidatorResidentIdNumberTestCase.m; sourceTree = "<group>"; };
+		74A1721C251CD6F7004C23AA /* ICResidentIdNumberError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICResidentIdNumberError.m; sourceTree = "<group>"; };
+		74A1721E251CD79D004C23AA /* ICResidentIdNumberError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICResidentIdNumberError.h; sourceTree = "<group>"; };
 		B4C3699A1DE754C100C50450 /* ICNetworkingWrapperTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICNetworkingWrapperTestCase.m; path = IngenicoConnectSDKTests/ICNetworkingWrapperTestCase.m; sourceTree = "<group>"; };
 		B4C3699C1DE754C100C50450 /* ICStubUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ICStubUtil.h; path = IngenicoConnectSDKTests/ICStubUtil.h; sourceTree = "<group>"; };
 		B4C3699D1DE754C100C50450 /* ICStubUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICStubUtil.m; path = IngenicoConnectSDKTests/ICStubUtil.m; sourceTree = "<group>"; };
@@ -622,6 +631,7 @@
 				B4C369BF1DE754C100C50450 /* ICValidatorEmailAddressTestCase.m */,
 				733CCFA620484847008099C5 /* ICValidatorIBAN.h */,
 				733CCFA720484847008099C5 /* ICValidatorIBAN.m */,
+				74A17219251CA454004C23AA /* ICValidatorResidentIdNumberTestCase.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -909,6 +919,8 @@
 				B4D77E781DE731B200F7B1C1 /* ICValidationErrorAllowed.h */,
 				732F866620052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.h */,
 				732F866720052FCA00A7DE68 /* ICValidationErrorTermsAndConditions.m */,
+				74A1721C251CD6F7004C23AA /* ICResidentIdNumberError.m */,
+				74A1721E251CD79D004C23AA /* ICResidentIdNumberError.h */,
 			);
 			name = ValidationErrors;
 			sourceTree = "<group>";
@@ -1047,6 +1059,8 @@
 				F5EC6CAF1E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m */,
 				732F866020051E1200A7DE68 /* ICValidatorTermsAndConditions.h */,
 				732F866120051E1200A7DE68 /* ICValidatorTermsAndConditions.m */,
+				74A17215251C9EFE004C23AA /* ICValidatorResidentIdNumber.m */,
+				74A17217251C9F6E004C23AA /* ICValidatorResidentIdNumber.h */,
 			);
 			name = Validators;
 			sourceTree = "<group>";
@@ -1146,6 +1160,7 @@
 				B4D77E7B1DE731B200F7B1C1 /* ICValidationErrorLength.h in Headers */,
 				F5EC6CB01E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.h in Headers */,
 				B4D77EFB1DE731D300F7B1C1 /* ICValidatorExpirationDate.h in Headers */,
+				74A17218251C9F6E004C23AA /* ICValidatorResidentIdNumber.h in Headers */,
 				B4D77F161DE731D300F7B1C1 /* ICBasicPaymentProductGroups.h in Headers */,
 				B4D77E1D1DE7303800F7B1C1 /* ICBasicPaymentItemConverter.h in Headers */,
 				B4D77E4F1DE7319700F7B1C1 /* ICDirectoryEntry.h in Headers */,
@@ -1332,6 +1347,7 @@
 				B4D77E861DE731B200F7B1C1 /* ICValidationErrorRegularExpression.m in Sources */,
 				B4D77F151DE731D300F7B1C1 /* ICBasicPaymentProductGroups.m in Sources */,
 				B4D77EF21DE731D300F7B1C1 /* ICPaymentProductField.m in Sources */,
+				74A17216251C9EFE004C23AA /* ICValidatorResidentIdNumber.m in Sources */,
 				B4D77DEF1DE7302500F7B1C1 /* ICEncryptor.m in Sources */,
 				B4D77EF01DE731D300F7B1C1 /* ICPaymentItemDisplayHints.m in Sources */,
 				B4D77EF41DE731D300F7B1C1 /* ICPaymentProductFields.m in Sources */,
@@ -1353,6 +1369,7 @@
 				B4D77E881DE731B200F7B1C1 /* ICValidationErrorIsRequired.m in Sources */,
 				7312C64420502E47002496A5 /* ICValidationErrorIBAN.m in Sources */,
 				B4D77E201DE7303800F7B1C1 /* ICPaymentProductGroupsConverter.m in Sources */,
+				74A1721D251CD6F7004C23AA /* ICResidentIdNumberError.m in Sources */,
 				B4D77DE51DE7301200F7B1C1 /* ICJSON.m in Sources */,
 				B4D77E131DE7303800F7B1C1 /* ICPaymentProductConverter.m in Sources */,
 				B4D77EE61DE731D300F7B1C1 /* ICDataRestrictions.m in Sources */,
@@ -1399,6 +1416,7 @@
 			files = (
 				B4C369CF1DE754C100C50450 /* ICStringFormatterTestCase.m in Sources */,
 				B4C369D21DE754C100C50450 /* ICPaymentProductConverterTestCase.m in Sources */,
+				74A1721B251CA458004C23AA /* ICValidatorResidentIdNumberTestCase.m in Sources */,
 				B4C369D61DE754C100C50450 /* ICPaymentRequestTestCase.m in Sources */,
 				B4C369C91DE754C100C50450 /* ICNetworkingWrapperTestCase.m in Sources */,
 				B4C369D31DE754C100C50450 /* ICBasicPaymentGroupConverterTestCase.m in Sources */,

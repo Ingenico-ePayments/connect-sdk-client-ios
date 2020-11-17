@@ -3,6 +3,7 @@
     "accountsOnFile" : [ ],
     "allowsTokenization" : true,
     "autoTokenized" : false,
+    "acquirerCountry" : "NL",
     "displayHints" : {
       "displayOrder" : 2147483647,
       "label" : "Cards",

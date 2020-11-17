@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) ICPaymentItemDisplayHints *displayHints;
 @property (nonatomic, strong) ICAccountsOnFile *accountsOnFile;
+@property (nonatomic, strong) NSString *acquirerCountry;
 
 
 - (void)setStringFormatter:(ICStringFormatter *)stringFormatter;
