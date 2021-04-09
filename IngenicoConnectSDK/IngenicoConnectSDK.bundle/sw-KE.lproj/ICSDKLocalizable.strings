@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Onyesha upya hali ya malipo";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Bofya kitufe hapa chini ili uonyeshe upya hali yako ya malipo.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ukishindwa kulipa ukitumia mbinu ya malipo iliyo hapo juu, tafadhali gusa 'Ghairi' kisha uchague bidhaa nyingine ya malipo ili ukamilishe malipo yako.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Jina la mkaazi ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Jina la mkaazi ";

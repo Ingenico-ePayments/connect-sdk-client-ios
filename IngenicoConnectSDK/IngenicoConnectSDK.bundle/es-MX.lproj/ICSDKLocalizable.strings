@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Actualizar el estado de pago";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Haga clic en el botón de abajo para actualizar el estado de su pago.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Si no puede pagar con el método anterior, toque la opción 'Cancel' y seleccione otro producto de pago para completar la transacción.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Nombre del Residente ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Nombre del Residente ";

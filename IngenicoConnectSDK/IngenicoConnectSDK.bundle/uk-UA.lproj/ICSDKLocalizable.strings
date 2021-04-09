@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Оновити статус платежу";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Натисніть кнопку нижче, щоб оновити статус платежу.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Якщо вам не вдається здійснити оплату за допомогою описаного вище способу, натисніть «Скасувати» та виберіть інший платіжний інструмент для здійснення платежу.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Ім’я резидента ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Ім’я резидента ";

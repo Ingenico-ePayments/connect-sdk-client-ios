@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Obnoviť stav platby";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Kliknite na nižšie uvedené tlačidlo a obnovte si stav platby.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ak sa nedarí vykonať platbu pomocou spôsobu platby uvedeného vyššie, ťuknite na položku „Cancel“ (Zrušiť) a vyberte inú možnosť platby.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Meno rezidenta ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Meno rezidenta ";

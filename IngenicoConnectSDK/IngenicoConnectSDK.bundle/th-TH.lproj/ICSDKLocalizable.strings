@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "รีเฟรชสถานะการชำระเงิน";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "คลิกปุ่มด้านล่างเพื่อรีเพรชสถานะการชำระเงินของคุณ";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "เมื่อคุณไม่สามารถชำระเงินด้วยวิธีชำระเงินข้างต้นได้ โปรดคลิก “ยกเลิก” และเลือกวิธีการชำระเงินแบบอื่นเพื่อชำระเงินของคุณ";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "ชื่อ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "ชื่อ";

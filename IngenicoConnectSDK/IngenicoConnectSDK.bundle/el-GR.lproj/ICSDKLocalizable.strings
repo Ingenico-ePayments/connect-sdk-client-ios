@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Ανανέωση κατάστασης πληρωμής";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Κάντε κλικ στο παρακάτω κουμπί για να ανανεωθεί η κατάσταση της πληρωμής σας.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Εάν δεν έχετε τη δυνατότητα να πληρώσετε με τον παραπάνω τρόπο πληρωμής, πατήστε «Ακύρωση» και επιλέξτε ένα άλλο μέσο πληρωμής για ολοκληρώσετε την πληρωμή σας.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Όνομα κατοίκου ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Όνομα κατοίκου ";

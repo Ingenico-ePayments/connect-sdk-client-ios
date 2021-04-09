@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Uppdatera betalningsstatus";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Klicka på knappen nedan för att uppdatera din betalningsstatus.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Om du inte kan betala med betalningsmetoden ovan klickar du på ”Avbryt” och väljer en annan betalningsprodukt för att slutföra din betalning.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Den stadigvarande bosatta personens namn ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Den stadigvarande bosatta personens namn ";

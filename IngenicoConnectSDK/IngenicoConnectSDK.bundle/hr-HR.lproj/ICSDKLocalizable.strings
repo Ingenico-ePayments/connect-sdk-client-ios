@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Osvježite status plaćanja";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Odaberite donji gumb za osvježenje statusa plaćanja.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ako ne možete izvršiti uplatu putem prethodnog načina plaćanja, dodirnite„Cancel” („Odustani”) pa odaberite drugi proizvod za plaćanje da biste dovršili plaćanje.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Ime i prezime osobe ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Ime i prezime osobe ";

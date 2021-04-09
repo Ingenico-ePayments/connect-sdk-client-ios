@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "بازآوری وضعیت پرداخت";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "برای بازآوری وضعیت پرداخت خود، بر روی دکمه زیر کلیک کنید.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "اگر نتوانید پرداخت را به روش پرداخت پیش-گفته انجام دهید، باید بر روی «لغو» (Cancel) تلنگر بزنید و روش پرداخت دیگری را برای تکمیل فرآیند پرداخت انتخاب کنید.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "نام فرد مقیم ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "نام فرد مقیم ";

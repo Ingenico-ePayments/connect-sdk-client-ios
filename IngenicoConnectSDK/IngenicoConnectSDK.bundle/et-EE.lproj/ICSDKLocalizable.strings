@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Makse staatuse värskendamine";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Vajutage all olevale nupule, et värskendada oma makse staatust.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Kui te ei saa kirjeldatud maksemeetodit kasutades tasuda, toksake „Cancel“ ja valige makse sooritamiseks muu võimalus.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Residendi nimi ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Residendi nimi ";

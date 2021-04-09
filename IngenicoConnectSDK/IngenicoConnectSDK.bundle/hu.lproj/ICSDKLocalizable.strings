@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "A fizetési állapot frissítése";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Kattintson az alábbi gombra a fizetési állapota frissítéséhez.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ha a fenti fizetési móddal nem tud fizetni, koppintson a „Mégse” elemre, és válasszon másik fizetőterméket a fizetés végrehajtásához.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Lakos neve ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Lakos neve ";

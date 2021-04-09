@@ -433,6 +433,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Ödeme durumunu yenileyin";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Ödeme durumunuzu yenilemek için aşağıdaki düğmeyi tıklayın.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Yukarıda belirtilen ödeme yöntemiyle ödeme yapamıyorsanız lütfen ‘İptal’ düğmesine tıklayın ve başka bir ödeme ürününü seçerek ödemenizi tamamlayın.";
+"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "İkamet edenin adı ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "İkamet edenin adı ";
