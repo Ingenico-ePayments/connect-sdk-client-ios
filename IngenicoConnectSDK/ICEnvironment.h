@@ -9,6 +9,7 @@
 #ifndef IngenicoConnectSDKExample_ICEnvironment_h
 #define IngenicoConnectSDKExample_ICEnvironment_h
 
+DEPRECATED_ATTRIBUTE __deprecated_msg("Use the clientApiUrl and assetUrl returned in the Server to Server Create Client Session API to determine the connection endpoints.")
 typedef enum {
     ICProduction,
     ICPreProduction,

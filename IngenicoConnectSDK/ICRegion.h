@@ -9,6 +9,7 @@
 #ifndef IngenicoConnectSDKExample_ICRegion_h
 #define IngenicoConnectSDKExample_ICRegion_h
 
+DEPRECATED_ATTRIBUTE __deprecated_msg("Use the clientApiUrl and assetUrl returned in the Server to Server Create Client Session API to determine the connection endpoints.")
 typedef enum {
     ICRegionEU,
     ICRegionUS,

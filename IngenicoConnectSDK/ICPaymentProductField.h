@@ -23,7 +23,7 @@
 @property (nonatomic) ICType type;
 @property (strong, nonatomic) NSMutableArray *errors;
 
-- (void)validateValue:(NSString *)value DEPRECATED_ATTRIBUTE;
+- (void)validateValue:(NSString *)value DEPRECATED_ATTRIBUTE __deprecated_msg("Use validateValue:value:forPaymentRequest instead");
 - (void)validateValue:(NSString *)value forPaymentRequest:(ICPaymentRequest *)request;
 
 @end
