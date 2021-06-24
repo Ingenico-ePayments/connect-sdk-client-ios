@@ -240,6 +240,8 @@
 "gc.general.paymentProductFields.validationErrors.residentIdNumber.label" = "请提供您居民身份证上的号码";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "请接受条款和条件";
 "gc.general.paymentProductFields.validationErrors.zip.label" = "请提供格式正确的值";
+"gc.general.paymentProductFields.vpa.label" = "VPA";
+"gc.general.paymentProductFields.vpa.placeholder" = "VPA";
 "gc.general.paymentProductFields.zip.label" = "邮政编码";
 "gc.general.paymentProductFields.zip.placeholder" = "邮政编码";
 "gc.general.paymentProductGroups.cards.name" = "银行卡";
@@ -443,6 +445,9 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.871.name" = "GCash";
+"gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
+"gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
+"gc.general.paymentProducts.875.name" = "DANA";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.885.name" = "Maybank2u";

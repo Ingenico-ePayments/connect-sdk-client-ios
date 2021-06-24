@@ -240,6 +240,8 @@
 "gc.general.paymentProductFields.validationErrors.residentIdNumber.label" = "체류증/거주증에 기재된 숫자를 정확히 입력해 주십시오";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "약관 및 조건에 동의해주십시오";
 "gc.general.paymentProductFields.validationErrors.zip.label" = "올바른 형식의 값을 입력하십시오";
+"gc.general.paymentProductFields.vpa.label" = "VPA";
+"gc.general.paymentProductFields.vpa.placeholder" = "VPA";
 "gc.general.paymentProductFields.zip.label" = "우편번호";
 "gc.general.paymentProductFields.zip.placeholder" = "우편번호";
 "gc.general.paymentProductGroups.cards.name" = "카드";
@@ -443,6 +445,9 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.871.name" = "GCash";
+"gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
+"gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
+"gc.general.paymentProducts.875.name" = "DANA";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.885.name" = "Maybank2u";

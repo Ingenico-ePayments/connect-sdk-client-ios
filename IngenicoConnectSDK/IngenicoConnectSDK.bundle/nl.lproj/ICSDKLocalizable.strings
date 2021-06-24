@@ -240,6 +240,8 @@
 "gc.general.paymentProductFields.validationErrors.residentIdNumber.label" = "Voer het nummer in precies zoals dat op uw identiteitskaart voor ingezetenen vermeld staat.";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "U dient de algemene voorwaarden te accepteren";
 "gc.general.paymentProductFields.validationErrors.zip.label" = "Voer een waarde met het juiste formaat in a.u.b.";
+"gc.general.paymentProductFields.vpa.label" = "VPA";
+"gc.general.paymentProductFields.vpa.placeholder" = "VPA";
 "gc.general.paymentProductFields.zip.label" = "Postcode";
 "gc.general.paymentProductFields.zip.placeholder" = "Postcode";
 "gc.general.paymentProductGroups.cards.name" = "Credit kaarten";
@@ -443,6 +445,9 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.871.name" = "GCash";
+"gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
+"gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
+"gc.general.paymentProducts.875.name" = "DANA";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.885.name" = "Maybank2u";

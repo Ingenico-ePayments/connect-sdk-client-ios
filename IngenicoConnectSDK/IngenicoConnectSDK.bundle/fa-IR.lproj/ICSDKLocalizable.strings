@@ -240,6 +240,8 @@
 "gc.general.paymentProductFields.validationErrors.residentIdNumber.label" = "لطفاً شماره دقیق را مطابق با آنچه روی کارت شناسایی اقامت شما درج شده، بنویسید";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "لطفا شرایط و ضوابط را بپذیرید";
 "gc.general.paymentProductFields.validationErrors.zip.label" = "لطفاً مقداری را با فرمت صحیح اعلام کنید";
+"gc.general.paymentProductFields.vpa.label" = "VPA";
+"gc.general.paymentProductFields.vpa.placeholder" = "VPA";
 "gc.general.paymentProductFields.zip.label" = "کد پستی";
 "gc.general.paymentProductFields.zip.placeholder" = "کد پستی";
 "gc.general.paymentProductGroups.cards.name" = "کارت‌ها";
@@ -443,6 +445,9 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.871.name" = "GCash";
+"gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
+"gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
+"gc.general.paymentProducts.875.name" = "DANA";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.885.name" = "Maybank2u";

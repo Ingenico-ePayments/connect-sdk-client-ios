@@ -240,6 +240,8 @@
 "gc.general.paymentProductFields.validationErrors.residentIdNumber.label" = "Lütfen Mukim Kimlik Kartınızda yazan numarayı girin";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Lütfen şartlar ve koşulları kabul ediniz";
 "gc.general.paymentProductFields.validationErrors.zip.label" = "Lütfen girdiğiniz değerin doğru formatta olmasına dikkat edin";
+"gc.general.paymentProductFields.vpa.label" = "VPA";
+"gc.general.paymentProductFields.vpa.placeholder" = "VPA";
 "gc.general.paymentProductFields.zip.label" = "Posta kodu";
 "gc.general.paymentProductFields.zip.placeholder" = "Posta kodu";
 "gc.general.paymentProductGroups.cards.name" = "Kartlar";
@@ -443,6 +445,9 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.871.name" = "GCash";
+"gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
+"gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
+"gc.general.paymentProducts.875.name" = "DANA";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.885.name" = "Maybank2u";

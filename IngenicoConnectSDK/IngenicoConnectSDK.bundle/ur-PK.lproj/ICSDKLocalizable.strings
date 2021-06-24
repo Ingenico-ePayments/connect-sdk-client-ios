@@ -240,6 +240,8 @@
 "gc.general.paymentProductFields.validationErrors.residentIdNumber.label" = "برائے مہربانی بعینہ وہی نمبر فراہم کریں جو آپ کے ریزیڈنٹ شناختی کارڈ پر تحریر ہو";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "براہ کرم شرائط و ضوابط قبول کریں";
 "gc.general.paymentProductFields.validationErrors.zip.label" = "براہ کرم درست فارمیٹ کی کوئی عددی قیمت فراہم کریں";
+"gc.general.paymentProductFields.vpa.label" = "VPA";
+"gc.general.paymentProductFields.vpa.placeholder" = "VPA";
 "gc.general.paymentProductFields.zip.label" = "ژپ کوڈ";
 "gc.general.paymentProductFields.zip.placeholder" = "ژپ کوڈ";
 "gc.general.paymentProductGroups.cards.name" = "کارڈز";
@@ -443,6 +445,9 @@
 "gc.general.paymentProducts.869.paymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.871.name" = "GCash";
+"gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
+"gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
+"gc.general.paymentProducts.875.name" = "DANA";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.885.name" = "Maybank2u";
