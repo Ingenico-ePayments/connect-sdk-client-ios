@@ -435,6 +435,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "بازآوری وضعیت پرداخت";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "برای بازآوری وضعیت پرداخت خود، بر روی دکمه زیر کلیک کنید.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "اگر نتوانید پرداخت را به روش پرداخت پیش-گفته انجام دهید، باید بر روی «لغو» (Cancel) تلنگر بزنید و روش پرداخت دیگری را برای تکمیل فرآیند پرداخت انتخاب کنید.";
+"gc.general.paymentProducts.864.name" = "Alipay Recurring";
 "gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "نام فرد مقیم ";
@@ -448,6 +449,7 @@
 "gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
 "gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
 "gc.general.paymentProducts.875.name" = "DANA";
+"gc.general.paymentProducts.876.name" = "kakaopay";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.885.name" = "Maybank2u";

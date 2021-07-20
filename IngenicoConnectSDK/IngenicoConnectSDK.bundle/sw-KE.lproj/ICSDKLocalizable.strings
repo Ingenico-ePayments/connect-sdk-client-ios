@@ -435,6 +435,7 @@
 "gc.general.paymentProducts.863.refreshPaymentButtonText" = "Onyesha upya hali ya malipo";
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Bofya kitufe hapa chini ili uonyeshe upya hali yako ya malipo.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ukishindwa kulipa ukitumia mbinu ya malipo iliyo hapo juu, tafadhali gusa 'Ghairi' kisha uchague bidhaa nyingine ya malipo ili ukamilishe malipo yako.";
+"gc.general.paymentProducts.864.name" = "Alipay Recurring";
 "gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Jina la mkaazi ";
@@ -448,6 +449,7 @@
 "gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
 "gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
 "gc.general.paymentProducts.875.name" = "DANA";
+"gc.general.paymentProducts.876.name" = "kakaopay";
 "gc.general.paymentProducts.880.name" = "SafetyPay Banking";
 "gc.general.paymentProducts.882.name" = "NetBanking";
 "gc.general.paymentProducts.885.name" = "Maybank2u";
