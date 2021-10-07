@@ -240,8 +240,8 @@
 "gc.general.paymentProductFields.validationErrors.residentIdNumber.label" = "Veuillez indiquer le numéro exact écrit sur votre carte d'identité de résident";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Veuillez accepter les conditions générales";
 "gc.general.paymentProductFields.validationErrors.zip.label" = "Veuillez indiquer une valeur dans le format correct";
-"gc.general.paymentProductFields.vpa.label" = "VPA";
-"gc.general.paymentProductFields.vpa.placeholder" = "VPA";
+"gc.general.paymentProductFields.virtualPaymentAddress.label" = "VPA";
+"gc.general.paymentProductFields.virtualPaymentAddress.placeholder" = "VPA";
 "gc.general.paymentProductFields.zip.label" = "Code postal";
 "gc.general.paymentProductFields.zip.placeholder" = "Code postal";
 "gc.general.paymentProductGroups.cards.name" = "Cartes";
@@ -374,7 +374,10 @@
 "gc.general.paymentProducts.320.preparing" = "Préparation de Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
+"gc.general.paymentProducts.4001.name" = "Rupay Credit";
+"gc.general.paymentProducts.4002.name" = "Rupay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
+"gc.general.paymentProducts.4101.name" = "UPI";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "Identifiant de facturation";
@@ -436,7 +439,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Cliquez sur le bouton ci-dessous pour actualiser votre statut de paiement.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Si vous êtes dans l’incapacité de payer au moyen de la méthode ci-dessus, veuillez appuyer sur « Annuler » et sélectionner un autre moyen de paiement afin de finaliser la transaction.";
 "gc.general.paymentProducts.864.name" = "Alipay Recurring";
-"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
+"gc.general.paymentProducts.865.name" = "Pay with your bank";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Nom du résident ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Nom du résident ";
@@ -447,6 +450,7 @@
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
+"gc.general.paymentProducts.873.name" = "AlipayHK";
 "gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
 "gc.general.paymentProducts.875.name" = "DANA";
 "gc.general.paymentProducts.876.name" = "kakaopay";

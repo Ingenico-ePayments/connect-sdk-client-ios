@@ -13,5 +13,6 @@
 @interface ICAccountOnFileDisplayHints : NSObject
 
 @property (strong, nonatomic) ICLabelTemplate *labelTemplate;
+@property (strong, nonatomic) NSString *logo;
 
 @end

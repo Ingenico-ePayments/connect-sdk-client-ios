@@ -240,8 +240,8 @@
 "gc.general.paymentProductFields.validationErrors.residentIdNumber.label" = "Lūdzu, norādiet precīzu numuru tieši tā, kā tas rakstīts uz pastāvīgā iedzīvotāja personas apliecības";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Lūdzu, piekrītiet noteikumiem un nosacījumiem";
 "gc.general.paymentProductFields.validationErrors.zip.label" = "Lūdzu, norādiet vērtību pareizā formātā";
-"gc.general.paymentProductFields.vpa.label" = "VPA";
-"gc.general.paymentProductFields.vpa.placeholder" = "VPA";
+"gc.general.paymentProductFields.virtualPaymentAddress.label" = "VPA";
+"gc.general.paymentProductFields.virtualPaymentAddress.placeholder" = "VPA";
 "gc.general.paymentProductFields.zip.label" = "Pasta indekss";
 "gc.general.paymentProductFields.zip.placeholder" = "Pasta indekss";
 "gc.general.paymentProductGroups.cards.name" = "Kartes";
@@ -374,7 +374,10 @@
 "gc.general.paymentProducts.320.preparing" = "Sagatavo Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
+"gc.general.paymentProducts.4001.name" = "Rupay Credit";
+"gc.general.paymentProducts.4002.name" = "Rupay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
+"gc.general.paymentProducts.4101.name" = "UPI";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "Rēķina izsniedzēja ID";
@@ -436,7 +439,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Nospiediet pogu zemāk, lai atjauninātu jūsu maksājuma statusu.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Ja nevarat veikt maksājumu, izmantojot augstāk minēto maksāšanas metodi, klikšķiniet uz „Atcelt” un maksājuma veikšanai izvēlieties citu maksāšanas produktu.";
 "gc.general.paymentProducts.864.name" = "Alipay Recurring";
-"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
+"gc.general.paymentProducts.865.name" = "Pay with your bank";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Rezidenta vārds ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Rezidenta vārds ";
@@ -447,6 +450,7 @@
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
+"gc.general.paymentProducts.873.name" = "AlipayHK";
 "gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
 "gc.general.paymentProducts.875.name" = "DANA";
 "gc.general.paymentProducts.876.name" = "kakaopay";

@@ -240,8 +240,8 @@
 "gc.general.paymentProductFields.validationErrors.residentIdNumber.label" = "Vui lòng cung cấp số chính xác như được ghi trên Thẻ Căn cước Thường trú của bạn";
 "gc.general.paymentProductFields.validationErrors.termsAndConditions.label" = "Xin chấp thuận các điều khoản và điều kiện";
 "gc.general.paymentProductFields.validationErrors.zip.label" = "Vui lòng cung cấp một giá trị đúng định dạng";
-"gc.general.paymentProductFields.vpa.label" = "VPA";
-"gc.general.paymentProductFields.vpa.placeholder" = "VPA";
+"gc.general.paymentProductFields.virtualPaymentAddress.label" = "VPA";
+"gc.general.paymentProductFields.virtualPaymentAddress.placeholder" = "VPA";
 "gc.general.paymentProductFields.zip.label" = "Mã zip";
 "gc.general.paymentProductFields.zip.placeholder" = "Mã zip";
 "gc.general.paymentProductGroups.cards.name" = "Thẻ";
@@ -374,7 +374,10 @@
 "gc.general.paymentProducts.320.preparing" = "Đang chuẩn bị Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
+"gc.general.paymentProducts.4001.name" = "Rupay Credit";
+"gc.general.paymentProducts.4002.name" = "Rupay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
+"gc.general.paymentProducts.4101.name" = "UPI";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "ID người lập hóa đơn";
@@ -436,7 +439,7 @@
 "gc.general.paymentProducts.863.refreshPaymentLabel" = "Bấm nút bên dưới để cập nhật hiện trạng thanh toán của bạn.";
 "gc.general.paymentProducts.863.wrongPaymentMethod" = "Khi bạn không thể thanh toán bằng phương thức thanh toán ở trên, vui lòng chạm 'Hủy' và chọn sản phẩm thanh toán khác để hoàn tất việc thanh toán của bạn.";
 "gc.general.paymentProducts.864.name" = "Alipay Recurring";
-"gc.general.paymentProducts.865.name" = "Instant Bank Transfer";
+"gc.general.paymentProducts.865.name" = "Pay with your bank";
 "gc.general.paymentProducts.869.name" = "China UnionPay";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.label" = "Tên của cư dân ";
 "gc.general.paymentProducts.869.paymentProductFields.residentIdName.placeholder" = "Tên của cư dân ";
@@ -447,6 +450,7 @@
 "gc.general.paymentProducts.870.name" = "Boku";
 "gc.general.paymentProducts.871.name" = "GCash";
 "gc.general.paymentProducts.872.name" = "TrueMoney Wallet";
+"gc.general.paymentProducts.873.name" = "AlipayHK";
 "gc.general.paymentProducts.874.name" = "Touch 'n Go eWallet";
 "gc.general.paymentProducts.875.name" = "DANA";
 "gc.general.paymentProducts.876.name" = "kakaopay";

@@ -58,6 +58,7 @@
 - (void)setAccountOnFileDisplayHints:(ICAccountOnFileDisplayHints *)displayHints JSON:(NSDictionary *)rawDisplayHints
 {
     [self setLabelTemplate:displayHints.labelTemplate JSON:[rawDisplayHints objectForKey:@"labelTemplate"]];
+    displayHints.logo = [[rawDisplayHints objectForKey:@"logo"] stringValue];
 }
 
 - (void)setLabelTemplate:(ICLabelTemplate *)labelTemplate JSON:(NSArray *)rawLabelTemplate
