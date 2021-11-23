@@ -13,10 +13,6 @@
 @implementation ICPaymentContext
 
 - (instancetype)initWithAmountOfMoney:(ICPaymentAmountOfMoney *)amountOfMoney isRecurring:(BOOL)isRecurring countryCode:(NSString *)countryCode {
-    if ([kICCountryCodes rangeOfString:countryCode].location == NSNotFound) {
-        [NSException raise:@"Invalid country code" format:@"Country code %@ is invalid", countryCode];
-    }
-
     self = [super init];
     if (self) {
         self.amountOfMoney = amountOfMoney;
