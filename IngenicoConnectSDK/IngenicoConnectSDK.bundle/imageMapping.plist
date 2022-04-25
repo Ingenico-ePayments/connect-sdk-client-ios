@@ -224,6 +224,16 @@
 	<string>templates/master/global/css/img/ppimages/pp_logo_6001_v1.png</string>
 	<key>pp_logo_6002</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_6002_v1.png</string>
+	<key>pp_logo_6003</key>
+    <string>templates/master/global/css/img/ppimages/pp_logo_6003_v1.png</string>
+    <key>pp_logo_6004</key>
+    <string>templates/master/global/css/img/ppimages/pp_logo_6004_v1.png</string>
+    <key>pp_logo_6005</key>
+    <string>templates/master/global/css/img/ppimages/pp_logo_6005_v1.png</string>
+    <key>pp_logo_6006</key>
+    <string>templates/master/global/css/img/ppimages/pp_logo_6006_v1.png</string>
+    <key>pp_logo_6007</key>
+    <string>templates/master/global/css/img/ppimages/pp_logo_6007_v1.png</string>
 	<key>pp_logo_6101</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_6101_v1.png</string>
 	<key>pp_logo_6102</key>
@@ -240,8 +250,20 @@
 	<string>templates/master/global/css/img/ppimages/pp_logo_6108_v1.png</string>
 	<key>pp_logo_6109</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_6109_v1.png</string>
+	<key>pp_logo_6110</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_6110_v1.png</string>
+	<key>pp_logo_6111</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_6111_v1.png</string>
 	<key>pp_logo_6201</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_6201_v1.png</string>
+	<key>pp_logo_6202</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_6202_v1.png</string>
+	<key>pp_logo_6203</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_6203_v1.png</string>
+	<key>pp_logo_6204</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_6204_v1.png</string>
+	<key>pp_logo_6205</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_6205_v1.png</string>
 	<key>pp_logo_6501</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_6501_v1.png</string>
 	<key>pp_logo_8580</key>

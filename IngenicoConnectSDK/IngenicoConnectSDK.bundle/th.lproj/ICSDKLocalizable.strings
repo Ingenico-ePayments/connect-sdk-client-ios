@@ -423,6 +423,11 @@
 "gc.general.paymentProducts.56.name" = "UnionPay";
 "gc.general.paymentProducts.6001.name" = "Magna";
 "gc.general.paymentProducts.6002.name" = "Redcompra";
+"gc.general.paymentProducts.6003.name" = "Lider";
+"gc.general.paymentProducts.6004.name" = "Creditel";
+"gc.general.paymentProducts.6005.name" = "OCA";
+"gc.general.paymentProducts.6006.name" = "Prex";
+"gc.general.paymentProducts.6007.name" = "Midinero";
 "gc.general.paymentProducts.6101.name" = "Banco do Brasil";
 "gc.general.paymentProducts.6102.name" = "Itaú";
 "gc.general.paymentProducts.6103.name" = "Banrisul";
@@ -432,7 +437,13 @@
 "gc.general.paymentProducts.6107.name" = "PicPay";
 "gc.general.paymentProducts.6108.name" = "Klap";
 "gc.general.paymentProducts.6109.name" = "WebPay";
+"gc.general.paymentProducts.6110.name" = "Nequi";
+"gc.general.paymentProducts.6111.name" = "PSE";
 "gc.general.paymentProducts.6201.name" = "OXXO Pay";
+"gc.general.paymentProducts.6202.name" = "Baloto";
+"gc.general.paymentProducts.6203.name" = "Efecty";
+"gc.general.paymentProducts.6204.name" = "SafetyPay Cash";
+"gc.general.paymentProducts.6205.name" = "PagoEfectivo";
 "gc.general.paymentProducts.6501.name" = "SPEI";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "รหัสอ้างอิงการชำระเงินของท่านคือ";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "หมายเลขอ้างอิง";
