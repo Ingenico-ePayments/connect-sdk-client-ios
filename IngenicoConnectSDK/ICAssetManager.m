@@ -153,13 +153,15 @@
          from image identifiers to paths on the device, and store the new
          image in the documents folder.
          */
-        NSString *newURL = [NSString stringWithFormat:@"%@/%@", baseURL, newPath];
+        NSString *newPathEncoded = [newPath stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        NSString *newURLString = [NSString stringWithFormat:@"%@/%@", baseURL, newPathEncoded];
+        NSString *newURLEncoded = [newURLString stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]];
         NSString *imagePath = [NSString stringWithFormat:@"%@/%@", DocumentsFolderPath, identifier];
         NSError *error = nil;
-        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:newURL]];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString: newURLEncoded]];
         BOOL success = [data writeToFile:imagePath options:0 error:&error];
         if (success == YES && error == nil) {
-            [imageMapping setObject:newPath forKey:identifier];
+            [imageMapping setObject:newPathEncoded forKey:identifier];
         } else if (success == NO) {
             DLog(@"Unable to save image: %@", identifier);
         } else {

@@ -12,6 +12,7 @@
 @interface ICPaymentItemDisplayHints : NSObject
 
 @property (nonatomic) NSUInteger displayOrder;
+@property (strong, nonatomic) NSString *label;
 @property (strong, nonatomic) NSString *logoPath;
 @property (strong, nonatomic) UIImage *logoImage;
 

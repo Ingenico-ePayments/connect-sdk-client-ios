@@ -85,6 +85,7 @@
     hints.mask = [rawHints objectForKey:@"mask"];
     hints.obfuscate = [[rawHints objectForKey:@"obfuscate"] boolValue];
     hints.label = [rawHints objectForKey:@"label"];
+    hints.placeholderLabel = [rawHints objectForKey:@"placeholderLabel"];
     hints.link = [NSURL URLWithString:[rawHints objectForKey:@"link"]];
     [self setPreferredInputType:hints JSON:[rawHints objectForKey:@"preferredInputType"]];
     [self setTooltip:hints.tooltip JSON:[rawHints objectForKey:@"tooltip"]];
@@ -112,6 +113,7 @@
 - (void)setTooltip:(ICTooltip *)tooltip JSON:(NSDictionary *)rawTooltip
 {
     tooltip.imagePath = [rawTooltip objectForKey:@"image"];
+    tooltip.label = [rawTooltip objectForKey:@"label"];
 }
 
 - (void)setFormElement:(ICFormElement *)formElement JSON:(NSDictionary *)rawFormElement
