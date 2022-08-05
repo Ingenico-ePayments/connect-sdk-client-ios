@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Imbas kod QR untuk melengkapkan pembayaran tersebut";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Muat semula status pembayaran";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Klik butang di bawah untuk memuatkan semula status pembayaran anda.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "ID Pengebil";

@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Tambaza msimbo wa QR ili kukamilisha malipo";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Onyesha upya hali ya malipo";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Bofya kitufe hapa chini ili uonyeshe upya hali yako ya malipo.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "Kitambulisho cha mwenye bili";

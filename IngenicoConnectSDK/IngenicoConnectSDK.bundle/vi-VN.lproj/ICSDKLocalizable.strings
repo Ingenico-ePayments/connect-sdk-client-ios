@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Quét mã QR để hoàn tất thanh toán";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Cập nhật hiện trạng thanh toán";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Bấm nút bên dưới để cập nhật hiện trạng thanh toán của bạn.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "ID người lập hóa đơn";

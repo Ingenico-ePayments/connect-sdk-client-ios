@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Skanna QR-koden för att slutföra betalningen";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Uppdatera betalningsstatus";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Klicka på knappen nedan för att uppdatera din betalningsstatus.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "Fakturerar-ID";

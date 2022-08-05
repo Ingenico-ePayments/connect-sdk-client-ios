@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Escanee el código QR para completar el pago";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Actualizar el estado del pago";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Haga clic en el botón inferior para actualizar el estado del pago.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "ID del emisor de la factura";

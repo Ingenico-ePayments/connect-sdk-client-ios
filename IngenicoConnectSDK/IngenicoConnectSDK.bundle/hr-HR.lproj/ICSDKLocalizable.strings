@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Skenirajte QR kôd da biste dovršili plaćanje";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Osvježite status plaćanja";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Odaberite donji gumb za osvježenje statusa plaćanja.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "kreditna kartica Inicis";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "Identifikacijski broj naplatitelja";

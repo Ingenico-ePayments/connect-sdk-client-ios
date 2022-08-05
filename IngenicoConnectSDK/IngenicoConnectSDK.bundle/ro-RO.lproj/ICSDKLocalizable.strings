@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Scanați codul QR pentru a finaliza plata";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Reactualizare status plată";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Clic pe butonul de mai jos pentru reactualizarea statusului plăţii.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "ID emitent factură";

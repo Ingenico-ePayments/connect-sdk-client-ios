@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Na ukončenie platby naskenujte QR kód";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Obnoviť stav platby";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Kliknite na nižšie uvedené tlačidlo a obnovte si stav platby.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "Biller ID";

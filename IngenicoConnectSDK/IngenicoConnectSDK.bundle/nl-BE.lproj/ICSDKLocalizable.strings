@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Scan de QR-code om de betaling te voltooien";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Betaalstatus vernieuwen";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Klik op de onderstaande knop om uw betaalstatus te vernieuwen.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "Incassant-id";

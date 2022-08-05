@@ -236,6 +236,10 @@
 	<string>templates/master/global/css/img/ppimages/pp_logo_4002_v2.png</string>
 	<key>pp_logo_4101</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_4101_v2.png</string>
+	<key>pp_logo_4102</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_4102_v1.png</string>
+	<key>pp_logo_4103</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_4103_v1.png</string>
 	<key>pp_logo_6001</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_6001_v1.png</string>
 	<key>pp_logo_6002</key>

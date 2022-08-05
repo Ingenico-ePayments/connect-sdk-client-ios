@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "לסיום התשלום, סרוק את קוד QR";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "רענן מצב תשלום";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "לחץ על הלחצן למטה כדי לרענן את מצב התשלום.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "מזהה הגוף המחייב";

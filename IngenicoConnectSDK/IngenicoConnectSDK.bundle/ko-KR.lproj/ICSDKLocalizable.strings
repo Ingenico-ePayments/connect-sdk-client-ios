@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "QR 코드를 스캔해 결제를 완료해 주십시오.";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "결제 상태 새로 고침";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "결제 상태를 새로 고침 하려면 아래 버튼을 클릭하십시오.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "청구인(Biller) ID";

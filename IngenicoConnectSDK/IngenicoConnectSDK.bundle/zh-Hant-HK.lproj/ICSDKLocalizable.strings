@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "掃描二維碼以完成支付";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "重新整理付款狀態";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "點按下方的按鈕以重新整理您的付款狀態。";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "發單人 ID";

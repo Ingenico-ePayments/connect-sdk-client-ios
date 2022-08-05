@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "สแกนคิวอาร์โค้ดเพื่อชำระเงิน";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "รีเฟรชสถานะการชำระเงิน";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "คลิกปุ่มด้านล่างเพื่อรีเพรชสถานะการชำระเงินของคุณ";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "หมายเลขผู้ออกบิล";

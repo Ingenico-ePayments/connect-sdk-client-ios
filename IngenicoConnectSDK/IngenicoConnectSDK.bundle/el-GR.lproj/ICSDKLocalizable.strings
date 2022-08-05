@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Σαρώστε τον κώδικα QR σας για να ολοκληρώσετε την πληρωμή σας";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Ανανέωση κατάστασης πληρωμής";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Κάντε κλικ στο παρακάτω κουμπί για να ανανεωθεί η κατάσταση της πληρωμής σας.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "Αναγνωριστικό Εκδότη";

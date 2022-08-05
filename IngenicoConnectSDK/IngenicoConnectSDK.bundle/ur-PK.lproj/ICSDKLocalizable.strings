@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "ادائیگی مکمل کرنے کے لیے QR کوڈ اسکین کریں";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "ادائیگی کا اسٹیٹس ریفریش کریں";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "اپنی ادائیگی کا اسٹیٹس ریفریش کرنے کے لیے نیچے بٹن پر کلک کریں۔";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "بل تیار کنندہ کی آئی ڈی";

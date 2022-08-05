@@ -408,6 +408,8 @@
 "gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Отсканируйте QR-код, чтобы завершить оплату";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Обновить статус платежа";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Нажмите кнопку ниже, чтобы обновить статус вашего платежа.";
+"gc.general.paymentProducts.4102.name" = "eNACH";
+"gc.general.paymentProducts.4103.name" = "eMandate";
 "gc.general.paymentProducts.420.name" = "Inicis Credit Card";
 "gc.general.paymentProducts.430.name" = "UnionPay";
 "gc.general.paymentProducts.500.instructionFields.BILLERID.label" = "Идентификатор лица, выставившего счет";
