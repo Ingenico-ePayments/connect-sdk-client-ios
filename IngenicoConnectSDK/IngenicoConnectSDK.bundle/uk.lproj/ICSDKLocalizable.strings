@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "Підготовка Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "або";
 "gc.general.paymentProducts.4101.introduction" = "Як ви хочете оплатити?";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "Вкажіть свою адресу для віртуальних платежів (VPA) та натисніть «Сплатити»";
 "gc.general.paymentProducts.4101.processing" = "Ваш платіж обробляється. Перевірте свій обліковий запис UPI.";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "Або відкрийте додаток на телефоні, натисніть кнопку «Оплатити» та відскануйте QR-код.";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Щоб завершити оплату, відскануйте QR-код";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "Щоб завершити оплату, відскануйте QR-код";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Оновити статус платежу";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Натисніть кнопку нижче, щоб оновити статус платежу.";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

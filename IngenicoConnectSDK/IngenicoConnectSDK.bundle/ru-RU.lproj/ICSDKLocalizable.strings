@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "Подготовка Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "Или";
 "gc.general.paymentProducts.4101.introduction" = "Каким способом вы хотите совершить оплату?";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "Укажите Virtual Payment Address (VPA) и нажмите «Оплатить»";
 "gc.general.paymentProducts.4101.processing" = "Ваш платеж обрабатывается. Проверьте учетную запись UPI.";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "Или откройте приложение на своем телефоне, нажмите «Оплатить» и отсканируйте QR-код.";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Отсканируйте QR-код, чтобы завершить оплату";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "Отсканируйте QR-код, чтобы завершить оплату";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Обновить статус платежа";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Нажмите кнопку ниже, чтобы обновить статус вашего платежа.";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

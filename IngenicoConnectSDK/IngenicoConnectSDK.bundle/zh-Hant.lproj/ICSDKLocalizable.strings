@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "準備 Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "或";
 "gc.general.paymentProducts.4101.introduction" = "您要如何付款？";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "提供您的虛擬支付地址 (VPA) 並點按支付";
 "gc.general.paymentProducts.4101.processing" = "您的付款正在處理中。請檢查您的 UPI 帳戶。";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "或在您的手機上打開應用程式，點按「Pay」（付款）並掃描 QR 碼。";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "掃描二維碼以完成支付";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "掃描二維碼以完成支付";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "重新整理付款狀態";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "點按下方的按鈕以重新整理您的付款狀態。";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

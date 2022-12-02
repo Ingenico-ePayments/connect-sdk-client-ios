@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "Google Pay ettevalmistamine";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "või";
 "gc.general.paymentProducts.4101.introduction" = "Kuidas sooviksite maksta?";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "Sisesta oma Virtual Payment Address (VPA) ja vajuta maksa";
 "gc.general.paymentProducts.4101.processing" = "Teie makse on sooritamisel. Palun kontrolli oma UPI kontot.";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "Või avage rakendus oma telefonis, vajutage ‘Maksa’ ja skaneerige QR-kood.";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Makse teostamiseks skanni QR-kood";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "Makse teostamiseks skanni QR-kood";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Makse staatuse värskendamine";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Vajutage all olevale nupule, et värskendada oma makse staatust.";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

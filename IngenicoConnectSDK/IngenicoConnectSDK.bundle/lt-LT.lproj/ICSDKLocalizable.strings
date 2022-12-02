@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "Ruošiama „Google Pay“";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "arba";
 "gc.general.paymentProducts.4101.introduction" = "Kokiu būdu norėtumėte mokėti?";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "Įveskite savo virtualų mokėjimo adresą (VPA) ir paspauskite „Mokėti“";
 "gc.general.paymentProducts.4101.processing" = "Jūsų mokėjimas apdorojamas. Patikrinkite savo UPI paskyrą.";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "Arba atidarykite programėlę telefone, paspauskite „Pay“ (mokėti) ir nuskaitykite QR kodą.";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Nuskenuokite QR kodą mokėjimui užbaigti";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "Nuskenuokite QR kodą mokėjimui užbaigti";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Atnaujinkite mokėjimo būseną";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Paspauskite žemiau esantį mygtuką, kad atnaujintumėte mokėjimo būseną.";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

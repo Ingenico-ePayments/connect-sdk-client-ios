@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "Pripravuje sa služba Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "Alebo";
 "gc.general.paymentProducts.4101.introduction" = "Ako by ste chceli platiť?";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "Zadajte vašu virtuálnu platobnú adresu (VPA) a stlačte tlačidlo Zaplatiť";
 "gc.general.paymentProducts.4101.processing" = "Vaša platba sa spracováva. Skontrolujte svoj účet UPI.";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "Alebo otvorte aplikáciu na svojom telefóne. Kliknite na možnosť „Zaplatiť“ a naskenujte QR kód.";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Na ukončenie platby naskenujte QR kód";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "Na ukončenie platby naskenujte QR kód";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Obnoviť stav platby";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Kliknite na nižšie uvedené tlačidlo a obnovte si stav platby.";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "Förbereder Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "Eller";
 "gc.general.paymentProducts.4101.introduction" = "Hur vill du betala?";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "Ange din Virtual Payment Address (VPA) och tryck på Betala";
 "gc.general.paymentProducts.4101.processing" = "Din betalning behandlas. Kontrollera ditt UPI-konto.";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "Eller öppna appen på din telefon och klicka på \"Betala\" och skanna in QR-koden.";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Skanna QR-koden för att slutföra betalningen";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "Skanna QR-koden för att slutföra betalningen";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Uppdatera betalningsstatus";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Klicka på knappen nedan för att uppdatera din betalningsstatus.";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

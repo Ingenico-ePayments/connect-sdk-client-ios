@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "正在准备 Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "或";
 "gc.general.paymentProducts.4101.introduction" = "您想如何付款？";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "提供您的Virtual Payment Address（VPA）并点击付款";
 "gc.general.paymentProducts.4101.processing" = "您的付款正在处理中。请检查您的UPI帐户。";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "或打开手机中的应用程序，点击“付款”并扫描二维码。";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "扫描二维码完成支付";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "扫描二维码完成支付";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "刷新付款状态";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "点击以下按钮刷新您的付款状态。";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

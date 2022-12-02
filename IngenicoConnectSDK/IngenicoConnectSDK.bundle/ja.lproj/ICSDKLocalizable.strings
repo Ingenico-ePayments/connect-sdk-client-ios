@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "Google Payを準備中です";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "または";
 "gc.general.paymentProducts.4101.introduction" = "お支払い方法はどうなさいますか？";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "Virtual Payment Address（VPA）を入力し、支払うボタンを押します";
 "gc.general.paymentProducts.4101.processing" = "お支払いを処理中です。UPIアカウントをご確認ください。";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "または携帯のアプリを開いて、［支払う］をクリックしてQRコードをスキャンします。";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "QRコードをスキャンして決済を完了します";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "QRコードをスキャンして決済を完了します";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "お支払い状況を更新する";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "下のボタンをクリックしてお支払い状況を更新します。";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

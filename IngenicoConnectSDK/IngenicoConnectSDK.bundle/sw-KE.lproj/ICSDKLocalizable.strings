@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "Inapakia Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "Au";
 "gc.general.paymentProducts.4101.introduction" = "Ungependa kulipa aje?";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "Toa Virtual Payment Address (VPA) yako na ubonyeze lipa";
 "gc.general.paymentProducts.4101.processing" = "Malipo yako yanachakatwa. Tafadhali angalia akaunti yako ya UPI.";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "Au fungua programu kwenye simu yako, bofya ‘Lipa’ na uchanganue msimbo wa QR.";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Tambaza msimbo wa QR ili kukamilisha malipo";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "Tambaza msimbo wa QR ili kukamilisha malipo";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Onyesha upya hali ya malipo";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Bofya kitufe hapa chini ili uonyeshe upya hali yako ya malipo.";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";

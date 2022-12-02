@@ -394,8 +394,8 @@
 "gc.general.paymentProducts.320.preparing" = "Προετοιμασία Google Pay";
 "gc.general.paymentProducts.3201.name" = "PostFinance Card";
 "gc.general.paymentProducts.3202.name" = "PostFinance e-finance";
-"gc.general.paymentProducts.4001.name" = "RuPay credit";
-"gc.general.paymentProducts.4002.name" = "RuPay debit";
+"gc.general.paymentProducts.4001.name" = "RuPay Credit";
+"gc.general.paymentProducts.4002.name" = "RuPay Debit";
 "gc.general.paymentProducts.402.name" = "e-Przelewy";
 "gc.general.paymentProducts.4101.divider" = "Ή";
 "gc.general.paymentProducts.4101.introduction" = "Πώς θα θέλατε να πληρώσετε;";
@@ -405,7 +405,7 @@
 "gc.general.paymentProducts.4101.payWithVPALabel" = "Δώστε το Virtual Payment Address (VPA) σας και πατήστε «πληρωμή»";
 "gc.general.paymentProducts.4101.processing" = "Η πληρωμή σας βρίσκεται υπό επεξεργασία. Ελέγξτε τον λογαριασμό σας UPI.";
 "gc.general.paymentProducts.4101.qrCodeLabel" = "Ή ανοίξτε την εφαρμογή στο τηλέφωνό σας, πατήστε \"Pay\" (Πληρωμή) και σαρώστε τον κωδικό QR.";
-"gc.general.paymentProducts.4101.qrCodeLabelNoButton" = "Σαρώστε τον κώδικα QR σας για να ολοκληρώσετε την πληρωμή σας";
+"gc.general.paymentProducts.4101.qrCodeLabel.noButton" = "Σαρώστε τον κώδικα QR σας για να ολοκληρώσετε την πληρωμή σας";
 "gc.general.paymentProducts.4101.refreshPaymentButtonText" = "Ανανέωση κατάστασης πληρωμής";
 "gc.general.paymentProducts.4101.refreshPaymentLabel" = "Κάντε κλικ στο παρακάτω κουμπί για να ανανεωθεί η κατάσταση της πληρωμής σας.";
 "gc.general.paymentProducts.4102.name" = "eNACH";
@@ -485,6 +485,7 @@
 "gc.general.paymentProducts.801.name" = "ING Home’Pay";
 "gc.general.paymentProducts.8013.name" = "Clearpay";
 "gc.general.paymentProducts.8014.name" = "Afterpay";
+"gc.general.paymentProducts.8015.name" = "Atome";
 "gc.general.paymentProducts.802.name" = "Nordea E-payment";
 "gc.general.paymentProducts.805.name" = "Nordea E-payment";
 "gc.general.paymentProducts.806.name" = "Trustly";
