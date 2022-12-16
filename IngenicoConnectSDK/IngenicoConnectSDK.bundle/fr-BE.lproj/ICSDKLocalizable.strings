@@ -468,6 +468,7 @@
 "gc.general.paymentProducts.6205.name" = "PagoEfectivo";
 "gc.general.paymentProducts.6206.name" = "Santander Cash";
 "gc.general.paymentProducts.6207.name" = "Interbank";
+"gc.general.paymentProducts.6208.name" = "Banco Popular";
 "gc.general.paymentProducts.6501.name" = "SPEI";
 "gc.general.paymentProducts.705.instructionFields.PAYMENTREFERENCE.label" = "Votre référence de paiement est";
 "gc.general.paymentProducts.705.instructionFields.REFERENCENUMBER.label" = "Numéro de référence";

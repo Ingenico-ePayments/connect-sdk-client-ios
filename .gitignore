@@ -67,3 +67,6 @@ fastlane/test_output
 
 ## MacOS
 .DS_store
+
+#Intelij
+.idea
