@@ -461,6 +461,7 @@
 "gc.general.paymentProducts.6114.name" = "BBVA";
 "gc.general.paymentProducts.6115.name" = "ScotiaBank";
 "gc.general.paymentProducts.6116.name" = "Santander";
+"gc.general.paymentProducts.6117.name" = "Caixa";
 "gc.general.paymentProducts.6201.name" = "OXXO Pay";
 "gc.general.paymentProducts.6202.name" = "Baloto";
 "gc.general.paymentProducts.6203.name" = "Efecty";
@@ -507,6 +508,14 @@
 "gc.general.paymentProducts.8580.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
 "gc.general.paymentProducts.8583.name" = "QIWI חוזר";
 "gc.general.paymentProducts.8583.paymentProductFields.phoneNumber.placeholder" = "7 *** *** ** **";
+"gc.general.paymentProducts.8590.name" = "BC Card";
+"gc.general.paymentProducts.8591.name" = "KEB Hana Card";
+"gc.general.paymentProducts.8592.name" = "Hyundai Card";
+"gc.general.paymentProducts.8593.name" = "KB Kookmin Card";
+"gc.general.paymentProducts.8594.name" = "Lotte Card";
+"gc.general.paymentProducts.8595.name" = "NH Card";
+"gc.general.paymentProducts.8596.name" = "Samsung Card";
+"gc.general.paymentProducts.8597.name" = "Shinhan Card";
 "gc.general.paymentProducts.861.name" = "Alipay";
 "gc.general.paymentProducts.863.introduction" = "כיצד תרצה לשלם?";
 "gc.general.paymentProducts.863.name" = "WeChat Pay";

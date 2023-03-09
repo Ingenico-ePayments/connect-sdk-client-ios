@@ -38,15 +38,15 @@
     [self.encryptor deleteRSAKeyWithTag:@"test-private-key"];
 }
 
-//- (void)testRevertible
-//{
-//    NSString *input = @"Will this encrypt and decrypt properly?";
-//    NSString *keyId = @"doesn't matter now";
-//    NSString *encrypted = [self.JOSEEncryptor encryptToCompactSerialization:input withPublicKey:self.publicKey keyId:keyId];
-//    NSString *decrypted = [self.JOSEEncryptor decryptFromCompactSerialization:encrypted withPrivateKey:self.privateKey];
-//    NSArray *parts = [decrypted componentsSeparatedByString:@"\n"];
-//    NSString *output = parts[1];
-//    XCTAssertTrue([input isEqualToString:output], @"String is not equal to original version after encrypting and decrypting according to the JOSE standard");
-//}
+- (void)testRevertible
+{
+    NSString *input = @"Will this encrypt and decrypt properly?";
+    NSString *keyId = @"doesn't matter now";
+    NSString *encrypted = [self.JOSEEncryptor encryptToCompactSerialization:input withPublicKey:self.publicKey keyId:keyId];
+    NSString *decrypted = [self.JOSEEncryptor decryptFromCompactSerialization:encrypted withPrivateKey:self.privateKey];
+    NSArray *parts = [decrypted componentsSeparatedByString:@"\n"];
+    NSString *output = parts[1];
+    XCTAssertTrue([input isEqualToString:output], @"String is not equal to original version after encrypting and decrypting according to the JOSE standard");
+}
 
 @end

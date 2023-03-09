@@ -127,7 +127,7 @@
 	<key>pp_logo_810</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_810_v1.png</string>
 	<key>pp_logo_816</key>
-	<string>templates/master/global/css/img/ppimages/pp_logo_816_v1.png</string>
+	<string>templates/master/global/css/img/ppimages/pp_logo_816_v2.png</string>
 	<key>pp_logo_830</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_830_v1.png</string>
 	<key>pp_logo_836</key>
@@ -300,6 +300,8 @@
     <string>templates/master/global/css/img/ppimages/pp_logo_6115_v1.png</string>
     <key>pp_logo_6116</key>
     <string>templates/master/global/css/img/ppimages/pp_logo_6116_v1.png</string>
+    <key>pp_logo_6117</key>
+    <string>templates/master/global/css/img/ppimages/pp_logo_6117_v1.png</string>
 	<key>pp_logo_6201</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_6201_v1.png</string>
 	<key>pp_logo_6202</key>
@@ -330,6 +332,22 @@
 	<string>templates/master/global/css/img/ppimages/pp_logo_8580_v1.png</string>
 	<key>pp_logo_8583</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_8583_v1.png</string>
+	<key>pp_logo_8590</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_8590_v1.png</string>
+	<key>pp_logo_8591</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_8591_v1.png</string>
+	<key>pp_logo_8592</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_8592_v1.png</string>
+	<key>pp_logo_8593</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_8593_v1.png</string>
+	<key>pp_logo_8594</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_8594_v1.png</string>
+	<key>pp_logo_8595</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_8595_v1.png</string>
+	<key>pp_logo_8596</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_8596_v1.png</string>
+	<key>pp_logo_8597</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_8597_v1.png</string>
 	<key>pp_logo_9000</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_9000_v1.png</string>
 	<key>pp_logo_9001</key>

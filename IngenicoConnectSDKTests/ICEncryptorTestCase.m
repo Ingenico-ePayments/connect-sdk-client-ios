@@ -42,20 +42,20 @@
     [self.encryptor deleteRSAKeyWithTag:@"test-private-tag"];
 }
 
-//- (void)testStoreKeyPair
-//{
-//    NSString *PFXPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"certificate" ofType:@"pfx"];
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    NSData *PFXData = [fileManager contentsAtPath:PFXPath];
-//    [self.encryptor deleteRSAKeyWithTag:@"test-public-tag"];
-//    [self.encryptor deleteRSAKeyWithTag:@"test-private-tag"];
-//    [self.encryptor storeRSAKeyPairFromPFXData:PFXData password:@"test" publicTag:@"test-public-tag" privateTag:@"test-private-tag"];
-//    SecKeyRef publicKey = [self.encryptor RSAKeyWithTag:@"test-public-tag"];
-//    SecKeyRef privateKey = [self.encryptor RSAKeyWithTag:@"test-private-tag"];
-//    XCTAssertTrue(publicKey != NULL && privateKey != NULL, @"Failed to import a pair of RSA keys from a PFX certificate");
-//    [self.encryptor deleteRSAKeyWithTag:@"test-public-tag"];
-//    [self.encryptor deleteRSAKeyWithTag:@"test-private-tag"];
-//}
+- (void)testStoreKeyPair
+{
+    NSString *PFXPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"certificate" ofType:@"pfx"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSData *PFXData = [fileManager contentsAtPath:PFXPath];
+    [self.encryptor deleteRSAKeyWithTag:@"test-public-tag"];
+    [self.encryptor deleteRSAKeyWithTag:@"test-private-tag"];
+    [self.encryptor storeRSAKeyPairFromPFXData:PFXData password:@"test" publicTag:@"test-public-tag" privateTag:@"test-private-tag"];
+    SecKeyRef publicKey = [self.encryptor RSAKeyWithTag:@"test-public-tag"];
+    SecKeyRef privateKey = [self.encryptor RSAKeyWithTag:@"test-private-tag"];
+    XCTAssertTrue(publicKey != NULL && privateKey != NULL, @"Failed to import a pair of RSA keys from a PFX certificate");
+    [self.encryptor deleteRSAKeyWithTag:@"test-public-tag"];
+    [self.encryptor deleteRSAKeyWithTag:@"test-private-tag"];
+}
 
 - (void)testStripPublicKey
 {
@@ -88,39 +88,39 @@
     }
 }
 
-//- (void)testEncryptRSA
-//{
-//    [self.encryptor generateRSAKeyPairWithPublicTag:@"test-public-tag" privateTag:@"test-private-tag"];
-//    SecKeyRef publicKey = [self.encryptor RSAKeyWithTag:@"test-public-tag"];
-//    unsigned char buffer[4];
-//    buffer[0] = 0;
-//    buffer[1] = 255;
-//    buffer[2] = 43;
-//    buffer[3] = 1;
-//    NSData *input = [NSData dataWithBytes:buffer length:4];
-//    NSData *output = [self.encryptor encryptRSA:input key:publicKey];
-//    XCTAssertTrue([input isEqualToData:output] == NO, @"RSA encrypted data is equal to unencrypted data");
-//    [self.encryptor deleteRSAKeyWithTag:@"test-public-tag"];
-//    [self.encryptor deleteRSAKeyWithTag:@"test-private-tag"];
-//}
+- (void)testEncryptRSA
+{
+    [self.encryptor generateRSAKeyPairWithPublicTag:@"test-public-tag" privateTag:@"test-private-tag"];
+    SecKeyRef publicKey = [self.encryptor RSAKeyWithTag:@"test-public-tag"];
+    unsigned char buffer[4];
+    buffer[0] = 0;
+    buffer[1] = 255;
+    buffer[2] = 43;
+    buffer[3] = 1;
+    NSData *input = [NSData dataWithBytes:buffer length:4];
+    NSData *output = [self.encryptor encryptRSA:input key:publicKey];
+    XCTAssertTrue([input isEqualToData:output] == NO, @"RSA encrypted data is equal to unencrypted data");
+    [self.encryptor deleteRSAKeyWithTag:@"test-public-tag"];
+    [self.encryptor deleteRSAKeyWithTag:@"test-private-tag"];
+}
 
-//- (void)testEncryptDecryptRSA
-//{
-//    [self.encryptor generateRSAKeyPairWithPublicTag:@"test-public-tag" privateTag:@"test-private-tag"];
-//    SecKeyRef publicKey = [self.encryptor RSAKeyWithTag:@"test-public-tag"];
-//    SecKeyRef privateKey = [self.encryptor RSAKeyWithTag:@"test-private-tag"];
-//    unsigned char buffer[4];
-//    buffer[0] = 0;
-//    buffer[1] = 255;
-//    buffer[2] = 43;
-//    buffer[3] = 1;
-//    NSData *input = [NSData dataWithBytes:buffer length:4];
-//    NSData *output = [self.encryptor encryptRSA:input key:publicKey];
-//    NSData *decryptedOutput = [self.encryptor decryptRSA:output key:privateKey];
-//    XCTAssert([input isEqualToData:decryptedOutput], @"Encrypted and decrypted data is not equal to initial data");
-//    [self.encryptor deleteRSAKeyWithTag:@"test-public-tag"];
-//    [self.encryptor deleteRSAKeyWithTag:@"test-private-tag"];
-//}
+- (void)testEncryptDecryptRSA
+{
+    [self.encryptor generateRSAKeyPairWithPublicTag:@"test-public-tag" privateTag:@"test-private-tag"];
+    SecKeyRef publicKey = [self.encryptor RSAKeyWithTag:@"test-public-tag"];
+    SecKeyRef privateKey = [self.encryptor RSAKeyWithTag:@"test-private-tag"];
+    unsigned char buffer[4];
+    buffer[0] = 0;
+    buffer[1] = 255;
+    buffer[2] = 43;
+    buffer[3] = 1;
+    NSData *input = [NSData dataWithBytes:buffer length:4];
+    NSData *output = [self.encryptor encryptRSA:input key:publicKey];
+    NSData *decryptedOutput = [self.encryptor decryptRSA:output key:privateKey];
+    XCTAssert([input isEqualToData:decryptedOutput], @"Encrypted and decrypted data is not equal to initial data");
+    [self.encryptor deleteRSAKeyWithTag:@"test-public-tag"];
+    [self.encryptor deleteRSAKeyWithTag:@"test-private-tag"];
+}
 
 - (void)testRSAKeyWithTag
 {
