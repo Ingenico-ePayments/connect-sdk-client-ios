@@ -86,6 +86,10 @@
 	<string>templates/master/global/css/img/ppimages/pp_logo_186_v1.png</string>
 	<key>pp_logo_187</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_187_v1.png</string>
+	<key>pp_logo_188</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_188_v1.png</string>
+	<key>pp_logo_189</key>
+	<string>templates/master/global/css/img/ppimages/pp_logo_189_v1.png</string>
 	<key>pp_logo_201</key>
 	<string>templates/master/global/css/img/ppimages/pp_logo_201_v1.png</string>
 	<key>pp_logo_302</key>

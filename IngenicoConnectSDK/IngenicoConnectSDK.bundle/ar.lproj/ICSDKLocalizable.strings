@@ -326,6 +326,8 @@
 "gc.general.paymentProducts.185.name" = "NH Card";
 "gc.general.paymentProducts.186.name" = "Samsung Card";
 "gc.general.paymentProducts.187.name" = "Shinhan Card";
+"gc.general.paymentProducts.188.name" = "Troy";
+"gc.general.paymentProducts.189.name" = "Troy Debit";
 "gc.general.paymentProducts.2.name" = "American Express";
 "gc.general.paymentProducts.2.paymentProductFields.cardNumber.placeholder" = "**** ****** *****";
 "gc.general.paymentProducts.2.paymentProductFields.cvv.label" = "رقم تعريف البطاقة";
