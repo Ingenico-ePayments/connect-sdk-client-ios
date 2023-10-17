@@ -185,24 +185,28 @@ additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes
                         success:(void (^)(id responseObject))success
                         failure:(void (^)(NSError *error))failure
 {
+    BOOL isValid = NO;
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+    id responseObject;
 
-    NSError *apiError;
-    BOOL isValid = [self validateResponse:(NSHTTPURLResponse *)response data:data error:&apiError];
+    if(!error && response) {
+        NSError *apiError;
+        isValid = [self validateResponse:(NSHTTPURLResponse *)response data:data error:&apiError];
 
-    if (apiError) {
-        userInfo[ICNetworkingTaskDidCompleteErrorKey] = apiError;
-    }
+        if (apiError) {
+            userInfo[ICNetworkingTaskDidCompleteErrorKey] = apiError;
+        }
 
-    NSError *serializationError = nil;
-    id responseObject = [self responseObjectForResponse:response data:data error:&serializationError];
+        NSError *serializationError = nil;
+        responseObject = [self responseObjectForResponse:response data:data error:&serializationError];
 
-    if (responseObject) {
-        userInfo[ICNetworkingTaskDidCompleteSerializedResponseKey] = responseObject;
-    }
+        if (responseObject) {
+            userInfo[ICNetworkingTaskDidCompleteSerializedResponseKey] = responseObject;
+        }
 
-    if (serializationError) {
-        userInfo[ICNetworkingTaskDidCompleteErrorKey] = serializationError;
+        if (serializationError) {
+            userInfo[ICNetworkingTaskDidCompleteErrorKey] = serializationError;
+        }
     }
 
     dispatch_async(dispatch_get_main_queue(), ^(void) {
@@ -219,7 +223,6 @@ additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes
         }
     });
 }
-
 
 - (BOOL)validateResponse:(NSHTTPURLResponse *)response
                     data:(NSData *)data

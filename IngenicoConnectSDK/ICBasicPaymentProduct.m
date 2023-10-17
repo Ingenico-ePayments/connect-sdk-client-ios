@@ -22,6 +22,7 @@
     if (self != nil) {
         self.displayHints = [[ICPaymentItemDisplayHints alloc] init];
         self.accountsOnFile = [[ICAccountsOnFile alloc] init];
+        self.authenticationIndicator = [[ICAuthenticationIndicator alloc] init];
     }
     return self;
 }

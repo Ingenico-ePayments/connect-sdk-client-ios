@@ -10,6 +10,7 @@
 
 #import  "ICAccountsOnFile.h"
 #import  "ICAccountOnFile.h"
+#import  "ICAuthenticationIndicator.h"
 #import  "ICPaymentItemDisplayHints.h"
 #import  "ICPaymentItem.h"
 #import  "ICBasicPaymentItem.h"
@@ -28,8 +29,18 @@
 @property (nonatomic) BOOL autoTokenized;
 @property (nonatomic) BOOL allowsInstallments;
 
+@property (strong, nonatomic) ICAuthenticationIndicator *authenticationIndicator;
+
+@property (nonatomic) BOOL *deviceFingerprintEnabled;
+
+@property (nonatomic) NSInteger *minAmount;
+@property (nonatomic) NSInteger *maxAmount;
+
 @property (nonatomic) NSString *paymentMethod;
+@property (nonatomic) NSString *mobileIntegrationLevel;
+@property (nonatomic) BOOL *usesRedirectionTo3rdParty;
 @property (nonatomic) NSString *paymentProductGroup;
+@property (nonatomic) BOOL *supportsMandates;
 
 @property (strong, nonatomic) ICPaymentProduct302SpecificData *paymentProduct302SpecificData;
 @property (strong, nonatomic) ICPaymentProduct320SpecificData *paymentProduct320SpecificData;

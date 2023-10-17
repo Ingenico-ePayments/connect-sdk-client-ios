@@ -13,6 +13,7 @@
 @interface ICPaymentProduct : ICBasicPaymentProduct <ICPaymentItem>
 
 @property (strong, nonatomic) ICPaymentProductFields *fields;
+@property (nonatomic) NSString *fieldsWarning;
 
 - (ICPaymentProductField *)paymentProductFieldWithId:(NSString *)paymentProductFieldId;
 

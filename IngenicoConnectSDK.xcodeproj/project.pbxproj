@@ -39,6 +39,7 @@
 		74A17218251C9F6E004C23AA /* ICValidatorResidentIdNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A17217251C9F6E004C23AA /* ICValidatorResidentIdNumber.h */; };
 		74A1721B251CA458004C23AA /* ICValidatorResidentIdNumberTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A17219251CA454004C23AA /* ICValidatorResidentIdNumberTestCase.m */; };
 		74A1721D251CD6F7004C23AA /* ICResidentIdNumberError.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A1721C251CD6F7004C23AA /* ICResidentIdNumberError.m */; };
+		7B9EE0BF29BB129400052D3B /* ICAuthenticationIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9EE0BE29BB129400052D3B /* ICAuthenticationIndicator.m */; };
 		7BE7C7262953499F00657F2F /* KeychainEntitlementTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7C7252953499F00657F2F /* KeychainEntitlementTestAppApp.swift */; };
 		B4C369C91DE754C100C50450 /* ICNetworkingWrapperTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699A1DE754C100C50450 /* ICNetworkingWrapperTestCase.m */; };
 		B4C369CA1DE754C100C50450 /* ICStubUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3699D1DE754C100C50450 /* ICStubUtil.m */; };
@@ -305,6 +306,8 @@
 		74A17219251CA454004C23AA /* ICValidatorResidentIdNumberTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICValidatorResidentIdNumberTestCase.m; sourceTree = "<group>"; };
 		74A1721C251CD6F7004C23AA /* ICResidentIdNumberError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICResidentIdNumberError.m; sourceTree = "<group>"; };
 		74A1721E251CD79D004C23AA /* ICResidentIdNumberError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICResidentIdNumberError.h; sourceTree = "<group>"; };
+		7B9EE0BD29BB0F6B00052D3B /* ICAuthenticationIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICAuthenticationIndicator.h; sourceTree = "<group>"; };
+		7B9EE0BE29BB129400052D3B /* ICAuthenticationIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICAuthenticationIndicator.m; sourceTree = "<group>"; };
 		7BE7C7232953499F00657F2F /* KeychainEntitlementTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainEntitlementTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE7C7252953499F00657F2F /* KeychainEntitlementTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainEntitlementTestAppApp.swift; sourceTree = "<group>"; };
 		B4C3699A1DE754C100C50450 /* ICNetworkingWrapperTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICNetworkingWrapperTestCase.m; path = IngenicoConnectSDKTests/ICNetworkingWrapperTestCase.m; sourceTree = "<group>"; };
@@ -973,6 +976,8 @@
 				735404452153B9E500771041 /* ICPaymentProduct320SpecificData.h */,
 				735404432153B9E500771041 /* ICPaymentProduct320SpecificData.m */,
 				735404412153B9E500771041 /* ICPaymentProduct863SpecificData.h */,
+				7B9EE0BD29BB0F6B00052D3B /* ICAuthenticationIndicator.h */,
+				7B9EE0BE29BB129400052D3B /* ICAuthenticationIndicator.m */,
 				735404442153B9E500771041 /* ICPaymentProduct863SpecificData.m */,
 				738E97DE1F85280F001C2CFE /* ICThirdPartyStatus.h */,
 				738E97DF1F85280F001C2CFE /* ICThirdPartyStatusResponse.h */,
@@ -1393,6 +1398,7 @@
 				B4D77E501DE7319700F7B1C1 /* ICDirectoryEntry.m in Sources */,
 				B4D77F191DE731D300F7B1C1 /* ICBasicPaymentProductGroup.m in Sources */,
 				F5EC6CB11E678CCC0001E0E6 /* ICValidatorBoletoBancarioRequiredness.m in Sources */,
+				7B9EE0BF29BB129400052D3B /* ICAuthenticationIndicator.m in Sources */,
 				B4D77E111DE7303800F7B1C1 /* ICBasicPaymentProductConverter.m in Sources */,
 				B4D77E861DE731B200F7B1C1 /* ICValidationErrorRegularExpression.m in Sources */,
 				B4D77F151DE731D300F7B1C1 /* ICBasicPaymentProductGroups.m in Sources */,
