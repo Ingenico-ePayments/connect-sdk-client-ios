@@ -219,7 +219,11 @@ additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes
             DLog(@"Error while retrieving response for URL %@: %@", [[requestTask originalRequest] URL], [error localizedDescription]);
             failure(error);
         } else {
-            success(responseObject);
+            NSMutableDictionary *mutableResponseObject = [responseObject mutableCopy];
+
+            mutableResponseObject[@"statusCode"] = [NSNumber numberWithInteger: [(NSHTTPURLResponse *)response statusCode]];
+
+            success(mutableResponseObject);
         }
     });
 }

@@ -64,16 +64,8 @@
 -(NSString *)assetsBaseURL {
     return [self.communicator assetsBaseURL];
 }
-+ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier{
-    ICUtil *util = [[ICUtil alloc] init];
-    ICAssetManager *assetManager = [[ICAssetManager alloc] init];
-    ICStringFormatter *stringFormatter = [[ICStringFormatter alloc] init];
-    ICEncryptor *encryptor = [[ICEncryptor alloc] init];
-    ICC2SCommunicatorConfiguration *configuration = [[ICC2SCommunicatorConfiguration alloc] initWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetBaseURL appIdentifier:appIdentifier util:util];
-    ICC2SCommunicator *communicator = [[ICC2SCommunicator alloc] initWithConfiguration:configuration];
-    ICJOSEEncryptor *JOSEEncryptor = [[ICJOSEEncryptor alloc] initWithEncryptor:encryptor];
-    ICSession *session = [[ICSession alloc] initWithCommunicator:communicator assetManager:assetManager encryptor:encryptor JOSEEncryptor:JOSEEncryptor stringFormatter:stringFormatter];
-    return session;
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier {
+    return [self sessionWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetBaseURL appIdentifier:appIdentifier loggingEnabled:NO];
 }
 + (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment
 {
@@ -92,6 +84,17 @@
     return session;
 }
 
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier loggingEnabled:(BOOL)loggingEnabled {
+    ICUtil *util = [[ICUtil alloc] init];
+    ICAssetManager *assetManager = [[ICAssetManager alloc] init];
+    ICStringFormatter *stringFormatter = [[ICStringFormatter alloc] init];
+    ICEncryptor *encryptor = [[ICEncryptor alloc] init];
+    ICC2SCommunicatorConfiguration *configuration = [[ICC2SCommunicatorConfiguration alloc] initWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetBaseURL appIdentifier:appIdentifier util:util loggingEnabled: loggingEnabled];
+    ICC2SCommunicator *communicator = [[ICC2SCommunicator alloc] initWithConfiguration:configuration];
+    ICJOSEEncryptor *JOSEEncryptor = [[ICJOSEEncryptor alloc] initWithEncryptor:encryptor];
+    ICSession *session = [[ICSession alloc] initWithCommunicator:communicator assetManager:assetManager encryptor:encryptor JOSEEncryptor:JOSEEncryptor stringFormatter:stringFormatter];
+    return session;
+}
 
 - (void)paymentProductsForContext:(ICPaymentContext *)context success:(void (^)(ICBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure
 {
@@ -299,6 +302,14 @@
 
 - (BOOL)isEnvironmentTypeProduction {
     return [self.communicator isEnvironmentTypeProduction];
+}
+
+- (BOOL)loggingEnabled {
+    return [self.communicator loggingEnabled];
+}
+
+-(void)setLoggingEnabled:(BOOL)loggingEnabled {
+    [self.communicator setLoggingEnabled:loggingEnabled];
 }
 
 @end

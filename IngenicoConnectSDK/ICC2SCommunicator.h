@@ -40,6 +40,8 @@
 - (NSString *)baseURL;
 - (NSString *)assetsBaseURL;
 - (NSString *)clientSessionId;
+- (BOOL)loggingEnabled;
+- (void)setLoggingEnabled:(BOOL)loggingEnabled;
 
 - (BOOL)isEnvironmentTypeProduction DEPRECATED_ATTRIBUTE __deprecated_msg("This attribute is dependant on ICEnvironment, and will therefore be removed.");
 

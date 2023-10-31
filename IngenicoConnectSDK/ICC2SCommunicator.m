@@ -310,27 +310,128 @@
 
 - (void)getResponseForURL:(NSString *)URL success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure
 {
-    [self.networkingWrapper getResponseForURL:URL headers:[self headers] additionalAcceptableStatusCodes:nil success:success failure:failure];
+    if([self loggingEnabled]) {
+        [self logRequestForURL:URL forRequestMethod:@"GET" withParameters:[NSDictionary alloc]];
+    }
+
+    [self.networkingWrapper
+     getResponseForURL:URL
+     headers:[self headers]
+     additionalAcceptableStatusCodes:nil
+     success:^(id responseObject) {
+        if([self loggingEnabled]) {
+            [self logSuccessResponseForURL:URL forResponseObject:responseObject];
+        }
+
+        success(responseObject);
+     }
+     failure:^(NSError *error) {
+        if([self loggingEnabled]) {
+            [self logResponseForURL:URL forResponseCode:[NSNumber numberWithInteger: error.code] forResponseBody:[error localizedDescription] hasError:YES];
+        }
+        failure(error);
+     }
+    ];
 }
 
 - (void)postResponseForURL:(NSString *)URL withParameters:(NSDictionary *)parameters additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure
 {
-    [self.networkingWrapper postResponseForURL:URL headers:[self headers] withParameters:parameters additionalAcceptableStatusCodes:additionalAcceptableStatusCodes success:success failure:failure];
+    if([self loggingEnabled]) {
+        [self logRequestForURL:URL forRequestMethod:@"POST" withParameters:parameters];
+    }
+    [self.networkingWrapper
+     postResponseForURL:URL
+     headers:[self headers]
+     withParameters:parameters
+     additionalAcceptableStatusCodes:additionalAcceptableStatusCodes
+     success:^(id responseObject) {
+        if([self loggingEnabled]) {
+            [self logSuccessResponseForURL:URL forResponseObject:responseObject];
+        }
+
+        success(responseObject);
+     }
+     failure:^(NSError *error) {
+        if([self loggingEnabled]) {
+            [self logResponseForURL:URL forResponseCode:[NSNumber numberWithInteger: error.code] forResponseBody:[error localizedDescription] hasError:YES];
+        }
+        failure(error);
+     }
+    ];
 }
+
+-(void)logSuccessResponseForURL:(NSString *)URL forResponseObject:(id)responseObject {
+    NSNumber *responseCode = responseObject[@"statusCode"];
+
+    [responseObject removeObjectForKey:@"statusCode"];
+
+    [self logResponseForURL:URL forResponseCode:responseCode forResponseBody:responseObject hasError:NO];
+}
+
+/**
+ * Logs all request headers, url and body
+ */
+-(void)logRequestForURL:(NSString *)URL forRequestMethod:(NSString *)requestMethod withParameters:(NSDictionary *)parameters {
+    NSString* requestLog = [NSString stringWithFormat:
+    @"Request URL : %@ \n"
+    "Request Method: %@ \n"
+    "Request Headers : %@ \n",
+    URL, requestMethod, self.headers
+    ];
+
+    if([requestMethod isEqual: @"POST"]) {
+        requestLog = [requestLog stringByAppendingString:[NSString stringWithFormat: @"Body: %@", parameters]];
+    }
+
+    NSLog(@"%@", requestLog);
+}
+
+/**
+ * Logs all response headers, status code and body
+ */
+-(void)logResponseForURL:(NSString *)URL forResponseCode:(NSNumber *)responseCode forResponseBody:(NSString *)responseBody hasError:(BOOL)hasError {
+    NSString* responseLog = [NSString stringWithFormat:
+    @"Response URL : %@ \n"
+    "Response Code : %@ \n"
+    "Response Headers : %@ \n",
+    URL, responseCode, self.headers];
+
+    if(hasError) {
+        responseLog = [responseLog stringByAppendingString:@"Response Error : "];
+    } else {
+        responseLog = [responseLog stringByAppendingString:@"Response Body : "];
+    }
+
+    responseLog = [responseLog stringByAppendingString:[NSString stringWithFormat: @"%@", responseBody]];
+
+    NSLog(@"%@", responseLog);
+}
+
 
 - (NSString *)baseURL
 {
     return [self.configuration baseURL];
 }
+
 -(void)setBaseURL:(NSString *)baseURL {
     [self.configuration setBaseURL:baseURL];
 }
+
 -(void)setAssetsBaseURL:(NSString *)assetsBaseURL {
     [self.configuration setAssetsBaseURL:assetsBaseURL];
 }
+
 - (NSString *)assetsBaseURL
 {
     return [self.configuration assetsBaseURL];
+}
+
+-(void)setLoggingEnabled:(BOOL)loggingEnabled {
+    [self.configuration setLoggingEnabled:loggingEnabled];
+}
+
+- (BOOL)loggingEnabled {
+    return [self.configuration loggingEnabled];
 }
 
 - (NSString *)base64EncodedClientMetaInfo

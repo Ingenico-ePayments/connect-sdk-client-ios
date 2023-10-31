@@ -26,9 +26,10 @@
 @property (nonatomic, strong) NSString *assetsBaseURL;
 
 - (instancetype)initWithCommunicator:(ICC2SCommunicator *)communicator assetManager:(ICAssetManager *)assetManager encryptor:(ICEncryptor *)encryptor JOSEEncryptor:(ICJOSEEncryptor *)JOSEEncryptor stringFormatter:(ICStringFormatter *)stringFormatter;
-+ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment DEPRECATED_ATTRIBUTE __deprecated_msg("Use sessionWithClientSessionId:customerId:baseURL:assetBaseURL:appIdentifier: instead");
-+ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment appIdentifier:(NSString *)appIdentifier DEPRECATED_ATTRIBUTE __deprecated_msg("Use sessionWithClientSessionId:customerId:baseURL:assetBaseURL:appIdentifier: instead");
-+ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier;
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment DEPRECATED_ATTRIBUTE __deprecated_msg("Use sessionWithClientSessionId:customerId:baseURL:assetBaseURL:appIdentifier:loggingEnabled: instead");
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId region:(ICRegion)region environment:(ICEnvironment)environment appIdentifier:(NSString *)appIdentifier DEPRECATED_ATTRIBUTE __deprecated_msg("Use sessionWithClientSessionId:customerId:baseURL:assetBaseURL:appIdentifier:loggingEnabled: instead");
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier DEPRECATED_ATTRIBUTE __deprecated_msg("Use sessionWithClientSessionId:customerId:baseURL:assetBaseURL:appIdentifier:loggingEnabled: instead");
++ (ICSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier loggingEnabled:(BOOL)loggingEnabled;
 
 - (void)paymentProductsForContext:(ICPaymentContext *)context success:(void (^)(ICBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure;
 - (void)paymentProductGroupsForContext:(ICPaymentContext *)context success:(void (^)(ICBasicPaymentProductGroups *paymentProductGroups))success failure:(void (^)(NSError *error))failure;
@@ -45,5 +46,7 @@
 - (void)thirdPartyStatusForPayment:(NSString *)paymentId success:(void(^)(ICThirdPartyStatusResponse *thirdPartyStatusResponse))success failure:(void(^)(NSError *error))failure;
 - (void)customerDetailsForProductId:(NSString *)productId withLookupValues:(NSArray<NSDictionary<NSString*, NSString*>*> *)values countryCode:(NSString *)countryCode success:(void (^)(ICCustomerDetails *))success failure:(void (^)(NSError *))failure;
 - (BOOL)isEnvironmentTypeProduction DEPRECATED_ATTRIBUTE __deprecated_msg("This attribute is dependant on ICEnvironment, and will therefore be removed.");
+- (BOOL)loggingEnabled;
+- (void)setLoggingEnabled:(BOOL)loggingEnabled;
 
 @end

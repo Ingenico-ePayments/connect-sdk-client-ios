@@ -35,6 +35,7 @@
         self.util = util;
         self.appIdentifier = appIdentifier;
         self.ipAddress = ipAddress;
+        self.loggingEnabled = NO;
     }
     return self;
 
@@ -48,6 +49,20 @@
         self.assetsBaseURL = assetBaseURL;
         self.util = util;
         self.appIdentifier = appIdentifier;
+        self.loggingEnabled = NO;
+    }
+    return self;
+}
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier util:(ICUtil *)util loggingEnabled:(BOOL)loggingEnabled {
+    self = [super init];
+    if (self != nil) {
+        self.clientSessionId = clientSessionId;
+        self.customerId = customerId;
+        self.baseURL = baseURL;
+        self.assetsBaseURL = assetBaseURL;
+        self.util = util;
+        self.appIdentifier = appIdentifier;
+        self.loggingEnabled = loggingEnabled;
     }
     return self;
 }
@@ -61,6 +76,22 @@
         self.util = util;
         self.appIdentifier = appIdentifier;
         self.ipAddress = ipAddress;
+        self.loggingEnabled = NO;
+    }
+    return self;
+}
+
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress util:(ICUtil *)util loggingEnabled:(BOOL)loggingEnabled {
+    self = [super init];
+    if (self != nil) {
+        self.clientSessionId = clientSessionId;
+        self.customerId = customerId;
+        self.baseURL = baseURL;
+        self.assetsBaseURL = assetBaseURL;
+        self.util = util;
+        self.appIdentifier = appIdentifier;
+        self.ipAddress = ipAddress;
+        self.loggingEnabled = loggingEnabled;
     }
     return self;
 }
@@ -149,5 +180,8 @@
     return [self.util base64EncodedClientMetaInfoWithAppIdentifier:self.appIdentifier ipAddress:self.ipAddress];
 }
 
+-(void)setLoggingEnabled:(BOOL)loggingEnabled {
+    self->_loggingEnabled = loggingEnabled;
+}
 
 @end
