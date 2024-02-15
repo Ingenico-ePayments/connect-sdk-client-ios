@@ -28,8 +28,6 @@
 		738E97E71F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 738E97E11F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		738E97E81F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E97E21F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m */; };
 		738E97E91F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E97E21F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m */; };
-		73C690301F56CDB200560FD1 /* ICCustomerDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C6902E1F56CDB200560FD1 /* ICCustomerDetails.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73C690311F56CDB200560FD1 /* ICCustomerDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C6902F1F56CDB200560FD1 /* ICCustomerDetails.m */; };
 		73C690371F56CDD600560FD1 /* ICDisplayElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C690321F56CDD600560FD1 /* ICDisplayElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73C690381F56CDD600560FD1 /* ICDisplayElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C690331F56CDD600560FD1 /* ICDisplayElement.m */; };
 		73C690391F56CDD600560FD1 /* ICDisplayElementsConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C690341F56CDD600560FD1 /* ICDisplayElementsConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -294,8 +292,6 @@
 		738E97E01F85280F001C2CFE /* ICThirdPartyStatusResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThirdPartyStatusResponse.m; sourceTree = "<group>"; };
 		738E97E11F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThirdPartyStatusResponseConverter.h; sourceTree = "<group>"; };
 		738E97E21F85280F001C2CFE /* ICThirdPartyStatusResponseConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThirdPartyStatusResponseConverter.m; sourceTree = "<group>"; };
-		73C6902E1F56CDB200560FD1 /* ICCustomerDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCustomerDetails.h; sourceTree = "<group>"; };
-		73C6902F1F56CDB200560FD1 /* ICCustomerDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCustomerDetails.m; sourceTree = "<group>"; };
 		73C690321F56CDD600560FD1 /* ICDisplayElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDisplayElement.h; sourceTree = "<group>"; };
 		73C690331F56CDD600560FD1 /* ICDisplayElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDisplayElement.m; sourceTree = "<group>"; };
 		73C690341F56CDD600560FD1 /* ICDisplayElementsConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDisplayElementsConverter.h; sourceTree = "<group>"; };
@@ -550,15 +546,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73C6902D1F56CD9E00560FD1 /* CustomerDetails */ = {
-			isa = PBXGroup;
-			children = (
-				73C6902E1F56CDB200560FD1 /* ICCustomerDetails.h */,
-				73C6902F1F56CDB200560FD1 /* ICCustomerDetails.m */,
-			);
-			name = CustomerDetails;
-			sourceTree = "<group>";
-		};
 		7BE7C7242953499F00657F2F /* KeychainEntitlementTestApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,7 +853,6 @@
 		B4D77E401DE730EC00F7B1C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				73C6902D1F56CD9E00560FD1 /* CustomerDetails */,
 				B4D77E411DE730F300F7B1C1 /* DirectoryEntries */,
 				B4D77E421DE730FE00F7B1C1 /* C2SPaymentProductContext */,
 				B4D77E431DE7310900F7B1C1 /* PaymentRequests */,
@@ -1177,7 +1163,6 @@
 				B4D77F071DE731D300F7B1C1 /* ICValidatorRegularExpression.h in Headers */,
 				B4D77E8D1DE731B200F7B1C1 /* ICValidationErrorEmailAddress.h in Headers */,
 				B4D77E2F1DE7305100F7B1C1 /* ICType.h in Headers */,
-				73C690301F56CDB200560FD1 /* ICCustomerDetails.h in Headers */,
 				B4D77EDF1DE731D300F7B1C1 /* ICAccountOnFileAttribute.h in Headers */,
 				B4D77F091DE731D300F7B1C1 /* ICValidatorEmailAddress.h in Headers */,
 				B4D77DE81DE7301900F7B1C1 /* ICBase64.h in Headers */,
@@ -1235,7 +1220,6 @@
 				B4D77C5D1DE72EB900F7B1C1 /* Frameworks */,
 				B4D77C5E1DE72EB900F7B1C1 /* Headers */,
 				B4D77C5F1DE72EB900F7B1C1 /* Resources */,
-				B9B9003A2330DBFC007993DD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1335,26 +1319,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		B9B9003A2330DBFC007993DD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		7BE7C71F2953499F00657F2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1417,7 +1381,6 @@
 				B4D77F0C1DE731D300F7B1C1 /* ICAccountOnFileDisplayHints.m in Sources */,
 				B4D77DCE1DE72F4E00F7B1C1 /* ICC2SCommunicatorConfiguration.m in Sources */,
 				732F866320051E1200A7DE68 /* ICValidatorTermsAndConditions.m in Sources */,
-				73C690311F56CDB200560FD1 /* ICCustomerDetails.m in Sources */,
 				B4D77DE91DE7301900F7B1C1 /* ICBase64.m in Sources */,
 				B4D77E1C1DE7303800F7B1C1 /* ICBasicPaymentItemConverter.m in Sources */,
 				B4D77EEA1DE731D300F7B1C1 /* ICToolTip.m in Sources */,
@@ -1525,6 +1488,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		36881D492B6BA17B007A676B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = KeychainEntitlementTestApp;
+			};
+			name = Release;
+		};
 		7BE7C72E295349A100657F2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1689,10 +1661,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = IngenicoConnectSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1714,10 +1683,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = IngenicoConnectSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1765,6 +1731,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BE7C72E295349A100657F2F /* Debug */,
+				36881D492B6BA17B007A676B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

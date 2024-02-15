@@ -137,10 +137,6 @@
 {
     [self.communicator thirdPartyStatusForPayment:paymentId success:success failure:failure];
 }
-- (void)customerDetailsForProductId:(NSString *)productId withLookupValues:(NSArray<NSDictionary<NSString*, NSString*>*> *)values countryCode:(NSString *)countryCode success:(void (^)(ICCustomerDetails *))success failure:(void (^)(NSError *))failure
-{
-    [self.communicator customerDetailsForProductId:productId withLookupValues:values countryCode:countryCode success:success failure:failure];
-}
 - (void)paymentItemsForContext:(ICPaymentContext *)context groupPaymentProducts:(BOOL)groupPaymentProducts success:(void (^)(ICPaymentItems *paymentItems))success failure:(void (^)(NSError *error))failure {
     [self.communicator paymentProductsForContext:context success:^(ICBasicPaymentProducts *paymentProducts) {
         self.paymentProducts = paymentProducts;

@@ -44,7 +44,6 @@
 - (void)preparePaymentRequest:(ICPaymentRequest *)paymentRequest success:(void (^)(ICPreparedPaymentRequest *preparedPaymentRequest))success failure:(void (^)(NSError *error))failure;
 - (void)paymentProductNetworksForProductId:(NSString *)paymentProductId context:(ICPaymentContext *)context success:(void (^)(ICPaymentProductNetworks *paymentProductNetworks))success failure:(void (^)(NSError *error))failure;
 - (void)thirdPartyStatusForPayment:(NSString *)paymentId success:(void(^)(ICThirdPartyStatusResponse *thirdPartyStatusResponse))success failure:(void(^)(NSError *error))failure;
-- (void)customerDetailsForProductId:(NSString *)productId withLookupValues:(NSArray<NSDictionary<NSString*, NSString*>*> *)values countryCode:(NSString *)countryCode success:(void (^)(ICCustomerDetails *))success failure:(void (^)(NSError *))failure;
 - (BOOL)isEnvironmentTypeProduction DEPRECATED_ATTRIBUTE __deprecated_msg("This attribute is dependant on ICEnvironment, and will therefore be removed.");
 - (BOOL)loggingEnabled;
 - (void)setLoggingEnabled:(BOOL)loggingEnabled;

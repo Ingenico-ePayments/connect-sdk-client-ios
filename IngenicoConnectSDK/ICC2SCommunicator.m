@@ -22,7 +22,6 @@
 #import  "ICThirdPartyStatusResponse.h"
 #import  "ICThirdPartyStatusResponseConverter.h"
 #import <PassKit/PKPaymentAuthorizationViewController.h>
-#import  "ICCustomerDetails.h"
 @interface ICC2SCommunicator ()
 
 @property (strong, nonatomic) ICC2SCommunicatorConfiguration *configuration;
@@ -153,30 +152,6 @@
     } failure:^(NSError *error) {
         failure(error);
     }];
-}
-- (void)customerDetailsForProductId:(NSString *)productId withLookupValues:(NSArray<NSDictionary<NSString*, NSString*>*> *)values countryCode:(NSString *)countryCode success:(void (^)(ICCustomerDetails *))success failure:(void (^)(NSError *))failure
-{
-    NSString *URL = [NSString stringWithFormat:@"%@/%@/products/%@/customerDetails", [self baseURL], self.configuration.customerId, productId];
-    NSDictionary<NSString *, id> *params = @{@"values": values, @"countryCode": countryCode};
-    NSMutableIndexSet *additionalAcceptableStatusCodes = [[NSMutableIndexSet alloc] init];
-//    [additionalAcceptableStatusCodes addIndex:400];
-    [self postResponseForURL:URL withParameters:params additionalAcceptableStatusCodes:additionalAcceptableStatusCodes success:^(id responseObject) {
-        NSDictionary *rawCustomerDetails = (NSDictionary *)responseObject;
-        ICCustomerDetails *details = [[ICCustomerDetails alloc]init];
-        details.values = rawCustomerDetails;
-        success(details);
-    } failure:^(NSError *error) {
-        NSData *errorBody = (NSData *)error.userInfo[@"com.alamofire.serialization.response.error.data"];
-        if (errorBody == nil) {
-            failure(error);
-            return;
-        }
-        NSMutableDictionary *dict =  [error.userInfo mutableCopy];
-        NSMutableDictionary *object = [NSJSONSerialization JSONObjectWithData:errorBody options: 0 error:nil];
-        dict[@"com.ingenicoconnect.responseBody"] = object;
-        failure([NSError errorWithDomain:error.domain code:error.code userInfo:dict]);
-    }];
-
 }
 - (void)checkAvailabilityForPaymentProductWithId:(NSString *)paymentProductId context:(ICPaymentContext *)context success:(void (^)(void))success failure:(void (^)(NSError *error))failure
 {
