@@ -1,6 +1,10 @@
 Ingenico Connect iOS SDK (Objective-C)
 =======================
 
+**This SDK has been rebranded to Worldline. As part of the rebranding the SDK has moved to https://github.com/Worldline-Global-Collect/connect-sdk-client-ios.**
+
+---
+
 The Ingenico Connect objective-C iOS SDK provides a convenient way to support a large number of payment methods inside your iOS app.
 It supports iOS 6.1 and up out-of-the-box.
 The objective-C iOS SDK comes with an [example app](https://github.com/Ingenico-ePayments/connect-sdk-client-ios-example) that illustrates the use of the SDK and the services provided by Ingenico ePayments on the Ingenico ePayments platform.
